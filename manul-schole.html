@@ -541,15 +541,77 @@
 }
 .form-submit:hover { background: var(--green-dark); transform: translateY(-2px); }
 
+/* ── PROGRAM BOX ── */
+.program-box {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 48px 40px;
+  margin-top: 40px;
+}
+
+/* ── YOUTH GRID ── */
+.youth-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
 @media (max-width: 900px) {
-  .hero-content { grid-template-columns: 1fr; gap: 40px; padding: 0 20px; }
+  .program-box { padding: 32px 24px; border-radius: 16px; }
+  .youth-grid { grid-template-columns: 1fr; gap: 12px; }
+  .hero { min-height: auto; padding: 0 0 48px; }
+  .hero-content { grid-template-columns: 1fr; gap: 40px; padding: 0 20px; padding-top: 80px; }
   .hero-right { display: none; }
-  .concept-grid { grid-template-columns: 1fr; gap: 40px; }
-  .phil-grid { grid-template-columns: 1fr; }
-  .target-grid { grid-template-columns: 1fr; gap: 40px; }
-  .flow-steps { grid-template-columns: 1fr 1fr; }
-  .team-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-logo img { width: min(320px, 85%); }
+  .hero-overline { font-size: 10px; margin-bottom: 20px; }
+  .hero-catch { font-size: 16px; margin-bottom: 28px; line-height: 1.9; }
+  .hero-actions { flex-direction: column; gap: 10px; }
+  .hero-actions a { width: 100%; text-align: center; }
+
+  .concept-grid { grid-template-columns: 1fr; gap: 32px; }
+  .pillar { padding: 20px 22px; }
+  .pillar-title { font-size: 16px; }
+  .pillar-desc { font-size: 13px; }
+
+  .phil-grid { grid-template-columns: 1fr; gap: 12px; }
+  .phil-card { padding: 32px 24px; }
+  .phil-num { font-size: 36px; }
+  .phil-title { font-size: 16px; }
+
+  .target-grid { grid-template-columns: 1fr; gap: 32px; }
+  .target-quote { padding: 36px 24px; border-radius: 16px; }
+  .target-quote::before { font-size: 72px; top: 6px; left: 16px; }
+  .target-card { padding: 18px 20px; }
+
+  .flow-steps { grid-template-columns: 1fr; gap: 0; border-radius: 12px; }
+  .flow-step { padding: 20px 20px; text-align: left; }
+  .flow-time { font-size: 12px; margin-bottom: 6px; }
+  .flow-name { font-size: 15px; margin-bottom: 4px; }
+  .flow-desc { font-size: 12px; }
+
+  .team-grid { grid-template-columns: 1fr !important; max-width: 100% !important; }
+  .team-photo { height: 180px; }
+  .team-body { padding: 22px 20px; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-form { padding: 32px 20px; border-radius: 16px; }
+  .contact-row { padding: 16px 18px; flex-direction: column; gap: 4px; }
+  .contact-label { width: auto; padding-top: 0; }
+  .form-input, .form-textarea, .form-select { font-size: 16px; padding: 14px 16px; }
+  .form-submit { padding: 18px; font-size: 15px; }
+}
+
+@media (max-width: 600px) {
+  .hero-content { padding: 0 16px; padding-top: 72px; }
+  .hero-logo img { width: min(280px, 80%); }
+  .hero-catch { font-size: 15px; }
+
+  .target-quote p { font-size: 18px; }
+
+  .flow-step { gap: 12px; padding: 16px 14px; }
+  .flow-time { min-width: 64px; font-size: 11px; }
+
+  .team-photo { height: 160px; }
 }
 
 [lang-hide] { display: none !important; }
@@ -735,7 +797,7 @@
       <h2 class="section-title" data-ja="学びの構造" data-en="How We Learn">学びの構造</h2>
       <span class="section-title-en">Our Curriculum</span>
     </div>
-    <div style="background:var(--navy);border-radius:20px;padding:48px 40px;margin-top:40px;" class="reveal">
+    <div class="program-box reveal">
       <p style="font-family:'BIZ UDPMincho',serif;font-size:clamp(20px,3vw,32px);font-weight:700;color:var(--white);line-height:1.7;margin-bottom:24px;" data-ja="カリキュラムは、ありません。<br>1日をどう過ごすかは、全部自分で決めます。" data-en="There is no curriculum.<br>You decide entirely how to spend each day.">カリキュラムは、ありません。<br>1日をどう過ごすかは、全部自分で決めます。</p>
       <p style="font-family:'BIZ UDPGothic',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);line-height:2;max-width:600px;" data-ja="読む、作る、話す、外に出る、ぼーっとする——何をするかはあなた次第。ファシリテーターは伴走しますが、決めるのはいつも自分です。自分が決める実感が、人生を一番豊かにしてくれると信じています。" data-en="Read, make, talk, go outside, do nothing — it's all up to you. Facilitators walk alongside you, but you always make the decisions. We believe that deciding for yourself is what most enriches your life.">読む、作る、話す、外に出る、ぼーっとする——何をするかはあなた次第。ファシリテーターは伴走しますが、決めるのはいつも自分です。自分が決める実感が、人生を一番豊かにしてくれると信じています。</p>
     </div>
@@ -816,7 +878,7 @@
       <span class="section-title-en">For High School Age</span>
       <p class="section-lead" data-ja="高校生年代（15〜18歳）を対象にした週2日のプログラム。好きなことをして生きる力——自分を活かして、変幻自在のキャリアをつくる人を育てます。瀬戸プラクティカルカレッジをモデルに、まぬるすこれが知多半島で展開します。" data-en="A twice-weekly program for high school age (15–18). Cultivating the ability to live doing what you love — developing people who can create flexible careers using their strengths. Modeled on Seto Practical College, brought to the Chita Peninsula by Manul Schole.">高校生年代（15〜18歳）を対象にした週2日のプログラム。好きなことをして生きる力——自分を活かして、変幻自在のキャリアをつくる人を育てます。瀬戸プラクティカルカレッジをモデルに、まぬるすこれが知多半島で展開します。</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;" class="reveal">
+    <div class="youth-grid reveal">
       <div style="background:var(--white);border-top:3px solid var(--green);padding:32px 24px;border-radius:0 0 12px 12px;">
         <div style="font-family:'Playfair Display',serif;font-size:11px;color:var(--green);letter-spacing:0.2em;margin-bottom:12px;">Year 1</div>
         <div style="font-family:'BIZ UDPMincho',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px;" data-ja="学ぶ" data-en="Learn">学ぶ</div>
