@@ -348,16 +348,33 @@
 .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 @media (max-width: 900px) {
-  .hero-content { grid-template-columns: 1fr; gap: 40px; padding: 0 20px; }
+  .hero-content { grid-template-columns: 1fr; gap: 32px; padding: 0 16px; }
   .hero-right { display: none; }
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero { padding: 80px 0 56px; min-height: auto; }
+  .hero-logo img { width: min(280px, 80%); }
+  .hero-catch { font-size: 18px; margin-bottom: 28px; }
+  .hero-overline { font-size: 10px; margin-bottom: 20px; }
+  .hero-actions { flex-direction: column; gap: 10px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .about-img-block { padding: 28px; }
+  .about-img-block img { width: 60%; }
+  .mission-band { padding: 48px 0; }
+  .mission-large { font-size: 20px; padding: 0 8px; }
   .project-cards { grid-template-columns: 1fr; }
-  .values-grid { grid-template-columns: 1fr 1fr; }
-  .news-item { flex-wrap: wrap; gap: 10px; }
+  .project-card-body { padding: 24px; }
+  .values-grid { grid-template-columns: 1fr; }
+  .value-card { padding: 24px 20px; }
+  .news-item { flex-wrap: wrap; gap: 8px; padding: 16px 20px; }
   .news-arrow { display: none; }
+  .news-date { width: auto; }
+  .cta-band { padding: 56px 0; }
+  .cta-band h2 { font-size: 20px; }
+  .cta-btns { flex-direction: column; }
 }
 @media (max-width: 600px) {
-  .values-grid { grid-template-columns: 1fr; }
+  .stat-num { font-size: 28px; }
+  .badge { font-size: 11px; padding: 4px 12px; }
 }
 
 /* lang hidden */
@@ -630,10 +647,8 @@
     <div>
       <div class="footer-col-title">Follow Us</div>
       <ul class="footer-links">
-        <li><a href="#">Instagram @kimyo_na_manul</a></li>
-        <li><a href="#" data-ja="まぬらじ（Podcast）" data-en="Manuraji (Podcast)">まぬらじ（Podcast）</a></li>
-        <li><a href="#">note</a></li>
-        <li><a href="#">Discord</a></li>
+        <li><a href="https://www.instagram.com/kimyo_na_manul/" target="_blank" rel="noopener">Instagram @kimyo_na_manul</a></li>
+        <li><a href="https://open.spotify.com/show/4pCX4vRVYYnigfrbYCAyXj" target="_blank" rel="noopener" data-ja="まぬらじ（Podcast）" data-en="Manuraji (Podcast)">まぬらじ（Podcast）</a></li>
       </ul>
     </div>
   </div>
