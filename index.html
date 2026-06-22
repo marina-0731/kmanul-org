@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NPO法人 kimyo-na-manul — 知多半島から教育と居場所をつくる</title>
-<meta name="description" content="NPO法人kimyo-na-manulは、知多半島を拠点にオルタナティブスクール「まぬるすこれ」・民間教育センター「りんごの樹」を運営。すべての子ども・若者が自分らしくいられる居場所をつくっています。">
-<meta name="keywords" content="まぬるすこれ,オルタナティブスクール,知多半島,不登校,NPO法人,kimyo-na-manul,りんごの樹">
+<title>NPO法人 kimyo-na-manul（奇妙なマヌル）— 知多半島から、自分らしく生きる場所をつくる</title>
+<meta name="description" content="NPO法人kimyo-na-manulは、知多半島を拠点にオルタナティブスクール「まぬるすこれ」・民間教育センター「りんごの樹」を運営しています。">
+<meta name="keywords" content="kimyo-na-manul,奇妙なマヌル,NPO法人,知多半島,まぬるすこれ,オルタナティブスクール,りんごの樹">
 <link rel="canonical" href="https://kmanul.org/">
-<meta property="og:title" content="NPO法人 kimyo-na-manul — 知多半島から教育と居場所をつくる">
-<meta property="og:description" content="オルタナティブスクール「まぬるすこれ」運営。知多半島から、すべての子どもが自分らしくいられる場所をつくる。">
+<meta property="og:title" content="NPO法人 kimyo-na-manul — 知多半島から、自分らしく生きる場所をつくる">
+<meta property="og:description" content="オルタナティブスクール「まぬるすこれ」など、子ども・若者の居場所をつくるNPO法人。">
 <meta property="og:url" content="https://kmanul.org/">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="assets/style.css">
@@ -17,618 +17,502 @@
   "@context": "https://schema.org",
   "@type": "NonprofitOrganization",
   "name": "NPO法人 kimyo-na-manul",
-  "alternateName": "奇妙なまぬる",
+  "alternateName": "奇妙なマヌル",
   "url": "https://kmanul.org",
-  "description": "知多半島を拠点にオルタナティブスクール「まぬるすこれ」を運営するNPO法人",
-  "areaServed": "愛知県知多半島",
-  "email": "info@kmanul.org"
+  "description": "知多半島を拠点に、オルタナティブスクール「まぬるすこれ」などを運営するNPO法人",
+  "areaServed": "愛知県知多半島"
 }
 </script>
 <style>
-/* ── HOME HERO ── */
+/* ── HERO ── */
 .hero {
   min-height: 100vh;
   background: var(--navy);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 0 80px;
+  justify-content: center;
+  padding: 100px 0 80px;
   position: relative;
   overflow: hidden;
 }
-.hero-bg-line {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background:
-    linear-gradient(135deg, rgba(95,185,90,0.04) 0%, transparent 60%),
-    linear-gradient(to bottom, transparent 60%, rgba(10,22,40,0.8) 100%);
-  pointer-events: none;
-}
-.hero-grid-lines {
+.hero-bg {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(95,185,90,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(95,185,90,0.04) 1px, transparent 1px);
-  background-size: 80px 80px;
+  background: radial-gradient(ellipse 70% 60% at 80% 40%, rgba(91,142,196,0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 1160px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 48px;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 80px;
+  align-items: center;
 }
 .hero-overline {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 11px;
-  color: var(--green);
-  letter-spacing: 0.4em;
+  color: var(--sky);
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 .hero-overline::before {
   content: '';
   display: block;
-  width: 48px; height: 1px;
-  background: var(--green);
+  width: 40px; height: 1px;
+  background: var(--sky);
 }
-.hero-headline {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(40px, 6vw, 88px);
-  font-weight: 600;
-  color: var(--white);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  margin-bottom: 32px;
+.hero-logo { margin-bottom: 32px; }
+.hero-logo img { width: min(420px, 90%); height: auto; display: block; }
+.hero-catch {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.9;
+  margin-bottom: 40px;
+  letter-spacing: 0.04em;
 }
-.hero-headline em {
-  font-style: normal;
-  color: var(--green);
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-right {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(91,142,196,0.2);
+  border-radius: 16px;
+  padding: 36px 32px;
 }
-.hero-sub {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: clamp(13px, 1.5vw, 16px);
-  font-weight: 300;
-  color: rgba(255,255,255,0.55);
-  line-height: 2;
-  max-width: 560px;
-  margin-bottom: 48px;
-  letter-spacing: 0.03em;
+.hero-right-title {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 10px;
+  color: var(--sky);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.hero-scroll-indicator {
-  position: absolute;
-  right: 48px;
-  bottom: 80px;
+.hero-right-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.hero-right-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  z-index: 2;
+  gap: 4px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.hero-scroll-indicator span {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 9px;
-  color: rgba(255,255,255,0.3);
-  letter-spacing: 0.3em;
-  writing-mode: vertical-rl;
-}
-.hero-scroll-indicator::after {
-  content: '';
-  display: block;
-  width: 1px; height: 60px;
-  background: linear-gradient(to bottom, rgba(95,185,90,0.6), transparent);
-}
-
-/* ── TICKER ── */
-.ticker {
-  background: var(--green);
-  padding: 14px 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.ticker-inner {
-  display: inline-flex;
-  gap: 0;
-  animation: ticker 30s linear infinite;
-}
-.ticker-text {
-  font-family: 'Noto Sans JP', sans-serif;
+.hero-right-item:last-child { border-bottom: none; padding-bottom: 0; }
+.hero-right-label {
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 11px;
-  font-weight: 500;
-  color: var(--navy);
-  letter-spacing: 0.2em;
-  padding: 0 48px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.1em;
 }
-@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.hero-right-name {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--white);
+}
+.hero-right-desc {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+}
 
 /* ── ABOUT ── */
-.about { background: var(--cream); }
+.about { background: var(--white); }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  gap: 80px;
   align-items: center;
 }
-.about-numbers {
+.about-img-block {
+  background: var(--sky-light);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+}
+.about-img-block img { width: 80%; height: auto; }
+.about-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2px;
-}
-.about-num-block {
-  background: var(--navy);
-  padding: 36px 32px;
-  position: relative;
-  overflow: hidden;
-}
-.about-num-block::before {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 3px; height: 100%;
-  background: var(--green);
-}
-.about-num-block:first-child { border-radius: 20px 0 0 0; }
-.about-num-block:nth-child(2) { border-radius: 0 20px 0 0; }
-.about-num-block:nth-child(3) { border-radius: 0 0 0 20px; }
-.about-num-block:last-child { border-radius: 0 0 20px 0; }
-.about-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  font-weight: 700;
-  color: var(--green);
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.about-num-label {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 11px;
-  color: rgba(255,255,255,0.45);
-  line-height: 1.8;
-  letter-spacing: 0.05em;
-}
-.about-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
   margin-top: 32px;
 }
-.badge {
-  background: rgba(95,185,90,0.1);
-  border: 1px solid rgba(95,185,90,0.35);
-  color: var(--green);
-  font-family: 'Noto Sans JP', sans-serif;
+.stat {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--sky);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label {
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 11px;
-  letter-spacing: 0.08em;
-  padding: 6px 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.badge-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.badge {
+  background: var(--sky-light);
+  border: 1px solid var(--sky-mid);
+  color: var(--sky-dark);
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 12px;
+  padding: 5px 14px;
   border-radius: 999px;
 }
 
 /* ── MISSION BAND ── */
 .mission-band {
-  background: var(--navy);
-  padding: 100px 0;
-  position: relative;
-  overflow: hidden;
-}
-.mission-band::before {
-  content: '';
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 800px; height: 800px;
-  background: radial-gradient(circle, rgba(95,185,90,0.06) 0%, transparent 65%);
-  pointer-events: none;
+  background: var(--sky);
+  padding: 72px 0;
+  text-align: center;
 }
 .mission-large {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(28px, 4vw, 54px);
-  font-weight: 500;
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: clamp(22px, 3.5vw, 40px);
+  font-weight: 700;
   color: var(--white);
-  line-height: 1.6;
-  text-align: center;
-  max-width: 860px;
-  margin: 0 auto 24px;
-  letter-spacing: 0.05em;
-  position: relative;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 16px;
+  letter-spacing: 0.04em;
 }
-.mission-large strong {
-  color: var(--green);
-  font-weight: 600;
-}
-.mission-label {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 10px;
-  color: rgba(255,255,255,0.3);
-  letter-spacing: 0.4em;
-  text-align: center;
+.mission-sub {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
 /* ── PROJECTS ── */
-.projects { background: var(--white); }
-.projects-grid {
+.projects { background: var(--stone); }
+.projects-intro {
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+.project-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  margin-top: 48px;
-  border-radius: 24px;
-  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 .project-card {
-  background: var(--stone);
-  padding: 48px 40px;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
   display: block;
-  position: relative;
-  overflow: hidden;
-  transition: background 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
-.project-card::after {
-  content: '→';
-  position: absolute;
-  bottom: 40px; right: 40px;
-  font-size: 20px;
-  color: var(--green);
-  opacity: 0;
-  transform: translateX(-8px);
-  transition: opacity 0.3s, transform 0.3s;
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+.project-card-top {
+  padding: 36px 36px 0;
 }
-.project-card:hover { background: var(--navy); }
-.project-card:hover::after { opacity: 1; transform: translateX(0); }
-.project-card:hover .project-card-tag { color: rgba(255,255,255,0.4); }
-.project-card:hover .project-card-title { color: var(--white); }
-.project-card:hover .project-card-desc { color: rgba(255,255,255,0.5); }
-.project-card-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 13px;
-  color: var(--green);
-  letter-spacing: 0.2em;
-  margin-bottom: 40px;
-}
+.project-card-top.sky { background: linear-gradient(135deg, var(--navy), #1a3050); }
+.project-card-top.green { background: linear-gradient(135deg, #0d2510, #1a3a18); }
+.project-card-logo { width: 80%; max-width: 280px; height: auto; display: block; margin-bottom: -20px; }
+.project-card-body { padding: 32px 36px 36px; }
 .project-card-tag {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 10px;
-  color: var(--text-muted);
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  margin-bottom: 12px;
-  transition: color 0.3s;
+  margin-bottom: 10px;
 }
-.project-card-title {
-  font-family: 'Noto Serif JP', serif;
+.project-card-tag.sky { color: var(--sky); }
+.project-card-tag.green { color: var(--green); }
+.project-card-name {
+  font-family: 'BIZ UDPMincho', serif;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--navy);
-  margin-bottom: 16px;
-  letter-spacing: 0.05em;
-  transition: color 0.3s;
+  margin-bottom: 12px;
 }
 .project-card-desc {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 13px;
-  font-weight: 300;
   color: var(--text-muted);
   line-height: 1.9;
-  transition: color 0.3s;
+  margin-bottom: 20px;
 }
+.project-card-link {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.project-card-link.sky { color: var(--sky); }
+.project-card-link.green { color: var(--green); }
 
 /* ── VALUES ── */
-.values { background: var(--cream); }
+.values { background: var(--white); }
 .values-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 20px;
   margin-top: 8px;
 }
 .value-card {
-  padding: 40px 28px;
-  border-top: 2px solid var(--navy);
+  padding: 32px 24px;
+  border-top: 3px solid var(--sky);
+  background: var(--sky-light);
+  border-radius: 0 0 12px 12px;
 }
 .value-num {
   font-family: 'Playfair Display', serif;
   font-size: 11px;
-  color: var(--green);
-  letter-spacing: 0.25em;
-  margin-bottom: 20px;
-}
-.value-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--navy);
+  color: var(--sky);
+  letter-spacing: 0.2em;
   margin-bottom: 14px;
 }
+.value-title {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
 .value-text {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12px;
-  font-weight: 300;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 13px;
   color: var(--text-muted);
   line-height: 1.9;
 }
 
 /* ── NEWS ── */
-.news { background: var(--navy); }
-.news-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  margin-top: 48px;
-}
+.news { background: var(--sky-light); }
+.news-list { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
 .news-item {
-  background: rgba(255,255,255,0.04);
-  padding: 24px 32px;
+  background: var(--white);
+  padding: 20px 28px;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
   text-decoration: none;
   color: inherit;
-  transition: background 0.2s;
-  border-radius: 4px;
+  border-radius: 8px;
+  transition: box-shadow 0.2s;
 }
-.news-item:hover { background: rgba(95,185,90,0.08); }
-.news-date {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 11px;
-  color: rgba(255,255,255,0.35);
-  letter-spacing: 0.1em;
-  width: 90px;
-  flex-shrink: 0;
-}
+.news-item:hover { box-shadow: 0 4px 16px rgba(91,142,196,0.15); }
+.news-date { font-family: 'BIZ UDPGothic', sans-serif; font-size: 12px; color: var(--text-muted); width: 90px; flex-shrink: 0; }
 .news-tag {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 10px;
-  color: var(--green);
-  background: rgba(95,185,90,0.1);
-  border: 1px solid rgba(95,185,90,0.3);
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 11px;
+  color: var(--sky-dark);
+  background: var(--sky-light);
+  border: 1px solid var(--sky-mid);
   padding: 3px 12px;
   border-radius: 999px;
   white-space: nowrap;
   flex-shrink: 0;
 }
-.news-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 14px;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.7;
-}
-.news-arrow {
-  margin-left: auto;
-  color: var(--green);
-  flex-shrink: 0;
-  font-size: 18px;
-}
+.news-title { font-family: 'BIZ UDPGothic', sans-serif; font-size: 14px; color: var(--navy); line-height: 1.7; }
+.news-arrow { margin-left: auto; color: var(--sky); flex-shrink: 0; font-size: 18px; }
 
 /* ── CTA ── */
-.cta-band {
-  background: var(--green);
-  padding: 88px 0;
-  text-align: center;
-}
+.cta-band { background: var(--navy); padding: 80px 0; text-align: center; }
 .cta-band h2 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 600;
-  color: var(--navy);
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  color: var(--white);
   margin-bottom: 16px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 .cta-band p {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 14px;
-  font-weight: 300;
-  color: rgba(10,22,40,0.65);
-  margin-bottom: 40px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 36px;
   line-height: 2;
 }
-.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn-navy {
-  background: var(--navy);
-  color: var(--white);
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  padding: 16px 36px;
-  text-decoration: none;
-  border-radius: 999px;
-  transition: all 0.25s;
-  display: inline-block;
-}
-.btn-navy:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
-.btn-wh {
-  background: rgba(255,255,255,0.85);
-  color: var(--navy);
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  padding: 16px 36px;
-  text-decoration: none;
-  border-radius: 999px;
-  transition: all 0.25s;
-  display: inline-block;
-}
-.btn-wh:hover { background: var(--white); transform: translateY(-2px); }
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 @media (max-width: 900px) {
-  .hero-content { padding: 0 24px; }
-  .hero-scroll-indicator { display: none; }
-  .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-numbers { grid-template-columns: 1fr 1fr; }
-  .projects-grid { grid-template-columns: 1fr; }
+  .hero-content { grid-template-columns: 1fr; gap: 40px; padding: 0 20px; }
+  .hero-right { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .project-cards { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr 1fr; }
-  .news-item { flex-wrap: wrap; gap: 12px; }
+  .news-item { flex-wrap: wrap; gap: 10px; }
   .news-arrow { display: none; }
 }
 @media (max-width: 600px) {
-  .hero-headline { font-size: 36px; }
   .values-grid { grid-template-columns: 1fr; }
-  .about-num { font-size: 40px; }
 }
+
+/* lang hidden */
+[lang-hide] { display: none !important; }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <a href="index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px;">
-      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="height:40px;width:auto;">
+    <a href="index.html">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
     </a>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">ホーム</a></li>
-    <li><a href="manul-schole.html">まぬるすこれ</a></li>
-    <li><a href="ringo.html">りんごの樹</a></li>
-    <li><a href="sns.html">SNS・メディア</a></li>
-    <li><a href="manul-schole.html#contact" class="nav-cta">お問い合わせ</a></li>
+    <li><a href="index.html" class="active" data-ja="ホーム" data-en="Home">ホーム</a></li>
+    <li><a href="manul-schole.html" data-ja="まぬるすこれ" data-en="Manul Schole">まぬるすこれ</a></li>
+    <li><a href="ringo.html" data-ja="りんごの樹" data-en="Ringo no Ki">りんごの樹</a></li>
+    <li><a href="sns.html" data-ja="SNS・メディア" data-en="Media">SNS・メディア</a></li>
+    <li><a href="manul-schole.html#contact" class="nav-cta" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
   </ul>
-  <div class="nav-hamburger" aria-label="メニュー">
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-ja" onclick="setLang('ja')">JA</button>
+    <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+  <div class="nav-hamburger" onclick="this.parentElement.querySelector('.nav-links').classList.toggle('open')">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg-line"></div>
-  <div class="hero-grid-lines"></div>
+  <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-overline">NPO法人 kimyo-na-manul — 愛知県知多半島</div>
-    <h1 class="hero-headline">
-      どんな子も、<br>
-      ここに<em>いていい</em>。
-    </h1>
-    <p class="hero-sub">
-      既存の教育の枠組みに馴染めない子どもたちが、ありのままの自分で生きていける社会をつくる。オルタナティブスクール「まぬるすこれ」・民間教育センター「りんごの樹」を運営するNPO法人です。
-    </p>
-    <div class="hero-actions">
-      <a href="manul-schole.html" class="btn-primary">まぬるすこれを見る</a>
-      <a href="#projects" class="btn-outline">活動一覧</a>
+    <div class="hero-left">
+      <div class="hero-overline">
+        <span data-ja="NPO法人 — 愛知県知多半島" data-en="Nonprofit Organization — Chita Peninsula, Aichi">NPO法人 — 愛知県知多半島</span>
+      </div>
+      <div class="hero-logo">
+        <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
+      </div>
+      <p class="hero-catch">
+        <span data-ja="どんな子も、自分らしく生きていい。<br>知多半島から、その場所をつくる。" data-en="Every child deserves to live as themselves.<br>We create those spaces from the Chita Peninsula.">どんな子も、自分らしく生きていい。<br>知多半島から、その場所をつくる。</span>
+      </p>
+      <div class="hero-actions">
+        <a href="manul-schole.html" class="btn-sky" data-ja="まぬるすこれを見る" data-en="Manul Schole">まぬるすこれを見る</a>
+        <a href="#about" class="btn-outline-white" data-ja="団体について" data-en="About Us">団体について</a>
+      </div>
     </div>
-  </div>
-  <div class="hero-scroll-indicator">
-    <span>Scroll</span>
+    <div class="hero-right">
+      <div class="hero-right-title" data-ja="わたしたちの活動" data-en="Our Projects">わたしたちの活動</div>
+      <ul class="hero-right-list">
+        <li class="hero-right-item">
+          <span class="hero-right-label" data-ja="オルタナティブスクール" data-en="Alternative School">オルタナティブスクール</span>
+          <span class="hero-right-name">まぬるすこれ</span>
+          <span class="hero-right-desc" data-ja="知多半島地域立。新小学一年生から。" data-en="Chita-based. For children entering 1st grade.">知多半島地域立。新小学一年生から。</span>
+        </li>
+        <li class="hero-right-item">
+          <span class="hero-right-label" data-ja="民間教育センター" data-en="Community Education Center">民間教育センター</span>
+          <span class="hero-right-name">りんごの樹</span>
+          <span class="hero-right-desc" data-ja="大府市。子どもと若者の居場所。" data-en="Obu City. A place for children and youth.">大府市。子どもと若者の居場所。</span>
+        </li>
+        <li class="hero-right-item">
+          <span class="hero-right-label" data-ja="コミュニティ・メディア" data-en="Community & Media">コミュニティ・メディア</span>
+          <span class="hero-right-name">まぬらじ</span>
+          <span class="hero-right-desc" data-ja="ラジオ・Discord・SNSで仲間とつながる。" data-en="Radio, Discord & SNS community.">ラジオ・Discord・SNSで仲間とつながる。</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-inner">
-    <span class="ticker-text">まぬるすこれ</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">オルタナティブスクール</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">知多半島</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">不登校支援</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">りんごの樹</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">NPO法人 kimyo-na-manul</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">まぬるすこれ</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">オルタナティブスクール</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">知多半島</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">不登校支援</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">りんごの樹</span>
-    <span class="ticker-text">—</span>
-    <span class="ticker-text">NPO法人 kimyo-na-manul</span>
-    <span class="ticker-text">—</span>
-  </div>
-</div>
-
 <!-- ABOUT -->
-<section class="about">
+<section class="about" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="reveal">
-        <div class="eyebrow">About Us</div>
-        <h2 class="section-title">kimyo-na-manul<br>とは</h2>
-        <span class="section-title-jp">Who We Are</span>
-        <p class="section-lead">
-          「奇妙なまぬる」——既存の枠組みに馴染めない子どもたちが、ありのままの自分で生きていける社会をつくるために設立したNPO法人です。知多半島を拠点に、オルタナティブスクール「まぬるすこれ」、民間教育センター「りんごの樹」などを運営しています。
+        <div class="eyebrow eyebrow-sky" data-ja="About Us" data-en="About Us">About Us</div>
+        <h2 class="section-title" data-ja="kimyo-na-manul とは" data-en="Who We Are">kimyo-na-manul とは</h2>
+        <span class="section-title-en">NPO法人 奇妙なマヌル</span>
+        <p class="section-lead" data-ja="「奇妙なまぬる（パラスネコ）」のように——孤高でありながら、深い観察眼と適応力をもって、自分の力で生きていく。そんな子ども・若者を育む場所をつくるために設立したNPO法人です。知多半島を拠点に、複数の事業を通じて活動しています。" data-en="Like the Pallas's cat — living independently, with deep perception and adaptability. We are a nonprofit building spaces for children and youth to grow on their own terms, based in the Chita Peninsula.">
+          「奇妙なまぬる（パラスネコ）」のように——孤高でありながら、深い観察眼と適応力をもって、自分の力で生きていく。そんな子ども・若者を育む場所をつくるために設立したNPO法人です。知多半島を拠点に、複数の事業を通じて活動しています。
         </p>
-        <div class="about-badges">
-          <span class="badge">NPO法人</span>
-          <span class="badge">愛知県知多半島</span>
-          <span class="badge">U29主導ガバナンス</span>
-          <span class="badge">インクルーシブ教育</span>
-          <span class="badge">不登校支援</span>
+        <div class="badge-list">
+          <span class="badge" data-ja="NPO法人格" data-en="Nonprofit">NPO法人格</span>
+          <span class="badge" data-ja="愛知県知多半島" data-en="Chita Peninsula, Aichi">愛知県知多半島</span>
+          <span class="badge" data-ja="U29主導ガバナンス" data-en="U29 Leadership">U29主導ガバナンス</span>
+          <span class="badge" data-ja="教育・居場所支援" data-en="Education & Spaces">教育・居場所支援</span>
         </div>
       </div>
-      <div class="about-numbers reveal">
-        <div class="about-num-block">
-          <div class="about-num">2</div>
-          <div class="about-num-label">教育拠点<br>まぬるすこれ・りんごの樹</div>
-        </div>
-        <div class="about-num-block">
-          <div class="about-num">U29</div>
-          <div class="about-num-label">若者主導の<br>ガバナンス体制</div>
-        </div>
-        <div class="about-num-block">
-          <div class="about-num">33<span style="font-size:20px">万</span></div>
-          <div class="about-num-label">日本の不登校児童生徒数<br>（文科省2023年調査）</div>
-        </div>
-        <div class="about-num-block">
-          <div class="about-num">∞</div>
-          <div class="about-num-label">自分らしい学びの<br>可能性</div>
+      <div class="about-img-block reveal">
+        <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-num">2</div>
+            <div class="stat-label" data-ja="教育拠点" data-en="Education Bases">教育拠点</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">U29</div>
+            <div class="stat-label" data-ja="若者主導運営" data-en="Youth-led">若者主導運営</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">知多</div>
+            <div class="stat-label" data-ja="半島から発信" data-en="Peninsula-based">半島から発信</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label" data-ja="学びの可能性" data-en="Possibilities">学びの可能性</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MISSION -->
+<!-- MISSION BAND -->
 <div class="mission-band">
   <div class="container">
-    <p class="mission-large reveal">
-      「奇妙さ」は、欠如ではない。<br>
-      それは、<strong>強さだ</strong>。
+    <p class="mission-large reveal" data-ja="「奇妙さ」は、欠如ではない。<br>自分の力で幸せに生きていく、その出発点だ。" data-en="Being 'different' is not a deficiency.<br>It is the starting point for living happily on your own terms.">
+      「奇妙さ」は、欠如ではない。<br>自分の力で幸せに生きていく、その出発点だ。
     </p>
-    <p class="mission-label reveal">KIMYO-NA-MANUL — OUR BELIEF</p>
+    <p class="mission-sub reveal">KIMYO-NA-MANUL — OUR BELIEF</p>
   </div>
 </div>
 
 <!-- PROJECTS -->
 <section class="projects" id="projects">
   <div class="container">
-    <div class="eyebrow reveal">Our Projects</div>
-    <h2 class="section-title reveal">活動・事業</h2>
-    <span class="section-title-jp reveal">What We Do</span>
-    <div class="projects-grid">
+    <div class="eyebrow eyebrow-sky reveal" data-ja="Our Projects" data-en="Our Projects">Our Projects</div>
+    <h2 class="section-title reveal" data-ja="活動・事業" data-en="What We Do">活動・事業</h2>
+    <div class="projects-intro reveal">
+      <p class="section-lead" data-ja="kimyo-na-manulは、複数の事業を通じて、子ども・若者・保護者を支えます。" data-en="kimyo-na-manul supports children, youth, and families through multiple programs.">kimyo-na-manulは、複数の事業を通じて、子ども・若者・保護者を支えます。</p>
+    </div>
+    <div class="project-cards">
       <a href="manul-schole.html" class="project-card reveal">
-        <div class="project-card-num">01</div>
-        <div class="project-card-tag">Education</div>
-        <div class="project-card-title">まぬるすこれ</div>
-        <p class="project-card-desc">知多半島地域立オルタナティブスクール。自己決定・探究・地域コミュニティを柱に、ひとりひとりの「あるがまま」を起点とした学びの場。</p>
+        <div class="project-card-top green">
+          <img src="assets/logo-manul-schole.png" alt="まぬるすこれ" class="project-card-logo">
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-tag green" data-ja="オルタナティブスクール" data-en="Alternative School">オルタナティブスクール</div>
+          <div class="project-card-name">まぬるすこれ</div>
+          <p class="project-card-desc" data-ja="知多半島地域立オルタナティブスクール。自己決定・探究・地域共育を柱に、自分らしく生きる力を育む。新小学一年生から。" data-en="Alternative school on the Chita Peninsula. Cultivating the ability to live authentically, through self-determination, inquiry, and community learning. From 1st grade.">知多半島地域立オルタナティブスクール。自己決定・探究・地域共育を柱に、自分らしく生きる力を育む。新小学一年生から。</p>
+          <span class="project-card-link green" data-ja="詳しく見る →" data-en="Learn more →">詳しく見る →</span>
+        </div>
       </a>
       <a href="ringo.html" class="project-card reveal">
-        <div class="project-card-num">02</div>
-        <div class="project-card-tag">Learning Support</div>
-        <div class="project-card-title">りんごの樹</div>
-        <p class="project-card-desc">大府市民間教育センター。学習・生活・心のサポートを提供する地域密着型の教育支援の場。学校に行きにくい子どもたちの居場所。</p>
-      </a>
-      <a href="sns.html" class="project-card reveal">
-        <div class="project-card-num">03</div>
-        <div class="project-card-tag">Community &amp; Media</div>
-        <div class="project-card-title">まぬらじ・コミュニティ</div>
-        <p class="project-card-desc">コミュニティラジオ「まぬらじ」、Discordコミュニティ、SNSを通じて、仲間とつながり、声を届け、共に考える場をつくっています。</p>
+        <div class="project-card-top sky" style="padding-top:48px;padding-bottom:48px;text-align:center;">
+          <span style="font-family:'BIZ UDPMincho',serif;font-size:42px;font-weight:700;color:var(--white);">りんごの樹</span>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-tag sky" data-ja="民間教育センター" data-en="Community Education Center">民間教育センター</div>
+          <div class="project-card-name">りんごの樹</div>
+          <p class="project-card-desc" data-ja="大府市の民間教育センター。学習・生活・心のサポートを提供する、地域密着型の子ども・若者の居場所。" data-en="Community education center in Obu City. A local space for learning, life support, and emotional care for children and youth.">大府市の民間教育センター。学習・生活・心のサポートを提供する、地域密着型の子ども・若者の居場所。</p>
+          <span class="project-card-link sky" data-ja="詳しく見る →" data-en="Learn more →">詳しく見る →</span>
+        </div>
       </a>
     </div>
   </div>
@@ -637,29 +521,29 @@
 <!-- VALUES -->
 <section class="values">
   <div class="container">
-    <div class="eyebrow reveal">Our Values</div>
-    <h2 class="section-title reveal">大切にしていること</h2>
-    <span class="section-title-jp reveal">Core Values</span>
+    <div class="eyebrow eyebrow-sky reveal" data-ja="Our Values" data-en="Our Values">Our Values</div>
+    <h2 class="section-title reveal" data-ja="大切にしていること" data-en="What We Value">大切にしていること</h2>
+    <span class="section-title-en reveal">Core Values</span>
     <div class="values-grid">
       <div class="value-card reveal">
         <div class="value-num">01</div>
-        <div class="value-title">ありのまま</div>
-        <p class="value-text">「できない」「違う」を欠如ではなく個性として捉え、すべての子どもの存在を肯定します。</p>
+        <div class="value-title" data-ja="ありのまま" data-en="As You Are">ありのまま</div>
+        <p class="value-text" data-ja="「違う」「変わっている」を欠如ではなく個性として肯定します。すべての子どもの存在が、そのままで価値を持っています。" data-en="We affirm 'different' and 'unusual' as individuality, not deficiency. Every child has inherent worth.">「違う」「変わっている」を欠如ではなく個性として肯定します。すべての子どもの存在が、そのままで価値を持っています。</p>
       </div>
       <div class="value-card reveal">
         <div class="value-num">02</div>
-        <div class="value-title">自己決定</div>
-        <p class="value-text">学びの内容・方法・ペースを自ら決める機会を保障。外から押しつけない教育を実践します。</p>
+        <div class="value-title" data-ja="自己決定" data-en="Self-determination">自己決定</div>
+        <p class="value-text" data-ja="学びの内容・方法・ペースを自ら決める機会を保障します。自分が決める実感が、人生を豊かにします。" data-en="We ensure opportunities to decide one's own learning content, method, and pace. The experience of deciding for yourself enriches life.">学びの内容・方法・ペースを自ら決める機会を保障します。自分が決める実感が、人生を豊かにします。</p>
       </div>
       <div class="value-card reveal">
         <div class="value-num">03</div>
-        <div class="value-title">共育</div>
-        <p class="value-text">子ども・保護者・スタッフ・地域が一緒に育ち合う。誰かが誰かを「教える」だけでない関係性を大切にします。</p>
+        <div class="value-title" data-ja="共育" data-en="Co-education">共育</div>
+        <p class="value-text" data-ja="子ども・保護者・スタッフ・地域が一緒に育ち合う。誰かが誰かを一方的に「教える」だけでない関係性を大切にします。" data-en="Children, parents, staff, and community grow together. We value relationships that go beyond one-sided 'teaching'.">子ども・保護者・スタッフ・地域が一緒に育ち合う。誰かが誰かを一方的に「教える」だけでない関係性を大切にします。</p>
       </div>
       <div class="value-card reveal">
         <div class="value-num">04</div>
-        <div class="value-title">地域とともに</div>
-        <p class="value-text">知多半島の人・自然・文化をいかし、地域社会と共に育つ次世代の教育エコシステムをつくります。</p>
+        <div class="value-title" data-ja="地域とともに" data-en="With the Community">地域とともに</div>
+        <p class="value-text" data-ja="知多半島の人・自然・文化を活かし、地域と共に育つ教育エコシステムをつくります。" data-en="We build an educational ecosystem that grows with the people, nature, and culture of the Chita Peninsula.">知多半島の人・自然・文化を活かし、地域と共に育つ教育エコシステムをつくります。</p>
       </div>
     </div>
   </div>
@@ -668,32 +552,25 @@
 <!-- NEWS -->
 <section class="news">
   <div class="container">
-    <div class="eyebrow dark reveal">News &amp; Updates</div>
-    <h2 class="section-title reveal" style="color:var(--white)">お知らせ</h2>
-    <span class="section-title-jp reveal" style="color:rgba(255,255,255,0.4)">Latest News</span>
+    <div class="eyebrow eyebrow-sky reveal" data-ja="News" data-en="News">News</div>
+    <h2 class="section-title reveal" data-ja="お知らせ" data-en="Latest News">お知らせ</h2>
     <div class="news-list reveal">
       <a href="manul-schole.html#contact" class="news-item">
         <span class="news-date">2025.04.01</span>
         <span class="news-tag">まぬるすこれ</span>
-        <span class="news-title">2025年度 入学・見学受付を開始しました</span>
+        <span class="news-title" data-ja="2025年度 入学・見学受付を開始しました" data-en="Applications and visits now open for 2025">2025年度 入学・見学受付を開始しました</span>
         <span class="news-arrow">→</span>
       </a>
       <a href="ringo.html" class="news-item">
         <span class="news-date">2025.02.01</span>
         <span class="news-tag">りんごの樹</span>
-        <span class="news-title">大府市民間教育センター「りんごの樹」開設のお知らせ</span>
+        <span class="news-title" data-ja="大府市民間教育センター「りんごの樹」開設のお知らせ" data-en="Ringo no Ki community center now open in Obu City">大府市民間教育センター「りんごの樹」開設のお知らせ</span>
         <span class="news-arrow">→</span>
       </a>
       <a href="sns.html" class="news-item">
         <span class="news-date">2025.01.10</span>
         <span class="news-tag">まぬらじ</span>
-        <span class="news-title">まぬらじ 新エピソード公開中！</span>
-        <span class="news-arrow">→</span>
-      </a>
-      <a href="#" class="news-item">
-        <span class="news-date">2024.09.01</span>
-        <span class="news-tag">団体</span>
-        <span class="news-title">NPO法人kimyo-na-manul 公式サイトをオープンしました</span>
+        <span class="news-title" data-ja="まぬらじ 新エピソード公開中" data-en="New episodes of Manuraji now available">まぬらじ 新エピソード公開中</span>
         <span class="news-arrow">→</span>
       </a>
     </div>
@@ -703,12 +580,11 @@
 <!-- CTA -->
 <div class="cta-band">
   <div class="container">
-    <h2 class="reveal">一緒に、居場所をつくりませんか？</h2>
-    <p class="reveal">入学相談・見学・寄付・ボランティアなど、関わり方はさまざまです。<br>まずはお気軽にお問い合わせください。</p>
+    <h2 class="reveal" data-ja="一緒に、子どもの未来をつくりませんか？" data-en="Let's build the future for children, together.">一緒に、子どもの未来をつくりませんか？</h2>
+    <p class="reveal" data-ja="入学相談・見学・寄付・ボランティアなど、関わり方はさまざまです。まずはお気軽にお問い合わせください。" data-en="There are many ways to get involved — admissions, visits, donations, volunteering. Feel free to reach out.">入学相談・見学・寄付・ボランティアなど、関わり方はさまざまです。まずはお気軽にお問い合わせください。</p>
     <div class="cta-btns reveal">
-      <a href="manul-schole.html#contact" class="btn-navy">まぬるすこれに相談する</a>
-      <a href="ringo.html" class="btn-navy">りんごの樹を見る</a>
-      <a href="sns.html" class="btn-wh">SNS・コミュニティを見る</a>
+      <a href="manul-schole.html#contact" class="btn-sky" data-ja="まぬるすこれに相談する" data-en="Contact Manul Schole">まぬるすこれに相談する</a>
+      <a href="ringo.html" class="btn-outline-white" data-ja="りんごの樹を見る" data-en="Visit Ringo no Ki">りんごの樹を見る</a>
     </div>
   </div>
 </div>
@@ -717,41 +593,51 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="width:160px;height:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);">
-      <div class="footer-tagline">
-        知多半島から、すべての子どもが<br>
-        自分らしくいられる場所をつくる。<br>
-        NPO法人 kimyo-na-manul
-      </div>
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="filter:brightness(0) invert(1);">
+      <div class="footer-tagline" data-ja="知多半島から、自分らしく生きる場所をつくる。<br>NPO法人 kimyo-na-manul（奇妙なマヌル）" data-en="Creating spaces to live authentically, from the Chita Peninsula.<br>NPO kimyo-na-manul">知多半島から、自分らしく生きる場所をつくる。<br>NPO法人 kimyo-na-manul（奇妙なマヌル）</div>
     </div>
     <div>
-      <div class="footer-col-title">サイトマップ</div>
+      <div class="footer-col-title" data-ja="サイトマップ" data-en="Site Map">サイトマップ</div>
       <ul class="footer-links">
-        <li><a href="index.html">ホーム</a></li>
+        <li><a href="index.html" data-ja="ホーム" data-en="Home">ホーム</a></li>
         <li><a href="manul-schole.html">まぬるすこれ</a></li>
-        <li><a href="ringo.html">りんごの樹</a></li>
-        <li><a href="sns.html">SNS・メディア</a></li>
-        <li><a href="manul-schole.html#contact">お問い合わせ</a></li>
+        <li><a href="ringo.html" data-ja="りんごの樹" data-en="Ringo no Ki">りんごの樹</a></li>
+        <li><a href="sns.html" data-ja="SNS・メディア" data-en="Media">SNS・メディア</a></li>
+        <li><a href="manul-schole.html#contact" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Follow Us</div>
       <ul class="footer-links">
         <li><a href="#">Instagram @kimyo_na_manul</a></li>
-        <li><a href="#">まぬらじ（Podcast）</a></li>
+        <li><a href="#" data-ja="まぬらじ（Podcast）" data-en="Manuraji (Podcast)">まぬらじ（Podcast）</a></li>
         <li><a href="#">note</a></li>
-        <li><a href="#">Discord コミュニティ</a></li>
+        <li><a href="#">Discord</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2025 NPO法人 kimyo-na-manul. All rights reserved.</div>
-    <div class="footer-legal">
-      <a href="#">プライバシーポリシー</a>
-    </div>
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script>
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+
+// Language toggle
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.querySelectorAll('[data-ja][data-en]').forEach(el => {
+    el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.ja;
+  });
+}
+</script>
 </body>
 </html>

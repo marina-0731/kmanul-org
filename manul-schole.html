@@ -3,22 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>まぬるすこれ | 知多半島のオルタナティブスクール | NPO法人 kimyo-na-manul</title>
-<meta name="description" content="まぬるすこれは、愛知県知多半島のオルタナティブスクールです。不登校・発達の多様性のある子どもたちが、自己決定・探究・地域コミュニティを通じて自分らしく学べる場所です。">
-<meta name="keywords" content="まぬるすこれ,オルタナティブスクール,知多半島,不登校,発達障害,愛知県,NPO,kimyo-na-manul,フリースクール">
+<title>まぬるすこれ | 知多半島地域立オルタナティブスクール | kmanul.org</title>
+<meta name="description" content="まぬるすこれは、愛知県知多半島のオルタナティブスクールです。自分の力で幸せに生きていきたい子どもたちのための、自己決定・探究・地域共育を柱にした学びの場。新小学一年生から。">
+<meta name="keywords" content="まぬるすこれ,オルタナティブスクール,知多半島,愛知県,自己決定,探究,kimyo-na-manul,フリースクール,新小学一年生">
 <link rel="canonical" href="https://kmanul.org/manul-schole.html">
-<meta property="og:title" content="まぬるすこれ | 知多半島のオルタナティブスクール">
-<meta property="og:description" content="自己決定・探究・地域共育。知多半島から、子どもの「ありのまま」を起点にした次世代型の学びの場。">
+<meta property="og:title" content="まぬるすこれ | 知多半島地域立オルタナティブスクール">
+<meta property="og:description" content="自分の力で幸せに生きていきたい子へ。知多半島から、自己決定と探究の学びをつくる。">
 <meta property="og:url" content="https://kmanul.org/manul-schole.html">
-<meta property="og:type" content="website">
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   "name": "まぬるすこれ",
-  "alternateName": "Manul Schole",
-  "description": "愛知県知多半島のオルタナティブスクール。不登校・発達の多様性のある子どもたちが自分らしく学べる場所。",
+  "alternateName": ["Manul Schole","まぬるすこれ オルタナティブスクール"],
+  "description": "愛知県知多半島のオルタナティブスクール。自己決定・探究・地域共育を柱に、自分らしく生きる力を育む。新小学一年生から。",
   "url": "https://kmanul.org/manul-schole.html",
   "areaServed": "愛知県知多半島",
   "parentOrganization": {
@@ -36,102 +35,76 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 0 80px;
+  padding: 0 0 72px;
   position: relative;
   overflow: hidden;
 }
-.hero-accent-line {
+.hero-bg {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background:
-    linear-gradient(135deg, rgba(95,185,90,0.05) 0%, transparent 50%);
-  pointer-events: none;
-}
-.hero-vertical-line {
-  position: absolute;
-  top: 0; right: 200px;
-  width: 1px; height: 100%;
-  background: linear-gradient(to bottom, transparent, rgba(95,185,90,0.15) 30%, rgba(95,185,90,0.15) 70%, transparent);
+  inset: 0;
+  background: radial-gradient(ellipse 60% 70% at 30% 60%, rgba(79,173,74,0.10) 0%, transparent 65%);
   pointer-events: none;
 }
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 1160px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 48px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 1fr 420px;
   gap: 80px;
   align-items: end;
 }
-.hero-left {}
 .hero-overline {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 10px;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 11px;
   color: var(--green);
-  letter-spacing: 0.4em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 .hero-overline::before {
   content: '';
   display: block;
-  width: 48px; height: 1px;
+  width: 40px; height: 1px;
   background: var(--green);
 }
-.hero-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(48px, 7vw, 96px);
-  font-weight: 600;
-  color: var(--white);
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  margin-bottom: 12px;
-}
-.hero-title-en {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(14px, 1.5vw, 18px);
+.hero-logo { margin-bottom: 24px; }
+.hero-logo img { width: min(500px, 90%); height: auto; display: block; }
+.hero-catch {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: clamp(16px, 2vw, 22px);
   font-weight: 400;
-  font-style: italic;
-  color: rgba(255,255,255,0.3);
-  letter-spacing: 0.2em;
-  margin-bottom: 40px;
-  display: block;
+  color: rgba(255,255,255,0.8);
+  line-height: 2;
+  max-width: 520px;
+  margin-bottom: 44px;
+  letter-spacing: 0.04em;
 }
-.hero-desc {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.55);
-  line-height: 2.1;
-  max-width: 480px;
-  margin-bottom: 48px;
-}
-.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
 .hero-right {}
 .hero-quote {
-  border-left: 2px solid var(--green);
-  padding: 28px 32px;
-  background: rgba(255,255,255,0.03);
+  border-left: 3px solid var(--green);
+  padding: 24px 28px;
   margin-bottom: 20px;
+  background: rgba(79,173,74,0.05);
   border-radius: 0 12px 12px 0;
 }
 .hero-quote p {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'BIZ UDPMincho', serif;
   font-size: 15px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.7);
   line-height: 2;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .hero-quote cite {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 10px;
   font-style: normal;
   color: var(--green);
@@ -144,15 +117,15 @@
 }
 .stat-block {
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(95,185,90,0.15);
-  padding: 28px 24px;
+  border: 1px solid rgba(79,173,74,0.15);
+  padding: 24px 20px;
   border-radius: 4px;
   transition: border-color 0.2s;
 }
-.stat-block:hover { border-color: rgba(95,185,90,0.4); }
+.stat-block:hover { border-color: rgba(79,173,74,0.4); }
 .stat-number {
   font-family: 'Playfair Display', serif;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--green);
   line-height: 1;
@@ -160,245 +133,251 @@
 }
 .stat-unit { font-size: 14px; font-weight: 300; }
 .stat-label {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 11px;
   color: rgba(255,255,255,0.4);
-  letter-spacing: 0.05em;
   line-height: 1.7;
 }
 
 /* ── CONCEPT ── */
-.concept { background: var(--cream); }
+.concept { background: var(--white); }
 .concept-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  gap: 80px;
   align-items: start;
 }
-.concept-text {}
-.concept-pillars {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
+.pillars { display: flex; flex-direction: column; gap: 2px; }
 .pillar {
-  background: var(--white);
+  background: var(--green-bg);
   border-left: 4px solid transparent;
-  padding: 28px 32px;
-  transition: border-color 0.25s, box-shadow 0.25s;
-  border-radius: 0 12px 12px 0;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 24px 28px;
+  border-radius: 0 10px 10px 0;
+  transition: border-color 0.25s, background 0.25s;
 }
 .pillar:hover {
   border-left-color: var(--green);
-  box-shadow: 0 4px 16px rgba(95,185,90,0.1);
+  background: var(--green-light);
 }
 .pillar-num {
   font-family: 'Playfair Display', serif;
   font-size: 10px;
   color: var(--green);
-  letter-spacing: 0.3em;
-  margin-bottom: 10px;
+  letter-spacing: 0.25em;
+  margin-bottom: 8px;
 }
 .pillar-title {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'BIZ UDPMincho', serif;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--navy);
   margin-bottom: 8px;
 }
 .pillar-desc {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 13px;
-  font-weight: 300;
   color: var(--text-muted);
   line-height: 1.9;
 }
 
 /* ── PHILOSOPHY ── */
 .philosophy { background: var(--navy); }
-.philosophy-grid {
+.phil-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
   margin-top: 48px;
 }
 .phil-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(95,185,90,0.12);
-  padding: 48px 36px;
-  transition: background 0.25s, border-color 0.25s;
+  background: rgba(79,173,74,0.04);
+  border: 1px solid rgba(79,173,74,0.12);
+  padding: 44px 32px;
   border-radius: 4px;
+  transition: background 0.25s, border-color 0.25s;
 }
 .phil-card:hover {
-  background: rgba(95,185,90,0.06);
-  border-color: rgba(95,185,90,0.35);
+  background: rgba(79,173,74,0.09);
+  border-color: rgba(79,173,74,0.35);
 }
 .phil-num {
   font-family: 'Playfair Display', serif;
-  font-size: 52px;
+  font-size: 48px;
   font-weight: 700;
-  color: rgba(95,185,90,0.2);
+  color: rgba(79,173,74,0.18);
   line-height: 1;
-  margin-bottom: 20px;
-}
-.phil-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--green-light);
   margin-bottom: 16px;
 }
+.phil-title {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--green-light);
+  margin-bottom: 14px;
+}
 .phil-text {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 13px;
-  font-weight: 300;
   color: rgba(255,255,255,0.5);
   line-height: 2;
 }
 
-/* ── IMPACT ── */
-.impact { background: var(--white); }
-.impact-grid {
+/* ── TARGET ── */
+.target { background: var(--green-bg); }
+.target-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  margin-top: 48px;
-  border-radius: 20px;
-  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
-.impact-card {
+.target-quote {
   background: var(--navy);
-  padding: 48px 36px;
+  border-radius: 20px;
+  padding: 48px 40px;
+  text-align: center;
   position: relative;
 }
-.impact-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 3px;
-  background: var(--green);
-}
-.impact-number {
+.target-quote::before {
+  content: '"';
   font-family: 'Playfair Display', serif;
-  font-size: 56px;
-  font-weight: 700;
-  color: var(--green);
+  font-size: 100px;
+  color: rgba(79,173,74,0.15);
+  position: absolute;
+  top: 10px; left: 24px;
   line-height: 1;
-  margin-bottom: 8px;
 }
-.impact-unit { font-size: 18px; font-weight: 300; }
-.impact-label {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12px;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0.1em;
-  line-height: 1.8;
+.target-quote p {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.7;
+  position: relative;
   margin-bottom: 16px;
 }
-.impact-note {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12px;
+.target-quote p em {
+  font-style: normal;
+  color: var(--green);
+}
+.target-quote cite {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 11px;
   color: rgba(255,255,255,0.3);
+  letter-spacing: 0.25em;
+  font-style: normal;
+}
+.target-cards { display: flex; flex-direction: column; gap: 12px; }
+.target-card {
+  background: var(--white);
+  border-left: 4px solid var(--green);
+  padding: 22px 24px;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.target-card-label {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 10px;
+  color: var(--green);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.target-card-text {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 14px;
+  color: var(--navy);
   line-height: 1.8;
-  border-top: 1px solid rgba(95,185,90,0.15);
-  padding-top: 16px;
-  margin-top: 4px;
+  font-weight: 700;
 }
 
 /* ── PROGRAM ── */
-.program { background: var(--stone); }
+.program { background: var(--white); }
 .program-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 48px;
-  background: var(--white);
-  border-radius: 20px;
+  margin-top: 40px;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 2px 16px rgba(0,0,0,0.05);
 }
 .program-table thead tr { background: var(--navy); }
 .program-table th {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 10px;
-  font-weight: 400;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
   color: var(--green);
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   text-align: left;
-  padding: 20px 28px;
+  padding: 18px 24px;
   text-transform: uppercase;
 }
 .program-table td {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 14px;
-  font-weight: 300;
   color: var(--text);
-  padding: 20px 28px;
+  padding: 18px 24px;
   border-bottom: 1px solid var(--stone);
   vertical-align: top;
   line-height: 1.8;
+  background: var(--white);
 }
 .program-table tr:last-child td { border-bottom: none; }
-.program-table tr:hover td { background: rgba(95,185,90,0.03); }
-.program-table td strong { font-weight: 500; color: var(--navy); }
+.program-table tr:hover td { background: var(--green-bg); }
+.program-table td strong { font-weight: 700; color: var(--navy); }
 .tag {
   display: inline-block;
   background: var(--navy);
   color: var(--green);
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 10px;
-  letter-spacing: 0.12em;
-  padding: 4px 12px;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
   margin-right: 4px;
-  margin-bottom: 4px;
   border-radius: 999px;
 }
 
-/* ── DAY FLOW ── */
-.dayflow { background: var(--cream); }
+/* ── DAYFLOW ── */
+.dayflow { background: var(--stone); }
 .flow-steps {
-  display: flex;
-  gap: 0;
-  margin-top: 48px;
-  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  margin-top: 40px;
+  border-radius: 16px;
   overflow: hidden;
 }
 .flow-step {
-  flex: 1;
   background: var(--white);
-  padding: 36px 24px;
-  border-right: 1px solid var(--stone);
-  position: relative;
+  padding: 32px 20px;
   text-align: center;
+  transition: background 0.25s;
+  cursor: default;
 }
-.flow-step:last-child { border-right: none; }
 .flow-step:hover { background: var(--navy); }
-.flow-step:hover .flow-time { color: rgba(255,255,255,0.4); }
-.flow-step:hover .flow-name { color: var(--green-light); }
+.flow-step:hover .flow-time,
+.flow-step:hover .flow-name { color: var(--green); }
 .flow-step:hover .flow-desc { color: rgba(255,255,255,0.5); }
 .flow-time {
   font-family: 'Playfair Display', serif;
-  font-size: 12px;
-  color: var(--green);
-  letter-spacing: 0.15em;
-  margin-bottom: 12px;
-  transition: color 0.3s;
+  font-size: 13px;
+  color: var(--green-dark);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  transition: color 0.25s;
 }
 .flow-name {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'BIZ UDPMincho', serif;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--navy);
-  margin-bottom: 10px;
-  transition: color 0.3s;
+  margin-bottom: 8px;
+  transition: color 0.25s;
 }
 .flow-desc {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 11px;
-  font-weight: 300;
   color: var(--text-muted);
   line-height: 1.8;
-  transition: color 0.3s;
+  transition: color 0.25s;
 }
 
 /* ── TEAM ── */
@@ -406,135 +385,136 @@
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  margin-top: 48px;
+  gap: 20px;
+  margin-top: 40px;
 }
 .team-card {
   background: rgba(255,255,255,0.04);
-  padding: 40px 32px;
-  border-radius: 4px;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.25s, background 0.25s;
+  border-radius: 16px;
+  overflow: hidden;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.25s, box-shadow 0.25s;
 }
-.team-card:hover {
-  border-bottom-color: var(--green);
-  background: rgba(95,185,90,0.05);
+.team-card:hover { border-bottom-color: var(--green); box-shadow: 0 8px 24px rgba(79,173,74,0.12); }
+.team-photo {
+  width: 100%; height: 200px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  background: rgba(255,255,255,0.06);
 }
-.team-avatar {
-  width: 64px; height: 64px;
-  background: rgba(95,185,90,0.15);
-  border: 1px solid rgba(95,185,90,0.3);
-  border-radius: 50%;
-  margin-bottom: 20px;
+.team-photo-placeholder {
+  width: 100%; height: 200px;
+  background: rgba(79,173,74,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  color: var(--green);
+  font-size: 48px;
+  color: rgba(79,173,74,0.4);
 }
+.team-body { padding: 28px 24px; }
 .team-role {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 10px;
   color: var(--green);
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .team-name {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: 19px;
+  font-weight: 700;
   color: var(--white);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 .team-name-en {
   font-family: 'Playfair Display', serif;
   font-size: 12px;
   font-style: italic;
   color: rgba(255,255,255,0.3);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .team-bio {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 12px;
-  font-weight: 300;
   color: rgba(255,255,255,0.45);
   line-height: 1.9;
   border-top: 1px solid rgba(255,255,255,0.06);
-  padding-top: 16px;
+  padding-top: 14px;
 }
 
 /* ── CONTACT ── */
-.contact { background: var(--cream); }
+.contact { background: var(--green-bg); }
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 72px;
   align-items: start;
 }
 .contact-info { display: flex; flex-direction: column; gap: 2px; }
 .contact-row {
   background: var(--white);
-  padding: 22px 28px;
+  padding: 20px 24px;
   display: flex;
-  gap: 24px;
+  gap: 20px;
   align-items: flex-start;
-  border-radius: 4px;
+  border-radius: 8px;
 }
-.contact-row-label {
-  font-family: 'Noto Sans JP', sans-serif;
+.contact-label {
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 10px;
-  color: var(--green);
+  color: var(--green-dark);
   letter-spacing: 0.2em;
-  width: 72px;
+  text-transform: uppercase;
+  width: 64px;
   flex-shrink: 0;
   padding-top: 3px;
 }
-.contact-row-value {
-  font-family: 'Noto Serif JP', serif;
+.contact-value {
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 14px;
   color: var(--navy);
   line-height: 1.8;
 }
 .contact-form {
   background: var(--navy);
-  padding: 48px 40px;
+  padding: 44px 36px;
   border-radius: 20px;
 }
 .form-title {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'BIZ UDPMincho', serif;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--white);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .form-subtitle {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 12px;
   color: rgba(255,255,255,0.4);
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   line-height: 1.8;
 }
-.form-group { margin-bottom: 20px; }
+.form-group { margin-bottom: 18px; }
 .form-label {
   display: block;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 10px;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
   color: var(--green);
-  letter-spacing: 0.2em;
-  margin-bottom: 8px;
-  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 6px;
 }
 .form-input, .form-textarea, .form-select {
   width: 100%;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
   color: var(--white);
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 14px;
-  font-weight: 300;
-  padding: 14px 16px;
+  padding: 12px 14px;
   outline: none;
   transition: border-color 0.2s;
   -webkit-appearance: none;
@@ -542,93 +522,103 @@
 }
 .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--green); }
 .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.2); }
-.form-textarea { min-height: 100px; resize: vertical; }
+.form-textarea { min-height: 96px; resize: vertical; }
 .form-select option { background: var(--navy); }
 .form-submit {
   width: 100%;
   background: var(--green);
-  color: var(--navy);
+  color: var(--white);
   border: none;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  padding: 18px;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 16px;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  margin-top: 8px;
   border-radius: 999px;
+  margin-top: 6px;
+  transition: background 0.2s, transform 0.2s;
 }
-.form-submit:hover { background: var(--green-light); transform: translateY(-2px); }
+.form-submit:hover { background: var(--green-dark); transform: translateY(-2px); }
 
 @media (max-width: 900px) {
-  .hero-content { grid-template-columns: 1fr; gap: 48px; padding: 0 24px; }
+  .hero-content { grid-template-columns: 1fr; gap: 40px; padding: 0 20px; }
   .hero-right { display: none; }
-  .concept-grid { grid-template-columns: 1fr; gap: 48px; }
-  .philosophy-grid { grid-template-columns: 1fr; }
-  .impact-grid { grid-template-columns: 1fr; }
-  .flow-steps { flex-direction: column; }
-  .flow-step { border-right: none; border-bottom: 1px solid var(--stone); }
+  .concept-grid { grid-template-columns: 1fr; gap: 40px; }
+  .phil-grid { grid-template-columns: 1fr; }
+  .target-grid { grid-template-columns: 1fr; gap: 40px; }
+  .flow-steps { grid-template-columns: 1fr 1fr; }
   .team-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
+
+[lang-hide] { display: none !important; }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <a href="index.html" style="text-decoration:none;display:flex;align-items:center;gap:10px;">
-      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="height:40px;width:auto;">
+    <a href="index.html">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
     </a>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html">ホーム</a></li>
+    <li><a href="index.html" data-ja="ホーム" data-en="Home">ホーム</a></li>
     <li><a href="manul-schole.html" class="active">まぬるすこれ</a></li>
-    <li><a href="ringo.html">りんごの樹</a></li>
-    <li><a href="sns.html">SNS・メディア</a></li>
-    <li><a href="#contact" class="nav-cta">入学相談</a></li>
+    <li><a href="ringo.html" data-ja="りんごの樹" data-en="Ringo no Ki">りんごの樹</a></li>
+    <li><a href="sns.html" data-ja="SNS・メディア" data-en="Media">SNS・メディア</a></li>
+    <li><a href="#contact" class="nav-cta" data-ja="入学相談" data-en="Admissions">入学相談</a></li>
   </ul>
-  <div class="nav-hamburger"><span></span><span></span><span></span></div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-ja" onclick="setLang('ja')">JA</button>
+    <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+  <div class="nav-hamburger" onclick="this.parentElement.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-accent-line"></div>
-  <div class="hero-vertical-line"></div>
+  <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-left">
-      <div class="hero-overline">知多半島地域立学校 — オルタナティブスクール</div>
-      <img src="assets/logo-manul-schole.png" alt="まぬるすこれ" style="width:min(480px,85%);height:auto;margin-bottom:20px;display:block;">
-      <span class="hero-title-en">Manul Schole — Alternative School, Chita Peninsula</span>
-      <p class="hero-desc">ひとりひとりの「あるがまま」を起点に、自己決定・探究・地域共育を柱とした学びの場。不登校・発達の多様性のある子どもたちが、自分らしく学べる知多半島のオルタナティブスクールです。</p>
+      <div class="hero-overline">
+        <span data-ja="知多半島地域立 — オルタナティブスクール" data-en="Chita Peninsula — Alternative School">知多半島地域立 — オルタナティブスクール</span>
+      </div>
+      <div class="hero-logo">
+        <img src="assets/logo-manul-schole.png" alt="まぬるすこれ">
+      </div>
+      <p class="hero-catch" data-ja="自分の力で、幸せに生きていきたい。<br>そんな子どもたちのための学校。" data-en="For children who want to live happily<br>on their own terms.">
+        自分の力で、幸せに生きていきたい。<br>そんな子どもたちのための学校。
+      </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">入学・見学を申し込む</a>
-        <a href="#concept" class="btn-outline">理念を読む</a>
+        <a href="#contact" class="btn-green" data-ja="入学・見学を申し込む" data-en="Apply / Visit">入学・見学を申し込む</a>
+        <a href="#concept" class="btn-outline-white" data-ja="学校の理念を読む" data-en="Our Philosophy">学校の理念を読む</a>
       </div>
     </div>
     <div class="hero-right">
       <div class="hero-quote">
-        <p>スコレー（σχολή）——<br>古代ギリシャ語で「自由な時間」「休息」を意味する。<br>それが、学びの本来の姿だった。</p>
+        <p data-ja="スコレー（σχολή）——<br>古代ギリシャ語で「自由な時間」「休息」。<br>それが、学びの本来の姿だった。" data-en="Schole (σχολή) — in ancient Greek, 'free time' and 'rest'. That was the original form of learning.">スコレー（σχολή）——<br>古代ギリシャ語で「自由な時間」「休息」。<br>それが、学びの本来の姿だった。</p>
         <cite>SCHOLE — THE ORIGIN OF SCHOOL</cite>
       </div>
       <div class="hero-stats">
         <div class="stat-block">
-          <div class="stat-number">U<span class="stat-unit">29</span></div>
-          <div class="stat-label">若者主導の<br>ガバナンス体制</div>
+          <div class="stat-number">新<span class="stat-unit">小1〜</span></div>
+          <div class="stat-label" data-ja="入学対象学年" data-en="Enrollment from">入学対象学年</div>
         </div>
         <div class="stat-block">
-          <div class="stat-number">∞</div>
-          <div class="stat-label">探究できる<br>テーマの可能性</div>
+          <div class="stat-number">U<span class="stat-unit">29</span></div>
+          <div class="stat-label" data-ja="若者主導の運営" data-en="Youth-led">若者主導の運営</div>
         </div>
         <div class="stat-block">
           <div class="stat-number">0</div>
-          <div class="stat-label">既存の枠組みに<br>縛られない教育</div>
+          <div class="stat-label" data-ja="既成概念に<br>縛られない教育" data-en="No conventional constraints">既成概念に<br>縛られない教育</div>
         </div>
         <div class="stat-block">
-          <div class="stat-number">知多</div>
-          <div class="stat-label">半島から<br>始まる変革</div>
+          <div class="stat-number">∞</div>
+          <div class="stat-label" data-ja="探究できる<br>テーマの可能性" data-en="Infinite inquiry themes">探究できる<br>テーマの可能性</div>
         </div>
       </div>
     </div>
@@ -640,32 +630,34 @@
   <div class="container">
     <div class="concept-grid">
       <div class="reveal">
-        <div class="eyebrow">Concept</div>
-        <h2 class="section-title">学校を、<br>再定義する</h2>
-        <span class="section-title-jp">Redefining Education</span>
-        <p class="section-lead">画一的な教育システムに馴染めない子どもたちが、社会的孤立に陥ることなく、ありのままの自分を愛しながら成長できる場所をつくる。それが「まぬるすこれ」の存在意義です。</p>
-        <p style="font-size:13px;color:var(--text-muted);line-height:2;max-width:480px;">「まぬる」はモンゴル語でパラスネコを指す言葉。孤高でありながら深い観察眼と適応力をもつその姿に、私たちの教育観が宿っています。「すこれ」はスコレー（σχολή）——自由な時間という意味の古代ギリシャ語です。</p>
+        <div class="eyebrow eyebrow-green" data-ja="Concept" data-en="Concept">Concept</div>
+        <h2 class="section-title" data-ja="学校を、<br>自分たちでつくる。" data-en="Building school<br>on our own terms.">学校を、<br>自分たちでつくる。</h2>
+        <span class="section-title-en">Redefining Education</span>
+        <p class="section-lead" data-ja="「幸せ」から始まる学校。子どもが幸せであることがスタートで、そこから学びが生まれます。自分が決める実感が、人生を一番豊かにしてくれる——そんな信念をもとに、まぬるすこれをつくりました。" data-en="A school that begins with happiness. When children feel happy, learning grows from that place. The belief that deciding for yourself enriches life most — that is the foundation of Manul Schole.">
+          「幸せ」から始まる学校。子どもが幸せであることがスタートで、そこから学びが生まれます。自分が決める実感が、人生を一番豊かにしてくれる——そんな信念をもとに、まぬるすこれをつくりました。
+        </p>
+        <p style="font-size:13px;color:var(--text-muted);line-height:2;max-width:480px;" data-ja="「まぬる」はモンゴル語でパラスネコを意味します。孤高でありながら深い観察眼と適応力をもつ、その姿に私たちの教育観が宿っています。「すこれ」はスコレー（σχολή）——古代ギリシャ語で「自由な時間」です。" data-en="'Manul' means Pallas's cat in Mongolian — solitary, perceptive, adaptive. 'Schole' (σχολή) means 'free time' in ancient Greek. Together, they define our vision of education.">「まぬる」はモンゴル語でパラスネコを意味します。孤高でありながら深い観察眼と適応力をもつ、その姿に私たちの教育観が宿っています。「すこれ」はスコレー（σχολή）——古代ギリシャ語で「自由な時間」です。</p>
       </div>
-      <div class="concept-pillars reveal">
+      <div class="pillars reveal">
         <div class="pillar">
           <div class="pillar-num">I</div>
-          <div class="pillar-title">自己決定の保障</div>
-          <p class="pillar-desc">学習の内容・方法・ペースを自ら決める機会を保障。内側から湧き出る探究を尊重します。</p>
+          <div class="pillar-title" data-ja="自己決定の保障" data-en="Self-determination">自己決定の保障</div>
+          <p class="pillar-desc" data-ja="学習の内容・方法・ペースを自ら決める機会を保障します。内側から湧き出る探究を尊重します。" data-en="We ensure the right to decide one's own content, method, and pace of learning — respecting curiosity that comes from within.">学習の内容・方法・ペースを自ら決める機会を保障します。内側から湧き出る探究を尊重します。</p>
         </div>
         <div class="pillar">
           <div class="pillar-num">II</div>
-          <div class="pillar-title">メタ認知の育成</div>
-          <p class="pillar-desc">「自分がどのように学んでいるか」を知る力を育てます。どんな環境でも自律的に成長できる人を育成します。</p>
+          <div class="pillar-title" data-ja="メタ認知の育成" data-en="Metacognition">メタ認知の育成</div>
+          <p class="pillar-desc" data-ja="「自分がどのように学んでいるか」を知る力を育てます。どんな環境でも自律的に成長できる人をつくります。" data-en="We cultivate the ability to understand how one learns — developing autonomous growth in any environment.">「自分がどのように学んでいるか」を知る力を育てます。どんな環境でも自律的に成長できる人をつくります。</p>
         </div>
         <div class="pillar">
           <div class="pillar-num">III</div>
-          <div class="pillar-title">地域コミュニティとの共育</div>
-          <p class="pillar-desc">知多半島の大人たち・企業・農家・職人と連携。日々の生活すべてを学びの場とします。</p>
+          <div class="pillar-title" data-ja="地域コミュニティとの共育" data-en="Community co-learning">地域コミュニティとの共育</div>
+          <p class="pillar-desc" data-ja="知多半島の大人・企業・農家・職人と連携します。地域の生活すべてが学びの場です。" data-en="We partner with local adults, businesses, farmers, and craftspeople. All of community life becomes a learning space.">知多半島の大人・企業・農家・職人と連携します。地域の生活すべてが学びの場です。</p>
         </div>
         <div class="pillar">
           <div class="pillar-num">IV</div>
-          <div class="pillar-title">包摂的な居場所づくり</div>
-          <p class="pillar-desc">不登校・発達の多様性・障がいのある子どもたちも含め、誰もが「ここにいていい」と感じられる環境を実現します。</p>
+          <div class="pillar-title" data-ja="生活を経営する力" data-en="Life design capability">生活を経営する力</div>
+          <p class="pillar-desc" data-ja="生活（Life）を自分たちで設計（Design）し、そこから学ぶ（Learning）。自分の人生を主体的に経営する力を育てます。" data-en="Design your own Life, and learn from it. We cultivate the ability to proactively manage your own life.">生活（Life）を自分たちで設計（Design）し、そこから学ぶ（Learning）。自分の人生を主体的に経営する力を育てます。</p>
         </div>
       </div>
     </div>
@@ -673,56 +665,63 @@
 </section>
 
 <!-- PHILOSOPHY -->
-<section class="philosophy" id="philosophy">
+<section class="philosophy">
   <div class="container">
     <div class="reveal">
-      <div class="eyebrow dark">Educational Philosophy</div>
-      <h2 class="section-title" style="color:var(--white)">三つの哲学</h2>
-      <span class="section-title-jp" style="color:rgba(255,255,255,0.35)">Three Pillars of Learning</span>
+      <div class="eyebrow eyebrow-white" data-ja="Educational Philosophy" data-en="Educational Philosophy">Educational Philosophy</div>
+      <h2 class="section-title" style="color:var(--white);" data-ja="三つの哲学" data-en="Three Pillars">三つの哲学</h2>
+      <span class="section-title-en" style="color:rgba(255,255,255,0.3);">Three Pillars of Learning</span>
     </div>
-    <div class="philosophy-grid">
+    <div class="phil-grid">
       <div class="phil-card reveal">
         <div class="phil-num">01</div>
-        <div class="phil-title">Authentic Self</div>
-        <p class="phil-text">ありのままの自分を出発点にする教育。「できない」「違う」を欠如ではなく個性の多様性として肯定します。自己肯定感は安全な環境の中で自然に育まれます。</p>
+        <div class="phil-title" data-ja="Authentic Self" data-en="Authentic Self">Authentic Self</div>
+        <p class="phil-text" data-ja="ありのままの自分を出発点にする教育。「できない」「違う」を欠如ではなく個性の多様性として肯定します。自己肯定感は、安全な環境の中で自然に育まれます。" data-en="Education that starts from your authentic self. 'Can't' and 'different' are affirmed as diversity, not deficiency. Self-worth grows naturally in a safe environment.">ありのままの自分を出発点にする教育。「できない」「違う」を欠如ではなく個性の多様性として肯定します。自己肯定感は、安全な環境の中で自然に育まれます。</p>
       </div>
       <div class="phil-card reveal">
         <div class="phil-num">02</div>
-        <div class="phil-title">Intellectual Rest</div>
-        <p class="phil-text">スコレー（σχολή）の思想に基づき、孤独な時間を「知的な休息」として再定義します。何もしない時間が、実は最も深い学びの源になります。</p>
+        <div class="phil-title" data-ja="Intellectual Rest" data-en="Intellectual Rest">Intellectual Rest</div>
+        <p class="phil-text" data-ja="スコレー（σχολή）の思想に基づき、自由な時間を「知的な休息」として再定義します。何もしない時間が、実は最も深い学びの源になります。" data-en="Based on the concept of Schole, we redefine free time as 'intellectual rest'. Doing nothing is often the deepest source of learning.">スコレー（σχολή）の思想に基づき、自由な時間を「知的な休息」として再定義します。何もしない時間が、実は最も深い学びの源になります。</p>
       </div>
       <div class="phil-card reveal">
         <div class="phil-num">03</div>
-        <div class="phil-title">Community as Curriculum</div>
-        <p class="phil-text">地域社会そのものをカリキュラムとして設計します。農業・工芸・福祉・ビジネス——知多半島のあらゆる営みが、生きた教材です。</p>
+        <div class="phil-title" data-ja="Community as Curriculum" data-en="Community as Curriculum">Community as Curriculum</div>
+        <p class="phil-text" data-ja="地域社会そのものをカリキュラムとして設計します。農業・工芸・福祉・ビジネス——知多半島のあらゆる営みが、生きた教材です。" data-en="The local community itself is the curriculum. Farming, crafts, welfare, business — all of the Chita Peninsula's activities are living textbooks.">地域社会そのものをカリキュラムとして設計します。農業・工芸・福祉・ビジネス——知多半島のあらゆる営みが、生きた教材です。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- IMPACT -->
-<section class="impact">
+<!-- TARGET -->
+<section class="target">
   <div class="container">
-    <div class="reveal">
-      <div class="eyebrow">Why This Matters</div>
-      <h2 class="section-title">社会的背景</h2>
-      <span class="section-title-jp">The Problem We Solve</span>
-    </div>
-    <div class="impact-grid">
-      <div class="impact-card reveal">
-        <div class="impact-number">33<span class="impact-unit">万人</span></div>
-        <div class="impact-label">日本全国の不登校児童生徒数<br>（文部科学省 2023年度調査）</div>
-        <p class="impact-note">過去最多を更新し続ける数字。既存の枠組み以外の選択肢が、今すぐ必要です。</p>
+    <div class="target-grid">
+      <div class="target-quote reveal">
+        <p data-ja="<em>自分らしく</em>、<br>逞しく生きていきたい<br>子どもたちへ。" data-en="For children who want to live <em>authentically</em> and with strength."><em>自分らしく</em>、<br>逞しく生きていきたい<br>子どもたちへ。</p>
+        <cite>MANUL SCHOLE — FOR WHOM</cite>
       </div>
-      <div class="impact-card reveal">
-        <div class="impact-number">1<span class="impact-unit"> in 4</span></div>
-        <div class="impact-label">若者の孤立リスク<br>（内閣府 孤独・孤立対策白書）</div>
-        <p class="impact-note">社会的孤立は、若者の精神的健康・経済的自立に深刻な影響を与えます。</p>
-      </div>
-      <div class="impact-card reveal">
-        <div class="impact-number" style="font-size:36px;line-height:1.3">知多<br>半島</div>
-        <div class="impact-label">まぬるすこれが根を張る地域<br>愛知県知多半島全体への波及を目指す</div>
-        <p class="impact-note">地域の教育エコシステムを変革し、半島全体に多様な学びの選択肢をつくります。</p>
+      <div class="reveal">
+        <div class="eyebrow eyebrow-green" data-ja="For Whom" data-en="For Whom">For Whom</div>
+        <h2 class="section-title" data-ja="こんな子に<br>来てほしい" data-en="Who We Welcome">こんな子に<br>来てほしい</h2>
+        <span class="section-title-en">Our Students</span>
+        <div class="target-cards">
+          <div class="target-card">
+            <div class="target-card-label" data-ja="Self-determination" data-en="Self-determination">Self-determination</div>
+            <div class="target-card-text" data-ja="自分が決める。その実感を大切にしたい子。" data-en="Children who want to make their own decisions — and feel it.">自分が決める。その実感を大切にしたい子。</div>
+          </div>
+          <div class="target-card">
+            <div class="target-card-label" data-ja="Happiness First" data-en="Happiness First">Happiness First</div>
+            <div class="target-card-text" data-ja="「幸せ」を自分の力でつかみにいける、逞しい子。" data-en="Children with the strength to pursue happiness on their own.">「幸せ」を自分の力でつかみにいける、逞しい子。</div>
+          </div>
+          <div class="target-card">
+            <div class="target-card-label" data-ja="Curiosity" data-en="Curiosity">Curiosity</div>
+            <div class="target-card-text" data-ja="好奇心旺盛で、探究することが好きな子。" data-en="Children brimming with curiosity who love to explore.">好奇心旺盛で、探究することが好きな子。</div>
+          </div>
+          <div class="target-card">
+            <div class="target-card-label" data-ja="Entry" data-en="Entry">Entry</div>
+            <div class="target-card-text" data-ja="基本的に、新小学一年生から入学。選考あり。" data-en="Enrollment primarily from 1st grade. Selective admission.">基本的に、新小学一年生から入学。選考あり。</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -732,98 +731,123 @@
 <section class="program" id="program">
   <div class="container">
     <div class="reveal">
-      <div class="eyebrow">Academic Program</div>
-      <h2 class="section-title">学びの構造</h2>
-      <span class="section-title-jp">How We Learn</span>
+      <div class="eyebrow eyebrow-green" data-ja="Academic Program" data-en="Academic Program">Academic Program</div>
+      <h2 class="section-title" data-ja="学びの構造" data-en="How We Learn">学びの構造</h2>
+      <span class="section-title-en">Our Curriculum</span>
     </div>
     <table class="program-table reveal">
       <thead>
         <tr>
-          <th>カテゴリ</th>
-          <th>内容</th>
-          <th>対象・頻度</th>
+          <th data-ja="カテゴリ" data-en="Category">カテゴリ</th>
+          <th data-ja="内容" data-en="Content">内容</th>
+          <th data-ja="対象・頻度" data-en="Who / When">対象・頻度</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td><strong>個別探究</strong></td><td>各自の「好き」「気になる」を起点にした自主テーマ研究。ファシリテーターが伴走します。</td><td><span class="tag">全学年</span><span class="tag">毎日</span></td></tr>
-        <tr><td><strong>クラス会議</strong></td><td>学校生活のルールや行事を、子どもたち自身が議論し決定する民主的プロセス。</td><td><span class="tag">全学年</span><span class="tag">週1回</span></td></tr>
-        <tr><td><strong>地域フィールドワーク</strong></td><td>知多半島の農家・企業・行政と連携したプロジェクト型学習。</td><td><span class="tag">中学生以上</span><span class="tag">月複数回</span></td></tr>
-        <tr><td><strong>キャリア教育</strong></td><td>「働く大人」と定期的に関わり、社会との接続感覚と職業観の多様性を育てます。</td><td><span class="tag">全学年</span><span class="tag">月1回</span></td></tr>
-        <tr><td><strong>特別活動</strong></td><td>学芸発表・地域祭り参加・環境活動など。表現と参加を通じた社会性の育成。</td><td><span class="tag">全学年</span><span class="tag">学期ごと</span></td></tr>
-        <tr><td><strong>個別学習支援</strong></td><td>基礎的な読み書き・計算のサポートを、本人のペースに合わせて提供します。</td><td><span class="tag">希望者</span><span class="tag">随時</span></td></tr>
+        <tr>
+          <td><strong data-ja="個別探究" data-en="Individual Inquiry">個別探究</strong></td>
+          <td data-ja="自分の「好き」「気になる」を起点にした自主テーマ研究。ファシリテーターが伴走します。" data-en="Self-directed thematic research starting from personal interests. Facilitated support provided.">自分の「好き」「気になる」を起点にした自主テーマ研究。ファシリテーターが伴走します。</td>
+          <td><span class="tag" data-ja="全学年" data-en="All">全学年</span><span class="tag" data-ja="毎日" data-en="Daily">毎日</span></td>
+        </tr>
+        <tr>
+          <td><strong data-ja="クラス会議" data-en="Class Meeting">クラス会議</strong></td>
+          <td data-ja="学校のルールや行事を子どもたち自身が議論して決める、民主的プロセス。" data-en="A democratic process where children discuss and decide school rules and events themselves.">学校のルールや行事を子どもたち自身が議論して決める、民主的プロセス。</td>
+          <td><span class="tag" data-ja="全学年" data-en="All">全学年</span><span class="tag" data-ja="週1回" data-en="Weekly">週1回</span></td>
+        </tr>
+        <tr>
+          <td><strong data-ja="地域フィールドワーク" data-en="Field Learning">地域フィールドワーク</strong></td>
+          <td data-ja="知多半島の農家・企業・行政と連携したプロジェクト型学習。地域が教室になります。" data-en="Project-based learning in partnership with local farms, businesses, and government. The community is the classroom.">知多半島の農家・企業・行政と連携したプロジェクト型学習。地域が教室になります。</td>
+          <td><span class="tag" data-ja="全学年" data-en="All">全学年</span><span class="tag" data-ja="月複数回" data-en="Monthly+">月複数回</span></td>
+        </tr>
+        <tr>
+          <td><strong data-ja="表現・発表" data-en="Expression">表現・発表</strong></td>
+          <td data-ja="学芸発表・地域行事参加・作品制作など。表現と参加を通じた自己開示の機会。" data-en="Arts presentations, community events, creative work — opportunities for self-expression and participation.">学芸発表・地域行事参加・作品制作など。表現と参加を通じた自己開示の機会。</td>
+          <td><span class="tag" data-ja="全学年" data-en="All">全学年</span><span class="tag" data-ja="学期ごと" data-en="Each term">学期ごと</span></td>
+        </tr>
+        <tr>
+          <td><strong data-ja="振り返り" data-en="Reflection">振り返り</strong></td>
+          <td data-ja="今日の学びを言語化し、メタ認知を育てる毎日の習慣。" data-en="A daily habit of putting today's learning into words — building metacognition.">今日の学びを言語化し、メタ認知を育てる毎日の習慣。</td>
+          <td><span class="tag" data-ja="全学年" data-en="All">全学年</span><span class="tag" data-ja="毎日" data-en="Daily">毎日</span></td>
+        </tr>
       </tbody>
     </table>
   </div>
 </section>
 
-<!-- DAY FLOW -->
-<section class="dayflow" id="dayflow">
+<!-- DAYFLOW -->
+<section class="dayflow">
   <div class="container">
     <div class="reveal">
-      <div class="eyebrow">Daily Schedule</div>
-      <h2 class="section-title">一日の流れ</h2>
-      <span class="section-title-jp">A Day at Manul Schole</span>
+      <div class="eyebrow eyebrow-green" data-ja="Daily Schedule" data-en="Daily Schedule">Daily Schedule</div>
+      <h2 class="section-title" data-ja="一日の流れ" data-en="A Day at Manul Schole">一日の流れ</h2>
+      <span class="section-title-en">How the Day Unfolds</span>
     </div>
     <div class="flow-steps reveal">
       <div class="flow-step">
         <div class="flow-time">9:00</div>
-        <div class="flow-name">朝の集まり</div>
-        <p class="flow-desc">今日の予定を共有。一日を自分でデザインする。</p>
+        <div class="flow-name" data-ja="朝の集まり" data-en="Morning Circle">朝の集まり</div>
+        <p class="flow-desc" data-ja="今日の予定を共有。一日を自分でデザインする。" data-en="Share the day's plan. Design your own day.">今日の予定を共有。一日を自分でデザインする。</p>
       </div>
       <div class="flow-step">
         <div class="flow-time">9:30</div>
-        <div class="flow-name">個別探究</div>
-        <p class="flow-desc">自分のテーマを深める。好奇心を起点に動く時間。</p>
+        <div class="flow-name" data-ja="個別探究" data-en="Inquiry Time">個別探究</div>
+        <p class="flow-desc" data-ja="自分のテーマを深める。好奇心を起点に動く時間。" data-en="Deepen your own theme. Time to move from curiosity.">自分のテーマを深める。好奇心を起点に動く時間。</p>
       </div>
       <div class="flow-step">
         <div class="flow-time">12:00</div>
-        <div class="flow-name">昼食・休憩</div>
-        <p class="flow-desc">みんなで食べる時間。関係性が育まれる場。</p>
+        <div class="flow-name" data-ja="昼食・休憩" data-en="Lunch & Rest">昼食・休憩</div>
+        <p class="flow-desc" data-ja="みんなで食べる時間。関係性が育まれる場。" data-en="Eating together. A space where relationships grow.">みんなで食べる時間。関係性が育まれる場。</p>
       </div>
       <div class="flow-step">
         <div class="flow-time">13:00</div>
-        <div class="flow-name">午後の活動</div>
-        <p class="flow-desc">地域フィールドワーク・グループ学習・創作など。</p>
+        <div class="flow-name" data-ja="午後の活動" data-en="Afternoon Activity">午後の活動</div>
+        <p class="flow-desc" data-ja="地域フィールドワーク・グループ活動・制作など。" data-en="Field learning, group activities, creative work.">地域フィールドワーク・グループ活動・制作など。</p>
       </div>
       <div class="flow-step">
         <div class="flow-time">15:30</div>
-        <div class="flow-name">振り返り</div>
-        <p class="flow-desc">今日の気づきを言語化。自己認識を深める。</p>
+        <div class="flow-name" data-ja="振り返り" data-en="Reflection">振り返り</div>
+        <p class="flow-desc" data-ja="今日の気づきを言語化。自己認識を深める。" data-en="Put today's insights into words. Deepen self-awareness.">今日の気づきを言語化。自己認識を深める。</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- TEAM -->
-<section class="team" id="team">
+<section class="team">
   <div class="container">
     <div class="reveal">
-      <div class="eyebrow dark">Leadership</div>
-      <h2 class="section-title" style="color:var(--white)">理事・スタッフ</h2>
-      <span class="section-title-jp" style="color:rgba(255,255,255,0.35)">Who We Are</span>
-      <p class="section-lead" style="color:rgba(255,255,255,0.5)">16歳から29歳以下の理事メンバーが中心となり、子どもたちと近い目線で学校運営を担います。</p>
+      <div class="eyebrow eyebrow-white" data-ja="Leadership" data-en="Leadership">Leadership</div>
+      <h2 class="section-title" style="color:var(--white);" data-ja="理事・スタッフ" data-en="Our Team">理事・スタッフ</h2>
+      <span class="section-title-en" style="color:rgba(255,255,255,0.3);">Who We Are</span>
+      <p class="section-lead" style="color:rgba(255,255,255,0.5);" data-ja="16歳から29歳の理事メンバーが中心となり、子どもたちと近い目線で学校運営を担います。" data-en="Board members aged 16–29 lead the school, operating from a perspective close to the children's.">16歳から29歳の理事メンバーが中心となり、子どもたちと近い目線で学校運営を担います。</p>
     </div>
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-avatar">安</div>
-        <div class="team-role">Representative Director</div>
-        <div class="team-name">安土 真理奈</div>
-        <div class="team-name-en">Marina Azuchi</div>
-        <p class="team-bio">代表理事。自らの経験を基に「ありのままを愛せる教育」の実現を目指し、まぬるすこれを設立。不登校・社会的孤立への実践的アプローチを構築してきた。</p>
+        <img src="assets/team-marina.png" alt="安土真理奈" class="team-photo">
+        <div class="team-body">
+          <div class="team-role">Representative Director</div>
+          <div class="team-name" data-ja="安土 真理奈" data-en="Marina Azuchi">安土 真理奈</div>
+          <div class="team-name-en">Marina Azuchi</div>
+          <p class="team-bio" data-ja="代表理事。「ありのままの自分で生きていける」教育の実現を目指し、まぬるすこれを設立。知多半島を拠点に、次世代型オルタナティブ教育の構築に取り組む。" data-en="Representative Director. Founded Manul Schole to realize education where children can live as themselves. Building next-generation alternative education from the Chita Peninsula.">代表理事。「ありのままの自分で生きていける」教育の実現を目指し、まぬるすこれを設立。知多半島を拠点に、次世代型オルタナティブ教育の構築に取り組む。</p>
+        </div>
       </div>
       <div class="team-card reveal">
-        <div class="team-avatar">理</div>
-        <div class="team-role">Board of Directors</div>
-        <div class="team-name">理事メンバー</div>
-        <div class="team-name-en">U29 Board</div>
-        <p class="team-bio">16歳〜29歳の若者たちが理事として参画。教育・福祉・デザイン・地域活動など多様な背景を持つメンバーが、子どもたちの視点に近い運営を実現しています。</p>
+        <img src="assets/team-yasunori.jpg" alt="山口太靖" class="team-photo">
+        <div class="team-body">
+          <div class="team-role">Board Director</div>
+          <div class="team-name" data-ja="山口 太靖" data-en="Yasunori Yamaguchi">山口 太靖</div>
+          <div class="team-name-en">Yasunori Yamaguchi</div>
+          <p class="team-bio" data-ja="理事。U29世代として、子どもたちの視点に近い運営を担う。教育・地域活動・デザインなど多様な分野で活動。" data-en="Board Director. Operates from a perspective close to children's as part of the U29 generation. Active in education, community, and design.">理事。U29世代として、子どもたちの視点に近い運営を担う。教育・地域活動・デザインなど多様な分野で活動。</p>
+        </div>
       </div>
       <div class="team-card reveal">
-        <div class="team-avatar">連</div>
-        <div class="team-role">Community Partners</div>
-        <div class="team-name">地域連携パートナー</div>
-        <div class="team-name-en">Regional Collaborators</div>
-        <p class="team-bio">知多半島の農家・企業・自治体・医療・福祉機関と連携。地域の大人たちが「教師」として子どもたちの学びを支える共育のネットワーク。</p>
+        <img src="assets/team-satsuki.jpg" alt="神谷咲津生" class="team-photo">
+        <div class="team-body">
+          <div class="team-role">Board Director</div>
+          <div class="team-name" data-ja="神谷 咲津生" data-en="Satsuki Kamiya">神谷 咲津生</div>
+          <div class="team-name-en">Satsuki Kamiya</div>
+          <p class="team-bio" data-ja="理事。知多半島の地域コミュニティとの連携を担う。子どもと地域をつなぐ共育のネットワークを構築。" data-en="Board Director. Leads community partnerships on the Chita Peninsula. Building co-educational networks that connect children and community.">理事。知多半島の地域コミュニティとの連携を担う。子どもと地域をつなぐ共育のネットワークを構築。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -834,64 +858,64 @@
   <div class="container">
     <div class="contact-grid">
       <div class="reveal">
-        <div class="eyebrow">Contact &amp; Admission</div>
-        <h2 class="section-title">お問い合わせ<br>入学相談</h2>
-        <span class="section-title-jp">Get in Touch</span>
-        <p class="section-lead" style="font-size:14px;">見学・体験参加は随時受け付けています。まずはお気軽にご連絡ください。</p>
+        <div class="eyebrow eyebrow-green" data-ja="Contact & Admission" data-en="Contact & Admission">Contact &amp; Admission</div>
+        <h2 class="section-title" data-ja="入学相談・<br>見学のご案内" data-en="Admissions &<br>Visit Info">入学相談・<br>見学のご案内</h2>
+        <span class="section-title-en">Get in Touch</span>
+        <p class="section-lead" style="font-size:14px;" data-ja="見学・体験参加は随時受け付けています。まずはお気軽にご連絡ください。入学は基本的に新小学一年生から、選考があります。" data-en="Visits and trial participation are welcome anytime. Enrollment is primarily from 1st grade and involves a selection process.">見学・体験参加は随時受け付けています。まずはお気軽にご連絡ください。入学は基本的に新小学一年生から、選考があります。</p>
         <div class="contact-info">
           <div class="contact-row">
-            <div class="contact-row-label">所在地</div>
-            <div class="contact-row-value">愛知県知多半島（詳細は申込後にご案内）</div>
+            <div class="contact-label" data-ja="所在地" data-en="Location">所在地</div>
+            <div class="contact-value" data-ja="愛知県知多半島（詳細は申込後にご案内）" data-en="Chita Peninsula, Aichi (details provided after inquiry)">愛知県知多半島（詳細は申込後にご案内）</div>
           </div>
           <div class="contact-row">
-            <div class="contact-row-label">対象</div>
-            <div class="contact-row-value">小学生〜中学生年齢のお子さん<br>（不登校・発達の多様性のあるお子さん歓迎）</div>
+            <div class="contact-label" data-ja="対象" data-en="Eligibility">対象</div>
+            <div class="contact-value" data-ja="基本的に新小学一年生（選考あり）" data-en="Primarily children entering 1st grade (selective)">基本的に新小学一年生（選考あり）</div>
           </div>
           <div class="contact-row">
-            <div class="contact-row-label">見学</div>
-            <div class="contact-row-value">毎月実施（予約制）</div>
+            <div class="contact-label" data-ja="見学" data-en="Visits">見学</div>
+            <div class="contact-value" data-ja="毎月実施（予約制）" data-en="Monthly (by appointment)">毎月実施（予約制）</div>
           </div>
           <div class="contact-row">
-            <div class="contact-row-label">メール</div>
-            <div class="contact-row-value">info@kmanul.org</div>
+            <div class="contact-label">Mail</div>
+            <div class="contact-value">info@kmanul.org</div>
           </div>
           <div class="contact-row">
-            <div class="contact-row-label">SNS</div>
-            <div class="contact-row-value">@kimyo_na_manul（Instagram）</div>
+            <div class="contact-label">SNS</div>
+            <div class="contact-value">@kimyo_na_manul（Instagram）</div>
           </div>
         </div>
       </div>
       <div class="contact-form reveal">
-        <div class="form-title">入学・見学のご相談</div>
-        <div class="form-subtitle">3営業日以内にご連絡いたします。</div>
+        <div class="form-title" data-ja="入学・見学のご相談" data-en="Admission & Visit Inquiry">入学・見学のご相談</div>
+        <div class="form-subtitle" data-ja="3営業日以内にご連絡いたします。" data-en="We will respond within 3 business days.">3営業日以内にご連絡いたします。</div>
         <div class="form-group">
-          <label class="form-label">お名前（保護者）</label>
+          <label class="form-label" data-ja="お名前（保護者）" data-en="Parent / Guardian Name">お名前（保護者）</label>
           <input type="text" class="form-input" placeholder="例：山田 花子">
         </div>
         <div class="form-group">
-          <label class="form-label">お子さんの年齢・学年</label>
-          <input type="text" class="form-input" placeholder="例：小学3年生（9歳）">
+          <label class="form-label" data-ja="お子さんの年齢・学年" data-en="Child's Age / Grade">お子さんの年齢・学年</label>
+          <input type="text" class="form-input" data-ja-placeholder="例：年長（6歳）" data-en-placeholder="e.g. Pre-K (age 6)" placeholder="例：年長（6歳）">
         </div>
         <div class="form-group">
-          <label class="form-label">お問い合わせの種類</label>
+          <label class="form-label" data-ja="お問い合わせの種類" data-en="Type of Inquiry">お問い合わせの種類</label>
           <select class="form-select">
-            <option value="" disabled selected>選択してください</option>
-            <option>入学・見学の相談</option>
-            <option>教育内容について</option>
-            <option>費用・助成について</option>
-            <option>取材・メディア</option>
-            <option>その他</option>
+            <option value="" disabled selected data-ja="選択してください" data-en="Please select">選択してください</option>
+            <option data-ja="入学・見学の相談" data-en="Admission / Visit">入学・見学の相談</option>
+            <option data-ja="教育内容について" data-en="About the curriculum">教育内容について</option>
+            <option data-ja="費用・助成について" data-en="Fees & support">費用・助成について</option>
+            <option data-ja="取材・メディア" data-en="Media inquiry">取材・メディア</option>
+            <option data-ja="その他" data-en="Other">その他</option>
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label">メールアドレス</label>
+          <label class="form-label">Email</label>
           <input type="email" class="form-input" placeholder="example@email.com">
         </div>
         <div class="form-group">
-          <label class="form-label">メッセージ</label>
-          <textarea class="form-textarea" placeholder="お子さんの状況やご希望など、自由にお書きください。"></textarea>
+          <label class="form-label" data-ja="メッセージ" data-en="Message">メッセージ</label>
+          <textarea class="form-textarea" data-ja-placeholder="お子さんのことや、ご質問などを自由にお書きください。" data-en-placeholder="Feel free to share about your child and any questions." placeholder="お子さんのことや、ご質問などを自由にお書きください。"></textarea>
         </div>
-        <button class="form-submit">送信する →</button>
+        <button class="form-submit" data-ja="送信する →" data-en="Send →">送信する →</button>
       </div>
     </div>
   </div>
@@ -901,37 +925,49 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="width:160px;height:auto;display:block;margin-bottom:16px;filter:brightness(0) invert(1);">
-      <div class="footer-tagline">
-        ありのままを起点に、自由な時間の中で探究する。<br>
-        知多半島から、教育の未来を拓く。
-      </div>
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="filter:brightness(0) invert(1);">
+      <div class="footer-tagline" data-ja="ありのままを起点に、自由な時間の中で探究する。<br>知多半島から、教育の未来を拓く。" data-en="Beginning from your authentic self, exploring in free time.<br>Opening the future of education from the Chita Peninsula.">ありのままを起点に、自由な時間の中で探究する。<br>知多半島から、教育の未来を拓く。</div>
     </div>
     <div>
-      <div class="footer-col-title">まぬるすこれ</div>
+      <div class="footer-col-title" data-ja="まぬるすこれ" data-en="Manul Schole">まぬるすこれ</div>
       <ul class="footer-links">
-        <li><a href="#concept">理念・ミッション</a></li>
-        <li><a href="#philosophy">教育哲学</a></li>
-        <li><a href="#program">プログラム</a></li>
-        <li><a href="#dayflow">一日の流れ</a></li>
-        <li><a href="#contact">入学相談</a></li>
+        <li><a href="#concept" data-ja="理念・ミッション" data-en="Mission">理念・ミッション</a></li>
+        <li><a href="#program" data-ja="プログラム" data-en="Program">プログラム</a></li>
+        <li><a href="#contact" data-ja="入学相談" data-en="Admissions">入学相談</a></li>
       </ul>
     </div>
     <div>
-      <div class="footer-col-title">サイト</div>
+      <div class="footer-col-title" data-ja="サイト" data-en="Site">サイト</div>
       <ul class="footer-links">
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="ringo.html">りんごの樹</a></li>
+        <li><a href="index.html" data-ja="ホーム（NPO法人紹介）" data-en="Home (NPO)">ホーム（NPO法人紹介）</a></li>
+        <li><a href="ringo.html" data-ja="りんごの樹" data-en="Ringo no Ki">りんごの樹</a></li>
         <li><a href="sns.html">SNS・メディア</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2025 NPO法人 kimyo-na-manul. All rights reserved.</div>
-    <div class="footer-legal"><a href="#">プライバシーポリシー</a></div>
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.querySelectorAll('[data-ja][data-en]').forEach(el => {
+    el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.ja;
+  });
+  document.querySelectorAll('[data-ja-placeholder]').forEach(el => {
+    el.placeholder = lang === 'en' ? el.dataset.enPlaceholder : el.dataset.jaPlaceholder;
+  });
+}
+</script>
 </body>
 </html>
