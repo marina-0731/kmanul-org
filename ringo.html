@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>りんごの樹 — 大府市民間教育センター | kmanul.org</title>
+<meta name="description" content="大府市民間教育センター「りんごの樹」。学校に行きにくい子どもたちの居場所として、学習・生活・心のサポートを提供します。">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  /* ── HERO ── */
+  .hero {
+    min-height: 70vh;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 130px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '🍎';
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 280px;
+    opacity: 0.06;
+    pointer-events: none;
+    line-height: 1;
+  }
+  .hero-eyebrow {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px; color: var(--green);
+    letter-spacing: 0.35em; text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .hero-eyebrow::before { content:''; display:block; width:40px; height:1px; background:var(--green); }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .hero-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 300;
+    color: var(--green-light);
+    letter-spacing: 0.2em;
+    margin-bottom: 32px;
+    display: block;
+  }
+  .hero-desc {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px; font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 2; max-width: 520px;
+    margin-bottom: 44px;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  /* ── ABOUT ── */
+  .about { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  .about-img-block {
+    background: var(--navy);
+    border-radius: 24px;
+    padding: 56px 40px;
+    text-align: center;
+  }
+  .about-img-emoji { font-size: 96px; display: block; margin-bottom: 28px; }
+  .about-img-caption {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .about-features { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+  .feature-row {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+  }
+  .feature-row:hover { box-shadow: 0 4px 16px rgba(95,185,90,0.1); }
+  .feature-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+  .feature-title { font-family:'Noto Serif JP',serif; font-size:15px; font-weight:500; color:var(--navy); margin-bottom:4px; }
+  .feature-desc { font-family:'Noto Sans JP',sans-serif; font-size:12px; font-weight:300; color:var(--text-muted); line-height:1.8; }
+
+  /* ── VALUES BAND ── */
+  .values-band { background: var(--navy); padding: 80px 0; }
+  .values-band-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 48px; }
+  .v-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(95,185,90,0.2);
+    border-radius: 20px;
+    padding: 36px 32px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .v-card:hover { transform: translateY(-4px); border-color: rgba(95,185,90,0.45); }
+  .v-icon { font-size: 32px; margin-bottom: 16px; display: block; }
+  .v-title { font-family:'Noto Serif JP',serif; font-size:18px; font-weight:500; color:var(--green-light); margin-bottom:12px; }
+  .v-text { font-family:'Noto Sans JP',sans-serif; font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:2; }
+
+  /* ── SCHEDULE ── */
+  .schedule { background: var(--stone); }
+  .schedule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+  .schedule-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  .schedule-day {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--green);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .schedule-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--stone);
+  }
+  .schedule-row {
+    display: flex;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--stone);
+    align-items: baseline;
+  }
+  .schedule-row:last-child { border-bottom: none; }
+  .schedule-time {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px; color: var(--green);
+    letter-spacing: 0.1em;
+    width: 80px; flex-shrink: 0;
+  }
+  .schedule-activity {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13px; font-weight: 300;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ── ACCESS ── */
+  .access { background: var(--cream); }
+  .access-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  .info-table { width: 100%; margin-top: 8px; }
+  .info-row {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--stone);
+  }
+  .info-row:first-child { border-top: 1px solid var(--stone); }
+  .info-key {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px; color: var(--green);
+    letter-spacing: 0.15em;
+    background: rgba(95,185,90,0.06);
+    padding: 18px 20px;
+    width: 120px; flex-shrink: 0;
+    display: flex; align-items: flex-start;
+  }
+  .info-val {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px; color: var(--navy);
+    padding: 18px 20px;
+    line-height: 1.8;
+    flex: 1;
+  }
+  .map-placeholder {
+    background: var(--navy);
+    border-radius: 20px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .map-placeholder-icon { font-size: 48px; }
+  .map-placeholder-text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px; color: rgba(255,255,255,0.4);
+    text-align: center; line-height: 1.8;
+  }
+  .map-placeholder-btn {
+    background: var(--green); color: var(--navy);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.15em;
+    padding: 10px 24px; border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .map-placeholder-btn:hover { background: var(--green-light); }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--stone); }
+  .contact-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .contact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; text-align: left; }
+  .contact-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s, transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .contact-card:hover { box-shadow: 0 8px 28px rgba(95,185,90,0.12); transform: translateY(-4px); }
+  .contact-card-icon { font-size: 32px; margin-bottom: 16px; display: block; }
+  .contact-card-title { font-family:'Noto Serif JP',serif; font-size:17px; font-weight:500; color:var(--navy); margin-bottom:8px; }
+  .contact-card-desc { font-family:'Noto Sans JP',sans-serif; font-size:12px; font-weight:300; color:var(--text-muted); line-height:1.9; }
+  .contact-card-link { font-family:'Noto Sans JP',sans-serif; font-size:12px; color:var(--green); margin-top:14px; display:block; }
+
+  @media (max-width:900px) {
+    .hero { padding: 130px 24px 72px; }
+    .hero::before { font-size: 160px; opacity: 0.04; }
+    .about-grid,.access-grid { grid-template-columns:1fr; gap:40px; }
+    .values-band-grid,.schedule-grid,.contact-cards { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="index.html"><img src="assets/logo.png" alt="kimyo-na-manul"></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="manul-schole.html">まぬるすこれ</a></li>
+    <li><a href="ringo.html" class="active">りんごの樹</a></li>
+    <li><a href="sns.html">SNS・メディア</a></li>
+    <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+  </ul>
+  <div class="nav-hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">大府市民間教育センター</div>
+    <h1 class="hero-title">りんごの樹</h1>
+    <span class="hero-title-jp">Ringo no Ki</span>
+    <p class="hero-desc">学校に行きにくい子どもたちが、安心して自分のペースで過ごせる居場所。学習・生活・心のサポートを、地域とともに提供します。</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">見学・相談を申し込む</a>
+      <a href="#about" class="btn-outline">りんごの樹について</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="eyebrow">About</div>
+        <h2 class="section-title">ここは、<br>あなたの居場所</h2>
+        <span class="section-title-jp">A Place Just for You</span>
+        <p class="section-lead">「学校に行けない」は、失敗ではありません。りんごの樹は、大府市を拠点に、子どもたちが自分らしくいられる安全な場所として運営されています。</p>
+        <div class="about-features">
+          <div class="feature-row"><span class="feature-icon">📚</span><div><div class="feature-title">学習サポート</div><p class="feature-desc">本人のペースに合わせた学習支援。教科学習から探究活動まで、個別に対応します。</p></div></div>
+          <div class="feature-row"><span class="feature-icon">💬</span><div><div class="feature-title">相談・カウンセリング</div><p class="feature-desc">子ども本人・保護者のどちらの相談にも対応。安心して話せる場を提供します。</p></div></div>
+          <div class="feature-row"><span class="feature-icon">🤝</span><div><div class="feature-title">保護者サポート</div><p class="feature-desc">同じ状況の保護者同士がつながれる場や、情報共有の機会も設けています。</p></div></div>
+          <div class="feature-row"><span class="feature-icon">🌿</span><div><div class="feature-title">地域とのつながり</div><p class="feature-desc">大府市の地域資源や人々と連携し、社会との接続を途切れさせない活動を行います。</p></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="about-img-block">
+          <span class="about-img-emoji">🍎</span>
+          <div class="about-img-caption">Ringo no Ki — Obu City</div>
+        </div>
+        <div style="margin-top:24px; background:var(--white); border-radius:20px; padding:28px 32px; box-shadow:0 2px 12px rgba(0,0,0,0.05);">
+          <div style="font-family:'Noto Sans JP',sans-serif; font-size:10px; color:var(--green); letter-spacing:0.25em; margin-bottom:14px;">AT A GLANCE</div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; gap:12px; align-items:center;"><span style="font-size:16px;">📍</span><span style="font-family:'Noto Sans JP',sans-serif; font-size:13px; color:var(--text-muted);">愛知県大府市</span></div>
+            <div style="display:flex; gap:12px; align-items:center;"><span style="font-size:16px;">👦</span><span style="font-family:'Noto Sans JP',sans-serif; font-size:13px; color:var(--text-muted);">小学生・中学生対象</span></div>
+            <div style="display:flex; gap:12px; align-items:center;"><span style="font-size:16px;">🏫</span><span style="font-family:'Noto Sans JP',sans-serif; font-size:13px; color:var(--text-muted);">民間教育センター（NPO運営）</span></div>
+            <div style="display:flex; gap:12px; align-items:center;"><span style="font-size:16px;">💚</span><span style="font-family:'Noto Sans JP',sans-serif; font-size:13px; color:var(--text-muted);">費用・支援制度あり（要相談）</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES BAND -->
+<section class="values-band">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--green);">Our Approach</div>
+      <h2 class="section-title" style="color:var(--white);">りんごの樹の<br>3つの柱</h2>
+      <span class="section-title-jp" style="color:rgba(255,255,255,0.4);">Three Core Principles</span>
+    </div>
+    <div class="values-band-grid">
+      <div class="v-card reveal">
+        <span class="v-icon">🌱</span>
+        <div class="v-title">安心・安全の場</div>
+        <p class="v-text">何もしなくていい。ただいるだけでいい。りんごの樹はまず「安心」を提供します。評価や比較のない、ありのままでいられる空間です。</p>
+      </div>
+      <div class="v-card reveal">
+        <span class="v-icon">🔓</span>
+        <div class="v-title">本人主体のペース</div>
+        <p class="v-text">「やる気になった時」が、本当の学びのスタートです。スタッフは伴走者として、子ども自身のペースを尊重しながら関わります。</p>
+      </div>
+      <div class="v-card reveal">
+        <span class="v-icon">🌉</span>
+        <div class="v-title">社会へのブリッジ</div>
+        <p class="v-text">学校・家庭・地域・将来——それぞれとのつながりを丁寧に橋渡しします。孤立させないことが、私たちの最も大切な役割の一つです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule" id="program">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Program</div>
+      <h2 class="section-title">1日の流れ</h2>
+      <span class="section-title-jp">A Day at Ringo no Ki</span>
+      <p class="section-lead">強制されるプログラムはありません。一例として、こんな形で過ごせます。</p>
+    </div>
+    <div class="schedule-grid">
+      <div class="schedule-card reveal">
+        <div class="schedule-day">Weekday Morning</div>
+        <div class="schedule-title">午前の過ごし方</div>
+        <div class="schedule-row"><span class="schedule-time">10:00</span><span class="schedule-activity">自由時間（読書・制作・休憩など、自分で選ぶ）</span></div>
+        <div class="schedule-row"><span class="schedule-time">10:30</span><span class="schedule-activity">学習サポート（希望者・個別対応）</span></div>
+        <div class="schedule-row"><span class="schedule-time">12:00</span><span class="schedule-activity">昼食・おしゃべり・休憩</span></div>
+      </div>
+      <div class="schedule-card reveal">
+        <div class="schedule-day">Weekday Afternoon</div>
+        <div class="schedule-title">午後の過ごし方</div>
+        <div class="schedule-row"><span class="schedule-time">13:00</span><span class="schedule-activity">探究・制作・外出活動（地域フィールドワークなど）</span></div>
+        <div class="schedule-row"><span class="schedule-time">14:30</span><span class="schedule-activity">振り返り・スタッフとの対話（希望者）</span></div>
+        <div class="schedule-row"><span class="schedule-time">16:00</span><span class="schedule-activity">帰宅 / 保護者との情報共有</span></div>
+      </div>
+    </div>
+    <div style="margin-top:24px; background:var(--white); border-radius:16px; padding:24px 28px; display:flex; gap:16px; align-items:flex-start; box-shadow:0 1px 6px rgba(0,0,0,0.04);">
+      <span style="font-size:20px; flex-shrink:0;">ℹ️</span>
+      <p style="font-family:'Noto Sans JP',sans-serif; font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.9;">上記はあくまで一例です。来所日・時間・活動内容は、お子さんの状況に合わせて柔軟に対応します。まずは見学・体験からお気軽にどうぞ。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="access" id="access">
+  <div class="container">
+    <div class="access-grid">
+      <div class="reveal">
+        <div class="eyebrow">Access & Info</div>
+        <h2 class="section-title">アクセス・<br>基本情報</h2>
+        <span class="section-title-jp">Location & Details</span>
+        <div class="info-table">
+          <div class="info-row"><div class="info-key">所在地</div><div class="info-val">愛知県大府市<br>（詳細は見学申込後にご案内）</div></div>
+          <div class="info-row"><div class="info-key">開所日</div><div class="info-val">月曜〜金曜（祝日・長期休暇中は要確認）</div></div>
+          <div class="info-row"><div class="info-key">時間</div><div class="info-val">10:00〜16:00（柔軟に相談可）</div></div>
+          <div class="info-row"><div class="info-key">対象</div><div class="info-val">小学生・中学生<br>（不登校・学校に行きにくいお子さん）</div></div>
+          <div class="info-row"><div class="info-key">費用</div><div class="info-val">詳細は個別にご相談ください<br>支援制度・助成利用についても対応します</div></div>
+          <div class="info-row"><div class="info-key">運営</div><div class="info-val">NPO法人 kimyo-na-manul</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="map-placeholder">
+          <span class="map-placeholder-icon">📍</span>
+          <div class="map-placeholder-text">
+            愛知県大府市<br>
+            詳細な住所は見学お申し込み後にご案内します
+          </div>
+          <a href="#contact" class="map-placeholder-btn">見学を申し込む</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <div class="eyebrow" style="justify-content:center;">Contact</div>
+      <h2 class="section-title">まずは気軽に<br>ご相談ください</h2>
+      <span class="section-title-jp">Get in Touch</span>
+      <p class="section-lead" style="margin:0 auto 0; text-align:left; max-width:none;">「うちの子は対象になるのかな？」「見学だけでもいいのかな？」——どんな小さな疑問でも大歓迎です。</p>
+    </div>
+    <div class="contact-cards reveal">
+      <a href="manul-schole.html#contact" class="contact-card">
+        <span class="contact-card-icon">✉️</span>
+        <div class="contact-card-title">お問い合わせフォーム</div>
+        <p class="contact-card-desc">見学・相談のご予約はこちらから。3営業日以内にご連絡いたします。不登校・発達の多様性のあるお子さんも歓迎です。</p>
+        <span class="contact-card-link">フォームへ →</span>
+      </a>
+      <a href="sns.html" class="contact-card">
+        <span class="contact-card-icon">💬</span>
+        <div class="contact-card-title">SNS・Discordから</div>
+        <p class="contact-card-desc">InstagramのDMや、Discordコミュニティからも気軽にメッセージをお送りください。保護者の方同士のつながりにも活用できます。</p>
+        <span class="contact-card-link">SNSページへ →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="kimyo-na-manul">
+      <div class="footer-tagline">知多半島から、すべての子どもが<br>自分らしくいられる場所をつくる。<br>NPO法人 kimyo-na-manul</div>
+    </div>
+    <div>
+      <div class="footer-col-title">りんごの樹</div>
+      <ul class="footer-links">
+        <li><a href="#about">りんごの樹について</a></li>
+        <li><a href="#program">1日の流れ</a></li>
+        <li><a href="#access">アクセス・基本情報</a></li>
+        <li><a href="#contact">見学・相談申込</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">サイト</div>
+      <ul class="footer-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="manul-schole.html">まぬるすこれ</a></li>
+        <li><a href="sns.html">SNS・メディア</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 NPO法人 kimyo-na-manul. All rights reserved.</div>
+    <div class="footer-legal"><a href="#">プライバシーポリシー</a></div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

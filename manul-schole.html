@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>まぬるすこれ — 知多半島地域立オルタナティブスクール | kmanul.org</title>
+<meta name="description" content="知多半島地域立オルタナティブスクール「まぬるすこれ」。自己決定・探究・地域コミュニティを柱に、ひとりひとりのありのままを起点とした学びの場です。">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0;
+    width: 50%; height: 100%;
+    background: var(--navy-mid);
+    z-index: 0;
+  }
+  .hero-left {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 120px 64px 80px;
+  }
+  .hero-eyebrow {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px; color: var(--green);
+    letter-spacing: 0.35em; text-transform: uppercase;
+    margin-bottom: 32px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .hero-eyebrow::before { content:''; display:block; width:40px; height:1px; background:var(--green); }
+  .hero-logo-wrap { margin-bottom: 36px; }
+  .hero-logo-img { width: min(480px, 90%); height: auto; mix-blend-mode: screen; filter: brightness(1.05); }
+  .hero-desc {
+    font-family: 'Noto Serif JP', serif; font-size: 15px; font-weight: 300;
+    color: rgba(255,255,255,0.65); line-height: 2; max-width: 400px; margin-bottom: 52px;
+  }
+  .hero-actions { display: flex; gap: 20px; flex-wrap: wrap; }
+  .hero-right {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 120px 64px 80px;
+  }
+  .hero-quote { padding-left: 24px; border-left: 2px solid var(--green); }
+  .hero-quote p {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 20px; color: rgba(255,255,255,0.7); line-height: 1.6;
+  }
+  .hero-quote cite {
+    display: block; margin-top: 12px;
+    font-family: 'Noto Sans JP', sans-serif; font-size: 11px;
+    font-style: normal; color: var(--green); letter-spacing: 0.2em;
+  }
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 40px; }
+  .stat-block {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(95,185,90,0.2);
+    padding: 32px 28px; transition: border-color 0.2s; border-radius: 16px;
+  }
+  .stat-block:hover { border-color: rgba(95,185,90,0.5); }
+  .stat-number { font-family:'Playfair Display',serif; font-size:42px; font-weight:600; color:var(--green); line-height:1; margin-bottom:8px; }
+  .stat-unit { font-size:14px; font-weight:300; }
+  .stat-label { font-family:'Noto Sans JP',sans-serif; font-size:11px; color:rgba(255,255,255,0.5); letter-spacing:0.1em; line-height:1.6; }
+
+  /* ── MISSION ── */
+  .mission { background: var(--cream); }
+  .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .mission-pillars { display: flex; flex-direction: column; gap: 12px; }
+  .pillar {
+    background: var(--white); border-left: 4px solid var(--green);
+    padding: 28px 32px; transition: border-width 0.2s, box-shadow 0.2s;
+    border-radius: 0 12px 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .pillar:hover { border-left-width: 6px; }
+  .pillar-num { font-family:'Playfair Display',serif; font-size:11px; color:var(--green); letter-spacing:0.3em; margin-bottom:10px; }
+  .pillar-title { font-family:'Noto Serif JP',serif; font-size:17px; font-weight:500; color:var(--navy); margin-bottom:8px; letter-spacing:0.05em; }
+  .pillar-desc { font-family:'Noto Sans JP',sans-serif; font-size:13px; font-weight:300; color:var(--text-muted); line-height:1.9; }
+
+  /* ── PHILOSOPHY ── */
+  .philosophy { background: var(--navy); }
+  .philosophy-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .phil-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(95,185,90,0.2);
+    padding: 44px 36px; transition: border-color 0.25s, background 0.25s, transform 0.25s;
+    border-radius: 20px;
+  }
+  .phil-card:hover { border-color: rgba(95,185,90,0.5); background: rgba(255,255,255,0.08); transform: translateY(-4px); }
+  .phil-icon { font-size:28px; margin-bottom:20px; display:block; }
+  .phil-title { font-family:'Noto Serif JP',serif; font-size:18px; font-weight:500; color:var(--green-light); margin-bottom:16px; }
+  .phil-text { font-family:'Noto Sans JP',sans-serif; font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:2; }
+
+  /* ── PROGRAM ── */
+  .program { background: var(--stone); }
+  .program-table { width:100%; border-collapse:collapse; margin-top:48px; background:var(--white); border-radius:16px; overflow:hidden; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+  .program-table thead tr { background: var(--navy); }
+  .program-table th { font-family:'Noto Sans JP',sans-serif; font-size:11px; font-weight:400; color:var(--green); letter-spacing:0.2em; text-align:left; padding:20px 28px; }
+  .program-table td { font-family:'Noto Sans JP',sans-serif; font-size:14px; font-weight:300; color:var(--text); padding:20px 28px; border-bottom:1px solid var(--stone); vertical-align:top; line-height:1.7; }
+  .program-table tr:last-child td { border-bottom:none; }
+  .program-table tr:hover td { background:rgba(95,185,90,0.04); }
+
+  /* ── GOVERNANCE ── */
+  .governance { background: var(--cream); }
+  .governance-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+  .credential-list { list-style:none; display:flex; flex-direction:column; gap:8px; }
+  .credential-item {
+    background:var(--white); border-top:2px solid transparent;
+    padding:24px 28px; display:flex; align-items:flex-start; gap:20px;
+    transition:border-color 0.2s; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.04);
+  }
+  .credential-item:hover { border-top-color: var(--green); }
+  .credential-mark { width:32px; height:32px; background:var(--navy); border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; margin-top:2px; }
+  .credential-mark svg { width:14px; height:14px; fill:var(--green); }
+  .credential-title { font-family:'Noto Serif JP',serif; font-size:14px; font-weight:500; color:var(--navy); margin-bottom:4px; }
+  .credential-desc { font-family:'Noto Sans JP',sans-serif; font-size:12px; font-weight:300; color:var(--text-muted); line-height:1.8; }
+  .org-chart { background:var(--navy); padding:40px; border-radius:20px; }
+  .org-title { font-family:'Noto Sans JP',sans-serif; font-size:10px; color:var(--green); letter-spacing:0.3em; text-transform:uppercase; margin-bottom:28px; }
+  .org-row { display:flex; gap:2px; margin-bottom:2px; }
+  .org-node { background:rgba(255,255,255,0.05); border:1px solid rgba(95,185,90,0.2); padding:16px 20px; flex:1; border-radius:8px; }
+  .org-node-label { font-family:'Noto Sans JP',sans-serif; font-size:10px; color:var(--green); letter-spacing:0.2em; margin-bottom:4px; }
+  .org-node-name { font-family:'Noto Serif JP',serif; font-size:13px; color:var(--white); font-weight:500; }
+  .org-connector { display:flex; justify-content:center; align-items:center; padding:6px 0; }
+  .org-connector::after { content:''; display:block; width:1px; height:20px; background:rgba(95,185,90,0.4); }
+
+  /* ── GRANT ── */
+  .grant { background: var(--navy); position:relative; overflow:hidden; }
+  .grant::before { content:''; position:absolute; top:-200px; right:-200px; width:600px; height:600px; background:radial-gradient(circle, rgba(95,185,90,0.08) 0%, transparent 70%); pointer-events:none; }
+  .grant-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:48px; }
+  .grant-card { background:rgba(255,255,255,0.05); border:1px solid rgba(95,185,90,0.2); padding:36px 32px; border-radius:20px; transition:transform 0.2s,border-color 0.2s; }
+  .grant-card:hover { transform:translateY(-4px); border-color:rgba(95,185,90,0.45); }
+  .grant-number { font-family:'Playfair Display',serif; font-size:52px; font-weight:600; color:var(--green); line-height:1; margin-bottom:6px; }
+  .grant-unit { font-size:16px; font-weight:300; }
+  .grant-label { font-family:'Noto Sans JP',sans-serif; font-size:11px; color:rgba(255,255,255,0.45); letter-spacing:0.12em; line-height:1.8; margin-bottom:16px; }
+  .grant-note { font-family:'Noto Sans JP',sans-serif; font-size:12px; color:rgba(255,255,255,0.35); line-height:1.8; border-top:1px solid rgba(95,185,90,0.2); padding-top:16px; margin-top:16px; }
+
+  /* ── TEAM ── */
+  .team { background: var(--stone); }
+  .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:48px; }
+  .team-card { background:var(--white); padding:36px 32px; border-bottom:3px solid transparent; transition:border-color 0.2s,box-shadow 0.2s; border-radius:20px; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
+  .team-card:hover { border-bottom-color:var(--green); box-shadow:0 8px 24px rgba(95,185,90,0.12); }
+  .team-avatar { width:72px; height:72px; background:var(--navy); border-radius:50%; margin-bottom:20px; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:24px; color:var(--green); }
+  .team-role { font-family:'Noto Sans JP',sans-serif; font-size:10px; color:var(--green); letter-spacing:0.25em; text-transform:uppercase; margin-bottom:8px; }
+  .team-name { font-family:'Noto Serif JP',serif; font-size:18px; font-weight:500; color:var(--navy); margin-bottom:4px; }
+  .team-name-en { font-family:'Playfair Display',serif; font-size:12px; color:var(--text-muted); margin-bottom:16px; font-style:italic; }
+  .team-bio { font-family:'Noto Sans JP',sans-serif; font-size:12px; font-weight:300; color:var(--text-muted); line-height:1.9; border-top:1px solid var(--stone); padding-top:16px; }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--cream); }
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+  .contact-info { display:flex; flex-direction:column; gap:8px; }
+  .contact-row { background:var(--white); padding:24px 28px; display:flex; gap:24px; align-items:flex-start; border-radius:12px; }
+  .contact-row-label { font-family:'Noto Sans JP',sans-serif; font-size:10px; color:var(--green); letter-spacing:0.2em; width:80px; flex-shrink:0; padding-top:3px; }
+  .contact-row-value { font-family:'Noto Serif JP',serif; font-size:14px; color:var(--navy); line-height:1.8; }
+  .contact-form { background:var(--navy); padding:48px 40px; border-radius:24px; }
+  .form-title { font-family:'Noto Serif JP',serif; font-size:18px; font-weight:500; color:var(--white); margin-bottom:8px; }
+  .form-subtitle { font-family:'Noto Sans JP',sans-serif; font-size:12px; color:rgba(255,255,255,0.4); margin-bottom:32px; line-height:1.8; }
+  .form-group { margin-bottom:20px; }
+  .form-label { display:block; font-family:'Noto Sans JP',sans-serif; font-size:11px; color:var(--green); letter-spacing:0.2em; margin-bottom:8px; }
+  .form-input,.form-textarea,.form-select { width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:var(--white); font-family:'Noto Sans JP',sans-serif; font-size:14px; font-weight:300; padding:14px 16px; outline:none; transition:border-color 0.2s; -webkit-appearance:none; border-radius:10px; }
+  .form-input:focus,.form-textarea:focus,.form-select:focus { border-color:var(--green); }
+  .form-input::placeholder,.form-textarea::placeholder { color:rgba(255,255,255,0.25); }
+  .form-textarea { min-height:100px; resize:vertical; }
+  .form-select option { background:var(--navy); }
+  .form-submit { width:100%; background:var(--green); color:var(--navy); border:none; font-family:'Noto Sans JP',sans-serif; font-size:13px; font-weight:500; letter-spacing:0.2em; padding:18px; cursor:pointer; transition:background 0.2s,transform 0.2s; margin-top:8px; border-radius:999px; }
+  .form-submit:hover { background:var(--green-light); transform:translateY(-2px); }
+
+  @media (max-width:900px) {
+    .hero { grid-template-columns:1fr; min-height:auto; }
+    .hero::after { display:none; }
+    .hero-left { padding:100px 28px 48px; }
+    .hero-right { padding:0 28px 80px; background:var(--navy-mid); }
+    .hero-stats { grid-template-columns:1fr 1fr; }
+    .mission-grid,.governance-grid,.contact-grid { grid-template-columns:1fr; gap:40px; }
+    .philosophy-cards,.grant-grid,.team-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="kimyo-na-manul">
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="manul-schole.html" class="active">まぬるすこれ</a></li>
+    <li><a href="ringo.html">りんごの樹</a></li>
+    <li><a href="sns.html">SNS・メディア</a></li>
+    <li><a href="#contact" class="nav-cta">入学相談</a></li>
+  </ul>
+  <div class="nav-hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-left">
+    <div class="hero-eyebrow">知多半島地域立学校 — 設立2024年</div>
+    <div class="hero-logo-wrap">
+      <img src="assets/logo.png" alt="まぬるすこれ" class="hero-logo-img">
+    </div>
+    <p class="hero-desc">ひとりひとりの「あるがまま」を起点に、自己決定・探究・共同体を柱とした次世代型オルタナティブ教育機関。知多半島から、日本の教育の可能性を拓く。</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">入学・見学を申し込む</a>
+      <a href="#mission" class="btn-outline">理念を読む</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-quote">
+      <p>"スコレー（σχολή）— 古代ギリシャ語で<br>「自由な時間」「休息」を意味する。<br>それが学びの本来の姿だった。"</p>
+      <cite>SCHOLE — THE ORIGIN OF SCHOOL</cite>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-block"><div class="stat-number">16<span class="stat-unit">歳〜</span></div><div class="stat-label">若い理事たちが<br>共につくる学校</div></div>
+      <div class="stat-block"><div class="stat-number">U<span class="stat-unit">29</span></div><div class="stat-label">次世代主導の<br>ガバナンス体制</div></div>
+      <div class="stat-block"><div class="stat-number">0</div><div class="stat-label">既存の枠組みに<br>縛られない教育</div></div>
+      <div class="stat-block"><div class="stat-number">∞</div><div class="stat-label">探究できる<br>テーマの可能性</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission" id="mission">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="reveal">
+        <div class="eyebrow">Our Mission</div>
+        <h2 class="section-title">学校の<br>再定義</h2>
+        <span class="section-title-jp">Redefining Education</span>
+        <p class="section-lead">既存の画一的な教育システムに馴染めない子どもたちが、社会的孤立に陥ることなく、ありのままの自分を愛しながら成長できる場所をつくる。それが「まぬるすこれ」の存在意義です。</p>
+        <p style="font-size:14px;color:var(--text-muted);line-height:2;max-width:500px;">「まぬる」はモンゴル語でパラスネコを指す言葉。孤高でありながら深い観察眼と適応力をもつその姿に、私たちの教育観が宿っています。「すこれ」はスコレー（σχολή）——自由な時間という意味の古代ギリシャ語です。</p>
+      </div>
+      <div class="mission-pillars reveal">
+        <div class="pillar"><div class="pillar-num">I</div><div class="pillar-title">自己決定の保障</div><p class="pillar-desc">学習の内容・方法・ペースを自ら決める機会を保障。内側から湧き出る探究を尊重します。</p></div>
+        <div class="pillar"><div class="pillar-num">II</div><div class="pillar-title">メタ認知の育成</div><p class="pillar-desc">「自分がどのように学んでいるか」を知る力を育てます。どんな環境でも自律的に成長できる人を育成します。</p></div>
+        <div class="pillar"><div class="pillar-num">III</div><div class="pillar-title">地域コミュニティとの共育</div><p class="pillar-desc">知多半島の大人たち・企業・農家・職人と連携。日々の生活すべてを学びの場とします。</p></div>
+        <div class="pillar"><div class="pillar-num">IV</div><div class="pillar-title">包摂的な居場所づくり</div><p class="pillar-desc">不登校・発達の多様性・障がいのある子どもたちも含め、誰もが「ここにいていい」と感じられる環境を実現します。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy" id="philosophy">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow dark">Educational Philosophy</div>
+      <h2 class="section-title" style="color:var(--white);">三つの哲学</h2>
+      <span class="section-title-jp" style="color:rgba(255,255,255,0.4);">Three Pillars of Learning</span>
+      <p class="section-lead" style="color:rgba(255,255,255,0.6);">まぬるすこれの教育は、国際的なオルタナティブ教育の知見と、日本の地域コミュニティの強みを融合させた独自のフレームワークに基づいています。</p>
+    </div>
+    <div class="philosophy-cards">
+      <div class="phil-card reveal"><span class="phil-icon">🌱</span><div class="phil-title">Authentic Self</div><p class="phil-text">ありのままの自分を出発点にする教育。「できない」「違う」を欠如ではなく個性の多様性として肯定します。自己肯定感は安全な環境の中で自然に育まれます。</p></div>
+      <div class="phil-card reveal"><span class="phil-icon">☁️</span><div class="phil-title">Intellectual Rest</div><p class="phil-text">スコレー（σχολή）の思想に基づき、孤独な時間を「知的な休息」として再定義します。何もしない時間が、実は最も深い学びの源になります。</p></div>
+      <div class="phil-card reveal"><span class="phil-icon">🏘️</span><div class="phil-title">Community as Curriculum</div><p class="phil-text">地域社会そのものをカリキュラムとして設計します。農業・工芸・福祉・ビジネス——知多半島のあらゆる営みが、生きた教材です。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="program" id="program">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Academic Program</div>
+      <h2 class="section-title">学びの構造</h2>
+      <span class="section-title-jp">How We Learn</span>
+    </div>
+    <table class="program-table reveal">
+      <thead><tr><th>カテゴリ</th><th>内容</th><th>対象・頻度</th></tr></thead>
+      <tbody>
+        <tr><td><strong>個別探究</strong></td><td>各自の「好き」「気になる」を起点にした自主テーマ研究。ファシリテーターが伴走します。</td><td><span class="tag">全学年</span><span class="tag">毎日</span></td></tr>
+        <tr><td><strong>クラス会議</strong></td><td>学校生活のルールや行事を、子どもたち自身が議論し決定する民主的プロセス。</td><td><span class="tag">全学年</span><span class="tag">週1回</span></td></tr>
+        <tr><td><strong>地域フィールドワーク</strong></td><td>知多半島の農家・企業・行政と連携したプロジェクト型学習。</td><td><span class="tag">中学生以上</span><span class="tag">月複数回</span></td></tr>
+        <tr><td><strong>キャリア教育</strong></td><td>「働く大人」と定期的に関わり、社会との接続感覚と職業観の多様性を育てます。</td><td><span class="tag">全学年</span><span class="tag">月1回</span></td></tr>
+        <tr><td><strong>特別活動</strong></td><td>学芸発表・地域祭り参加・環境活動など。表現と参加を通じた社会性の育成。</td><td><span class="tag">全学年</span><span class="tag">学期ごと</span></td></tr>
+        <tr><td><strong>個別学習支援</strong></td><td>基礎的な読み書き・計算のサポートを、本人のペースに合わせて提供します。</td><td><span class="tag">希望者</span><span class="tag">随時</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- GOVERNANCE -->
+<section class="governance" id="governance">
+  <div class="container">
+    <div class="governance-grid">
+      <div class="reveal">
+        <div class="eyebrow">Governance & Credentials</div>
+        <h2 class="section-title">透明な<br>組織運営</h2>
+        <span class="section-title-jp">Trust & Accountability</span>
+        <p class="section-lead">透明性の高いガバナンス体制が、まぬるすこれへの信頼を支えています。</p>
+        <ul class="credential-list">
+          <li class="credential-item"><div class="credential-mark"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><div><div class="credential-title">NPO法人格取得</div><p class="credential-desc">公的な法人格のもとで運営。財務・事業報告を年次開示します。</p></div></li>
+          <li class="credential-item"><div class="credential-mark"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><div><div class="credential-title">助成金・補助金の積極的活用</div><p class="credential-desc">子ども・若者支援、地域教育振興、インクルーシブ教育分野の公的助成を申請・活用します。</p></div></li>
+          <li class="credential-item"><div class="credential-mark"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><div><div class="credential-title">U29世代による若者主導ガバナンス</div><p class="credential-desc">理事の多数が16〜29歳。現場感覚と経営判断を直結させます。</p></div></li>
+          <li class="credential-item"><div class="credential-mark"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><div><div class="credential-title">地域パートナーシップ</div><p class="credential-desc">知多半島の自治体・企業・NPOと連携した持続可能なエコシステムを構築しています。</p></div></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="org-chart">
+          <div class="org-title">Organization Structure</div>
+          <div class="org-row"><div class="org-node" style="text-align:center;"><div class="org-node-label">REPRESENTATIVE</div><div class="org-node-name">代表理事　安土 真理奈</div></div></div>
+          <div class="org-connector"></div>
+          <div class="org-row"><div class="org-node"><div class="org-node-label">BOARD</div><div class="org-node-name">理事会（U29）</div></div><div style="width:2px;"></div><div class="org-node"><div class="org-node-label">ADVISOR</div><div class="org-node-name">外部顧問・監事</div></div></div>
+          <div class="org-connector"></div>
+          <div class="org-row"><div class="org-node"><div class="org-node-label">EDUCATION</div><div class="org-node-name">教育プログラム部門</div></div><div style="width:2px;"></div><div class="org-node"><div class="org-node-label">COMMUNITY</div><div class="org-node-name">地域連携部門</div></div></div>
+          <div class="org-connector"></div>
+          <div class="org-row"><div class="org-node" style="text-align:center;"><div class="org-node-label">LEARNERS</div><div class="org-node-name">在籍する子どもたち・保護者</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRANT -->
+<section class="grant" id="grant">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Impact & Funding</div>
+      <h2 class="section-title" style="color:var(--white);">社会的インパクト</h2>
+      <span class="section-title-jp" style="color:rgba(255,255,255,0.4);">Why This Matters</span>
+    </div>
+    <div class="grant-grid">
+      <div class="grant-card reveal"><div class="grant-number">33<span class="grant-unit">万人</span></div><div class="grant-label">日本全国の不登校児童生徒数<br>（文部科学省 2023年度調査）</div><p class="grant-note">過去最多を更新し続ける数字。既存の枠組み以外の選択肢が必要です。</p></div>
+      <div class="grant-card reveal"><div class="grant-number">1<span class="grant-unit"> in 4</span></div><div class="grant-label">若者の孤立リスク<br>（内閣府 孤独・孤立対策白書）</div><p class="grant-note">社会的孤立は、若者の精神的健康・経済的自立に深刻な影響を与えます。</p></div>
+      <div class="grant-card reveal"><div class="grant-number">知多<span class="grant-unit">半島</span></div><div class="grant-label">まぬるすこれが根を張る地域<br>愛知県知多半島全体への波及を目指す</div><p class="grant-note">地域の教育エコシステムを変革し、半島全体に多様な学びの選択肢をつくります。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Leadership</div>
+      <h2 class="section-title">理事・スタッフ</h2>
+      <span class="section-title-jp">Who We Are</span>
+      <p class="section-lead">16歳から29歳以下の理事メンバーが中心となり、子どもたちと近い目線で学校運営を担います。</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal"><div class="team-avatar">安</div><div class="team-role">Representative Director</div><div class="team-name">安土 真理奈</div><div class="team-name-en">Marina Azuchi</div><p class="team-bio">代表理事。自らの経験を基に「ありのままを愛せる教育」の実現を目指し、まぬるすこれを設立。不登校・社会的孤立への実践的アプローチを構築してきた。</p></div>
+      <div class="team-card reveal"><div class="team-avatar">理</div><div class="team-role">Board Director</div><div class="team-name">理事メンバー</div><div class="team-name-en">Board of Directors</div><p class="team-bio">16歳〜29歳の若者たちが理事として参画。教育・福祉・デザイン・地域活動など多様な背景を持つメンバーが、子どもたちの視点に近い運営を実現しています。</p></div>
+      <div class="team-card reveal"><div class="team-avatar">連</div><div class="team-role">Community Partners</div><div class="team-name">地域連携パートナー</div><div class="team-name-en">Regional Collaborators</div><p class="team-bio">知多半島の農家・企業・自治体・医療・福祉機関と連携。地域の大人たちが「教師」として子どもたちの学びを支える共育のネットワークを構築しています。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="eyebrow">Contact & Admission</div>
+        <h2 class="section-title">お問い合わせ<br>入学相談</h2>
+        <span class="section-title-jp">Get in Touch</span>
+        <p class="section-lead" style="font-size:14px;">見学・体験参加は随時受け付けています。助成金・補助金に関するお問い合わせも歓迎します。</p>
+        <div class="contact-info">
+          <div class="contact-row"><div class="contact-row-label">所在地</div><div class="contact-row-value">愛知県知多半島（詳細は見学申込後にご案内）</div></div>
+          <div class="contact-row"><div class="contact-row-label">対象</div><div class="contact-row-value">小学生〜中学生年齢のお子さん<br>（不登校・発達の多様性のあるお子さん歓迎）</div></div>
+          <div class="contact-row"><div class="contact-row-label">見学</div><div class="contact-row-value">毎月実施（予約制）</div></div>
+          <div class="contact-row"><div class="contact-row-label">SNS</div><div class="contact-row-value">@kimyo_na_manul（Instagram）</div></div>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <div class="form-title">入学・見学のご相談</div>
+        <div class="form-subtitle">内容を記入してお送りください。3営業日以内にご連絡いたします。</div>
+        <div class="form-group"><label class="form-label">お名前（保護者）</label><input type="text" class="form-input" placeholder="例：山田 花子"></div>
+        <div class="form-group"><label class="form-label">お子さんの年齢・学年</label><input type="text" class="form-input" placeholder="例：小学3年生（9歳）"></div>
+        <div class="form-group"><label class="form-label">お問い合わせの種類</label>
+          <select class="form-select"><option value="" disabled selected>選択してください</option><option>入学・見学の相談</option><option>教育内容について</option><option>費用・助成について</option><option>助成金・補助金（機関向け）</option><option>取材・メディア</option><option>その他</option></select>
+        </div>
+        <div class="form-group"><label class="form-label">メールアドレス</label><input type="email" class="form-input" placeholder="example@email.com"></div>
+        <div class="form-group"><label class="form-label">メッセージ</label><textarea class="form-textarea" placeholder="お子さんの状況やご希望など、自由にお書きください。"></textarea></div>
+        <button class="form-submit">送信する →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="kimyo-na-manul まぬるすこれ">
+      <div class="footer-tagline">ありのままを起点に、自由な時間の中で探究する。<br>知多半島から、教育の未来を拓く。</div>
+    </div>
+    <div>
+      <div class="footer-col-title">まぬるすこれ</div>
+      <ul class="footer-links">
+        <li><a href="#mission">理念・ミッション</a></li>
+        <li><a href="#philosophy">教育哲学</a></li>
+        <li><a href="#program">プログラム</a></li>
+        <li><a href="#governance">組織概要</a></li>
+        <li><a href="#contact">入学相談</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">サイト</div>
+      <ul class="footer-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="ringo.html">りんごの樹</a></li>
+        <li><a href="sns.html">SNS・メディア</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 NPO法人 kimyo-na-manul. All rights reserved.</div>
+    <div class="footer-legal"><a href="#">プライバシーポリシー</a></div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
