@@ -30,7 +30,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
   background: var(--white);
   color: var(--text);
   overflow-x: hidden;
@@ -66,7 +66,7 @@ nav {
   align-items: center;
 }
 .nav-links a {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 13px;
   color: rgba(255,255,255,0.7);
   text-decoration: none;
@@ -96,7 +96,7 @@ nav {
   background: none;
   border: 1px solid rgba(255,255,255,0.3);
   color: rgba(255,255,255,0.5);
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 11px;
   padding: 4px 10px;
   border-radius: 4px;
@@ -172,7 +172,7 @@ section { padding: 80px 0; }
 
 /* ── TYPOGRAPHY ── */
 .eyebrow {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 11px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -229,7 +229,7 @@ section { padding: 80px 0; }
 .btn-sky {
   background: var(--sky);
   color: var(--white);
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -244,7 +244,7 @@ section { padding: 80px 0; }
 .btn-green {
   background: var(--green);
   color: var(--white);
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -259,7 +259,7 @@ section { padding: 80px 0; }
 .btn-outline-white {
   border: 2px solid rgba(255,255,255,0.5);
   color: var(--white);
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -274,7 +274,7 @@ section { padding: 80px 0; }
 .btn-outline-sky {
   border: 2px solid var(--sky);
   color: var(--sky);
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -285,6 +285,21 @@ section { padding: 80px 0; }
   transition: all 0.25s;
 }
 .btn-outline-sky:hover { background: var(--sky); color: var(--white); }
+
+.btn-gold {
+  background: linear-gradient(135deg, #C8942A, #E8B84B);
+  color: var(--white);
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 999px;
+  display: inline-block;
+  transition: all 0.25s;
+}
+.btn-gold:hover { background: linear-gradient(135deg, #A87B1E, #C8942A); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200,148,42,0.4); }
 
 @media (max-width: 600px) {
   .btn-sky, .btn-green, .btn-outline-white, .btn-outline-sky {
@@ -330,13 +345,13 @@ footer {
 }
 .footer-logo img { width: 140px; height: auto; margin-bottom: 14px; display: block; }
 .footer-tagline {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 12px;
   color: rgba(255,255,255,0.35);
   line-height: 2;
 }
 .footer-col-title {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 10px;
   color: var(--sky);
   letter-spacing: 0.25em;
@@ -345,7 +360,7 @@ footer {
 }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .footer-links a {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 13px;
   color: rgba(255,255,255,0.4);
   text-decoration: none;
@@ -362,7 +377,7 @@ footer {
   align-items: center;
 }
 .footer-copy {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 11px;
   color: rgba(255,255,255,0.2);
 }
