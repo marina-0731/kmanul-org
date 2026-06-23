@@ -133,12 +133,14 @@ nav {
   .nav-links {
     display: none;
     position: fixed;
-    top: 56px; left: 0; right: 0; bottom: 0;
+    top: 56px; left: 0; right: 0;
+    height: calc(100vh - 56px);
     background: rgba(15,30,53,0.99);
     flex-direction: column;
     gap: 0;
     padding: 20px 0;
     overflow-y: auto;
+    z-index: 200;
   }
   .nav-links.open { display: flex; }
   .nav-links li { width: 100%; }

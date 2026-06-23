@@ -146,7 +146,7 @@
     <li><a href="sns.html">SNS・メディア</a></li>
     <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
   </ul>
-  <div class="nav-hamburger" onclick="this.parentElement.querySelector('.nav-links').classList.toggle('open')">
+  <div class="nav-hamburger">
     <span></span><span></span><span></span>
   </div>
 </nav>
@@ -312,7 +312,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="filter:brightness(0) invert(1);">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
       <div class="footer-tagline">知多半島から、自分らしく生きる場所をつくる。<br>NPO法人 kimyo-na-manul（奇妙なマヌル）</div>
     </div>
     <div>
@@ -346,5 +346,6 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 reveals.forEach(el => observer.observe(el));
 </script>
+<script src="assets/main.js"></script>
 </body>
 </html>
