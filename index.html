@@ -11,6 +11,7 @@
 <meta property="og:description" content="オルタナティブスクール「まぬるすこれ」など、子ども・若者の居場所をつくるNPO法人。">
 <meta property="og:url" content="https://kmanul.org/">
 <meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
@@ -31,98 +32,56 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 100px 0 80px;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 80% 40%, rgba(91,142,196,0.12) 0%, transparent 70%);
+  background:
+    radial-gradient(ellipse 50% 50% at 50% 50%, rgba(91,142,196,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 1120px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 32px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 80px;
-  align-items: center;
 }
-.hero-overline {
-  font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 11px;
-  color: var(--sky);
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.hero-overline::before {
-  content: '';
-  display: block;
-  width: 40px; height: 1px;
-  background: var(--sky);
-}
-.hero-logo { margin-bottom: 32px; }
-.hero-logo img { width: min(420px, 90%); height: auto; display: block; }
-.hero-catch {
+.hero-deny {
   font-family: 'BIZ UDPMincho', serif;
-  font-size: clamp(18px, 2.5vw, 26px);
+  font-size: clamp(17px, 2.5vw, 24px);
   font-weight: 400;
-  color: rgba(255,255,255,0.85);
-  line-height: 1.9;
-  margin-bottom: 40px;
-  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.45);
+  line-height: 2.2;
+  margin-bottom: 48px;
+  letter-spacing: 0.06em;
 }
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-.hero-right {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(91,142,196,0.2);
-  border-radius: 16px;
-  padding: 36px 32px;
+.hero-deny s {
+  text-decoration: line-through;
+  text-decoration-color: rgba(255,255,255,0.25);
 }
-.hero-right-title {
-  font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 10px;
-  color: var(--sky);
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.hero-right-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
-.hero-right-item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.hero-right-item:last-child { border-bottom: none; padding-bottom: 0; }
-.hero-right-label {
-  font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 11px;
-  color: rgba(255,255,255,0.35);
-  letter-spacing: 0.1em;
-}
-.hero-right-name {
+.hero-punch {
   font-family: 'BIZ UDPMincho', serif;
-  font-size: 17px;
+  font-size: clamp(32px, 5.5vw, 64px);
   font-weight: 700;
   color: var(--white);
+  line-height: 1.5;
+  margin-bottom: 56px;
+  letter-spacing: 0.04em;
 }
-.hero-right-desc {
-  font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 12px;
-  color: rgba(255,255,255,0.45);
-  line-height: 1.7;
+.hero-punch em {
+  font-style: normal;
+  color: var(--sky);
 }
+.hero-logo { margin-bottom: 40px; }
+.hero-logo img { width: min(360px, 70%); height: auto; display: inline-block; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
 /* ── ABOUT ── */
 .about { background: var(--white); }
@@ -348,12 +307,11 @@
 .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 @media (max-width: 900px) {
-  .hero-content { grid-template-columns: 1fr; gap: 32px; padding: 0 16px; }
-  .hero-right { display: none; }
   .hero { padding: 80px 0 56px; min-height: auto; }
-  .hero-logo img { width: min(280px, 80%); }
-  .hero-catch { font-size: 18px; margin-bottom: 28px; }
-  .hero-overline { font-size: 10px; margin-bottom: 20px; }
+  .hero-content { padding: 0 20px; }
+  .hero-deny { font-size: 16px; margin-bottom: 32px; line-height: 2; }
+  .hero-punch { font-size: clamp(26px, 7vw, 40px); margin-bottom: 36px; }
+  .hero-logo img { width: min(240px, 65%); }
   .hero-actions { flex-direction: column; gap: 10px; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .about-stats { grid-template-columns: 1fr 1fr; }
@@ -410,40 +368,17 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-left">
-      <div class="hero-overline">
-        <span data-ja="NPO法人 — 愛知県知多半島" data-en="Nonprofit Organization — Chita Peninsula, Aichi">NPO法人 — 愛知県知多半島</span>
-      </div>
-      <div class="hero-logo">
-        <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
-      </div>
-      <p class="hero-catch">
-        <span data-ja="どんな子も、自分らしく生きていい。<br>知多半島から、その場所をつくる。" data-en="Every child deserves to live as themselves.<br>We create those spaces from the Chita Peninsula.">どんな子も、自分らしく生きていい。<br>知多半島から、その場所をつくる。</span>
-      </p>
-      <div class="hero-actions">
-        <a href="manul-schole.html" class="btn-sky" data-ja="まぬるすこれを見る" data-en="Manul Schole">まぬるすこれを見る</a>
-        <a href="#about" class="btn-outline-white" data-ja="団体について" data-en="About Us">団体について</a>
-      </div>
+    <p class="hero-deny">
+      <s>私たちは不登校支援の団体ではありません。</s><br>
+      <s>優しい、子ども・若者のための居場所、でもありません。</s>
+    </p>
+    <h1 class="hero-punch">今までにない、<em>挑戦</em>です。</h1>
+    <div class="hero-logo">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
     </div>
-    <div class="hero-right">
-      <div class="hero-right-title" data-ja="わたしたちの活動" data-en="Our Projects">わたしたちの活動</div>
-      <ul class="hero-right-list">
-        <li class="hero-right-item">
-          <span class="hero-right-label" data-ja="オルタナティブスクール" data-en="Alternative School">オルタナティブスクール</span>
-          <span class="hero-right-name">まぬるすこれ</span>
-          <span class="hero-right-desc" data-ja="知多半島地域立。新小学一年生から。" data-en="Chita-based. For children entering 1st grade.">知多半島地域立。新小学一年生から。</span>
-        </li>
-        <li class="hero-right-item">
-          <span class="hero-right-label" data-ja="民間教育センター" data-en="Community Education Center">民間教育センター</span>
-          <span class="hero-right-name">りんごの樹</span>
-          <span class="hero-right-desc" data-ja="大府市。子どもと若者の居場所。" data-en="Obu City. A place for children and youth.">大府市。子どもと若者の居場所。</span>
-        </li>
-        <li class="hero-right-item">
-          <span class="hero-right-label" data-ja="コミュニティ・メディア" data-en="Community & Media">コミュニティ・メディア</span>
-          <span class="hero-right-name">まぬらじ</span>
-          <span class="hero-right-desc" data-ja="ラジオ・Discord・SNSで仲間とつながる。" data-en="Radio, Discord & SNS community.">ラジオ・Discord・SNSで仲間とつながる。</span>
-        </li>
-      </ul>
+    <div class="hero-actions">
+      <a href="manul-schole.html" class="btn-sky">まぬるすこれを見る</a>
+      <a href="#about" class="btn-outline-white">団体について</a>
     </div>
   </div>
 </section>
@@ -709,14 +644,16 @@
         <li><a href="manul-schole.html">まぬるすこれ</a></li>
         <li><a href="activities.html" data-ja="活動内容" data-en="Activities">活動内容</a></li>
         <li><a href="contact.html" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
-        <li><a href="https://congrant.com/project/kimyo-na-manul/21284" target="_blank" rel="noopener" data-ja="クラウドファンディング" data-en="Crowdfunding">クラウドファンディング</a></li>
+        <li><a href="https://congrant.com/project/kimyo-na-manul/20646" target="_blank" rel="noopener" data-ja="寄付" data-en="Donate">寄付</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Follow Us</div>
       <ul class="footer-links">
         <li><a href="https://www.instagram.com/kimyo_na_manul0423/" target="_blank" rel="noopener">Instagram @kimyo_na_manul0423</a></li>
+        <li><a href="https://www.instagram.com/manulschole/" target="_blank" rel="noopener">Instagram @manulschole</a></li>
         <li><a href="https://open.spotify.com/show/4pCX4vRVYYnigfrbYCAyXj" target="_blank" rel="noopener" data-ja="まぬらじ（Podcast）" data-en="Manuraji (Podcast)">まぬらじ（Podcast）</a></li>
+        <li><a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" data-ja="公式LINE" data-en="Official LINE">公式LINE</a></li>
       </ul>
     </div>
   </div>

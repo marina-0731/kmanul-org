@@ -10,6 +10,7 @@
 <meta property="og:title" content="まぬるすこれ | 知多半島地域立オルタナティブスクール">
 <meta property="og:description" content="自分の力で幸せに生きていきたい子へ。知多半島から、自己決定と探究の学びをつくる。">
 <meta property="og:url" content="https://kmanul.org/manul-schole.html">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
@@ -445,6 +446,90 @@
   padding-top: 14px;
 }
 
+/* ── PARENTS ── */
+.parents { background: var(--white); }
+.parents-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+.parent-card {
+  background: var(--green-bg);
+  border-radius: 16px;
+  padding: 28px 24px;
+  border-left: 4px solid var(--green);
+}
+.parent-card-label {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.parent-card-title {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.parent-card-text {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+.parent-card-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--green);
+  margin: 8px 0 4px;
+}
+.parent-card-price span {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* ── INSTAGRAM ── */
+.insta-banner {
+  background: var(--navy);
+  text-align: center;
+}
+.insta-banner h2 {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.insta-banner p {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  line-height: 2;
+  margin-bottom: 28px;
+}
+.btn-insta {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: var(--white);
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 16px 40px;
+  text-decoration: none;
+  border-radius: 999px;
+  display: inline-block;
+  transition: all 0.25s;
+}
+.btn-insta:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(225,48,108,0.4); }
+
 /* ── CONTACT ── */
 .contact { background: var(--green-bg); }
 .contact-grid {
@@ -478,68 +563,46 @@
   color: var(--navy);
   line-height: 1.8;
 }
-.contact-form {
-  background: var(--navy);
-  padding: 44px 36px;
+.line-cta-box {
+  background: #06C755;
   border-radius: 20px;
+  padding: 44px 36px;
+  text-align: center;
 }
-.form-title {
+.line-cta-box h3 {
   font-family: 'BIZ UDPMincho', serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
-.form-subtitle {
-  font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 12px;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 28px;
-  line-height: 1.8;
-}
-.form-group { margin-bottom: 18px; }
-.form-label {
-  display: block;
-  font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--green);
-  letter-spacing: 0.15em;
-  margin-bottom: 6px;
-}
-.form-input, .form-textarea, .form-select {
-  width: 100%;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: var(--white);
+.line-cta-box p {
   font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 14px;
-  padding: 12px 14px;
-  outline: none;
-  transition: border-color 0.2s;
-  -webkit-appearance: none;
-  border-radius: 8px;
+  color: rgba(255,255,255,0.85);
+  line-height: 2;
+  margin-bottom: 20px;
 }
-.form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--green); }
-.form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.2); }
-.form-textarea { min-height: 96px; resize: vertical; }
-.form-select option { background: var(--navy); }
-.form-submit {
-  width: 100%;
-  background: var(--green);
-  color: var(--white);
-  border: none;
+.btn-line {
+  background: var(--white);
+  color: #06C755;
   font-family: 'BIZ UDPGothic', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  padding: 16px;
-  cursor: pointer;
+  padding: 16px 40px;
+  text-decoration: none;
   border-radius: 999px;
-  margin-top: 6px;
-  transition: background 0.2s, transform 0.2s;
+  display: inline-block;
+  transition: all 0.25s;
 }
-.form-submit:hover { background: var(--green-dark); transform: translateY(-2px); }
+.btn-line:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+.line-qr {
+  margin-top: 20px;
+  display: inline-block;
+  background: var(--white);
+  padding: 12px;
+  border-radius: 12px;
+}
 
 /* ── PROGRAM BOX ── */
 .program-box {
@@ -593,8 +656,9 @@
   .team-photo { height: 180px; }
   .team-body { padding: 22px 20px; }
 
+  .parents-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-  .contact-form { padding: 32px 20px; border-radius: 16px; }
+  .line-cta-box { padding: 32px 20px; border-radius: 16px; }
   .contact-row { padding: 16px 18px; flex-direction: column; gap: 4px; }
   .contact-label { width: auto; padding-top: 0; }
   .form-input, .form-textarea, .form-select { font-size: 16px; padding: 14px 16px; }
@@ -903,73 +967,94 @@
   </div>
 </section>
 
+<!-- PARENTS -->
+<section class="parents">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow eyebrow-green">For Parents</div>
+      <h2 class="section-title">保護者の方へ</h2>
+      <span class="section-title-en">Practical Information</span>
+      <p class="section-lead">入学を検討されている保護者の方からよくいただくご質問をまとめました。</p>
+    </div>
+    <div class="parents-grid">
+      <div class="parent-card reveal">
+        <div class="parent-card-label">Tuition</div>
+        <div class="parent-card-title">授業料</div>
+        <div class="parent-card-price">¥0 <span>/ 無償</span></div>
+        <p class="parent-card-text">授業料は無償です。施設費（水光熱費・家賃）として月額6,000円のみご負担いただきます。</p>
+      </div>
+      <div class="parent-card reveal">
+        <div class="parent-card-label">Lunch</div>
+        <div class="parent-card-title">昼食</div>
+        <div class="parent-card-price">¥300 <span>/ 1食</span></div>
+        <p class="parent-card-text">給食ではなく、子どもたちが自分で計画・買い出し・調理をします。生きた経済と生活力を学ぶ時間です。</p>
+      </div>
+      <div class="parent-card reveal">
+        <div class="parent-card-label">Insurance</div>
+        <div class="parent-card-title">保険料</div>
+        <p class="parent-card-text">年間800円の保険料をお願いしています。遠足等に参加する場合は実費をご負担いただきます。</p>
+      </div>
+      <div class="parent-card reveal">
+        <div class="parent-card-label">Hours</div>
+        <div class="parent-card-title">時間・学童</div>
+        <p class="parent-card-text">平日毎日開講。10:15〜15:00が基本の活動時間です。学童タイムは18:30まで利用可能です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="insta-banner">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow eyebrow-white" style="justify-content:center;">Instagram</div>
+      <h2>まぬるすこれの日常を覗いてみませんか？</h2>
+      <p>実際のまぬるすこれの様子はInstagramからご覧いただけます。<br>子どもたちの探究・昼ごはん作り・イベントの様子を発信中。</p>
+      <a href="https://www.instagram.com/manulschole/" target="_blank" rel="noopener" class="btn-insta">@manulschole をフォローする</a>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact-grid">
       <div class="reveal">
-        <div class="eyebrow eyebrow-green" data-ja="Contact & Admission" data-en="Contact & Admission">Contact &amp; Admission</div>
-        <h2 class="section-title" data-ja="入学相談・<br>見学のご案内" data-en="Admissions &<br>Visit Info">入学相談・<br>見学のご案内</h2>
+        <div class="eyebrow eyebrow-green">Contact & Admission</div>
+        <h2 class="section-title">入学相談・<br>見学のご案内</h2>
         <span class="section-title-en">Get in Touch</span>
-        <p class="section-lead" style="font-size:14px;" data-ja="見学・体験参加は随時受け付けています。まずはお気軽にご連絡ください。入学は基本的に新小学一年生からです。不登校、発達障害等の児童生徒もご入学いただけます。ただし、一条校（公立の学校等）に通えないからまぬるすこれに通う、という方はお断りしています。まぬるすこれに通いたい、と自身で決断し、選んだ生徒がご入学いただけます。" data-en="Visits and trial participation are welcome anytime. Students with school refusal or developmental differences are also welcome. However, we do not accept students who attend simply because they cannot go to public school. Students must choose Manul Schole for themselves.">見学・体験参加は随時受け付けています。まずはお気軽にご連絡ください。入学は基本的に新小学一年生からです。不登校、発達障害等の児童生徒もご入学いただけます。ただし、一条校（公立の学校等）に通えないからまぬるすこれに通う、という方はお断りしています。まぬるすこれに通いたい、と自身で決断し、選んだ生徒がご入学いただけます。</p>
+        <p class="section-lead" style="font-size:14px;">見学・体験参加は随時受け付けています。まずはお気軽にご連絡ください。入学は基本的に新小学一年生からです。不登校、発達障害等の児童生徒もご入学いただけます。ただし、一条校（公立の学校等）に通えないからまぬるすこれに通う、という方はお断りしています。まぬるすこれに通いたい、と自身で決断し、選んだ生徒がご入学いただけます。</p>
         <div class="contact-info">
           <div class="contact-row">
-            <div class="contact-label" data-ja="所在地" data-en="Location">所在地</div>
+            <div class="contact-label">所在地</div>
             <div class="contact-value">愛知県大府市中央町６丁目25番地<br>セントロ大府201号<br>（大府市民間教育センター「りんごの樹」内）</div>
           </div>
           <div class="contact-row">
-            <div class="contact-label" data-ja="時間" data-en="Hours">時間</div>
-            <div class="contact-value" data-ja="小中学生：10:00〜15:00（学童〜18:00）<br>ユース部：14:30〜18:00（週2日）<br>平日毎日開講" data-en="Elementary/Middle: 10:00–15:00 (after school until 18:00)<br>Youth: 14:30–18:00 (twice weekly)<br>Open every weekday">小中学生：10:00〜15:00（学童〜18:00）<br>ユース部：14:30〜18:00（週2日）<br>平日毎日開講</div>
+            <div class="contact-label">時間</div>
+            <div class="contact-value">小中学生：10:15〜15:00（学童〜18:30）<br>ユース部：14:30〜18:00（週2日）<br>平日毎日開講</div>
           </div>
           <div class="contact-row">
-            <div class="contact-label" data-ja="対象" data-en="Eligibility">対象</div>
-            <div class="contact-value" data-ja="基本的に新小学一年生から" data-en="Primarily from 1st grade">基本的に新小学一年生から</div>
+            <div class="contact-label">対象</div>
+            <div class="contact-value">基本的に新小学一年生から</div>
           </div>
           <div class="contact-row">
-            <div class="contact-label" data-ja="見学" data-en="Visits">見学</div>
-            <div class="contact-value" data-ja="随時受付中（予約制）" data-en="Accepting visits anytime (by appointment)">随時受付中（予約制）</div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-label">Mail</div>
-            <div class="contact-value">info@kmanul.org</div>
+            <div class="contact-label">見学</div>
+            <div class="contact-value">随時受付中（予約制）</div>
           </div>
           <div class="contact-row">
             <div class="contact-label">SNS</div>
-            <div class="contact-value">@manulschole（Instagram）</div>
+            <div class="contact-value"><a href="https://www.instagram.com/manulschole/" target="_blank" rel="noopener" style="color:var(--green);text-decoration:none;">@manulschole（Instagram）</a></div>
           </div>
         </div>
       </div>
-      <div class="contact-form reveal">
-        <div class="form-title" data-ja="入学・見学のご相談" data-en="Admission & Visit Inquiry">入学・見学のご相談</div>
-        <div class="form-subtitle" data-ja="3営業日以内にご連絡いたします。" data-en="We will respond within 3 business days.">3営業日以内にご連絡いたします。</div>
-        <div class="form-group">
-          <label class="form-label" data-ja="お名前（保護者）" data-en="Parent / Guardian Name">お名前（保護者）</label>
-          <input type="text" class="form-input" placeholder="例：山田 花子">
+      <div class="line-cta-box reveal">
+        <h3>📱 お問い合わせは公式LINEから</h3>
+        <p>入学相談・見学のお申し込み・ご質問など、<br>公式LINEよりお気軽にご連絡ください。</p>
+        <a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" class="btn-line">友だち追加して相談する →</a>
+        <div class="line-qr">
+          <img src="images/line-qr.png" alt="公式LINE QRコード" style="width:140px;display:block;">
         </div>
-        <div class="form-group">
-          <label class="form-label" data-ja="お子さんの年齢・学年" data-en="Child's Age / Grade">お子さんの年齢・学年</label>
-          <input type="text" class="form-input" data-ja-placeholder="例：年長（6歳）" data-en-placeholder="e.g. Pre-K (age 6)" placeholder="例：年長（6歳）">
-        </div>
-        <div class="form-group">
-          <label class="form-label" data-ja="お問い合わせの種類" data-en="Type of Inquiry">お問い合わせの種類</label>
-          <select class="form-select">
-            <option value="" disabled selected data-ja="選択してください" data-en="Please select">選択してください</option>
-            <option data-ja="入学・見学の相談" data-en="Admission / Visit">入学・見学の相談</option>
-            <option data-ja="教育内容について" data-en="About the curriculum">教育内容について</option>
-            <option data-ja="費用・助成について" data-en="Fees & support">費用・助成について</option>
-            <option data-ja="取材・メディア" data-en="Media inquiry">取材・メディア</option>
-            <option data-ja="その他" data-en="Other">その他</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-input" placeholder="example@email.com">
-        </div>
-        <div class="form-group">
-          <label class="form-label" data-ja="メッセージ" data-en="Message">メッセージ</label>
-          <textarea class="form-textarea" data-ja-placeholder="お子さんのことや、ご質問などを自由にお書きください。" data-en-placeholder="Feel free to share about your child and any questions." placeholder="お子さんのことや、ご質問などを自由にお書きください。"></textarea>
-        </div>
-        <button class="form-submit" data-ja="送信する →" data-en="Send →">送信する →</button>
+        <p style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:16px;margin-bottom:0;">QRコードを読み取って友だち追加できます</p>
       </div>
     </div>
   </div>
@@ -997,7 +1082,7 @@
         <li><a href="about.html" data-ja="団体概要" data-en="About">団体概要</a></li>
         <li><a href="activities.html" data-ja="活動内容" data-en="Activities">活動内容</a></li>
         <li><a href="contact.html" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
-        <li><a href="https://congrant.com/project/kimyo-na-manul/21284" target="_blank" rel="noopener" data-ja="クラウドファンディング" data-en="Crowdfunding">クラウドファンディング</a></li>
+        <li><a href="https://congrant.com/project/kimyo-na-manul/20646" target="_blank" rel="noopener" data-ja="寄付" data-en="Donate">寄付</a></li>
       </ul>
     </div>
   </div>
