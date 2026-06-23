@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | NPO法人 kimyo-na-manul</title>
+<meta name="description" content="NPO法人 kimyo-na-manulへのお問い合わせ。子育て相談は24時間365日受付中。LINE・オンライン・対面で対応。">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.page-hero {
+  background: var(--navy);
+  padding: 120px 0 64px;
+  text-align: center;
+}
+.page-hero h1 {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.page-hero .sub {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: rgba(255,255,255,0.35);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.info-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sky-light);
+  border-radius: 12px;
+}
+.info-text strong {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 8px;
+}
+.info-text p {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, var(--sky), var(--sky-dark));
+  border-radius: 16px;
+  padding: 36px 32px;
+  color: var(--white);
+}
+.highlight-card h3 {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.highlight-card p {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 8px;
+}
+.highlight-card .detail {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 16px;
+}
+
+.map-section {
+  background: var(--white);
+}
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .info-card { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="about.html">団体概要</a></li>
+    <li><a href="manul-schole.html">まぬるすこれ</a></li>
+    <li><a href="activities.html">活動内容</a></li>
+    <li><a href="sns.html">SNS・メディア</a></li>
+    <li><a href="contact.html" class="nav-cta active">お問い合わせ</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="this.parentElement.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow eyebrow-white" style="justify-content:center;">Contact</div>
+    <h1>お問い合わせ</h1>
+    <span class="sub">Get in Touch</span>
+  </div>
+</section>
+
+<!-- CONTACT INFO -->
+<section style="background:var(--misora-bg);padding:80px 0;">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow eyebrow-sky reveal">Contact Info</div>
+        <h2 class="section-title reveal">連絡先</h2>
+        <span class="section-title-en reveal">How to Reach Us</span>
+        <div class="info-cards">
+          <div class="info-card reveal">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <strong>活動拠点</strong>
+              <p>〒474-0073<br>愛知県大府市中央町６丁目25番地<br>セントロ大府201号</p>
+            </div>
+          </div>
+          <div class="info-card reveal">
+            <div class="info-icon">📧</div>
+            <div class="info-text">
+              <strong>メール</strong>
+              <p>info@kmanul.org</p>
+            </div>
+          </div>
+          <div class="info-card reveal">
+            <div class="info-icon">📱</div>
+            <div class="info-text">
+              <strong>SNS</strong>
+              <p><a href="https://www.instagram.com/kimyo_na_manul/" target="_blank" rel="noopener" style="color:var(--sky);text-decoration:none;">Instagram @kimyo_na_manul</a><br>
+              DMからもお気軽にどうぞ。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="highlight-card reveal">
+          <h3>💬 子育て相談</h3>
+          <p>24時間365日受付（12時間以内に対応）</p>
+          <p>LINE・オンライン・対面、いずれも可</p>
+          <p class="detail">
+            不登校・発達障害・引きこもり・貧困・ジェンダーなど、
+            お子さまや子育てに関するご相談をお受けしています。
+            ひとりで抱え込まず、まずはお気軽にご連絡ください。
+          </p>
+        </div>
+        <div class="info-card reveal" style="margin-top:20px;">
+          <div class="info-icon">🏫</div>
+          <div class="info-text">
+            <strong>まぬるすこれ 入学・見学</strong>
+            <p>入学相談・見学のお申し込みは、メールまたはInstagram DMにてお気軽にお問い合わせください。</p>
+          </div>
+        </div>
+        <div style="margin-top:24px;" class="reveal">
+          <a href="https://congrant.com/project/kimyo-na-manul/21284" target="_blank" rel="noopener"
+             style="display:block;background:linear-gradient(135deg,#1A2E4A,#6C9BD2);border-radius:12px;padding:24px 28px;text-decoration:none;">
+            <p style="color:rgba(255,255,255,.7);font-size:.85rem;margin-bottom:4px;">🎉 クラウドファンディング</p>
+            <p style="color:#fff;font-size:1.1rem;font-weight:700;">支援総額 300万円突破！応援はこちら →</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section" style="padding:80px 0;">
+  <div class="container">
+    <div class="eyebrow eyebrow-sky reveal" style="justify-content:center;">Access</div>
+    <h2 class="section-title reveal" style="text-align:center;">アクセス</h2>
+    <span class="section-title-en reveal" style="text-align:center;display:block;">Location</span>
+    <div class="reveal" style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.5!2d136.9613!3d35.0123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z44K744Oz44OI44Ot5aSn5bqc!5e0!3m2!1sja!2sjp!4v1"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p class="reveal" style="font-family:'BIZ UDPGothic',sans-serif;font-size:13px;color:var(--text-muted);text-align:center;margin-top:16px;line-height:1.8;">
+      愛知県大府市中央町６丁目25番地 セントロ大府201号<br>
+      JR東海道本線「大府駅」より徒歩約10分
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="filter:brightness(0) invert(1);">
+      <div class="footer-tagline">知多半島から、自分らしく生きる場所をつくる。<br>NPO法人 kimyo-na-manul（奇妙なマヌル）</div>
+    </div>
+    <div>
+      <div class="footer-col-title">サイトマップ</div>
+      <ul class="footer-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">団体概要</a></li>
+        <li><a href="manul-schole.html">まぬるすこれ</a></li>
+        <li><a href="activities.html">活動内容</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="https://congrant.com/project/kimyo-na-manul/21284" target="_blank" rel="noopener">クラウドファンディング</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Follow Us</div>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/kimyo_na_manul/" target="_blank" rel="noopener">Instagram @kimyo_na_manul</a></li>
+        <li><a href="https://open.spotify.com/show/4pCX4vRVYYnigfrbYCAyXj" target="_blank" rel="noopener">まぬらじ（Podcast）</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 NPO法人 kimyo-na-manul. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

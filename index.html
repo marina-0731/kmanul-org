@@ -391,10 +391,11 @@
   </div>
   <ul class="nav-links">
     <li><a href="index.html" class="active" data-ja="ホーム" data-en="Home">ホーム</a></li>
+    <li><a href="about.html" data-ja="団体概要" data-en="About">団体概要</a></li>
     <li><a href="manul-schole.html" data-ja="まぬるすこれ" data-en="Manul Schole">まぬるすこれ</a></li>
-    <li><a href="ringo.html" data-ja="りんごの樹" data-en="Ringo no Ki">りんごの樹</a></li>
+    <li><a href="activities.html" data-ja="活動内容" data-en="Activities">活動内容</a></li>
     <li><a href="sns.html" data-ja="SNS・メディア" data-en="Media">SNS・メディア</a></li>
-    <li><a href="manul-schole.html#contact" class="nav-cta" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
+    <li><a href="contact.html" class="nav-cta" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
   </ul>
   <div class="lang-toggle">
     <button class="lang-btn active" id="btn-ja" onclick="setLang('ja')">JA</button>
@@ -448,15 +449,20 @@
 </section>
 
 <!-- ABOUT -->
-<section class="about" id="about">
+<section class="about" id="about" style="background:var(--misora-bg);">
   <div class="container">
+    <div style="margin-bottom:48px;text-align:center;" class="reveal">
+      <div class="eyebrow eyebrow-sky" style="justify-content:center;">Who We Are</div>
+      <h2 class="section-title" data-ja="kimyo-na-manulとは" data-en="Who We Are">kimyo-na-manulとは</h2>
+    </div>
     <div class="about-grid">
       <div class="reveal">
-        <div class="eyebrow eyebrow-sky" data-ja="About Us" data-en="About Us">About Us</div>
-        <h2 class="section-title" data-ja="kimyo-na-manul とは" data-en="Who We Are">kimyo-na-manul とは</h2>
-        <span class="section-title-en">NPO法人 奇妙なマヌル</span>
-        <p class="section-lead" data-ja="「奇妙なまぬる（パラスネコ）」のように——孤高でありながら、深い観察眼と適応力をもって、自分の力で生きていく。そんな子ども・若者を育む場所をつくるために設立したNPO法人です。知多半島を拠点に、複数の事業を通じて活動しています。" data-en="Like the Pallas's cat — living independently, with deep perception and adaptability. We are a nonprofit building spaces for children and youth to grow on their own terms, based in the Chita Peninsula.">
-          「奇妙なまぬる（パラスネコ）」のように——孤高でありながら、深い観察眼と適応力をもって、自分の力で生きていく。そんな子ども・若者を育む場所をつくるために設立したNPO法人です。知多半島を拠点に、複数の事業を通じて活動しています。
+        <h3 class="section-title" style="font-size:clamp(20px,2.5vw,28px);margin-bottom:16px;" data-ja="自分で決める。<br>だから幸せ。" data-en="Decide for yourself.<br>That's happiness.">自分で決める。<br>だから幸せ。</h3>
+        <p class="section-lead" data-ja="わたしたちは、不登校・発達障害・引きこもり・貧困・ジェンダーマイノリティなど、多様な背景を持つ当事者が主体となって活動しています。当事者に本当に必要なのは、一方的な「支援」だけではありません。他者に信頼され、応援され、自ら挑戦し、成長する機会です。" data-en="We are led by people with diverse backgrounds — school refusal, developmental differences, social withdrawal, poverty, gender minorities. What they truly need is not just one-sided 'support', but trust, encouragement, and opportunities to challenge and grow.">
+          わたしたちは、不登校・発達障害・引きこもり・貧困・ジェンダーマイノリティなど、多様な背景を持つ当事者が主体となって活動しています。当事者に本当に必要なのは、一方的な「支援」だけではありません。他者に信頼され、応援され、自ら挑戦し、成長する機会です。
+        </p>
+        <p style="font-size:14px;color:var(--text-muted);line-height:2;max-width:620px;margin-bottom:28px;" data-ja="kimyo-na-manulは、そんな「成長の機会と貢献感が得られる居場所」を市民・企業・行政・各種団体と共につくります。ひとりひとりが活躍できる社会の実現を目指して。" data-en="kimyo-na-manul creates 'places where people gain growth opportunities and a sense of contribution', together with citizens, businesses, government, and organizations — aiming for a society where everyone can thrive.">
+          kimyo-na-manulは、そんな「成長の機会と貢献感が得られる居場所」を市民・企業・行政・各種団体と共につくります。ひとりひとりが活躍できる社会の実現を目指して。
         </p>
         <div class="badge-list">
           <span class="badge" data-ja="NPO法人格" data-en="Nonprofit">NPO法人格</span>
@@ -469,24 +475,53 @@
         <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
         <div class="about-stats">
           <div class="stat">
-            <div class="stat-num">2</div>
-            <div class="stat-label" data-ja="教育拠点" data-en="Education Bases">教育拠点</div>
+            <div class="stat-num">2024</div>
+            <div class="stat-label" data-ja="設立年（2024年4月24日）" data-en="Founded (April 24, 2024)">設立年（2024年4月24日）</div>
           </div>
           <div class="stat">
-            <div class="stat-num">U29</div>
-            <div class="stat-label" data-ja="若者主導運営" data-en="Youth-led">若者主導運営</div>
+            <div class="stat-num">300<span style="font-size:1.2rem">万円</span></div>
+            <div class="stat-label" data-ja="クラウドファンディング達成額" data-en="Crowdfunding achieved">クラウドファンディング達成額</div>
           </div>
           <div class="stat">
-            <div class="stat-num">知多</div>
-            <div class="stat-label" data-ja="半島から発信" data-en="Peninsula-based">半島から発信</div>
+            <div class="stat-num">小中高</div>
+            <div class="stat-label" data-ja="一貫教育　週5日開講中" data-en="K-12 integrated, 5 days/week">一貫教育　週5日開講中</div>
           </div>
           <div class="stat">
-            <div class="stat-num">∞</div>
-            <div class="stat-label" data-ja="学びの可能性" data-en="Possibilities">学びの可能性</div>
+            <div class="stat-num">24h</div>
+            <div class="stat-label" data-ja="子育て相談 365日対応" data-en="Parenting support, 365 days">子育て相談 365日対応</div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- クラファン達成バナー -->
+<section style="padding-top:0;padding-bottom:0;">
+  <div class="container">
+    <a href="https://congrant.com/project/kimyo-na-manul/21284"
+       target="_blank" rel="noopener"
+       style="display:flex; background:linear-gradient(135deg,#1A2E4A,#6C9BD2);
+              border-radius:16px; padding:28px 36px;
+              align-items:center; justify-content:space-between;
+              gap:20px; flex-wrap:wrap; text-decoration:none;">
+      <div>
+        <p style="color:rgba(255,255,255,.7);font-size:.85rem;margin-bottom:4px;">
+          🎉 クラウドファンディング NEXTゴール達成！
+        </p>
+        <p style="color:#fff;font-size:1.5rem;font-weight:700;line-height:1.3;">
+          支援総額 <span style="color:#FFD700;font-size:2rem;">300万円</span> 突破！
+        </p>
+        <p style="color:rgba(255,255,255,.7);font-size:.85rem;margin-top:4px;">
+          たくさんの応援、ありがとうございます。
+        </p>
+      </div>
+      <span style="background:#fff;color:#1A2E4A;font-weight:700;
+                   padding:.6em 1.4em;border-radius:100px;font-size:.9rem;
+                   white-space:nowrap;">
+        プロジェクトを見る →
+      </span>
+    </a>
   </div>
 </section>
 
@@ -508,29 +543,38 @@
     <div class="projects-intro reveal">
       <p class="section-lead" data-ja="kimyo-na-manulは、複数の事業を通じて、子ども・若者・保護者を支えます。" data-en="kimyo-na-manul supports children, youth, and families through multiple programs.">kimyo-na-manulは、複数の事業を通じて、子ども・若者・保護者を支えます。</p>
     </div>
-    <div class="project-cards">
+    <div class="project-cards" style="grid-template-columns:repeat(3,1fr);">
       <a href="manul-schole.html" class="project-card reveal">
         <div class="project-card-top green">
           <img src="assets/logo-manul-schole.png" alt="まぬるすこれ" class="project-card-logo">
         </div>
         <div class="project-card-body">
           <div class="project-card-tag green" data-ja="オルタナティブスクール" data-en="Alternative School">オルタナティブスクール</div>
-          <div class="project-card-name">まぬるすこれ</div>
-          <p class="project-card-desc" data-ja="知多半島地域立オルタナティブスクール。自己決定・探究・地域共育を柱に、自分らしく生きる力を育む。新小学一年生から。" data-en="Alternative school on the Chita Peninsula. Cultivating the ability to live authentically, through self-determination, inquiry, and community learning. From 1st grade.">知多半島地域立オルタナティブスクール。自己決定・探究・地域共育を柱に、自分らしく生きる力を育む。新小学一年生から。</p>
+          <div class="project-card-name" data-ja="まぬるすこれ" data-en="Manul Schole">まぬるすこれ</div>
+          <p class="project-card-desc" data-ja="2026年4月7日、大府市中央町に開校。小中高一貫、週5日開講中。LBL（ライフデザイン・ベースド・ラーニング）で子どもの個性と主体性を育みます。各学年定員4名。" data-en="Opened April 7, 2026 in Obu City. K-12 integrated, 5 days/week. Nurturing individuality through Life Design-Based Learning. 4 students per grade.">2026年4月7日、大府市中央町に開校。小中高一貫、週5日開講中。LBL（ライフデザイン・ベースド・ラーニング）で子どもの個性と主体性を育みます。各学年定員4名。</p>
           <span class="project-card-link green" data-ja="詳しく見る →" data-en="Learn more →">詳しく見る →</span>
         </div>
       </a>
-      <a href="ringo.html" class="project-card reveal">
+      <div class="project-card reveal">
         <div class="project-card-top sky" style="padding-top:48px;padding-bottom:48px;text-align:center;">
-          <span style="font-family:'BIZ UDPMincho',serif;font-size:42px;font-weight:700;color:var(--white);">りんごの樹</span>
+          <span style="font-family:'BIZ UDPMincho',serif;font-size:32px;font-weight:700;color:var(--white);">居場所・相談</span>
         </div>
         <div class="project-card-body">
-          <div class="project-card-tag sky" data-ja="民間教育センター" data-en="Community Education Center">民間教育センター</div>
-          <div class="project-card-name">りんごの樹</div>
-          <p class="project-card-desc" data-ja="大府市の民間教育センター。学習・生活・心のサポートを提供する、地域密着型の子ども・若者の居場所。" data-en="Community education center in Obu City. A local space for learning, life support, and emotional care for children and youth.">大府市の民間教育センター。学習・生活・心のサポートを提供する、地域密着型の子ども・若者の居場所。</p>
-          <span class="project-card-link sky" data-ja="詳しく見る →" data-en="Learn more →">詳しく見る →</span>
+          <div class="project-card-tag sky" data-ja="居場所・相談" data-en="Support & Community">居場所・相談</div>
+          <div class="project-card-name" data-ja="子育て相談 & 居場所づくり" data-en="Parenting Support & Community">子育て相談 & 居場所づくり</div>
+          <p class="project-card-desc" data-ja="子育て相談は24時間365日、LINE・オンライン・対面で受付中。オンライン交流会（月2回、Discord）や対面イベント（月2回以上）も開催しています。" data-en="Parenting consultations available 24/7 via LINE, online, or in-person. Monthly online meetups (twice/month on Discord) and in-person events (twice/month or more).">子育て相談は24時間365日、LINE・オンライン・対面で受付中。オンライン交流会（月2回、Discord）や対面イベント（月2回以上）も開催しています。</p>
         </div>
-      </a>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-card-top sky" style="padding-top:48px;padding-bottom:48px;text-align:center;">
+          <span style="font-family:'BIZ UDPMincho',serif;font-size:32px;font-weight:700;color:var(--white);">情報発信</span>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-tag sky" data-ja="情報発信" data-en="Media">情報発信</div>
+          <div class="project-card-name" data-ja="まぬらじ！& マヌルちゃんねる" data-en="Manuraji! & Manul Channel">まぬらじ！& マヌルちゃんねる</div>
+          <p class="project-card-desc" data-ja="毎週土曜18時半配信のラジオ「まぬらじ！」と、YouTubeチャンネル「マヌルちゃんねる（仮）」で不登校・発達障害の当事者経験や子育て情報を発信しています。" data-en="Weekly radio show 'Manuraji!' every Saturday at 6:30 PM, plus YouTube channel 'Manul Channel' sharing experiences of school refusal, developmental differences, and parenting.">毎週土曜18時半配信のラジオ「まぬらじ！」と、YouTubeチャンネル「マヌルちゃんねる（仮）」で不登校・発達障害の当事者経験や子育て情報を発信しています。</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -572,24 +616,30 @@
     <div class="eyebrow eyebrow-sky reveal" data-ja="News" data-en="News">News</div>
     <h2 class="section-title reveal" data-ja="お知らせ" data-en="Latest News">お知らせ</h2>
     <div class="news-list reveal">
-      <a href="manul-schole.html#contact" class="news-item">
-        <span class="news-date">2025.04.01</span>
-        <span class="news-tag">まぬるすこれ</span>
-        <span class="news-title" data-ja="2025年度 入学・見学受付を開始しました" data-en="Applications and visits now open for 2025">2025年度 入学・見学受付を開始しました</span>
+      <div class="news-item">
+        <span class="news-date">2026.06.14</span>
+        <span class="news-tag">イベント</span>
+        <span class="news-title" data-ja="武豊のイベントにて理事2名が登壇しました" data-en="Two board members spoke at a Taketoyo event">武豊のイベントにて理事2名が登壇しました</span>
         <span class="news-arrow">→</span>
-      </a>
-      <a href="ringo.html" class="news-item">
-        <span class="news-date">2025.02.01</span>
-        <span class="news-tag">りんごの樹</span>
-        <span class="news-title" data-ja="大府市民間教育センター「りんごの樹」開設のお知らせ" data-en="Ringo no Ki community center now open in Obu City">大府市民間教育センター「りんごの樹」開設のお知らせ</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2026.06.01</span>
+        <span class="news-tag">募集</span>
+        <span class="news-title" data-ja="まぬるすこれ 中学部 各学年残り3名を募集中" data-en="Manul Schole middle school: 3 spots remaining per grade">まぬるすこれ 中学部 各学年残り3名を募集中</span>
         <span class="news-arrow">→</span>
-      </a>
-      <a href="sns.html" class="news-item">
-        <span class="news-date">2025.01.10</span>
-        <span class="news-tag">まぬらじ</span>
-        <span class="news-title" data-ja="まぬらじ 新エピソード公開中" data-en="New episodes of Manuraji now available">まぬらじ 新エピソード公開中</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2026.04.07</span>
+        <span class="news-tag">重要</span>
+        <span class="news-title" data-ja="まぬるすこれ 開校式＆入学式を開催しました（大府市中央町）" data-en="Manul Schole opening ceremony held in Obu City">まぬるすこれ 開校式＆入学式を開催しました（大府市中央町）</span>
         <span class="news-arrow">→</span>
-      </a>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2026.04.06</span>
+        <span class="news-tag">重要</span>
+        <span class="news-title" data-ja="NPO法人として登記が完了しました" data-en="NPO registration completed">NPO法人として登記が完了しました</span>
+        <span class="news-arrow">→</span>
+      </div>
     </div>
   </div>
 </section>
@@ -603,7 +653,7 @@
         <h2 class="section-title" style="color:var(--white);" data-ja="寄付で、子どもの<br>未来を支える" data-en="Support children's future<br>with a donation">寄付で、子どもの<br>未来を支える</h2>
         <span class="section-title-en" style="color:rgba(255,255,255,0.3);">Make a Donation</span>
         <p style="font-family:'BIZ UDPGothic',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);line-height:2;max-width:480px;margin-bottom:32px;" data-ja="まぬるすこれの運営は、地域と社会の支えによって成り立っています。ご支援いただいた資金は、子どもたちの学びの場づくりに直接使われます。" data-en="Manul Schole is sustained by the support of community and society. Donations go directly to building learning spaces for children.">まぬるすこれの運営は、地域と社会の支えによって成り立っています。ご支援いただいた資金は、子どもたちの学びの場づくりに直接使われます。</p>
-        <a href="https://congrant.com/project/kimyo-na-manul/20646" target="_blank" rel="noopener" class="btn-sky" data-ja="寄付をする（Congrant）" data-en="Donate (Congrant)">寄付をする（Congrant）</a>
+        <a href="https://congrant.com/project/kimyo-na-manul/21284" target="_blank" rel="noopener" class="btn-sky" data-ja="寄付をする（Congrant）" data-en="Donate (Congrant)">寄付をする（Congrant）</a>
       </div>
       <div class="reveal">
         <div style="font-family:'BIZ UDPGothic',sans-serif;font-size:10px;color:var(--sky);letter-spacing:0.3em;text-transform:uppercase;margin-bottom:16px;">まぬらじ — Podcast</div>
@@ -615,14 +665,31 @@
   </div>
 </section>
 
+<!-- VOICES -->
+<section style="background:var(--misora-bg);padding:80px 0;">
+  <div class="container">
+    <div class="eyebrow eyebrow-sky reveal" style="justify-content:center;">Voices</div>
+    <h2 class="section-title reveal" style="text-align:center;" data-ja="みんなの声" data-en="Voices">みんなの声</h2>
+    <span class="section-title-en reveal" style="text-align:center;display:block;">What People Say</span>
+    <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:24px;">
+      <div class="reveal" style="background:var(--white);border-radius:16px;padding:32px 36px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+        <p style="font-family:'BIZ UDPMincho',serif;font-size:16px;color:var(--navy);line-height:2;margin-bottom:16px;">
+          思い立ったら即行動！でもちゃんと本気。こんな人に流されるのは楽しいですよ。一緒に学校作ってみませんか？
+        </p>
+        <p style="font-family:'BIZ UDPGothic',sans-serif;font-size:13px;color:var(--text-muted);">― 常務理事 堀金結（クラファンページより）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <div class="cta-band">
   <div class="container">
     <h2 class="reveal" data-ja="一緒に、子どもの未来をつくりませんか？" data-en="Let's build the future for children, together.">一緒に、子どもの未来をつくりませんか？</h2>
     <p class="reveal" data-ja="入学相談・見学・寄付・ボランティアなど、関わり方はさまざまです。まずはお気軽にお問い合わせください。" data-en="There are many ways to get involved — admissions, visits, donations, volunteering. Feel free to reach out.">入学相談・見学・寄付・ボランティアなど、関わり方はさまざまです。まずはお気軽にお問い合わせください。</p>
     <div class="cta-btns reveal">
-      <a href="manul-schole.html#contact" class="btn-sky" data-ja="まぬるすこれに相談する" data-en="Contact Manul Schole">まぬるすこれに相談する</a>
-      <a href="ringo.html" class="btn-outline-white" data-ja="りんごの樹を見る" data-en="Visit Ringo no Ki">りんごの樹を見る</a>
+      <a href="contact.html" class="btn-sky" data-ja="お問い合わせ" data-en="Contact Us">お問い合わせ</a>
+      <a href="about.html" class="btn-outline-white" data-ja="団体概要を見る" data-en="About Us">団体概要を見る</a>
     </div>
   </div>
 </div>
@@ -638,10 +705,11 @@
       <div class="footer-col-title" data-ja="サイトマップ" data-en="Site Map">サイトマップ</div>
       <ul class="footer-links">
         <li><a href="index.html" data-ja="ホーム" data-en="Home">ホーム</a></li>
+        <li><a href="about.html" data-ja="団体概要" data-en="About">団体概要</a></li>
         <li><a href="manul-schole.html">まぬるすこれ</a></li>
-        <li><a href="ringo.html" data-ja="りんごの樹" data-en="Ringo no Ki">りんごの樹</a></li>
-        <li><a href="sns.html" data-ja="SNS・メディア" data-en="Media">SNS・メディア</a></li>
-        <li><a href="manul-schole.html#contact" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
+        <li><a href="activities.html" data-ja="活動内容" data-en="Activities">活動内容</a></li>
+        <li><a href="contact.html" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
+        <li><a href="https://congrant.com/project/kimyo-na-manul/21284" target="_blank" rel="noopener" data-ja="クラウドファンディング" data-en="Crowdfunding">クラウドファンディング</a></li>
       </ul>
     </div>
     <div>

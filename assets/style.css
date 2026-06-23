@@ -8,6 +8,8 @@
   --sky-light:  #EBF3FB;
   --sky-mid:    #D0E4F5;
 
+  --misora-bg:  #EEF4FB;
+
   /* まぬるすこれ色（グリーン） */
   --green:      #4FAD4A;
   --green-dark: #2D7A2A;
@@ -123,21 +125,35 @@ nav {
 }
 
 @media (max-width: 900px) {
-  nav { padding: 0 20px; }
-  .nav-hamburger { display: flex; }
+  nav { padding: 0 16px; height: 56px; }
+  .nav-logo img { height: 30px; }
+  .nav-hamburger { display: flex; padding: 8px; }
+  .nav-hamburger span { width: 22px; }
+  .lang-toggle { margin-right: 8px; }
   .nav-links {
     display: none;
     position: fixed;
-    top: 64px; left: 0; right: 0;
-    background: rgba(15,30,53,0.98);
+    top: 56px; left: 0; right: 0; bottom: 0;
+    background: rgba(15,30,53,0.99);
     flex-direction: column;
     gap: 0;
-    padding: 12px 0;
+    padding: 20px 0;
+    overflow-y: auto;
   }
   .nav-links.open { display: flex; }
   .nav-links li { width: 100%; }
-  .nav-links a { display: block; padding: 12px 24px; font-size: 15px; }
-  .nav-cta { margin: 8px 24px; text-align: center; }
+  .nav-links a {
+    display: block;
+    padding: 16px 24px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .nav-cta {
+    margin: 16px 24px 8px;
+    text-align: center;
+    padding: 14px 20px !important;
+    font-size: 15px !important;
+  }
 }
 
 /* ── LAYOUT ── */
@@ -150,8 +166,8 @@ section { padding: 80px 0; }
 }
 
 @media (max-width: 900px) {
-  .container { padding: 0 20px; }
-  section { padding: 56px 0; }
+  .container { padding: 0 16px; }
+  section { padding: 48px 0; }
 }
 
 /* ── TYPOGRAPHY ── */
@@ -201,6 +217,12 @@ section { padding: 80px 0; }
   line-height: 2;
   max-width: 620px;
   margin-bottom: 48px;
+}
+@media (max-width: 600px) {
+  .section-title { font-size: 24px; margin-bottom: 4px; }
+  .section-title-en { font-size: 12px; margin-bottom: 20px; }
+  .section-lead { font-size: 14px; margin-bottom: 32px; }
+  .eyebrow { font-size: 10px; margin-bottom: 8px; }
 }
 
 /* ── BUTTONS ── */
@@ -263,6 +285,26 @@ section { padding: 80px 0; }
   transition: all 0.25s;
 }
 .btn-outline-sky:hover { background: var(--sky); color: var(--white); }
+
+@media (max-width: 600px) {
+  .btn-sky, .btn-green, .btn-outline-white, .btn-outline-sky {
+    width: 100%;
+    text-align: center;
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+}
+
+/* ── SECTION MISORA ── */
+.section--misora {
+  background: var(--misora-bg);
+}
+.section--misora .label {
+  color: var(--sky-dark);
+}
+.section--misora h2 {
+  color: var(--navy);
+}
 
 /* ── REVEAL ── */
 .reveal {

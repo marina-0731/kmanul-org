@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活動内容 | NPO法人 kimyo-na-manul</title>
+<meta name="description" content="kimyo-na-manulの活動内容。オルタナティブスクール「まぬるすこれ」、子育て相談、イベント、情報発信など。">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.page-hero {
+  background: var(--navy);
+  padding: 120px 0 64px;
+  text-align: center;
+}
+.page-hero h1 {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.page-hero .sub {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: rgba(255,255,255,0.35);
+}
+
+.activity-section { padding: 80px 0; }
+.activity-section:nth-child(even) { background: var(--stone); }
+.activity-section:nth-child(odd) { background: var(--white); }
+
+.open-banner {
+  background: var(--green);
+  color: #fff;
+  border-radius: 10px;
+  padding: 16px 24px;
+  margin-bottom: 32px;
+  font-size: .95rem;
+  font-family: 'BIZ UDPGothic', sans-serif;
+}
+
+.tl {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.tl-item {
+  display: flex;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--stone);
+  align-items: flex-start;
+}
+.tl-item:last-child { border-bottom: none; }
+.tl-time {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green);
+  width: 80px;
+  flex-shrink: 0;
+}
+.tl-body {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.mini-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.mini-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.mini-card__icon {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.mini-card__title {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.mini-card__text {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+.media-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .mini-cards, .media-cards { grid-template-columns: 1fr; }
+  .tl-item { gap: 12px; }
+  .tl-time { width: 70px; font-size: 12px; }
+  .activity-section { padding: 48px 0; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="about.html">団体概要</a></li>
+    <li><a href="manul-schole.html">まぬるすこれ</a></li>
+    <li><a href="activities.html" class="active">活動内容</a></li>
+    <li><a href="sns.html">SNS・メディア</a></li>
+    <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="this.parentElement.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow eyebrow-white" style="justify-content:center;">Activities</div>
+    <h1>活動内容</h1>
+    <span class="sub">What We Do</span>
+  </div>
+</section>
+
+<!-- まぬるすこれ -->
+<section class="activity-section">
+  <div class="container">
+    <div class="eyebrow eyebrow-green reveal">Alternative School</div>
+    <h2 class="section-title reveal">オルタナティブスクール「まぬるすこれ」</h2>
+    <span class="section-title-en reveal">Manul Schole</span>
+
+    <div class="open-banner reveal">
+      🎉 2026年4月7日、大府市中央町にて開校式＆入学式を開催しました！現在週5日開講中。
+    </div>
+
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      <div>
+        <p class="section-lead">
+          LBL（ライフデザイン・ベースド・ラーニング）で子どもの個性と主体性を育む、
+          小中高一貫のオルタナティブスクール。各学年定員4名。
+        </p>
+        <h3 style="font-family:'BIZ UDPMincho',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:16px;">1日のながれ</h3>
+        <div class="tl">
+          <div class="tl-item">
+            <span class="tl-time">10:00</span>
+            <div class="tl-body">登校</div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-time">10:15</span>
+            <div class="tl-body">朝のミーティング</div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-time">午前中</span>
+            <div class="tl-body">まぬるたいむ（自由探究・電子機器なし）</div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-time">12:00ごろ</span>
+            <div class="tl-body">昼ごはん作り（買い出し・調理を子どもたちが主体で）</div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-time">午後</span>
+            <div class="tl-body">まぬるたいむ・クラス会議・プロジェクト活動</div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-time">15:00</span>
+            <div class="tl-body">下校（学童利用の場合は18:00まで）</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="images/cardgame.jpg" alt="まぬるすこれの活動" style="border-radius:16px;width:100%;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+        <div style="margin-top:32px;">
+          <img src="images/schole_origin.png"
+               alt="すこれの由来：古代ギリシャ語のスコレー（積極的な暇・知的な自由時間）"
+               style="border-radius:12px;max-width:100%;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;text-align:center;" class="reveal">
+      <a href="manul-schole.html" class="btn-green">まぬるすこれ 詳細ページへ →</a>
+    </div>
+  </div>
+</section>
+
+<!-- イベント・居場所 -->
+<section class="activity-section">
+  <div class="container">
+    <div class="eyebrow eyebrow-sky reveal">Events & Community</div>
+    <h2 class="section-title reveal">イベント・居場所・相談</h2>
+    <span class="section-title-en reveal">Events, Community Spaces & Support</span>
+    <div class="mini-cards">
+      <div class="mini-card reveal">
+        <div class="mini-card__icon">🎉</div>
+        <h3 class="mini-card__title">月例対面イベント</h3>
+        <p class="mini-card__text">
+          月2回以上、地域のみんなが集まるリアルイベントを開催。
+          子育て講座・クラス会議体験・久遠チョコレートにまつわるイベント・
+          映画上映会など多彩な内容で実施しています。
+        </p>
+      </div>
+      <div class="mini-card reveal">
+        <div class="mini-card__icon">💬</div>
+        <h3 class="mini-card__title">子育て相談</h3>
+        <p class="mini-card__text">
+          24時間365日受付（12時間以内に対応）。
+          LINE・オンライン・対面、いずれも可。
+          オンライン交流会も月2回（Discord）開催しています。
+        </p>
+      </div>
+      <div class="mini-card reveal">
+        <div class="mini-card__icon">☀️</div>
+        <h3 class="mini-card__title">夏休み子どもの居場所（8月予定）</h3>
+        <p class="mini-card__text">
+          8月に「アドラー心理学講座エルム」と合わせて実施予定。
+          宿題は持参不要。人生の中の自由な時間＝「積極的余暇」を
+          体感してもらいます。定員30名。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 人材育成・派遣 -->
+<section class="activity-section">
+  <div class="container">
+    <div class="eyebrow eyebrow-sky reveal">Human Resources</div>
+    <h2 class="section-title reveal">人材育成・派遣事業</h2>
+    <span class="section-title-en reveal">Speaker Dispatch & Development</span>
+    <div class="mini-cards" style="grid-template-columns:1fr;">
+      <div class="mini-card reveal" style="max-width:720px;">
+        <div class="mini-card__icon">🎤</div>
+        <h3 class="mini-card__title">人材育成・派遣事業</h3>
+        <p class="mini-card__text">
+          多様な背景を持つ子ども・若者を市民・企業・行政の催しに派遣し、
+          当事者経験の共有や講演を行います。<br>
+          【実績】2026年6月14日 武豊のイベントにて理事2名が登壇。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 情報発信 -->
+<section class="activity-section">
+  <div class="container">
+    <div class="eyebrow eyebrow-sky reveal">Media</div>
+    <h2 class="section-title reveal">情報発信</h2>
+    <span class="section-title-en reveal">Media & Publications</span>
+    <div class="media-cards">
+      <div class="mini-card reveal" id="radio">
+        <div class="mini-card__icon">🎙️</div>
+        <h3 class="mini-card__title">ラジオ「まぬらじ！」</h3>
+        <p class="mini-card__text">
+          毎週土曜18時半配信。不登校・発達障害の当事者経験や
+          子育ての悩みに若者目線で答えます。
+          共生や多様性といった価値観を発信中。
+        </p>
+        <div style="margin-top:16px;">
+          <a href="https://open.spotify.com/show/4pCX4vRVYYnigfrbYCAyXj" target="_blank" rel="noopener" class="btn-sky" style="font-size:13px;padding:10px 24px;">Spotifyで聴く →</a>
+        </div>
+      </div>
+      <div class="mini-card reveal">
+        <div class="mini-card__icon">▶️</div>
+        <h3 class="mini-card__title">マヌルちゃんねる（YouTube・準備中）</h3>
+        <p class="mini-card__text">
+          様々なマイノリティの当事者がチャレンジする姿や
+          経験を動画で発信予定。毎日配信を目標にしています。
+        </p>
+      </div>
+      <div class="mini-card reveal">
+        <div class="mini-card__icon">📄</div>
+        <h3 class="mini-card__title">紙媒体での情報発信</h3>
+        <p class="mini-card__text">
+          地域への広報・普及啓発のため、紙媒体での情報発信を予定しています。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div style="background:var(--navy);padding:80px 0;text-align:center;">
+  <div class="container">
+    <h2 class="reveal" style="font-family:'BIZ UDPMincho',serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--white);margin-bottom:16px;">活動に参加しませんか？</h2>
+    <p class="reveal" style="font-family:'BIZ UDPGothic',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);margin-bottom:36px;line-height:2;">見学・ボランティア・寄付など、関わり方はさまざまです。</p>
+    <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn-sky">お問い合わせ</a>
+      <a href="https://congrant.com/project/kimyo-na-manul/21284" target="_blank" rel="noopener" class="btn-outline-white">クラウドファンディング</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="filter:brightness(0) invert(1);">
+      <div class="footer-tagline">知多半島から、自分らしく生きる場所をつくる。<br>NPO法人 kimyo-na-manul（奇妙なマヌル）</div>
+    </div>
+    <div>
+      <div class="footer-col-title">サイトマップ</div>
+      <ul class="footer-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">団体概要</a></li>
+        <li><a href="manul-schole.html">まぬるすこれ</a></li>
+        <li><a href="activities.html">活動内容</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="https://congrant.com/project/kimyo-na-manul/21284" target="_blank" rel="noopener">クラウドファンディング</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Follow Us</div>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/kimyo_na_manul/" target="_blank" rel="noopener">Instagram @kimyo_na_manul</a></li>
+        <li><a href="https://open.spotify.com/show/4pCX4vRVYYnigfrbYCAyXj" target="_blank" rel="noopener">まぬらじ（Podcast）</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 NPO法人 kimyo-na-manul. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

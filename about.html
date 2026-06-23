@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>団体概要 | NPO法人 kimyo-na-manul</title>
+<meta name="description" content="NPO法人 kimyo-na-manul（奇妙なマヌル）の団体概要。代表メッセージ・あゆみ・法人情報。">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.page-hero {
+  background: var(--navy);
+  padding: 120px 0 64px;
+  text-align: center;
+}
+.page-hero h1 {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.page-hero .sub {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: rgba(255,255,255,0.35);
+}
+
+/* message */
+.message-section { background: var(--misora-bg); }
+.message-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.message-title {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+.message-body p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 2.2;
+  margin-bottom: 20px;
+}
+.message-sig {
+  font-family: 'BIZ UDPMincho', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 24px;
+}
+
+/* history */
+.history-section { background: var(--white); }
+.history-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.history-item {
+  display: flex;
+  gap: 28px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--stone);
+  align-items: flex-start;
+}
+.history-item:last-child { border-bottom: none; }
+.history-date {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sky);
+  width: 120px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.history-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+/* org table */
+.org-section { background: var(--stone); }
+.org-table {
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.org-table th,
+.org-table td {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 14px;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.9;
+}
+.org-table th {
+  color: var(--navy);
+  font-weight: 700;
+  width: 180px;
+  background: rgba(91,142,196,0.06);
+}
+.org-table td {
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .message-grid { grid-template-columns: 1fr; gap: 32px; }
+  .history-item { flex-direction: column; gap: 8px; }
+  .history-date { width: auto; }
+  .org-table th { width: 120px; font-size: 13px; padding: 14px 16px; }
+  .org-table td { font-size: 13px; padding: 14px 16px; }
+}
+@media (max-width: 600px) {
+  .org-table th, .org-table td { display: block; width: 100%; }
+  .org-table th { border-bottom: none; padding-bottom: 4px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="about.html" class="active">団体概要</a></li>
+    <li><a href="manul-schole.html">まぬるすこれ</a></li>
+    <li><a href="activities.html">活動内容</a></li>
+    <li><a href="sns.html">SNS・メディア</a></li>
+    <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="this.parentElement.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow eyebrow-white" style="justify-content:center;">About Us</div>
+    <h1>団体概要</h1>
+    <span class="sub">About kimyo-na-manul</span>
+  </div>
+</section>
+
+<!-- 代表メッセージ -->
+<section class="message-section">
+  <div class="container">
+    <div class="eyebrow eyebrow-sky reveal">Message</div>
+    <h2 class="section-title reveal">代表メッセージ</h2>
+    <span class="section-title-en reveal">From Our Representative</span>
+    <div class="message-grid">
+      <div class="reveal">
+        <h3 class="message-title">「きみょう」であること、<br>それが個性の始まり。</h3>
+        <div class="message-body">
+          <p>
+            不登校・発達障害・引きこもり・貧困・昼夜逆転・シングルペアレント・
+            ジェンダーマイノリティ——わたしたちは、こうした多様な背景を持つ
+            当事者が主体となって活動しています。
+          </p>
+          <p>
+            当事者にとって真に必要なのは、一方的な「支援」だけではありません。
+            他者に信頼され、応援され、自ら挑戦し、成長する機会です。
+            そして、たとえ失敗して心が折れてしまった時でも、
+            そっと手を握ってくれる仲間の存在です。
+          </p>
+          <p>
+            kimyo-na-manulという名前は、中央アジアに生息するマヌルネコから。
+            なんとも言えない奇妙な表情でも、たくましく自分らしく生きるマヌルネコのように、
+            すべての人が自分らしく生きられる社会をつくりたい。
+            そんな想いで、2024年4月24日にこの団体を立ち上げました。
+          </p>
+        </div>
+        <p class="message-sig">
+          土屋 真理奈（安土）<br>
+          <span style="font-size:.82rem;color:var(--text-muted);font-weight:400;">
+            特定非営利活動法人 kimyo-na-manul 奇妙なマヌル 代表理事
+          </span>
+        </p>
+      </div>
+      <div class="reveal" style="text-align:center;">
+        <div style="background:var(--sky-light);border-radius:20px;padding:48px;">
+          <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="width:80%;height:auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- あゆみ -->
+<section class="history-section">
+  <div class="container">
+    <div class="eyebrow eyebrow-sky reveal" style="justify-content:center;">History</div>
+    <h2 class="section-title reveal" style="text-align:center;">あゆみ</h2>
+    <span class="section-title-en reveal" style="text-align:center;display:block;">Our Journey</span>
+    <div class="history-list">
+      <div class="history-item reveal">
+        <span class="history-date">2024年4月</span>
+        <div class="history-content">
+          <p>任意団体 kimyo-na-manul 設立（4月24日）。知多半島でオルタナティブスクール構想を発信し始める。</p>
+        </div>
+      </div>
+      <div class="history-item reveal">
+        <span class="history-date">2024〜2025年</span>
+        <div class="history-content">
+          <p>地域イベント・オンライン交流会を重ねながら仲間を集める。クラウドファンディング「まぬるすこれ校舎をつくりたい！」を実施、目標200万円に対して支援総額300万円超を達成（NEXTゴール達成）。</p>
+        </div>
+      </div>
+      <div class="history-item reveal">
+        <span class="history-date">2026年1月</span>
+        <div class="history-content">
+          <p>特定非営利活動法人設立総会（1月23日）。</p>
+        </div>
+      </div>
+      <div class="history-item reveal">
+        <span class="history-date">2026年4月</span>
+        <div class="history-content">
+          <p>NPO法人登記完了（4月6日）。翌4月7日、大府市中央町にてまぬるすこれ開校式＆入学式を開催。小中高一貫、週5日で本格開始。</p>
+        </div>
+      </div>
+      <div class="history-item reveal">
+        <span class="history-date">2026年6月</span>
+        <div class="history-content">
+          <p>武豊のイベントにて理事・髙橋実百里と新帯駈が登壇（6月14日）。人材育成・派遣事業を本格始動。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 法人概要 -->
+<section class="org-section">
+  <div class="container">
+    <div class="eyebrow eyebrow-sky reveal" style="justify-content:center;">Organization</div>
+    <h2 class="section-title reveal" style="text-align:center;">法人概要</h2>
+    <span class="section-title-en reveal" style="text-align:center;display:block;">Corporate Information</span>
+    <table class="org-table reveal">
+      <tr>
+        <th>法人名</th>
+        <td>特定非営利活動法人 kimyo-na-manul（奇妙なマヌル）</td>
+      </tr>
+      <tr>
+        <th>設立</th>
+        <td>任意団体設立：2024年4月24日<br>
+            NPO法人設立総会：2026年1月23日<br>
+            NPO法人登記：2026年4月6日</td>
+      </tr>
+      <tr>
+        <th>定款の目的</th>
+        <td>市民に対して、成長の機会や貢献感を得られる交流の場（居場所）の提供等に関する事業を、市民・企業・行政・各種団体などと共に行い、社会的孤立といった市民に係る問題の改善を図り、ひとりひとりが活躍できる社会の実現に寄与すること</td>
+      </tr>
+      <tr>
+        <th>特定非営利活動の種類</th>
+        <td>社会教育の推進／まちづくりの推進／子どもの健全育成／職業能力の開発・雇用機会の拡充支援／人権の擁護・平和の推進</td>
+      </tr>
+      <tr>
+        <th>役員</th>
+        <td>代表理事：土屋真理奈 / 常務理事：堀金結・山田みそら<br>
+            理事：髙橋実百里・新帯駈・大原純々・八幡篤明<br>
+            監事：後藤颯人</td>
+      </tr>
+      <tr>
+        <th>主たる事務所</th>
+        <td>愛知県大府市（詳細は定款記載）</td>
+      </tr>
+      <tr>
+        <th>活動拠点</th>
+        <td>〒474-0073 愛知県大府市中央町６丁目25番地 セントロ大府201号</td>
+      </tr>
+      <tr>
+        <th>会計年度</th>
+        <td>毎年4月1日〜翌年3月31日</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- CTA -->
+<div style="background:var(--navy);padding:80px 0;text-align:center;">
+  <div class="container">
+    <h2 class="reveal" style="font-family:'BIZ UDPMincho',serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--white);margin-bottom:16px;">一緒に、子どもの未来をつくりませんか？</h2>
+    <p class="reveal" style="font-family:'BIZ UDPGothic',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);margin-bottom:36px;line-height:2;">入学相談・見学・寄付・ボランティアなど、関わり方はさまざまです。</p>
+    <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn-sky">お問い合わせ</a>
+      <a href="https://congrant.com/project/kimyo-na-manul/21284" target="_blank" rel="noopener" class="btn-outline-white">クラウドファンディング</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul" style="filter:brightness(0) invert(1);">
+      <div class="footer-tagline">知多半島から、自分らしく生きる場所をつくる。<br>NPO法人 kimyo-na-manul（奇妙なマヌル）</div>
+    </div>
+    <div>
+      <div class="footer-col-title">サイトマップ</div>
+      <ul class="footer-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">団体概要</a></li>
+        <li><a href="manul-schole.html">まぬるすこれ</a></li>
+        <li><a href="activities.html">活動内容</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="https://congrant.com/project/kimyo-na-manul/21284" target="_blank" rel="noopener">クラウドファンディング</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Follow Us</div>
+      <ul class="footer-links">
+        <li><a href="https://www.instagram.com/kimyo_na_manul/" target="_blank" rel="noopener">Instagram @kimyo_na_manul</a></li>
+        <li><a href="https://open.spotify.com/show/4pCX4vRVYYnigfrbYCAyXj" target="_blank" rel="noopener">まぬらじ（Podcast）</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 NPO法人 kimyo-na-manul. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
