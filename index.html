@@ -118,6 +118,18 @@
   font-style: normal;
   color: var(--sky);
 }
+.hero-what {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: clamp(14px, 1.8vw, 17px);
+  color: rgba(255,255,255,0.7);
+  line-height: 2.2;
+  margin-bottom: 48px;
+  letter-spacing: 0.03em;
+}
+.pc-only { display: inline; }
+@media (max-width: 600px) {
+  .pc-only { display: none; }
+}
 .hero-logo { margin-bottom: 40px; }
 .hero-logo img { width: min(360px, 70%); height: auto; display: inline-block; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
@@ -423,11 +435,18 @@
       優しい、子ども・若者のための居場所、でもありません。
     </p>
     <h1 class="hero-punch"><span class="sr-only">kimyo-na-manul（奇妙なマヌル）— </span>今までにない、<em>挑戦</em>です。</h1>
+    <p class="hero-what">
+      愛知県大府市で「まぬるすこれ」という学校を運営するNPO法人です。<br>
+      まぬるすこれは、子ども自身が「何を学ぶか」「どう学ぶか」を決める学校。<br>
+      教科書どおりの授業はありません。自分で考え、動き、つくる毎日の中で、<br class="pc-only">
+      自立して生きていく力を育みます。<br>
+      小中高一貫・週5日・授業料無償。
+    </p>
     <div class="hero-logo">
       <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
     </div>
     <div class="hero-actions">
-      <a href="manul-schole.html" class="btn-sky">まぬるすこれを見る</a>
+      <a href="manul-schole.html" class="btn-green">まぬるすこれを見る</a>
       <a href="#about" class="btn-outline-white">団体について</a>
     </div>
   </div>
