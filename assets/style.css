@@ -379,6 +379,14 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+.footer-legal {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.8;
+  margin-bottom: 8px;
+  text-align: center;
+}
 .footer-copy {
   font-family: 'UD デジタル 教科書体 NP-R', 'UDDigiKyokashoNP-R', 'BIZ UDPGothic', sans-serif;
   font-size: 11px;
