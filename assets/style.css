@@ -16,6 +16,12 @@
   --green-light:#C8E8C6;
   --green-bg:   #F0F8EF;
 
+  /* まりな塾色（レッド） */
+  --red:        #D14B4B;
+  --red-dark:   #A33030;
+  --red-light:  #F5D0D0;
+  --red-bg:     #FDF2F2;
+
   /* 共通 */
   --navy:       #0F1E35;
   --navy-mid:   #1A3050;
@@ -193,6 +199,8 @@ section { padding: 80px 0; }
 .eyebrow-sky::before { background: var(--sky); }
 .eyebrow-green { color: var(--green); }
 .eyebrow-green::before { background: var(--green); }
+.eyebrow-red { color: var(--red); }
+.eyebrow-red::before { background: var(--red); }
 .eyebrow-white { color: rgba(255,255,255,0.6); }
 .eyebrow-white::before { background: rgba(255,255,255,0.3); }
 
@@ -258,6 +266,24 @@ section { padding: 80px 0; }
   transition: all 0.25s;
 }
 .btn-green:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(79,173,74,0.4); }
+
+.btn-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: var(--white);
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(209,75,75,0.3);
+}
+.btn-red:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(209,75,75,0.4); }
 
 .btn-outline-white {
   border: 2px solid rgba(255,255,255,0.5);
