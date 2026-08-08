@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://kmanul.org/assets/logo-kmanul.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=2">
+<link rel="stylesheet" href="assets/style.css?v=3">
 <style>
 .page-hero {
   background: var(--navy);
@@ -122,6 +122,12 @@
   .tl-time { width: 70px; font-size: 12px; }
   .activity-section { padding: 48px 0; }
 }
+
+/* phone-frame: force mobile layout */
+.mini-cards, .media-cards { grid-template-columns: 1fr !important; }
+.tl-item { gap: 12px; }
+.tl-time { width: 70px; font-size: 12px; }
+.activity-section { padding: 48px 0; }
 </style>
 </head>
 <body>
@@ -171,7 +177,7 @@
       🎉 2026年4月7日、大府市中央町にて開校式＆入学式を開催しました！現在週5日開講中。
     </div>
 
-    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+    <div class="reveal" style="display:grid;grid-template-columns:1fr;gap:24px;align-items:start;">
       <div>
         <p class="section-lead">
           LBL（ライフデザイン・ベースド・ラーニング）で子どもの個性と主体性を育む、
@@ -228,7 +234,7 @@
     <h2 class="section-title reveal">市民運営まりな塾</h2>
     <span class="section-title-en reveal">Marina Juku — Community-Run Learning</span>
 
-    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+    <div class="reveal" style="display:grid;grid-template-columns:1fr;gap:24px;align-items:start;">
       <div>
         <p class="section-lead">
           頭はよくしません。夢を叶える力を育みます。<br>

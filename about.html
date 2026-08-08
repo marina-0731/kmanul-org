@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://kmanul.org/assets/logo-kmanul.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=2">
+<link rel="stylesheet" href="assets/style.css?v=3">
 <style>
 .page-hero {
   background: var(--navy);
@@ -137,6 +137,15 @@
   .org-table th, .org-table td { display: block; width: 100%; }
   .org-table th { border-bottom: none; padding-bottom: 4px; }
 }
+
+/* phone-frame: force mobile layout */
+.message-grid { grid-template-columns: 1fr; gap: 32px; }
+.history-item { flex-direction: column; gap: 8px; }
+.history-date { width: auto; }
+.org-table th { width: 120px; font-size: 13px; padding: 14px 16px; }
+.org-table td { font-size: 13px; padding: 14px 16px; }
+.org-table th, .org-table td { display: block; width: 100%; }
+.org-table th { border-bottom: none; padding-bottom: 4px; }
 </style>
 </head>
 <body>
