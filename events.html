@@ -15,12 +15,12 @@
 <meta property="og:image" content="https://kmanul.org/images/event-banner-info.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=4">
+<link rel="stylesheet" href="assets/style.css?v=9">
 <style>
 /* ── EVENT PAGE ── */
 
 .ev-hero {
-  background: var(--navy);
+  background: var(--cream);
   padding: 100px 24px 60px;
   text-align: center;
   position: relative;
@@ -34,7 +34,7 @@
   pointer-events: none;
 }
 .ev-hero-label {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 11px;
   color: var(--green);
   letter-spacing: 0.3em;
@@ -42,10 +42,10 @@
   margin-bottom: 20px;
 }
 .ev-hero h1 {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: clamp(24px, 5vw, 40px);
   font-weight: 700;
-  color: var(--white);
+  color: var(--text);
   line-height: 1.5;
   margin-bottom: 16px;
 }
@@ -54,9 +54,9 @@
   color: var(--green);
 }
 .ev-hero-sub {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: clamp(13px, 1.8vw, 16px);
-  color: rgba(255,255,255,0.6);
+  color: var(--text-mid);
   line-height: 1.9;
   max-width: 560px;
   margin: 0 auto 32px;
@@ -68,7 +68,7 @@
   flex-wrap: wrap;
 }
 .ev-hero-btns a {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 14px;
   font-weight: 700;
   padding: 14px 28px;
@@ -82,8 +82,8 @@
   color: var(--white);
 }
 .btn-ev-outline {
-  border: 1px solid rgba(255,255,255,0.3);
-  color: var(--white);
+  border: 1px solid rgba(0,0,0,0.15);
+  color: var(--text-mid);
 }
 
 /* ── EMPATHY ── */
@@ -97,7 +97,7 @@
   text-align: center;
 }
 .ev-empathy h2 {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: clamp(20px, 4vw, 30px);
   font-weight: 700;
   color: var(--navy);
@@ -132,7 +132,7 @@
   border-radius: 10px;
 }
 .ev-wish-text {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 15px;
   color: var(--navy);
   line-height: 1.8;
@@ -146,7 +146,7 @@
   margin-top: 4px;
 }
 .ev-empathy-lead {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 15px;
   color: var(--text-muted);
   line-height: 2;
@@ -159,7 +159,11 @@
 .ev-section {
   padding: 80px 24px;
 }
-.ev-section-navy { background: var(--navy); }
+.ev-section-navy { background: var(--green-dark); }
+/* 濃い緑の上では緑アクセントが沈むので明るい緑に差し替える */
+.ev-section-navy .ev-detail-label,
+.ev-section-navy .ev-urgency-text,
+.ev-section-navy strong { color: #B8EDB3; }
 .ev-section-white { background: var(--white); }
 .ev-section-stone { background: var(--stone); }
 
@@ -169,7 +173,7 @@
 }
 
 .ev-section-label {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 11px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -179,7 +183,7 @@
 .ev-section-label-white { color: rgba(255,255,255,0.5); }
 
 .ev-section-title {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: clamp(22px, 4.5vw, 36px);
   font-weight: 700;
   line-height: 1.5;
@@ -187,7 +191,7 @@
 }
 
 .ev-section-title-en {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 13px;
   font-style: italic;
   margin-bottom: 32px;
@@ -227,7 +231,7 @@
   border: 1px solid rgba(255,255,255,0.1);
 }
 .ev-details h3 {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -246,7 +250,7 @@
 }
 .ev-detail-row:last-child { border-bottom: none; }
 .ev-detail-label {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 12px;
   font-weight: 700;
   color: var(--green);
@@ -256,7 +260,7 @@
   padding-top: 2px;
 }
 .ev-detail-value {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 14px;
   color: var(--navy);
   line-height: 1.8;
@@ -292,7 +296,7 @@
   50% { opacity: 0.3; }
 }
 .ev-urgency-text {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: var(--green);
@@ -316,7 +320,7 @@
   gap: 10px;
   background: linear-gradient(135deg, #06C755 0%, #05B34C 100%);
   color: var(--white);
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 18px;
   font-weight: 700;
   padding: 20px 48px;
@@ -337,7 +341,7 @@
   box-shadow: 0 10px 32px rgba(6,199,85,0.5);
 }
 .ev-cta-note {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 12px;
   color: rgba(255,255,255,0.6);
   margin-top: 12px;
@@ -352,7 +356,7 @@
   padding: 72px 24px;
 }
 .ev-compare-title {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: clamp(20px, 4vw, 28px);
   font-weight: 700;
   color: var(--navy);
@@ -384,14 +388,14 @@
   background: var(--green);
 }
 .ev-compare-card h3 {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 16px;
 }
 .ev-compare-card .ev-compare-date {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--green);
@@ -403,7 +407,7 @@
   margin: 0 0 20px;
 }
 .ev-compare-card li {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 13px;
   color: var(--text-muted);
   line-height: 1.9;
@@ -422,7 +426,7 @@
   text-align: center;
   background: linear-gradient(135deg, #06C755 0%, #05B34C 100%);
   color: var(--white);
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 15px;
   font-weight: 700;
   padding: 16px;
@@ -461,7 +465,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 14px;
   font-weight: 700;
   flex-shrink: 0;
@@ -479,14 +483,14 @@
   background: rgba(79,173,74,0.2);
 }
 .ev-step-content h4 {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 15px;
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 4px;
 }
 .ev-step-content p {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 13px;
   color: var(--text-muted);
   line-height: 1.8;
@@ -511,14 +515,14 @@
   margin-bottom: 12px;
 }
 .ev-highlight-title {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 15px;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 8px;
 }
 .ev-highlight-text {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 12px;
   color: rgba(255,255,255,0.55);
   line-height: 1.7;
@@ -531,7 +535,7 @@
   text-align: center;
 }
 .ev-final-cta h2 {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: clamp(22px, 4vw, 32px);
   font-weight: 700;
   color: var(--white);
@@ -539,7 +543,7 @@
   margin-bottom: 16px;
 }
 .ev-final-cta p {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 14px;
   color: rgba(255,255,255,0.6);
   line-height: 1.9;
@@ -561,14 +565,14 @@
   margin-top: 8px;
 }
 .ev-countdown-num {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 32px;
   font-weight: 700;
   color: var(--green);
   line-height: 1;
 }
 .ev-countdown-unit {
-  font-family: 'BIZ UDPGothic', sans-serif;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 13px;
   color: var(--green);
 }
@@ -761,7 +765,7 @@
       <img src="images/event-banner-summer.png" alt="まぬるすこれ サマートライアル 2026年8月">
     </div>
 
-    <p style="font-family:'BIZ UDPGothic',sans-serif;font-size:15px;color:rgba(255,255,255,0.7);line-height:2;margin-bottom:32px;">
+    <p style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:15px;color:rgba(255,255,255,0.7);line-height:2;margin-bottom:32px;">
       サマートライアルは、単なる体験授業ではありません。<br>
       約1ヶ月間、まぬるすこれの日常にじっくり入り込む期間です。<br>
       お子さん自身が「ここで学びたい」と感じるかどうか——<br>
@@ -826,20 +830,20 @@
       <div class="ev-detail-row">
         <div class="ev-detail-label">費用</div>
         <div class="ev-detail-value">
-          <strong style="color:var(--green);">トライアル自体は 0円</strong><br>
+          <strong style="color:#B8EDB3;">トライアル自体は 0円</strong><br>
           実費のみ：保険料 940円（初回のみ）/ 施設費 7,000円 / 昼食代 300円×回数
         </div>
       </div>
       <div class="ev-detail-row">
         <div class="ev-detail-label">締切</div>
-        <div class="ev-detail-value"><strong style="color:#ff6b6b;">2026年7月31日（金）</strong></div>
+        <div class="ev-detail-value"><strong style="color:#FFB3B3;">2026年7月31日（金）</strong></div>
       </div>
     </div>
 
     <!-- APPLICATION STEPS -->
     <div style="margin-top:48px;">
-      <h3 style="font-family:'BIZ UDPGothic',sans-serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:8px;">申込の流れ</h3>
-      <p style="font-family:'BIZ UDPGothic',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:24px;">4つのステップで申込が完了します</p>
+      <h3 style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:8px;">申込の流れ</h3>
+      <p style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:24px;">4つのステップで申込が完了します</p>
       <div class="ev-steps">
         <div class="ev-step">
           <div class="ev-step-num">1</div>
@@ -971,7 +975,7 @@
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v=2"></script>
 <script>
 (function() {
   function updateCountdown(elementId, targetDate, label) {

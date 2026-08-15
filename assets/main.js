@@ -1,4 +1,23 @@
 (function() {
+  // ── Announce bar height → --announce-h ──
+  // 文字が折り返してバーが2行になっても nav が重ならないよう実測値を渡す
+  const announceBar = document.querySelector('.announce-bar');
+  if (announceBar) {
+    const syncAnnounceHeight = () => {
+      document.documentElement.style.setProperty(
+        '--announce-h', announceBar.offsetHeight + 'px'
+      );
+    };
+    syncAnnounceHeight();
+    if (window.ResizeObserver) {
+      new ResizeObserver(syncAnnounceHeight).observe(announceBar);
+    } else {
+      window.addEventListener('resize', syncAnnounceHeight);
+    }
+    // Webフォント読み込み後に字幅が変わるので再計測
+    if (document.fonts) document.fonts.ready.then(syncAnnounceHeight);
+  }
+
   // ── Hamburger menu ──
   const hamburger = document.querySelector('.nav-hamburger');
   const navLinks  = document.querySelector('.nav-links');
