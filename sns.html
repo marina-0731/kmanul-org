@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://kmanul.org/assets/logo-kmanul.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=9">
+<link rel="stylesheet" href="assets/style.css?v=13">
 <style>
   /* ── HERO ── */
   .hero {
@@ -117,7 +117,7 @@
   .sns-cta:hover { background: var(--navy-mid); }
 
   /* ── MANURAJI FEATURE ── */
-  .manuraji { background: var(--green-dark); }
+  .manuraji { background: var(--purple-dark); }
   .manuraji-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -230,7 +230,8 @@
   .community-grid,.note-grid { grid-template-columns: 1fr; }
 </style>
 </head>
-<body>
+<body class="theme-online">
+<canvas id="sky" aria-hidden="true"></canvas>
 
 <div class="announce-bar">
   <a href="events.html"><span class="announce-dot"></span>7/26 入学説明会は終了しました — 8月サマートライアル受付中 →</a>
@@ -304,7 +305,7 @@
   <div class="container">
     <div class="manuraji-inner">
       <div class="reveal">
-        <div class="eyebrow" style="color:#B8EDB3;">Podcast</div>
+        <div class="eyebrow" style="color:#D8C9EE;">Podcast</div>
         <h2 class="section-title" style="color:var(--white);">まぬらじ</h2>
         <span class="section-title-jp" style="color:rgba(255,255,255,0.4);">Manuraji — Community Radio</span>
         <p class="section-lead" style="color:rgba(255,255,255,0.6);">
@@ -315,15 +316,15 @@
         </div>
         <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap;">
           <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(95,185,90,0.2); border-radius:12px; padding:14px 20px; text-align:center;">
-            <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif; font-size:10px; color:#B8EDB3; letter-spacing:0.2em; margin-bottom:4px;">SPOTIFY</div>
+            <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif; font-size:10px; color:#D8C9EE; letter-spacing:0.2em; margin-bottom:4px;">SPOTIFY</div>
             <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif; font-size:12px; color:rgba(255,255,255,0.6);">配信中</div>
           </div>
           <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(95,185,90,0.2); border-radius:12px; padding:14px 20px; text-align:center;">
-            <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif; font-size:10px; color:#B8EDB3; letter-spacing:0.2em; margin-bottom:4px;">APPLE PODCAST</div>
+            <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif; font-size:10px; color:#D8C9EE; letter-spacing:0.2em; margin-bottom:4px;">APPLE PODCAST</div>
             <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif; font-size:12px; color:rgba(255,255,255,0.6);">配信中</div>
           </div>
           <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(95,185,90,0.2); border-radius:12px; padding:14px 20px; text-align:center;">
-            <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif; font-size:10px; color:#B8EDB3; letter-spacing:0.2em; margin-bottom:4px;">YOUTUBE</div>
+            <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif; font-size:10px; color:#D8C9EE; letter-spacing:0.2em; margin-bottom:4px;">YOUTUBE</div>
             <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif; font-size:12px; color:rgba(255,255,255,0.6);">配信中</div>
           </div>
         </div>
@@ -402,5 +403,6 @@
 </footer>
 
 <script src="assets/main.js?v=2"></script>
+<script src="assets/sky.js?v=5"></script>
 </body>
 </html>

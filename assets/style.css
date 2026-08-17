@@ -5,26 +5,56 @@
 :root {
   --announce-h: 36px;
 
-  --sky:        #5B8EC4;
+  /* ══════════════════════════════════════════
+     七色 — 事業ごとのテーマカラー
+     わたしたちは、ひとつの色では表せない。
+     ══════════════════════════════════════════ */
+
+  /* ① NPO法人 kimyo-na-manul ── みそら色（ブルー） */
+  --sky:        #4A7FB5;
   --sky-dark:   #2E5F8E;
   --sky-light:  #E3EFF9;
   --sky-mid:    #D0E4F5;
   --misora-bg:  #F5F8FC;
 
-  --green:      #4FAD4A;
-  --green-dark: #3A8A37;
+  /* ② 知多半島地域立 まぬるすこれ ── グリーン */
+  --green:      #3F9A3A;
+  --green-dark: #2F7A2C;
   --green-light:#E8F5E6;
   --green-bg:   #F0F8EF;
 
-  --red:        #D14B4B;
-  --red-dark:   #A33030;
-  --red-light:  #F5D0D0;
-  --red-bg:     #FDF2F2;
+  /* ③ オンライン事業（Discord・まぬらじ）── 紫 */
+  --purple:      #7B5EA7;
+  --purple-dark: #5F468A;
+  --purple-light:#EFE9F7;
 
-  --orange:     #E8A065;
+  /* ④ 子育て24時間相談 ── 水色 */
+  --aqua:       #3FA8C4;
+  --aqua-dark:  #2A8AA4;
+  --aqua-light: #E2F4F9;
+
+  /* ⑤ 市民運営 まぬる塾 ── オレンジ */
+  --orange:      #D9822B;
+  --orange-dark: #B36618;
   --orange-light:#FFF0E0;
+
+  /* ⑥ 月1回 対面イベント・ボドゲ会 ── パステルイエロー */
+  --yellow:      #C9A227;   /* 文字用に沈めた黄 */
+  --yellow-soft: #F5DC7A;   /* 面で使うパステル */
+  --yellow-light:#FDF6DC;
+
+  /* 旧クラス互換（まぬる塾はオレンジに統合） */
+  --red:        var(--orange);
+  --red-dark:   var(--orange-dark);
+  --red-light:  var(--orange-light);
+  --red-bg:     var(--orange-light);
   --pink:       #E8879B;
   --pink-light: #FDE8ED;
+
+  /* ページごとの主役の色。body の theme-* クラスで切り替える */
+  --brand:       var(--sky);
+  --brand-dark:  var(--sky-dark);
+  --brand-light: var(--sky-light);
 
   --navy:       #2D3436;
   --navy-mid:   #4A5568;
@@ -36,6 +66,14 @@
   --text-mid:   #4A5568;
   --text-muted: #8896A4;
 }
+
+/* ── ページの主役の色 ───────────────────── */
+body.theme-npo    { --brand: var(--sky);    --brand-dark: var(--sky-dark);    --brand-light: var(--sky-light); }
+body.theme-schole { --brand: var(--green);  --brand-dark: var(--green-dark);  --brand-light: var(--green-light); }
+body.theme-online { --brand: var(--purple); --brand-dark: var(--purple-dark); --brand-light: var(--purple-light); }
+body.theme-soudan { --brand: var(--aqua);   --brand-dark: var(--aqua-dark);   --brand-light: var(--aqua-light); }
+body.theme-juku   { --brand: var(--orange); --brand-dark: var(--orange-dark); --brand-light: var(--orange-light); }
+body.theme-event  { --brand: var(--yellow); --brand-dark: #A8871C;            --brand-light: var(--yellow-light); }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -90,14 +128,14 @@ nav {
 .nav-links a.active { color: var(--text); }
 
 .nav-cta {
-  background: var(--green) !important;
+  background: var(--brand) !important;
   color: var(--white) !important;
   font-weight: 700 !important;
   padding: 8px 20px !important;
   border-radius: 999px !important;
   transition: background 0.2s !important;
 }
-.nav-cta:hover { background: var(--green-dark) !important; }
+.nav-cta:hover { background: var(--brand-dark) !important; }
 
 .lang-toggle {
   display: flex;
@@ -209,8 +247,31 @@ section { padding: 80px 0; }
 .eyebrow-green::before { background: var(--green); }
 .eyebrow-red { color: var(--red); }
 .eyebrow-red::before { background: var(--red); }
+.eyebrow-purple { color: var(--purple); }
+.eyebrow-purple::before { background: var(--purple); }
+.eyebrow-aqua { color: var(--aqua-dark); }
+.eyebrow-aqua::before { background: var(--aqua-dark); }
+.eyebrow-orange { color: var(--orange); }
+.eyebrow-orange::before { background: var(--orange); }
+.eyebrow-yellow { color: var(--yellow); }
+.eyebrow-yellow::before { background: var(--yellow); }
+.eyebrow-brand { color: var(--brand); }
+.eyebrow-brand::before { background: var(--brand); }
 .eyebrow-white { color: rgba(255,255,255,0.6); }
 .eyebrow-white::before { background: rgba(255,255,255,0.3); }
+
+/* ひとつの色では表せない、という帯 */
+.spectrum {
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg,
+    var(--sky)    0%,   var(--sky)    16.66%,
+    var(--green)  16.66%, var(--green)  33.33%,
+    var(--purple) 33.33%, var(--purple) 50%,
+    var(--aqua)   50%,   var(--aqua)   66.66%,
+    var(--orange) 66.66%, var(--orange) 83.33%,
+    var(--yellow-soft) 83.33%, var(--yellow-soft) 100%);
+}
 
 .section-title {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
@@ -311,6 +372,30 @@ section { padding: 80px 0; }
 }
 .btn-outline-white:hover { border-color: var(--text); color: var(--text); }
 
+/* ページの色をまとうボタン */
+.btn-primary {
+  background: var(--brand);
+  color: var(--white);
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 999px;
+  display: inline-block;
+  transition: background 0.25s, transform 0.25s;
+}
+.btn-primary:hover { background: var(--brand-dark); transform: translateY(-2px); }
+/* 濃い面の上では白抜きに */
+.on-dark .btn-primary,
+.manuraji .btn-primary {
+  background: var(--white);
+  color: var(--brand-dark);
+}
+.on-dark .btn-primary:hover,
+.manuraji .btn-primary:hover { background: var(--cream); }
+
 /* 濃い背景（緑バンド・404）の上では白抜きに反転させる */
 .on-dark .btn-outline-white,
 .cta-band .btn-outline-white,
@@ -322,7 +407,7 @@ section { padding: 80px 0; }
 .cta-band .btn-outline-white:hover,
 .error-page .btn-outline-white:hover {
   background: var(--white);
-  color: var(--green-dark);
+  color: var(--brand-dark);
   border-color: var(--white);
 }
 
@@ -409,7 +494,7 @@ footer {
 .footer-col-title {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 10px;
-  color: var(--green);
+  color: var(--brand);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -422,7 +507,7 @@ footer {
   text-decoration: none;
   transition: color 0.2s;
 }
-.footer-links a:hover { color: var(--green); }
+.footer-links a:hover { color: var(--brand); }
 .footer-bottom {
   max-width: 1120px;
   margin: 0 auto;
@@ -456,7 +541,7 @@ footer {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 110;
-  background: var(--green);
+  background: var(--brand);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -500,7 +585,7 @@ body:has(.announce-bar) .nav-links {
 }
 
 .nav-event {
-  background: var(--green) !important;
+  background: var(--brand) !important;
   color: var(--white) !important;
   font-weight: 700 !important;
   padding: 8px 16px !important;
@@ -508,20 +593,36 @@ body:has(.announce-bar) .nav-links {
   transition: background 0.2s !important;
   font-size: 12px !important;
 }
-.nav-event:hover { background: var(--green-dark) !important; }
+.nav-event:hover { background: var(--brand-dark) !important; }
 
 /* ══════════════════════════════════════════════
    PHONE-FRAME: mobile-width layout on all screens
    PC → content centered, warm cream sides
    ══════════════════════════════════════════════ */
 
-html { background: var(--stone); }
+/* html に背景を置くとキャンバスより手前に描かれて空を隠すので、
+   余白の色は #sky 自身に持たせる（下の #sky を参照） */
 
 body {
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 40px rgba(0,0,0,0.06);
+}
+
+/* 両脇に広がる空。body は幅520pxで不透明なので、
+   z-index:-1 の canvas は body の背景の裏＝左右の余白だけに見える。
+   （body はスタッキングコンテキストを作らないので成立する） */
+#sky {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  /* 空を描く前・JSが動かないときの余白の色。
+     900px未満では sky.js が描画しないので、この色がそのまま残る */
+  background: var(--stone);
 }
 
 nav {

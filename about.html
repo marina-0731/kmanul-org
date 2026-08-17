@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://kmanul.org/assets/logo-kmanul.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=9">
+<link rel="stylesheet" href="assets/style.css?v=13">
 <style>
 .page-hero {
   background: var(--cream);
@@ -148,7 +148,8 @@
 .org-table th { border-bottom: none; padding-bottom: 4px; }
 </style>
 </head>
-<body>
+<body class="theme-npo">
+<canvas id="sky" aria-hidden="true"></canvas>
 
 <div class="announce-bar">
   <a href="events.html"><span class="announce-dot"></span>7/26 入学説明会は終了しました — 8月サマートライアル受付中 →</a>
@@ -380,5 +381,6 @@ const observer = new IntersectionObserver(entries => {
 reveals.forEach(el => observer.observe(el));
 </script>
 <script src="assets/main.js?v=2"></script>
+<script src="assets/sky.js?v=5"></script>
 </body>
 </html>

@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="愛知県知多半島のNPO法人。オルタナティブスクール「まぬるすこれ」を大府市で運営。">
 <meta name="twitter:image" content="https://kmanul.org/assets/logo-kmanul.png">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=9">
+<link rel="stylesheet" href="assets/style.css?v=13">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -109,7 +109,7 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 60% at 50% 40%, rgba(79,173,74,0.04) 0%, transparent 70%);
+    radial-gradient(ellipse 60% 60% at 50% 40%, rgba(74,127,181,0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-content {
@@ -140,7 +140,7 @@
 }
 .hero-punch em {
   font-style: normal;
-  color: var(--green);
+  color: var(--sky);
 }
 .pc-only { display: inline; }
 @media (max-width: 600px) {
@@ -181,7 +181,7 @@
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: var(--green);
+  color: var(--sky);
   line-height: 1;
   margin-bottom: 6px;
 }
@@ -204,7 +204,7 @@
 
 /* ── MISSION BAND ── */
 .mission-band {
-  background: var(--green);
+  background: var(--sky);
   padding: 72px 0;
   text-align: center;
 }
@@ -251,8 +251,12 @@
 .project-card-top {
   padding: 36px 36px 0;
 }
-.project-card-top.sky { background: linear-gradient(135deg, var(--sky), var(--sky-dark)); }
-.project-card-top.green { background: linear-gradient(135deg, var(--green), var(--green-dark)); }
+/* 事業ごとの色。七色のまま並べる */
+.project-card-top.sky    { background: linear-gradient(135deg, var(--sky), var(--sky-dark)); }
+.project-card-top.green  { background: linear-gradient(135deg, var(--green), var(--green-dark)); }
+.project-card-top.purple { background: linear-gradient(135deg, var(--purple), var(--purple-dark)); }
+.project-card-top.aqua   { background: linear-gradient(135deg, var(--aqua), var(--aqua-dark)); }
+.project-card-top.orange { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); }
 .project-card-logo { width: 80%; max-width: 280px; height: auto; display: block; margin-bottom: -20px; }
 .project-card-body { padding: 32px 36px 36px; }
 .project-card-tag {
@@ -262,11 +266,14 @@
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.project-card-tag.sky { color: var(--sky); }
-.project-card-tag.green { color: var(--green); }
-.project-card-tag.red { color: var(--red); }
-.project-card-top.red { background: linear-gradient(135deg, var(--orange), #D08A4A); }
-.project-card-link.red { color: var(--red); }
+.project-card-tag.sky    { color: var(--sky); }
+.project-card-tag.green  { color: var(--green); }
+.project-card-tag.purple { color: var(--purple); }
+.project-card-tag.aqua   { color: var(--aqua-dark); }
+.project-card-tag.orange { color: var(--orange); }
+.project-card-link.purple { color: var(--purple); }
+.project-card-link.aqua   { color: var(--aqua-dark); }
+.project-card-link.orange { color: var(--orange); }
 .project-card-name {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 22px;
@@ -302,14 +309,14 @@
 }
 .value-card {
   padding: 32px 24px;
-  border-top: 3px solid var(--green);
-  background: var(--green-light);
+  border-top: 3px solid var(--sky);
+  background: var(--sky-light);
   border-radius: 0 0 12px 12px;
 }
 .value-num {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 11px;
-  color: var(--green);
+  color: var(--sky);
   letter-spacing: 0.2em;
   margin-bottom: 14px;
 }
@@ -369,7 +376,7 @@
 }
 
 /* ── CTA ── */
-.cta-band { background: var(--green); padding: 80px 0; text-align: center; }
+.cta-band { background: var(--sky); padding: 80px 0; text-align: center; }
 .cta-band h2 {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: clamp(22px, 3vw, 34px);
@@ -445,7 +452,8 @@
 .badge { font-size: 11px; padding: 4px 12px; }
 </style>
 </head>
-<body>
+<body class="theme-npo">
+<canvas id="sky" aria-hidden="true"></canvas>
 
 <div class="announce-bar">
   <a href="events.html"><span class="announce-dot"></span>7/26 入学説明会は終了しました — 8月サマートライアル受付中 →</a>
@@ -486,7 +494,7 @@
     </p>
     <h1 class="hero-punch"><span class="sr-only">kimyo-na-manul（奇妙なマヌル）— </span>今までにない、<em>挑戦</em>です。</h1>
     <div class="hero-logo">
-      <img src="assets/logo-manul-schole.png" alt="まぬるすこれ">
+      <img src="assets/logo-kmanul.png" alt="kimyo-na-manul（奇妙なマヌル）">
     </div>
     <div class="hero-actions">
       <a href="manul-schole.html" class="btn-green">まぬるすこれを見る</a>
@@ -494,6 +502,9 @@
     </div>
   </div>
 </section>
+
+<!-- 七色 — ひとつの色では表せない -->
+<div class="spectrum" role="presentation"></div>
 
 <!-- ABOUT -->
 <section class="about" id="about" style="background:var(--misora-bg);">
@@ -548,7 +559,7 @@
   <div class="container">
     <a href="https://congrant.com/project/kimyo-na-manul/21284"
        target="_blank" rel="noopener"
-       style="display:flex; background:linear-gradient(135deg,var(--green),var(--sky));
+       style="display:flex; background:linear-gradient(135deg,var(--sky-dark),var(--sky));
               border-radius:16px; padding:28px 36px;
               align-items:center; justify-content:space-between;
               gap:20px; flex-wrap:wrap; text-decoration:none;">
@@ -563,7 +574,7 @@
           たくさんの応援、ありがとうございます。
         </p>
       </div>
-      <span style="background:#fff;color:var(--green-dark);font-weight:700;
+      <span style="background:#fff;color:var(--sky-dark);font-weight:700;
                    padding:.6em 1.4em;border-radius:100px;font-size:.9rem;
                    white-space:nowrap;">
         プロジェクトを見る →
@@ -603,34 +614,34 @@
         </div>
       </a>
       <div class="project-card reveal">
-        <div class="project-card-top sky" style="padding-top:48px;padding-bottom:48px;text-align:center;">
-          <span style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:32px;font-weight:700;color:var(--white);">居場所・相談</span>
+        <div class="project-card-top aqua" style="padding-top:48px;padding-bottom:48px;text-align:center;">
+          <span style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:32px;font-weight:700;color:var(--white);">子育て相談</span>
         </div>
         <div class="project-card-body">
-          <div class="project-card-tag sky" data-ja="居場所・相談" data-en="Support & Community">居場所・相談</div>
+          <div class="project-card-tag aqua" data-ja="24時間365日" data-en="24/7 Support">24時間365日</div>
           <div class="project-card-name" data-ja="子育て相談 & 居場所づくり" data-en="Parenting Support & Community">子育て相談 & 居場所づくり</div>
           <p class="project-card-desc" data-ja="子育て相談は24時間365日、LINE・オンライン・対面で受付中。オンライン交流会（月2回、Discord）や対面イベント（月2回以上）も開催しています。" data-en="Parenting consultations available 24/7 via LINE, online, or in-person. Monthly online meetups (twice/month on Discord) and in-person events (twice/month or more).">子育て相談は24時間365日、LINE・オンライン・対面で受付中。オンライン交流会（月2回、Discord）や対面イベント（月2回以上）も開催しています。</p>
         </div>
       </div>
       <div class="project-card reveal">
-        <div class="project-card-top sky" style="padding-top:48px;padding-bottom:48px;text-align:center;">
-          <span style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:32px;font-weight:700;color:var(--white);">情報発信</span>
+        <div class="project-card-top purple" style="padding-top:48px;padding-bottom:48px;text-align:center;">
+          <span style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:32px;font-weight:700;color:var(--white);">オンライン</span>
         </div>
         <div class="project-card-body">
-          <div class="project-card-tag sky" data-ja="情報発信" data-en="Media">情報発信</div>
+          <div class="project-card-tag purple" data-ja="ラジオ・Discord" data-en="Radio & Discord">ラジオ・Discord</div>
           <div class="project-card-name" data-ja="まぬらじ！& マヌルちゃんねる" data-en="Manuraji! & Manul Channel">まぬらじ！& マヌルちゃんねる</div>
           <p class="project-card-desc" data-ja="毎週土曜18時半配信のラジオ「まぬらじ！」と、YouTubeチャンネル「マヌルちゃんねる（仮）」で不登校・発達障害の当事者経験や子育て情報を発信しています。" data-en="Weekly radio show 'Manuraji!' every Saturday at 6:30 PM, plus YouTube channel 'Manul Channel' sharing experiences of school refusal, developmental differences, and parenting.">毎週土曜18時半配信のラジオ「まぬらじ！」と、YouTubeチャンネル「マヌルちゃんねる（仮）」で不登校・発達障害の当事者経験や子育て情報を発信しています。</p>
         </div>
       </div>
       <a href="manul-juku.html" class="project-card reveal">
-        <div class="project-card-top red" style="padding-top:48px;padding-bottom:48px;text-align:center;">
+        <div class="project-card-top orange" style="padding-top:48px;padding-bottom:48px;text-align:center;">
           <span style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:32px;font-weight:700;color:var(--white);">まぬる塾</span>
         </div>
         <div class="project-card-body">
-          <div class="project-card-tag red" data-ja="市民運営学習塾" data-en="Community-Run Tutoring">市民運営学習塾</div>
+          <div class="project-card-tag orange" data-ja="市民運営学習塾" data-en="Community-Run Tutoring">市民運営学習塾</div>
           <div class="project-card-name" data-ja="市民運営まぬる塾" data-en="Manul Juku">市民運営まぬる塾</div>
           <p class="project-card-desc" data-ja="頭はよくしません。夢を叶える力を育みます。学校に行っていない子、発達特性がある子、勉強が苦手な子のための市民運営の学習塾。月謝6,000円・完全ボランティア運営。" data-en="We don't make you smarter — we nurture the power to make dreams come true. A community-run tutoring school for children not attending school, with developmental differences, or struggling with studies. ¥6,000/month, fully volunteer-run.">頭はよくしません。夢を叶える力を育みます。学校に行っていない子、発達特性がある子、勉強が苦手な子のための市民運営の学習塾。月謝6,000円・完全ボランティア運営。</p>
-          <span class="project-card-link red" data-ja="詳しく見る →" data-en="Learn more →">詳しく見る →</span>
+          <span class="project-card-link orange" data-ja="詳しく見る →" data-en="Learn more →">詳しく見る →</span>
         </div>
       </a>
     </div>
@@ -726,14 +737,14 @@
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr;gap:32px;">
       <div class="reveal">
-        <div class="eyebrow eyebrow-green">Support Us</div>
+        <div class="eyebrow eyebrow-sky">Support Us</div>
         <h2 class="section-title" data-ja="寄付で、子どもの<br>未来を支える" data-en="Support children's future<br>with a donation">寄付で、子どもの<br>未来を支える</h2>
         <span class="section-title-en">Make a Donation</span>
         <p style="font-size:14px;color:var(--text-muted);line-height:2;max-width:480px;margin-bottom:32px;" data-ja="まぬるすこれの運営は、地域と社会の支えによって成り立っています。ご支援いただいた資金は、子どもたちの学びの場づくりに直接使われます。" data-en="Manul Schole is sustained by the support of community and society. Donations go directly to building learning spaces for children.">まぬるすこれの運営は、地域と社会の支えによって成り立っています。ご支援いただいた資金は、子どもたちの学びの場づくりに直接使われます。</p>
         <a href="https://congrant.com/project/kimyo-na-manul/20646" target="_blank" rel="noopener" class="btn-gold" data-ja="寄付をする（Congrant）" data-en="Donate (Congrant)">寄付をする（Congrant）</a>
       </div>
       <div class="reveal">
-        <div style="font-size:10px;color:var(--green);letter-spacing:0.3em;text-transform:uppercase;margin-bottom:16px;">まぬらじ — Podcast</div>
+        <div style="font-size:10px;color:var(--purple);letter-spacing:0.3em;text-transform:uppercase;margin-bottom:16px;">まぬらじ — Podcast</div>
         <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px;" data-ja="まぬらじ、Spotifyで聴けます" data-en="Listen to Manuraji on Spotify">まぬらじ、Spotifyで聴けます</div>
         <p style="font-size:13px;color:var(--text-muted);line-height:1.8;margin-bottom:16px;" data-ja="kimyo-na-manulのコミュニティラジオ。日々の活動や考えを発信しています。" data-en="kimyo-na-manul's community radio. Sharing our daily activities and thoughts.">kimyo-na-manulのコミュニティラジオ。日々の活動や考えを発信しています。</p>
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4pCX4vRVYYnigfrbYCAyXj?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -833,5 +844,6 @@ function setLang(lang) {
 </script>
 <script async src="//www.instagram.com/embed.js"></script>
 <script src="assets/main.js?v=2"></script>
+<script src="assets/sky.js?v=5"></script>
 </body>
 </html>
