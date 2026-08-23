@@ -21,13 +21,13 @@
 <meta name="twitter:description" content="成績向上ではなく「夢を叶える力」を育む。月謝6,000円・完全ボランティア運営。">
 <meta name="twitter:image" content="https://kmanul.org/assets/logo-kmanul.png">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=14">
+<link rel="stylesheet" href="assets/style.css?v=15">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   "name": "市民運営まぬる義塾",
-  "alternateName": ["まぬる義塾", "Manul Juku"],
+  "alternateName": ["まぬる義塾", "Manul Gijuku"],
   "description": "NPO法人kimyo-na-manul（奇妙なマヌル）が運営する愛知県大府市の市民運営学習塾。成績向上ではなく「夢を叶える力」を育みます。完全ボランティア運営。",
   "url": "https://kmanul.org/manul-juku.html",
   "address": {
@@ -55,10 +55,18 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "いきなり入会するのは不安です。一度試せますか？",
+      "name": "いきなり入会するのは不安です。見学はできますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "はい。単発参加ができます。1回1,200円で、実際の回にそのまま参加していただけます。まずは一度来てみて、それから決めてください。"
+        "text": "見学という形はご用意していません。かわりに、単発参加をご利用ください。1回1,200円で、実際の回にそのまま参加していただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "月謝の支払いが難しいのですが、あきらめるしかないでしょうか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "あきらめないでください。ご相談いただければ、金銭面の優遇を行います。お金を理由に学びをあきらめてほしくないというのが、この塾の考え方です。公式LINEからご相談ください。"
       }
     },
     {
@@ -74,7 +82,7 @@
       "name": "2時間、どんなふうに過ごすのですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "はじめの45分は全員でマインドセットの時間、そのあとはそれぞれの学びの時間です。前後には自由参加の自習時間もあります。"
+        "text": "はじめの45分は全員でマインドセットの時間です。目標の立て方、計画の組み方、モチベーションの保ち方、やる気の出し方などを扱います。そのあとはそれぞれの学びの時間。前後には自由参加の自習時間もあります。"
       }
     },
     {
@@ -123,7 +131,7 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 70% at 30% 60%, rgba(209,75,75,0.10) 0%, transparent 65%);
+  background: radial-gradient(ellipse 60% 70% at 30% 60%, rgba(200,90,84,0.10) 0%, transparent 65%);
   pointer-events: none;
 }
 .hero-content {
@@ -188,12 +196,12 @@
 }
 .stat-block {
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(209,75,75,0.15);
+  border: 1px solid rgba(200,90,84,0.15);
   padding: 24px 20px;
   border-radius: 4px;
   transition: border-color 0.2s;
 }
-.stat-block:hover { border-color: rgba(209,75,75,0.4); }
+.stat-block:hover { border-color: rgba(200,90,84,0.4); }
 .stat-number {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 36px;
@@ -356,6 +364,44 @@
 .flow-tag.all  { background: var(--red-light); color: var(--red-dark); }
 .flow-tag.free { background: var(--stone); color: var(--text-muted); }
 
+/* ── 金銭優遇の案内 ── */
+/* 料金を見て引き返す人に届くよう、金額のすぐ下に置いている */
+.fee-help {
+  margin-top: 24px;
+  background: var(--red-bg);
+  border: 1px solid var(--red-light);
+  border-radius: 20px;
+  padding: 28px 26px;
+}
+.fee-help-title {
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--red-dark);
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+.fee-help-text {
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 2;
+}
+.fee-help-text strong { color: var(--red-dark); font-weight: 700; }
+.fee-help-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--red-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--red-light);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.fee-help-link:hover { border-bottom-color: var(--red-dark); }
+
 /* ── よくある質問 ── */
 .faq { background: var(--white); }
 .faq-list {
@@ -463,16 +509,16 @@
   margin-top: 48px;
 }
 .vol-card {
-  background: rgba(209,75,75,0.04);
-  border: 1px solid rgba(209,75,75,0.12);
+  background: rgba(200,90,84,0.04);
+  border: 1px solid rgba(200,90,84,0.12);
   padding: 40px 28px;
   border-radius: 4px;
   text-align: center;
   transition: background 0.25s, border-color 0.25s;
 }
 .vol-card:hover {
-  background: rgba(209,75,75,0.09);
-  border-color: rgba(209,75,75,0.35);
+  background: rgba(200,90,84,0.09);
+  border-color: rgba(200,90,84,0.35);
 }
 .vol-icon {
   font-size: 36px;
@@ -596,7 +642,7 @@
     <li><a href="index.html" data-ja="ホーム" data-en="Home">ホーム</a></li>
     <li><a href="about.html" data-ja="団体概要" data-en="About">団体概要</a></li>
     <li><a href="manul-schole.html" data-ja="まぬるすこれ" data-en="Manul Schole">まぬるすこれ</a></li>
-    <li><a href="manul-juku.html" class="active" data-ja="まぬる義塾" data-en="Manul Juku">まぬる義塾</a></li>
+    <li><a href="manul-juku.html" class="active" data-ja="まぬる義塾" data-en="Manul Gijuku">まぬる義塾</a></li>
     <li><a href="activities.html" data-ja="活動内容" data-en="Activities">活動内容</a></li>
     <li><a href="events.html" class="nav-event" data-ja="イベント予約" data-en="Events">イベント予約</a></li>
     <li><a href="contact.html" class="nav-cta" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
@@ -617,7 +663,7 @@
     <div>
       <div class="hero-overline" data-ja="愛知県大府市 — 市民運営・月6回・小中高生" data-en="Obu City, Aichi — Community-run, 6 sessions/month">愛知県大府市 — 市民運営・月6回・小中高生</div>
       <h1 class="hero-title" data-ja="頭はよくしません。<br><em>夢を叶える力</em>を<br>育みます。" data-en="We don't make you smarter.<br>We nurture the <em>power to<br>make dreams come true</em>.">頭はよくしません。<br><em>夢を叶える力</em>を<br>育みます。</h1>
-      <p class="hero-catch" data-ja="市民運営まぬる義塾は、成績を上げるための塾ではありません。学校に行っていない子、勉強が苦手な子、発達特性がある子——ひとりひとりの「やりたい」に寄り添い、夢を叶える力を育む場所です。" data-en="Manul Juku is not a cram school for better grades. It's a place where children who aren't attending school, struggle with studies, or have developmental differences can nurture the power to make their dreams come true.">市民運営まぬる義塾は、成績を上げるための塾ではありません。<br>学校に行っていない子、勉強が苦手な子、発達特性がある子——<br>ひとりひとりの「やりたい」に寄り添い、<br>夢を叶える力を育む場所です。</p>
+      <p class="hero-catch" data-ja="市民運営まぬる義塾は、成績を上げるための塾ではありません。学校に行っていない子、勉強が苦手な子、発達特性がある子——ひとりひとりの「やりたい」に寄り添い、夢を叶える力を育む場所です。" data-en="Manul Gijuku is not a cram school for better grades. It's a place where children who aren't attending school, struggle with studies, or have developmental differences can nurture the power to make their dreams come true.">市民運営まぬる義塾は、成績を上げるための塾ではありません。<br>学校に行っていない子、勉強が苦手な子、発達特性がある子——<br>ひとりひとりの「やりたい」に寄り添い、<br>夢を叶える力を育む場所です。</p>
       <div class="hero-actions">
         <a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" class="btn-red" data-ja="公式LINEで問い合わせる" data-en="Contact via LINE">公式LINEで問い合わせる</a>
         <a href="#details" class="btn-outline-white" data-ja="詳細を見る" data-en="View Details">詳細を見る</a>
@@ -650,7 +696,7 @@
 <section class="concept" id="concept">
   <div class="container">
     <div class="eyebrow eyebrow-red reveal" data-ja="Concept" data-en="Concept">Concept</div>
-    <h2 class="section-title reveal" data-ja="まぬる義塾が大切にすること" data-en="What Manul Juku Values">まぬる義塾が大切にすること</h2>
+    <h2 class="section-title reveal" data-ja="まぬる義塾が大切にすること" data-en="What Manul Gijuku Values">まぬる義塾が大切にすること</h2>
     <span class="section-title-en reveal">What We Value</span>
 
     <div class="concept-grid" style="margin-top:48px;">
@@ -764,6 +810,12 @@
           <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:12px;color:var(--text-muted);letter-spacing:0.2em;margin-bottom:12px;" data-ja="単発参加" data-en="DROP-IN">単発参加</div>
           <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:28px;font-weight:700;color:var(--navy);">1,200<span class="price-unit" data-ja="円/回" data-en="yen/session">円/回</span></div>
         </div>
+
+        <div class="fee-help reveal">
+          <div class="fee-help-title" data-ja="お金のことで、あきらめないでください" data-en="Please don't give up over money">お金のことで、あきらめないでください</div>
+          <p class="fee-help-text" data-ja="お支払いが難しい場合は、ご相談ください。<strong>金銭面の優遇を行います。</strong>お金を理由に学びをあきらめてほしくない、というのが私たちの考え方です。" data-en="If payment is difficult, please talk to us — <strong>reduced fees are available.</strong> No child should have to give up learning over money.">お支払いが難しい場合は、ご相談ください。<strong>金銭面の優遇を行います。</strong>お金を理由に学びをあきらめてほしくない、というのが私たちの考え方です。</p>
+          <a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" class="fee-help-link" data-ja="公式LINEで相談する →" data-en="Ask via LINE →">公式LINEで相談する →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -772,7 +824,7 @@
 <!-- 当日の過ごし方 -->
 <section class="flow" id="flow">
   <div class="container">
-    <div class="eyebrow eyebrow-red reveal" data-ja="A Day at Manul Juku" data-en="A Day at Manul Juku">A Day at Manul Juku</div>
+    <div class="eyebrow eyebrow-red reveal" data-ja="A Day at Manul Gijuku" data-en="A Day at Manul Gijuku">A Day at Manul Gijuku</div>
     <h2 class="section-title reveal" data-ja="当日の過ごし方" data-en="How a Session Goes">当日の過ごし方</h2>
     <span class="section-title-en reveal">Monday &amp; Thursday</span>
 
@@ -788,7 +840,7 @@
         <div class="flow-time">19:00–19:45</div>
         <div class="flow-body">
           <div class="flow-name" data-ja="マインドセット<span class='flow-tag all'>全員</span>" data-en="Mindset<span class='flow-tag all'>everyone</span>">マインドセット<span class="flow-tag all">全員</span></div>
-          <div class="flow-desc" data-ja="はじめの45分は、全員でそろって過ごします。いきなり問題を解きはじめるのではなく、ここから一日がはじまります。" data-en="The first 45 minutes are spent together as a group — the day does not begin with worksheets.">はじめの45分は、全員でそろって過ごします。いきなり問題を解きはじめるのではなく、ここから一日がはじまります。</div>
+          <div class="flow-desc" data-ja="目標の立て方、計画の組み方、モチベーションの保ち方、やる気の出し方。<br>いきなり問題を解きはじめるのではなく、「どう学ぶか」を学ぶ時間から一日がはじまります。" data-en="How to set goals, make plans, sustain motivation, and get started.<br>The day begins not with worksheets, but with learning how to learn.">目標の立て方、計画の組み方、モチベーションの保ち方、やる気の出し方。<br>いきなり問題を解きはじめるのではなく、「どう学ぶか」を学ぶ時間から一日がはじまります。</div>
         </div>
       </div>
       <div class="flow-row reveal">
@@ -845,8 +897,8 @@
 
     <div class="faq-list">
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="いきなり入会するのは不安です。一度試せますか？" data-en="Can we try it once before joining?">いきなり入会するのは不安です。一度試せますか？</div>
-        <div class="faq-a" data-ja="はい。単発参加ができます。1回1,200円で、実際の回にそのまま参加していただけます。まずは一度来てみて、それから決めてください。" data-en="Yes. Drop-in participation is available at ¥1,200 per session. Come once, then decide.">はい。単発参加ができます。1回1,200円で、実際の回にそのまま参加していただけます。まずは一度来てみて、それから決めてください。</div>
+        <div class="faq-q" data-ja="いきなり入会するのは不安です。見学はできますか？" data-en="Can we observe a session before joining?">いきなり入会するのは不安です。見学はできますか？</div>
+        <div class="faq-a" data-ja="見学という形はご用意していません。かわりに、単発参加をご利用ください。1回1,200円で、実際の回にそのまま参加していただけます。外から眺めるより、一度混ざってみたほうが分かることが多いはずです。" data-en="We don't offer observation-only visits. Instead, please join a single session for ¥1,200 — taking part tells you more than watching from outside.">見学という形はご用意していません。かわりに、単発参加をご利用ください。1回1,200円で、実際の回にそのまま参加していただけます。外から眺めるより、一度混ざってみたほうが分かることが多いはずです。</div>
       </div>
       <div class="faq-item reveal">
         <div class="faq-q" data-ja="教材は持っていく必要がありますか？" data-en="Do we need to bring our own materials?">教材は持っていく必要がありますか？</div>
@@ -855,6 +907,10 @@
       <div class="faq-item reveal">
         <div class="faq-q" data-ja="2時間、どんなふうに過ごすのですか？" data-en="What happens during the two hours?">2時間、どんなふうに過ごすのですか？</div>
         <div class="faq-a" data-ja="はじめの45分は全員でマインドセットの時間、そのあとはそれぞれの学びの時間です。前後には自由参加の自習時間もあります。" data-en="The first 45 minutes are a group mindset session; after that, each student works individually. Optional self-study time is available before and after.">はじめの45分は全員でマインドセットの時間、そのあとはそれぞれの学びの時間です。前後には自由参加の自習時間もあります。</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" data-ja="月謝の支払いが難しいのですが、あきらめるしかないでしょうか？" data-en="What if we can't afford the monthly fee?">月謝の支払いが難しいのですが、あきらめるしかないでしょうか？</div>
+        <div class="faq-a" data-ja="あきらめないでください。ご相談いただければ、金銭面の優遇を行います。お金を理由に学びをあきらめてほしくないというのが、この塾の考え方です。公式LINEから、遠慮なくご相談ください。" data-en="Please don't give up. Reduced fees are available — just ask. No child should have to give up learning over money. Reach out via our official LINE.">あきらめないでください。ご相談いただければ、金銭面の優遇を行います。お金を理由に学びをあきらめてほしくないというのが、この塾の考え方です。公式LINEから、遠慮なくご相談ください。</div>
       </div>
       <div class="faq-item reveal">
         <div class="faq-q" data-ja="学校に行っていないのですが、通えますか？" data-en="Can my child attend if they're not going to school?">学校に行っていないのですが、通えますか？</div>
@@ -873,7 +929,7 @@
 
     <div class="line-cta-box reveal" style="margin-top:48px;">
       <h3 data-ja="まずは気軽にご連絡ください" data-en="Feel free to reach out">まずは気軽にご連絡ください</h3>
-      <p data-ja="入塾のご相談・見学・体験のお申し込みは、公式LINEから受け付けています。「まぬる義塾について」とお送りください。" data-en="For enrollment consultations, visits, and trial sessions, please contact us via our official LINE. Send us 'About Manul Juku'.">入塾のご相談・見学・体験のお申し込みは、<br>公式LINEから受け付けています。<br>「まぬる義塾について」とお送りください。</p>
+      <p data-ja="入塾のご相談・見学・体験のお申し込みは、公式LINEから受け付けています。「まぬる義塾について」とお送りください。" data-en="For enrollment consultations, visits, and trial sessions, please contact us via our official LINE. Send us 'About Manul Gijuku'.">入塾のご相談・見学・体験のお申し込みは、<br>公式LINEから受け付けています。<br>「まぬる義塾について」とお送りください。</p>
       <a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" class="btn-line">📱 公式LINEで問い合わせる</a>
       <p class="line-note" data-ja="NPO法人 kimyo-na-manul 公式LINE" data-en="NPO kimyo-na-manul Official LINE">NPO法人 kimyo-na-manul 公式LINE</p>
     </div>
@@ -892,7 +948,7 @@
         <li><a href="index.html" data-ja="ホーム" data-en="Home">ホーム</a></li>
         <li><a href="about.html" data-ja="団体概要" data-en="About">団体概要</a></li>
         <li><a href="manul-schole.html">まぬるすこれ</a></li>
-        <li><a href="manul-juku.html" data-ja="まぬる義塾" data-en="Manul Juku">まぬる義塾</a></li>
+        <li><a href="manul-juku.html" data-ja="まぬる義塾" data-en="Manul Gijuku">まぬる義塾</a></li>
         <li><a href="activities.html" data-ja="活動内容" data-en="Activities">活動内容</a></li>
         <li><a href="events.html" data-ja="イベント予約" data-en="Events">イベント予約</a></li>
         <li><a href="contact.html" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
