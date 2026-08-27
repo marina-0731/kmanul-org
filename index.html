@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="愛知県知多半島のNPO法人。オルタナティブスクール「まぬるすこれ」を大府市で運営。">
 <meta name="twitter:image" content="https://kmanul.org/assets/logo-kmanul.png">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=18">
+<link rel="stylesheet" href="assets/style.css?v=19">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -119,6 +119,20 @@
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
+}
+/* 近日公開の告知。中身が決まったら文言を差し替えるか、この要素ごと削除する */
+.coming-soon {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sky-dark);
+  background: var(--sky-light);
+  border: 1px solid var(--sky-mid);
+  border-radius: 999px;
+  padding: 7px 20px;
+  margin-bottom: 28px;
 }
 .hero-deny {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
@@ -488,6 +502,7 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
+    <div class="coming-soon" data-ja="Coming Soon" data-en="Coming Soon">Coming Soon</div>
     <p class="hero-deny">
       私たちは不登校支援の団体ではありません。<br>
       優しい、子ども・若者のための居場所、でもありません。
