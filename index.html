@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="愛知県知多半島のNPO法人。オルタナティブスクール「まぬるすこれ」を大府市で運営。">
 <meta name="twitter:image" content="https://kmanul.org/assets/logo-kmanul.png">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=25">
+<link rel="stylesheet" href="assets/style.css?v=26">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -120,14 +120,22 @@
   padding: 0 20px;
   width: 100%;
 }
+/* 何者でないかを先に言い切る一文。ページの起点なので弱く出さない */
 .hero-deny {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  color: var(--text-muted);
-  line-height: 2.2;
-  margin-bottom: 32px;
-  letter-spacing: 0.06em;
+  color: var(--text-mid);
+  line-height: 2.1;
+  margin-bottom: 28px;
+  letter-spacing: 0.04em;
+}
+/* 否定の語だけ濃く太く。ここが効かないと次の「挑戦です。」が立たない */
+.hero-deny b {
+  font-weight: 700;
+  color: var(--text);
+  border-bottom: 2px solid var(--sky-mid);
+  padding-bottom: 1px;
 }
 .hero-punch {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
@@ -232,6 +240,13 @@
   max-width: 640px;
   margin-bottom: 48px;
 }
+/* 2文目が主張。1文目に埋もれないよう濃さで差をつける */
+.projects-intro strong {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--text);
+}
 .project-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -257,7 +272,7 @@
 .project-card-top.purple { background: linear-gradient(135deg, var(--purple), var(--purple-dark)); }
 .project-card-top.aqua   { background: linear-gradient(135deg, var(--aqua), var(--aqua-dark)); }
 .project-card-top.red    { background: linear-gradient(135deg, var(--red), var(--red-dark)); }
-.project-card-logo { width: 80%; max-width: 280px; height: auto; display: block; margin-bottom: -20px; }
+.project-card-logo { width: 80%; max-width: 280px; height: auto; display: block; margin: 0 auto -20px; }
 .project-card-body { padding: 32px 36px 36px; }
 .project-card-tag {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
@@ -274,6 +289,20 @@
 .project-card-link.purple { color: var(--purple); }
 .project-card-link.aqua   { color: var(--aqua-dark); }
 .project-card-link.red    { color: var(--red); }
+/* 開講前であることを事業名の隣で示す */
+.project-card-name .soon {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red-dark);
+  background: var(--red-light);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
 .project-card-name {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 22px;
@@ -334,35 +363,6 @@
   line-height: 1.9;
 }
 
-/* ── NEWS ── */
-.news { background: var(--warm-white); }
-.news-list { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
-.news-item {
-  background: var(--white);
-  padding: 20px 28px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 8px;
-  transition: box-shadow 0.2s;
-}
-.news-item:hover { box-shadow: 0 4px 16px rgba(91,142,196,0.15); }
-.news-date { font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 12px; color: var(--text-muted); width: 90px; flex-shrink: 0; }
-.news-tag {
-  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
-  font-size: 11px;
-  color: var(--sky-dark);
-  background: var(--sky-light);
-  border: 1px solid var(--sky-mid);
-  padding: 3px 12px;
-  border-radius: 999px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.news-title { font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 14px; color: var(--text); line-height: 1.7; }
-.news-arrow { margin-left: auto; color: var(--sky); flex-shrink: 0; font-size: 18px; }
 
 /* ── INSTAGRAM ── */
 .insta-section { background: var(--white); }
@@ -397,7 +397,7 @@
 @media (max-width: 900px) {
   .hero { padding: 80px 0 56px; min-height: auto; }
   .hero-content { padding: 0 20px; }
-  .hero-deny { font-size: 16px; margin-bottom: 32px; line-height: 2; }
+  .hero-deny { font-size: 17px; margin-bottom: 26px; line-height: 2.05; }
   .hero-punch { font-size: clamp(26px, 7vw, 40px); margin-bottom: 36px; }
   .hero-logo img { width: min(240px, 65%); }
   .hero-actions { flex-direction: column; gap: 10px; }
@@ -411,9 +411,6 @@
   .project-card-body { padding: 24px; }
   .values-grid { grid-template-columns: 1fr; }
   .value-card { padding: 24px 20px; }
-  .news-item { flex-wrap: wrap; gap: 8px; padding: 16px 20px; }
-  .news-arrow { display: none; }
-  .news-date { width: auto; }
   .cta-band { padding: 56px 0; }
   .cta-band h2 { font-size: 20px; }
   .cta-btns { flex-direction: column; }
@@ -429,7 +426,7 @@
 /* phone-frame: force mobile layout */
 .hero { padding: 80px 0 56px; min-height: auto; }
 .hero-content { padding: 0 20px; }
-.hero-deny { font-size: 16px; margin-bottom: 32px; line-height: 2; }
+.hero-deny { font-size: 17px; margin-bottom: 26px; line-height: 2.05; }
 .hero-punch { font-size: clamp(26px, 7vw, 40px); margin-bottom: 36px; }
 .hero-logo img { width: min(240px, 65%); }
 .hero-actions { flex-direction: column; gap: 10px; }
@@ -442,9 +439,6 @@
 .project-card-body { padding: 24px; }
 .values-grid { grid-template-columns: 1fr; }
 .value-card { padding: 24px 20px; }
-.news-item { flex-wrap: wrap; gap: 8px; padding: 16px 20px; }
-.news-arrow { display: none; }
-.news-date { width: auto; }
 .cta-band { padding: 56px 0; }
 .cta-band h2 { font-size: 20px; }
 .cta-btns { flex-direction: column; }
@@ -486,16 +480,16 @@
   <div class="hero-bg"></div>
   <div class="hero-content">
     <p class="hero-deny">
-      私たちは不登校支援の団体ではありません。<br>
-      優しい、子ども・若者のための居場所、でもありません。
+      私たちは不登校支援の団体<b>ではありません</b>。<br>
+      優しい、子ども・若者のための居場所、<b>でもありません</b>。
     </p>
     <h1 class="hero-punch"><span class="sr-only">kimyo-na-manul（奇妙なマヌル）— </span>今までにない、<em>挑戦</em>です。</h1>
     <div class="hero-logo">
       <img src="assets/logo-kmanul.png" alt="kimyo-na-manul（奇妙なマヌル）">
     </div>
     <div class="hero-actions">
+      <a href="#about" class="btn-sky">団体について</a>
       <a href="manul-schole.html" class="btn-green">まぬるすこれを見る</a>
-      <a href="#about" class="btn-outline-white">団体について</a>
     </div>
   </div>
 </section>
@@ -513,8 +507,8 @@
     <div class="about-grid">
       <div class="reveal">
         <h3 class="section-title" style="font-size:clamp(20px,2.5vw,28px);margin-bottom:16px;" data-ja="自分で決める。<br>だから幸せ。" data-en="Decide for yourself.<br>That's happiness.">自分で決める。<br>だから幸せ。</h3>
-        <p class="section-lead" data-ja="わたしたちは、不登校・発達障害・引きこもり・貧困・ジェンダーマイノリティなど、多様な背景を持つ当事者が主体となって活動しています。当事者に本当に必要なのは、一方的な「支援」だけではありません。他者に信頼され、応援され、自ら挑戦し、成長する機会です。" data-en="We are led by people with diverse backgrounds — school refusal, developmental differences, social withdrawal, poverty, gender minorities. What they truly need is not just one-sided 'support', but trust, encouragement, and opportunities to challenge and grow.">
-          わたしたちは、不登校・発達障害・引きこもり・貧困・ジェンダーマイノリティなど、多様な背景を持つ当事者が主体となって活動しています。当事者に本当に必要なのは、一方的な「支援」だけではありません。他者に信頼され、応援され、自ら挑戦し、成長する機会です。
+        <p class="section-lead" data-ja="わたしたちは、不登校・発達障害・引きこもり・貧困・ジェンダーマイノリティなど、多様な背景を持つ当事者が主体となって活動しています。生きづらさを抱える私たちに必要なのは、一方的な「支援」”だけ”ではありません。他者に信頼され、応援され、自ら挑戦し、成長する機会です。" data-en="We are led by people with diverse backgrounds — school refusal, developmental differences, social withdrawal, poverty, gender minorities. What those of us living with hardship need is not one-sided 'support' alone. It is trust, encouragement, and opportunities to challenge ourselves and grow.">
+          わたしたちは、不登校・発達障害・引きこもり・貧困・ジェンダーマイノリティなど、多様な背景を持つ当事者が主体となって活動しています。生きづらさを抱える私たちに必要なのは、一方的な「支援」”だけ”ではありません。他者に信頼され、応援され、自ら挑戦し、成長する機会です。
         </p>
         <p style="font-size:14px;color:var(--text-muted);line-height:2;max-width:620px;margin-bottom:28px;" data-ja="kimyo-na-manulは、そんな「成長の機会と貢献感が得られる居場所」を市民・企業・行政・各種団体と共につくります。ひとりひとりが活躍できる社会の実現を目指して。" data-en="kimyo-na-manul creates 'places where people gain growth opportunities and a sense of contribution', together with citizens, businesses, government, and organizations — aiming for a society where everyone can thrive.">
           kimyo-na-manulは、そんな「成長の機会と貢献感が得られる居場所」を市民・企業・行政・各種団体と共につくります。ひとりひとりが活躍できる社会の実現を目指して。
@@ -551,35 +545,6 @@
   </div>
 </section>
 
-<!-- クラファン達成バナー -->
-<section style="padding-top:0;padding-bottom:0;">
-  <div class="container">
-    <a href="https://congrant.com/project/kimyo-na-manul/21284"
-       target="_blank" rel="noopener"
-       style="display:flex; background:linear-gradient(135deg,var(--sky-dark),var(--sky));
-              border-radius:16px; padding:28px 36px;
-              align-items:center; justify-content:space-between;
-              gap:20px; flex-wrap:wrap; text-decoration:none;">
-      <div>
-        <p style="color:rgba(255,255,255,.7);font-size:.85rem;margin-bottom:4px;">
-          🎉 クラウドファンディング NEXTゴール達成！
-        </p>
-        <p style="color:#fff;font-size:1.5rem;font-weight:700;line-height:1.3;">
-          支援総額 <span style="color:#FFD700;font-size:2rem;">300万円</span> 突破！
-        </p>
-        <p style="color:rgba(255,255,255,.7);font-size:.85rem;margin-top:4px;">
-          たくさんの応援、ありがとうございます。
-        </p>
-      </div>
-      <span style="background:#fff;color:var(--sky-dark);font-weight:700;
-                   padding:.6em 1.4em;border-radius:100px;font-size:.9rem;
-                   white-space:nowrap;">
-        プロジェクトを見る →
-      </span>
-    </a>
-  </div>
-</section>
-
 <!-- MISSION BAND -->
 <div class="mission-band">
   <div class="container">
@@ -596,7 +561,7 @@
     <div class="eyebrow eyebrow-sky reveal" data-ja="Our Projects" data-en="Our Projects">Our Projects</div>
     <h2 class="section-title reveal" data-ja="活動・事業" data-en="What We Do">活動・事業</h2>
     <div class="projects-intro reveal">
-      <p class="section-lead" data-ja="kimyo-na-manulは、複数の事業を通じて、子ども・若者・保護者を支えます。" data-en="kimyo-na-manul supports children, youth, and families through multiple programs.">kimyo-na-manulは、複数の事業を通じて、子ども・若者・保護者を支えます。</p>
+      <p class="section-lead" data-ja="kimyo-na-manulは、複数の事業を通じて、子ども・若者・保護と関わります。<br><strong>「誰1人取り残さない社会」になるのを待つのではなく、「社会から取り残されない力」を私たち自身が育みます。</strong>" data-en="kimyo-na-manul engages with children, youth, and guardians through multiple programs.<br><strong>Rather than waiting for a society that leaves no one behind, we build the strength not to be left behind.</strong>">kimyo-na-manulは、複数の事業を通じて、子ども・若者・保護と関わります。<br><strong>「誰1人取り残さない社会」になるのを待つのではなく、「社会から取り残されない力」を私たち自身が育みます。</strong></p>
     </div>
     <div class="project-cards" style="grid-template-columns:repeat(4,1fr);">
       <a href="manul-schole.html" class="project-card reveal">
@@ -617,7 +582,7 @@
         <div class="project-card-body">
           <div class="project-card-tag aqua" data-ja="24時間365日" data-en="24/7 Support">24時間365日</div>
           <div class="project-card-name" data-ja="子育て相談 & 居場所づくり" data-en="Parenting Support & Community">子育て相談 & 居場所づくり</div>
-          <p class="project-card-desc" data-ja="子育て相談は24時間365日、LINE・オンライン・対面で受付中。オンライン交流会（月2回、Discord）や対面イベント（月2回以上）も開催しています。" data-en="Parenting consultations available 24/7 via LINE, online, or in-person. Monthly online meetups (twice/month on Discord) and in-person events (twice/month or more).">子育て相談は24時間365日、LINE・オンライン・対面で受付中。オンライン交流会（月2回、Discord）や対面イベント（月2回以上）も開催しています。</p>
+          <p class="project-card-desc" data-ja="子育て相談は24時間365日、LINE・オンライン・対面（要予約）で受付中。オンライン交流会（月1回、Discord）や対面イベント（月1回以上）も開催しています。" data-en="Parenting consultations available 24/7 via LINE, online, or in person (by appointment). Online meetups (monthly, on Discord) and in-person events (at least monthly) are also held.">子育て相談は24時間365日、LINE・オンライン・対面（要予約）で受付中。オンライン交流会（月1回、Discord）や対面イベント（月1回以上）も開催しています。</p>
         </div>
       </div>
       <div class="project-card reveal">
@@ -626,8 +591,8 @@
         </div>
         <div class="project-card-body">
           <div class="project-card-tag purple" data-ja="ラジオ・Discord" data-en="Radio & Discord">ラジオ・Discord</div>
-          <div class="project-card-name" data-ja="まぬらじ！& マヌルちゃんねる" data-en="Manuraji! & Manul Channel">まぬらじ！& マヌルちゃんねる</div>
-          <p class="project-card-desc" data-ja="毎週土曜18時半配信のラジオ「まぬらじ！」と、YouTubeチャンネル「マヌルちゃんねる（仮）」で不登校・発達障害の当事者経験や子育て情報を発信しています。" data-en="Weekly radio show 'Manuraji!' every Saturday at 6:30 PM, plus YouTube channel 'Manul Channel' sharing experiences of school refusal, developmental differences, and parenting.">毎週土曜18時半配信のラジオ「まぬらじ！」と、YouTubeチャンネル「マヌルちゃんねる（仮）」で不登校・発達障害の当事者経験や子育て情報を発信しています。</p>
+          <div class="project-card-name" data-ja="まぬらじ！& 各種SNS" data-en="Manuraji! & Social Media">まぬらじ！& 各種SNS</div>
+          <p class="project-card-desc" data-ja="毎週土曜18時半配信のラジオ「まぬらじ！」と、各種SNS（Instagram、TikTok等）で不登校・発達障害の当事者経験を赤裸々に発信しています。" data-en="Our weekly radio show 'Manuraji!' airs Saturdays at 6:30 PM, and on social media (Instagram, TikTok and others) we speak candidly about living with school refusal and developmental differences.">毎週土曜18時半配信のラジオ「まぬらじ！」と、各種SNS（Instagram、TikTok等）で不登校・発達障害の当事者経験を赤裸々に発信しています。</p>
         </div>
       </div>
       <a href="manul-juku.html" class="project-card reveal">
@@ -636,7 +601,7 @@
         </div>
         <div class="project-card-body">
           <div class="project-card-tag red" data-ja="市民運営学習塾" data-en="Community-Run Tutoring">市民運営学習塾</div>
-          <div class="project-card-name" data-ja="市民運営まぬる義塾" data-en="Manul Gijuku">市民運営まぬる義塾</div>
+          <div class="project-card-name" data-ja="市民運営まぬる義塾<span class='soon'>Coming Soon</span>" data-en="Manul Gijuku<span class='soon'>Coming Soon</span>">市民運営まぬる義塾<span class="soon">Coming Soon</span></div>
           <p class="project-card-desc" data-ja="頭はよくしません。夢を叶える力を育みます。学校に行っていない子、発達特性がある子、勉強が苦手な子のための市民運営の学習塾。月謝6,000円・完全ボランティア運営。" data-en="We don't make you smarter — we nurture the power to make dreams come true. A community-run tutoring school for children not attending school, with developmental differences, or struggling with studies. ¥6,000/month, fully volunteer-run.">頭はよくしません。夢を叶える力を育みます。学校に行っていない子、発達特性がある子、勉強が苦手な子のための市民運営の学習塾。月謝6,000円・完全ボランティア運営。</p>
           <span class="project-card-link red" data-ja="詳しく見る →" data-en="Learn more →">詳しく見る →</span>
         </div>
@@ -671,40 +636,6 @@
         <div class="value-num">04</div>
         <div class="value-title" data-ja="地域とともに" data-en="With the Community">地域とともに</div>
         <p class="value-text" data-ja="知多半島の人・自然・文化を活かし、地域と共に育つ教育エコシステムをつくります。" data-en="We build an educational ecosystem that grows with the people, nature, and culture of the Chita Peninsula.">知多半島の人・自然・文化を活かし、地域と共に育つ教育エコシステムをつくります。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NEWS -->
-<section class="news">
-  <div class="container">
-    <div class="eyebrow eyebrow-sky reveal" data-ja="News" data-en="News">News</div>
-    <h2 class="section-title reveal" data-ja="お知らせ" data-en="Latest News">お知らせ</h2>
-    <div class="news-list reveal">
-      <div class="news-item">
-        <span class="news-date">2026.06.14</span>
-        <span class="news-tag">イベント</span>
-        <span class="news-title" data-ja="武豊のイベントにて理事2名が登壇しました" data-en="Two board members spoke at a Taketoyo event">武豊のイベントにて理事2名が登壇しました</span>
-        <span class="news-arrow">→</span>
-      </div>
-      <div class="news-item">
-        <span class="news-date">2026.06.01</span>
-        <span class="news-tag">募集</span>
-        <span class="news-title" data-ja="まぬるすこれ 中学部 各学年残り3名を募集中" data-en="Manul Schole middle school: 3 spots remaining per grade">まぬるすこれ 中学部 各学年残り3名を募集中</span>
-        <span class="news-arrow">→</span>
-      </div>
-      <div class="news-item">
-        <span class="news-date">2026.04.07</span>
-        <span class="news-tag">重要</span>
-        <span class="news-title" data-ja="まぬるすこれ 開校式＆入学式を開催しました（大府市中央町）" data-en="Manul Schole opening ceremony held in Obu City">まぬるすこれ 開校式＆入学式を開催しました（大府市中央町）</span>
-        <span class="news-arrow">→</span>
-      </div>
-      <div class="news-item">
-        <span class="news-date">2026.04.06</span>
-        <span class="news-tag">重要</span>
-        <span class="news-title" data-ja="NPO法人として登記が完了しました" data-en="NPO registration completed">NPO法人として登記が完了しました</span>
-        <span class="news-arrow">→</span>
       </div>
     </div>
   </div>
@@ -745,23 +676,6 @@
         <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px;" data-ja="まぬらじ、Spotifyで聴けます" data-en="Listen to Manuraji on Spotify">まぬらじ、Spotifyで聴けます</div>
         <p style="font-size:13px;color:var(--text-muted);line-height:1.8;margin-bottom:16px;" data-ja="kimyo-na-manulのコミュニティラジオ。日々の活動や考えを発信しています。" data-en="kimyo-na-manul's community radio. Sharing our daily activities and thoughts.">kimyo-na-manulのコミュニティラジオ。日々の活動や考えを発信しています。</p>
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4pCX4vRVYYnigfrbYCAyXj?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VOICES -->
-<section style="background:var(--misora-bg);padding:80px 0;">
-  <div class="container">
-    <div class="eyebrow eyebrow-sky reveal" style="justify-content:center;">Voices</div>
-    <h2 class="section-title reveal" style="text-align:center;" data-ja="みんなの声" data-en="Voices">みんなの声</h2>
-    <span class="section-title-en reveal" style="text-align:center;display:block;">What People Say</span>
-    <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:24px;">
-      <div class="reveal" style="background:var(--white);border-radius:16px;padding:32px 36px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <p style="font-size:16px;color:var(--text);line-height:2;margin-bottom:16px;">
-          思い立ったら即行動！でもちゃんと本気。こんな人に流されるのは楽しいですよ。一緒に学校作ってみませんか？
-        </p>
-        <p style="font-size:13px;color:var(--text-muted);">― 常務理事 堀金結（クラファンページより）</p>
       </div>
     </div>
   </div>
