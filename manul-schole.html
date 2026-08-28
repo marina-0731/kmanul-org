@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="NPO法人kimyo-na-manulが運営。小中高一貫・週5日・授業料無償。自己決定と探究の学び。">
 <meta name="twitter:image" content="https://kmanul.org/assets/logo-manul-schole.png">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=28">
+<link rel="stylesheet" href="assets/style.css?v=29">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -182,6 +182,13 @@
   letter-spacing: 0.04em;
 }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+/* CTAの下で、まだ決めなくていいと添える一言。手を止めている人向け */
+.hero-reassure {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 14px;
+  line-height: 1.8;
+}
 
 .hero-right {}
 .hero-quote {
@@ -863,9 +870,10 @@
         自分で考え、動き、つくる毎日の中で、<br>自立して生きていく力を育みます。
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-green" data-ja="入学・見学を申し込む" data-en="Apply / Visit">入学・見学を申し込む</a>
+        <a href="#contact" class="btn-green" data-ja="うちの子に合うか、聞いてみる" data-en="Ask if it might suit your child">うちの子に合うか、聞いてみる</a>
         <a href="#concept" class="btn-outline-white" data-ja="学校の理念を読む" data-en="Our Philosophy">学校の理念を読む</a>
       </div>
+      <p class="hero-reassure" data-ja="見学するか迷っている段階でも大丈夫です。まだ決めなくてかまいません。" data-en="It's fine to reach out even while you're still unsure about visiting. You don't have to decide anything yet.">見学するか迷っている段階でも大丈夫です。まだ決めなくてかまいません。</p>
     </div>
     <div class="hero-right">
       <div class="hero-quote">
@@ -965,8 +973,8 @@
   <div class="container">
     <div class="target-grid">
       <div class="target-quote reveal">
-        <p data-ja="「うちの子に<em>合うかな？</em>」<br>そう思ったら、<br>まずは見学にきてください。" data-en="'Would this <em>suit my child?</em>'<br>If you're wondering,<br>come see for yourself.">「うちの子に<em>合うかな？</em>」<br>そう思ったら、<br>まずは見学にきてください。</p>
-        <cite>見学は随時受付中</cite>
+        <p data-ja="「うちの子に<em>合うかな？</em>」<br>分からなくて、大丈夫。<br>それを一緒に確かめる場です。" data-en="'Would this <em>suit my child?</em>'<br>Not knowing is fine.<br>This is a place to find out together.">「うちの子に<em>合うかな？</em>」<br>分からなくて、大丈夫。<br>それを一緒に確かめる場です。</p>
+        <cite>見学・体験は随時受付中</cite>
       </div>
       <div class="reveal">
         <div class="eyebrow eyebrow-green" data-ja="For Whom" data-en="For Whom">For Whom</div>
@@ -1176,9 +1184,10 @@
     <div class="contact-grid">
       <div class="reveal">
         <div class="eyebrow eyebrow-green">Contact & Admission</div>
-        <h2 class="section-title">入学相談・<br>見学のご案内</h2>
+        <h2 class="section-title">まず、聞いてみて<br>ください。</h2>
         <span class="section-title-en">Get in Touch</span>
-        <p class="section-lead" style="font-size:14px;">見学・体験参加は随時受け付けています。まずはお気軽にご連絡ください。入学選抜はありません。入学は基本的に新小学一年生からです。大切にしているのは、お子さん自身が「まぬるすこれに通いたい」と思っていること。自分で選んで来る——それが、まぬるすこれでの学びの第一歩です。</p>
+        <p class="section-lead" style="font-size:14px;"><strong>「うちの子に合うか分からない」——それで大丈夫です。</strong>合うかどうかを、一緒に確かめる場です。見学・体験参加は随時受け付けています。決めてから来る必要はありません。まだ迷っている段階のご質問も、遠慮なくどうぞ。</p>
+        <p class="section-lead" style="font-size:13px;color:var(--text-muted);">なお、入学選抜はありません。大切にしているのは、お子さん自身が「まぬるすこれに通いたい」と思っていること。自分で選んで来る——それが、まぬるすこれでの学びの第一歩です。入学は基本的に新小学一年生からです。</p>
         <div class="contact-info">
           <div class="contact-row">
             <div class="contact-label">所在地</div>
@@ -1203,9 +1212,9 @@
         </div>
       </div>
       <div class="line-cta-box reveal">
-        <h3>📱 お問い合わせは公式LINEから</h3>
-        <p>入学相談・見学のお申し込み・ご質問など、<br>公式LINEよりお気軽にご連絡ください。</p>
-        <a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" class="btn-line">友だち追加して相談する →</a>
+        <h3>📱 まずは公式LINEで</h3>
+        <p>「ちょっと聞いてみたい」だけで大丈夫。<br>ご質問ひとつからでも、お気軽にどうぞ。</p>
+        <a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" class="btn-line">LINEで聞いてみる →</a>
         <div class="line-qr">
           <img src="images/line-qr.png" alt="公式LINE QRコード" style="width:140px;display:block;">
         </div>
