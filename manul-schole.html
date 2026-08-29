@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="NPO法人kimyo-na-manulが運営。小中高一貫・週5日・授業料無償。自己決定と探究の学び。">
 <meta name="twitter:image" content="https://kmanul.org/assets/logo-manul-schole.png">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=29">
+<link rel="stylesheet" href="assets/style.css?v=30">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -705,6 +705,25 @@
   padding: 12px;
   border-radius: 12px;
 }
+/* LINEを使わない人の逃げ道。白帯＋暗い文字で確実に読めるようにする
+   （囲みの LINE 緑に白文字だとコントラストが足りないため） */
+.line-alt {
+  margin-top: 22px;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 13px;
+  line-height: 1.85;
+}
+.line-alt span { color: var(--text-muted); display: block; }
+.line-alt a {
+  color: var(--green-dark);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--green-light);
+  padding-bottom: 1px;
+}
+.line-alt a:hover { border-bottom-color: var(--green-dark); }
 
 /* ── PROGRAM BOX ── */
 .program-box {
@@ -1219,6 +1238,10 @@
           <img src="images/line-qr.png" alt="公式LINE QRコード" style="width:140px;display:block;">
         </div>
         <p style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:16px;margin-bottom:0;">QRコードを読み取って友だち追加できます</p>
+        <div class="line-alt">
+          <span>LINEを使っていない方は</span>
+          <a href="https://docs.google.com/forms/d/1woxwGDqKeVqpWLWEcPL7jh9cmRJlDeKmZy0_0xftQlw/viewform" target="_blank" rel="noopener">お問い合わせフォームからどうぞ →</a>
+        </div>
       </div>
     </div>
   </div>
