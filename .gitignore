@@ -1,0 +1,17 @@
+# macOS が勝手に作るファイル
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# Claude Code のローカル設定と作業メモ
+# 公開リポジトリなので、手元にだけ置いておく
+.claude/
+CLAUDE_CODE_INSTRUCTIONS.md
+
+# サイトから参照していない素材（ファイル自体は手元に残す）
+qr_add_friend_bot_188138.png
+
+# エディタ
+.vscode/
+.idea/
+*.swp
