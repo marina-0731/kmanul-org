@@ -443,6 +443,58 @@
 .cta-btns { flex-direction: column; }
 .stat-num { font-size: 28px; }
 .badge { font-size: 11px; padding: 4px 12px; }
+
+/* ── AWARD（名古屋人間力大賞2026） ── */
+.award {
+  background: var(--yellow-light);
+  padding: 64px 0;
+}
+.award-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+.award-photo { max-width: 260px; margin: 0 auto; }
+.award-photo img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: block;
+}
+.award-photo figcaption {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  text-align: center;
+}
+.award-title {
+  font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.award-title em {
+  font-style: normal;
+  color: var(--yellow);
+}
+.award-text {
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 2;
+  margin-bottom: 20px;
+}
+.award-quote {
+  border-left: 3px solid var(--yellow-soft);
+  padding: 4px 0 4px 16px;
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.9;
+}
+@media (max-width: 900px) {
+  .award { padding: 48px 0; }
+}
 </style>
 </head>
 <body class="theme-npo">
@@ -495,6 +547,28 @@
 
 <!-- 七色 — ひとつの色では表せない -->
 <div class="spectrum" role="presentation"></div>
+
+<!-- AWARD — 名古屋人間力大賞2026 -->
+<section class="award" id="award">
+  <div class="container">
+    <div class="award-grid">
+      <figure class="award-photo reveal">
+        <img src="images/award_noyp2026.jpg" alt="名古屋人間力大賞2026グランプリのトロフィーと賞状を手にする代表理事・土屋真理奈" loading="lazy">
+        <figcaption data-ja="2026年10月17日 最終選考会にて" data-en="At the final selection, Oct 17, 2026">2026年10月17日 最終選考会にて</figcaption>
+      </figure>
+      <div class="reveal">
+        <div class="eyebrow eyebrow-yellow">Award</div>
+        <h2 class="award-title" data-ja="名古屋人間力大賞2026<br><em>グランプリ</em>を受賞しました" data-en="Grand Prix at the<br><em>Nagoya Ningenryoku Award 2026</em>">名古屋人間力大賞2026<br><em>グランプリ</em>を受賞しました</h2>
+        <p class="award-text" data-ja="代表理事の土屋真理奈（安土真理奈）が、公益社団法人名古屋青年会議所主催「名古屋人間力大賞2026」最終選考会にて、2026年度NOYP（名古屋人間力大賞）グランプリ賞を受賞しました。3分間のスピーチ「このまちのために、何ができるか。」で、子どもが主役になる学びの場づくりと、耕作放棄地のサトウキビ酒を通じた仕事づくりを語りました。" data-en="Our representative director, Marina Tsuchiya (Marina Azuchi), received the 2026 NOYP Grand Prix at the Nagoya Ningenryoku Award 2026, hosted by the Nagoya Junior Chamber. In her 3-minute speech, “What can I do for this town?”, she spoke about building places where children lead their own learning, and creating jobs through sugarcane liquor grown on abandoned farmland.">
+          代表理事の土屋真理奈（安土真理奈）が、公益社団法人名古屋青年会議所主催「名古屋人間力大賞2026」最終選考会にて、2026年度NOYP（名古屋人間力大賞）グランプリ賞を受賞しました。3分間のスピーチ「このまちのために、何ができるか。」で、子どもが主役になる学びの場づくりと、耕作放棄地のサトウキビ酒を通じた仕事づくりを語りました。
+        </p>
+        <p class="award-quote" data-ja="人間力大賞は「表彰で終わらない。共創の始まり」。ここからが本番です。誰もが自分の未来に胸躍る愛知県を目指していきます。" data-en="The award “doesn't end with recognition — it's the beginning of co-creation.” The real work starts now, toward an Aichi where everyone is excited about their own future.">
+          人間力大賞は「表彰で終わらない。共創の始まり」。ここからが本番です。誰もが自分の未来に胸躍る愛知県を目指していきます。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ABOUT -->
 <section class="about" id="about" style="background:var(--misora-bg);">
