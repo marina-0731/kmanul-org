@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="愛知県大府市・知多半島のオンライン塾。成績向上ではなく「夢を叶える力」を育む。週2回のオンライン面談＋自習室使い放題、月額はドネーション制。">
 <meta name="twitter:image" content="https://kmanul.org/assets/logo-manul-juku.png">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=30">
+<link rel="stylesheet" href="assets/style.css?v=31">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&display=swap">
@@ -679,7 +679,11 @@
 }
 
 /* phone-frame: force mobile layout */
-.hero-content { grid-template-columns: 1fr; gap: 48px; padding: 0 16px; padding-top: 72px; }
+/* 長い単語の多い言語でも横にはみ出さないよう、列幅を中身で広げない */
+.hero-content > *, .stat-block { min-width: 0; }
+.hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+.hero-title, .hero-overline, .stat-number, .stat-label, .opening-badge { overflow-wrap: anywhere; }
+.hero-content { grid-template-columns: minmax(0, 1fr); gap: 48px; padding: 0 16px; padding-top: 72px; }
 .hero { justify-content: center; padding: 0 0 48px; }
 .hero-title { font-size: clamp(26px, 7vw, 40px); }
 .hero-catch { font-size: 15px; }
@@ -839,12 +843,12 @@ body.theme-juku footer { border-top: 3px double rgba(226,201,138,0.35); }
     </a>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html" data-ja="ホーム" data-en="Home">ホーム</a></li>
-    <li><a href="about.html" data-ja="団体概要" data-en="About">団体概要</a></li>
-    <li><a href="manul-juku.html" class="active" data-ja="まぬる義塾" data-en="Manul Gijuku">まぬる義塾</a></li>
-    <li><a href="activities.html" data-ja="活動内容" data-en="Activities">活動内容</a></li>
-    <li><a href="events.html" class="nav-event" data-ja="イベント" data-en="Events">イベント</a></li>
-    <li><a href="contact.html" class="nav-cta" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
+    <li><a href="index.html" data-i18n="ted28cf13" data-ja="ホーム" data-en="Home">ホーム</a></li>
+    <li><a href="about.html" data-i18n="t7157b08d" data-ja="団体概要" data-en="About">団体概要</a></li>
+    <li><a href="manul-juku.html" class="active" data-i18n="tc1215991" data-ja="まぬる義塾" data-en="Manul Gijuku">まぬる義塾</a></li>
+    <li><a href="activities.html" data-i18n="t959b5b69" data-ja="活動内容" data-en="Activities">活動内容</a></li>
+    <li><a href="events.html" class="nav-event" data-i18n="te18b1ea1" data-ja="イベント" data-en="Events">イベント</a></li>
+    <li><a href="contact.html" class="nav-cta" data-i18n="t44ff6d3f" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
   </ul>
   <div class="lang-toggle">
     <button class="lang-btn active" id="btn-ja" onclick="setLang('ja')">JA</button>
@@ -861,32 +865,32 @@ body.theme-juku footer { border-top: 3px double rgba(226,201,138,0.35); }
   <div class="hero-content">
     <div>
       <img src="assets/logo-manul-juku-clear.png" alt="まぬる義塾" style="width:200px;height:auto;display:block;margin:0 auto 32px;">
-      <div class="hero-overline" data-ja="愛知県大府市・知多半島 — 市民運営のオンライン塾・マンツーマン・小中高生" data-en="Obu, Aichi — Community-run online tutoring, one-on-one">愛知県大府市・知多半島 — 市民運営のオンライン塾・マンツーマン・小中高生</div>
-      <div class="opening-badge" data-ja="開講中・生徒募集中" data-en="Now open — accepting students">開講中・生徒募集中</div>
-      <h1 class="hero-title" data-ja="頭はよくしません。<br><em>夢を叶える力</em>を<br>育みます。" data-en="We don't make you smarter.<br>We nurture the <em>power to<br>make dreams come true</em>.">頭はよくしません。<br><em>夢を叶える力</em>を<br>育みます。</h1>
-      <p class="hero-catch" data-ja="市民運営まぬる義塾は、成績を上げるための塾ではありません。学校に行っていない子、勉強が苦手な子、発達特性がある子——ひとりひとりの「やりたい」に寄り添い、夢を叶える力を育む場所です。" data-en="Manul Gijuku is not a cram school for better grades. It's a place where children who aren't attending school, struggle with studies, or have developmental differences can nurture the power to make their dreams come true.">市民運営まぬる義塾は、成績を上げるための塾ではありません。<br>学校に行っていない子、勉強が苦手な子、発達特性がある子——<br>ひとりひとりの「やりたい」に寄り添い、<br>夢を叶える力を育む場所です。</p>
+      <div class="hero-overline" data-i18n="tc38871f9" data-ja="愛知県大府市・知多半島 — 市民運営のオンライン塾・マンツーマン・小中高生" data-en="Obu, Aichi — Community-run online tutoring, one-on-one">愛知県大府市・知多半島 — 市民運営のオンライン塾・マンツーマン・小中高生</div>
+      <div class="opening-badge" data-i18n="td7406e0e" data-ja="開講中・生徒募集中" data-en="Now open — accepting students">開講中・生徒募集中</div>
+      <h1 class="hero-title" data-i18n="td5eb59b5" data-ja="頭はよくしません。<br><em>夢を叶える力</em>を<br>育みます。" data-en="We don't make you smarter.<br>We nurture the <em>power to<br>make dreams come true</em>.">頭はよくしません。<br><em>夢を叶える力</em>を<br>育みます。</h1>
+      <p class="hero-catch" data-i18n="t210ae78e" data-ja="市民運営まぬる義塾は、成績を上げるための塾ではありません。学校に行っていない子、勉強が苦手な子、発達特性がある子——ひとりひとりの「やりたい」に寄り添い、夢を叶える力を育む場所です。" data-en="Manul Gijuku is not a cram school for better grades. It's a place where children who aren't attending school, struggle with studies, or have developmental differences can nurture the power to make their dreams come true.">市民運営まぬる義塾は、成績を上げるための塾ではありません。<br>学校に行っていない子、勉強が苦手な子、発達特性がある子——<br>ひとりひとりの「やりたい」に寄り添い、<br>夢を叶える力を育む場所です。</p>
       <div class="hero-actions">
-        <a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" class="btn-red" data-ja="公式LINEで問い合わせる" data-en="Contact via LINE">公式LINEで問い合わせる</a>
-        <a href="#details" class="btn-outline-white" data-ja="詳細を見る" data-en="View Details">詳細を見る</a>
+        <a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" class="btn-red" data-i18n="t8c7063ca" data-ja="公式LINEで問い合わせる" data-en="Contact via LINE">公式LINEで問い合わせる</a>
+        <a href="#details" class="btn-outline-white" data-i18n="tb8195348" data-ja="詳細を見る" data-en="View Details">詳細を見る</a>
       </div>
     </div>
     <div class="hero-right">
       <div class="hero-stats">
         <div class="stat-block">
-          <div class="stat-number" data-ja="週2<span class='stat-unit'>回</span>" data-en="2<span class='stat-unit'>/wk</span>">週2<span class="stat-unit">回</span></div>
-          <div class="stat-label" data-ja="オンライン面談 各30分" data-en="Online coaching, 30 min each">オンライン面談 各30分</div>
+          <div class="stat-number" data-i18n="te714290c" data-ja="週2<span class='stat-unit'>回</span>" data-en="2<span class='stat-unit'>/wk</span>">週2<span class="stat-unit">回</span></div>
+          <div class="stat-label" data-i18n="tbd1fc814" data-ja="オンライン面談 各30分" data-en="Online coaching, 30 min each">オンライン面談 各30分</div>
         </div>
         <div class="stat-block">
-          <div class="stat-number" data-ja="使い放題" data-en="Unlimited">使い放題</div>
-          <div class="stat-label" data-ja="自習室＠大府" data-en="Study room in Obu">自習室＠大府</div>
+          <div class="stat-number" data-i18n="t77d00517" data-ja="使い放題" data-en="Unlimited">使い放題</div>
+          <div class="stat-label" data-i18n="tb8a8c102" data-ja="自習室＠大府" data-en="Study room in Obu">自習室＠大府</div>
         </div>
         <div class="stat-block">
-          <div class="stat-number" data-ja="¥0〜" data-en="¥0〜">¥0〜</div>
-          <div class="stat-label" data-ja="月額ドネーション制（〜50,000円）" data-en="Monthly by donation (up to ¥50,000)">月額ドネーション制（〜50,000円）</div>
+          <div class="stat-number" data-i18n="t320682f3" data-ja="¥0〜" data-en="¥0〜">¥0〜</div>
+          <div class="stat-label" data-i18n="tfa35636e" data-ja="月額ドネーション制（〜50,000円）" data-en="Monthly by donation (up to ¥50,000)">月額ドネーション制（〜50,000円）</div>
         </div>
         <div class="stat-block">
-          <div class="stat-number" data-ja="小〜高" data-en="K-12">小〜高</div>
-          <div class="stat-label" data-ja="小学生・中学生・高校生" data-en="Elementary to High School">小学生・中学生・高校生</div>
+          <div class="stat-number" data-i18n="t445e2e7d" data-ja="小〜高" data-en="K-12">小〜高</div>
+          <div class="stat-label" data-i18n="t4b12cdd8" data-ja="小学生・中学生・高校生" data-en="Elementary to High School">小学生・中学生・高校生</div>
         </div>
       </div>
     </div>
@@ -896,35 +900,35 @@ body.theme-juku footer { border-top: 3px double rgba(226,201,138,0.35); }
 <!-- CONCEPT -->
 <section class="concept" id="concept">
   <div class="container">
-    <div class="eyebrow eyebrow-red reveal" data-ja="Concept" data-en="Concept">Concept</div>
-    <h2 class="section-title reveal" data-ja="まぬる義塾が大切にすること" data-en="What Manul Gijuku Values">まぬる義塾が大切にすること</h2>
+    <div class="eyebrow eyebrow-red reveal" data-i18n="tc05bafdb" data-ja="Concept" data-en="Concept">Concept</div>
+    <h2 class="section-title reveal" data-i18n="t2c850f26" data-ja="まぬる義塾が大切にすること" data-en="What Manul Gijuku Values">まぬる義塾が大切にすること</h2>
     <span class="section-title-en reveal">What We Value</span>
 
     <div class="concept-grid" style="margin-top:48px;">
       <div>
-        <p class="concept-lead reveal" data-ja="既存の学習塾とは違います。成績向上ではなく、「夢を叶える力」を育むことが目的です。" data-en="Unlike conventional cram schools, our goal is not to improve grades, but to nurture the power to make dreams come true.">既存の学習塾とは違います。<br>成績向上ではなく、<br>「夢を叶える力」を育むことが目的です。</p>
-        <p class="concept-text reveal" data-ja="学校に行っていないけれど勉強したい子。発達特性がある子。学習がかなり遅れてしまっている子。勉強が苦手な子。そんな子どもたちが、自分のペースで、自分の夢に向かって学べる場所をつくりました。地域のボランティアが伴走し、完全ボランティア運営で人件費ゼロ。月額は、生徒自身が金額を決めるドネーション制です。" data-en="For children who aren't attending school but want to learn. Children with developmental differences. Children who have fallen far behind. Children who struggle with studies. We created a place where they can learn at their own pace, toward their own dreams. Supported entirely by community volunteers with zero labor costs. Monthly fees are by donation — each student decides the amount.">学校に行っていないけれど勉強したい子。<br>発達特性がある子。学習がかなり遅れてしまっている子。<br>勉強が苦手な子。<br><br>そんな子どもたちが、自分のペースで、自分の夢に向かって学べる場所をつくりました。<br><br>地域のボランティアが伴走し、完全ボランティア運営で人件費ゼロ。月額は、生徒自身が金額を決めるドネーション制です。</p>
+        <p class="concept-lead reveal" data-i18n="t6cf5acd6" data-ja="既存の学習塾とは違います。成績向上ではなく、「夢を叶える力」を育むことが目的です。" data-en="Unlike conventional cram schools, our goal is not to improve grades, but to nurture the power to make dreams come true.">既存の学習塾とは違います。<br>成績向上ではなく、<br>「夢を叶える力」を育むことが目的です。</p>
+        <p class="concept-text reveal" data-i18n="tfb5efdf1" data-ja="学校に行っていないけれど勉強したい子。発達特性がある子。学習がかなり遅れてしまっている子。勉強が苦手な子。そんな子どもたちが、自分のペースで、自分の夢に向かって学べる場所をつくりました。地域のボランティアが伴走し、完全ボランティア運営で人件費ゼロ。月額は、生徒自身が金額を決めるドネーション制です。" data-en="For children who aren't attending school but want to learn. Children with developmental differences. Children who have fallen far behind. Children who struggle with studies. We created a place where they can learn at their own pace, toward their own dreams. Supported entirely by community volunteers with zero labor costs. Monthly fees are by donation — each student decides the amount.">学校に行っていないけれど勉強したい子。<br>発達特性がある子。学習がかなり遅れてしまっている子。<br>勉強が苦手な子。<br><br>そんな子どもたちが、自分のペースで、自分の夢に向かって学べる場所をつくりました。<br><br>地域のボランティアが伴走し、完全ボランティア運営で人件費ゼロ。月額は、生徒自身が金額を決めるドネーション制です。</p>
       </div>
       <div class="pillars reveal">
         <div class="pillar">
           <div class="pillar-num">01</div>
-          <div class="pillar-title" data-ja="夢から逆算する" data-en="Work Backwards from Dreams">夢から逆算する</div>
-          <div class="pillar-desc" data-ja="「何のために勉強するのか」。その答えは、ひとりひとりの夢の中にあります。" data-en="'Why study?' The answer lies within each child's own dreams.">「何のために勉強するのか」。その答えは、ひとりひとりの夢の中にあります。</div>
+          <div class="pillar-title" data-i18n="t15cc32a3" data-ja="夢から逆算する" data-en="Work Backwards from Dreams">夢から逆算する</div>
+          <div class="pillar-desc" data-i18n="t6238fa9e" data-ja="「何のために勉強するのか」。その答えは、ひとりひとりの夢の中にあります。" data-en="'Why study?' The answer lies within each child's own dreams.">「何のために勉強するのか」。その答えは、ひとりひとりの夢の中にあります。</div>
         </div>
         <div class="pillar">
           <div class="pillar-num">02</div>
-          <div class="pillar-title" data-ja="自分のペースで" data-en="At Your Own Pace">自分のペースで</div>
-          <div class="pillar-desc" data-ja="進度も方法も、その子に合わせる。遅れていても、苦手でも、大丈夫。" data-en="Pace and methods adapt to each child. Behind or struggling — that's okay.">進度も方法も、その子に合わせる。遅れていても、苦手でも、大丈夫。</div>
+          <div class="pillar-title" data-i18n="t5d9ef866" data-ja="自分のペースで" data-en="At Your Own Pace">自分のペースで</div>
+          <div class="pillar-desc" data-i18n="t8676ef2d" data-ja="進度も方法も、その子に合わせる。遅れていても、苦手でも、大丈夫。" data-en="Pace and methods adapt to each child. Behind or struggling — that's okay.">進度も方法も、その子に合わせる。遅れていても、苦手でも、大丈夫。</div>
         </div>
         <div class="pillar">
           <div class="pillar-num">03</div>
-          <div class="pillar-title" data-ja="地域の大人が支える" data-en="Supported by Community Adults">地域の大人が支える</div>
-          <div class="pillar-desc" data-ja="講師はすべて地域のボランティア。市民が市民の子どもを育てる、地域の学び場です。" data-en="All instructors are community volunteers. A learning space where community members nurture community children.">講師はすべて地域のボランティア。市民が市民の子どもを育てる、地域の学び場です。</div>
+          <div class="pillar-title" data-i18n="t6d7838c4" data-ja="地域の大人が支える" data-en="Supported by Community Adults">地域の大人が支える</div>
+          <div class="pillar-desc" data-i18n="t66147af0" data-ja="講師はすべて地域のボランティア。市民が市民の子どもを育てる、地域の学び場です。" data-en="All instructors are community volunteers. A learning space where community members nurture community children.">講師はすべて地域のボランティア。市民が市民の子どもを育てる、地域の学び場です。</div>
         </div>
         <div class="pillar">
           <div class="pillar-num">04</div>
-          <div class="pillar-title" data-ja="点数より「力」" data-en="Skills Over Scores">点数より「力」</div>
-          <div class="pillar-desc" data-ja="テストの点数ではなく、考える力、やり抜く力、助けを求める力を育みます。" data-en="Not test scores, but the ability to think, persevere, and ask for help.">テストの点数ではなく、考える力、やり抜く力、助けを求める力を育みます。</div>
+          <div class="pillar-title" data-i18n="t0b7c6f94" data-ja="点数より「力」" data-en="Skills Over Scores">点数より「力」</div>
+          <div class="pillar-desc" data-i18n="t43b8df1c" data-ja="テストの点数ではなく、考える力、やり抜く力、助けを求める力を育みます。" data-en="Not test scores, but the ability to think, persevere, and ask for help.">テストの点数ではなく、考える力、やり抜く力、助けを求める力を育みます。</div>
         </div>
       </div>
     </div>
@@ -934,74 +938,74 @@ body.theme-juku footer { border-top: 3px double rgba(226,201,138,0.35); }
 <!-- TARGET -->
 <section class="target" id="target">
   <div class="container">
-    <div class="eyebrow eyebrow-red reveal" data-ja="Who It's For" data-en="Who It's For">Who It's For</div>
-    <h2 class="section-title reveal" data-ja="こんなお子さんのための場所です" data-en="A Place for Children Like These">こんなお子さんのための場所です</h2>
+    <div class="eyebrow eyebrow-red reveal" data-i18n="t6b355bd2" data-ja="Who It's For" data-en="Who It's For">Who It's For</div>
+    <h2 class="section-title reveal" data-i18n="t934e1b32" data-ja="こんなお子さんのための場所です" data-en="A Place for Children Like These">こんなお子さんのための場所です</h2>
     <span class="section-title-en reveal">Who We Welcome</span>
 
     <div class="target-cards">
       <div class="target-card reveal">
         <div class="target-card-icon">📚</div>
-        <div class="target-card-title" data-ja="学校に行っていないけれど勉強したい" data-en="Not attending school but wants to learn">学校に行っていないけれど<br>勉強したい</div>
-        <div class="target-card-desc" data-ja="学校には行っていない。でも学びたい気持ちはある。そんな子の居場所です。" data-en="Not going to school, but the desire to learn is there.">学校には行っていない。<br>でも学びたい気持ちはある。<br>そんな子の居場所です。</div>
+        <div class="target-card-title" data-i18n="t1d8ad31b" data-ja="学校に行っていないけれど勉強したい" data-en="Not attending school but wants to learn">学校に行っていないけれど<br>勉強したい</div>
+        <div class="target-card-desc" data-i18n="t8b7d6a8d" data-ja="学校には行っていない。でも学びたい気持ちはある。そんな子の居場所です。" data-en="Not going to school, but the desire to learn is there.">学校には行っていない。<br>でも学びたい気持ちはある。<br>そんな子の居場所です。</div>
       </div>
       <div class="target-card reveal">
         <div class="target-card-icon">🌈</div>
-        <div class="target-card-title" data-ja="発達特性がある" data-en="Has developmental differences">発達特性がある</div>
-        <div class="target-card-desc" data-ja="特性に合わせた学び方で、自分のペースで進められます。" data-en="Learn in ways that suit your characteristics, at your own pace.">特性に合わせた学び方で、<br>自分のペースで進められます。</div>
+        <div class="target-card-title" data-i18n="t75c9a40d" data-ja="発達特性がある" data-en="Has developmental differences">発達特性がある</div>
+        <div class="target-card-desc" data-i18n="t4513df55" data-ja="特性に合わせた学び方で、自分のペースで進められます。" data-en="Learn in ways that suit your characteristics, at your own pace.">特性に合わせた学び方で、<br>自分のペースで進められます。</div>
       </div>
       <div class="target-card reveal">
         <div class="target-card-icon">🐢</div>
-        <div class="target-card-title" data-ja="学習がかなり遅れている" data-en="Significantly behind in studies">学習がかなり遅れている</div>
-        <div class="target-card-desc" data-ja="どこから始めても大丈夫。今の自分から、一歩ずつ。" data-en="It's okay to start from anywhere. One step at a time.">どこから始めても大丈夫。<br>今の自分から、一歩ずつ。</div>
+        <div class="target-card-title" data-i18n="t96288818" data-ja="学習がかなり遅れている" data-en="Significantly behind in studies">学習がかなり遅れている</div>
+        <div class="target-card-desc" data-i18n="t01229baa" data-ja="どこから始めても大丈夫。今の自分から、一歩ずつ。" data-en="It's okay to start from anywhere. One step at a time.">どこから始めても大丈夫。<br>今の自分から、一歩ずつ。</div>
       </div>
       <div class="target-card reveal">
         <div class="target-card-icon">💪</div>
-        <div class="target-card-title" data-ja="勉強が苦手" data-en="Struggles with studying">勉強が苦手</div>
-        <div class="target-card-desc" data-ja="苦手でいい。でも「やってみたい」の気持ちがあれば、それだけで十分。" data-en="It's okay to struggle. The willingness to try is more than enough.">苦手でいい。<br>でも「やってみたい」の気持ちがあれば、<br>それだけで十分。</div>
+        <div class="target-card-title" data-i18n="te5eb7019" data-ja="勉強が苦手" data-en="Struggles with studying">勉強が苦手</div>
+        <div class="target-card-desc" data-i18n="t9ba1731a" data-ja="苦手でいい。でも「やってみたい」の気持ちがあれば、それだけで十分。" data-en="It's okay to struggle. The willingness to try is more than enough.">苦手でいい。<br>でも「やってみたい」の気持ちがあれば、<br>それだけで十分。</div>
       </div>
     </div>
 
-    <p class="reveal" style="text-align:center;margin-top:32px;font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:14px;color:var(--text-muted);" data-ja="対象：小学生・中学生・高校生　｜　通えるならどこからでも可" data-en="For: Elementary, Middle, and High School students | From anywhere, as long as you can commute">対象：小学生・中学生・高校生　｜　通えるならどこからでも可</p>
+    <p class="reveal" style="text-align:center;margin-top:32px;font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:14px;color:var(--text-muted);" data-i18n="td5fba5d3" data-ja="対象：小学生・中学生・高校生　｜　通えるならどこからでも可" data-en="For: Elementary, Middle, and High School students | From anywhere, as long as you can commute">対象：小学生・中学生・高校生　｜　通えるならどこからでも可</p>
   </div>
 </section>
 
 <!-- DETAILS -->
 <section class="details" id="details">
   <div class="container">
-    <div class="eyebrow eyebrow-red reveal" data-ja="Details" data-en="Details">Details</div>
-    <h2 class="section-title reveal" data-ja="開催概要" data-en="Overview">開催概要</h2>
+    <div class="eyebrow eyebrow-red reveal" data-i18n="tdc3decbb" data-ja="Details" data-en="Details">Details</div>
+    <h2 class="section-title reveal" data-i18n="tac990725" data-ja="開催概要" data-en="Overview">開催概要</h2>
     <span class="section-title-en reveal">Program Details</span>
 
     <div class="details-grid" style="margin-top:48px;">
       <div class="reveal">
         <table class="detail-table">
           <tr>
-            <th data-ja="自習室の場所" data-en="Study room location">自習室の場所</th>
-            <td data-ja="大府市民間教育センター「りんごの樹」<br>愛知県大府市中央町6丁目25番地 セントロ大府201号" data-en="Obu City Private Education Center 'Ringo no Ki'<br>6-25 Chuo-cho, Obu City, Aichi">大府市民間教育センター「りんごの樹」<br><span style="font-size:12px;color:var(--text-muted);">愛知県大府市中央町6丁目25番地 セントロ大府201号</span><br><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%A4%A7%E5%BA%9C%E5%B8%82%E4%B8%AD%E5%A4%AE%E7%94%BA6%E4%B8%81%E7%9B%AE25%E7%95%AA%E5%9C%B0%20%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E5%A4%A7%E5%BA%9C" target="_blank" rel="noopener" style="font-size:12px;color:var(--red);text-decoration:none;border-bottom:1px solid var(--red-light);">地図で見る →</a></td>
+            <th data-i18n="t41233502" data-ja="自習室の場所" data-en="Study room location">自習室の場所</th>
+            <td data-i18n="tad75725d" data-ja="大府市民間教育センター「りんごの樹」<br>愛知県大府市中央町6丁目25番地 セントロ大府201号" data-en="Obu City Private Education Center 'Ringo no Ki'<br>6-25 Chuo-cho, Obu City, Aichi">大府市民間教育センター「りんごの樹」<br><span style="font-size:12px;color:var(--text-muted);">愛知県大府市中央町6丁目25番地 セントロ大府201号</span><br><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%A4%A7%E5%BA%9C%E5%B8%82%E4%B8%AD%E5%A4%AE%E7%94%BA6%E4%B8%81%E7%9B%AE25%E7%95%AA%E5%9C%B0%20%E3%82%BB%E3%83%B3%E3%83%88%E3%83%AD%E5%A4%A7%E5%BA%9C" target="_blank" rel="noopener" style="font-size:12px;color:var(--red);text-decoration:none;border-bottom:1px solid var(--red-light);">地図で見る →</a></td>
           </tr>
           <tr>
-            <th data-ja="面談" data-en="Coaching">面談</th>
-            <td data-ja="週2回・各30分（オンライン）" data-en="Twice a week, 30 min each (online)">週2回・各30分<br><span style="font-size:12px;color:var(--text-muted);">オンライン</span></td>
+            <th data-i18n="t572d330e" data-ja="面談" data-en="Coaching">面談</th>
+            <td data-i18n="t9b9c992e" data-ja="週2回・各30分（オンライン）" data-en="Twice a week, 30 min each (online)">週2回・各30分<br><span style="font-size:12px;color:var(--text-muted);">オンライン</span></td>
           </tr>
           <tr>
-            <th data-ja="自習室" data-en="Study room">自習室</th>
-            <td data-ja="使い放題（大府）" data-en="Unlimited use (Obu)">使い放題<br><span style="font-size:12px;color:var(--text-muted);">利用できる日時は公式LINEでご案内します</span></td>
+            <th data-i18n="t4e9f4f5c" data-ja="自習室" data-en="Study room">自習室</th>
+            <td data-i18n="t1b8ac668" data-ja="使い放題（大府）" data-en="Unlimited use (Obu)">使い放題<br><span style="font-size:12px;color:var(--text-muted);">利用できる日時は公式LINEでご案内します</span></td>
           </tr>
           <tr>
-            <th data-ja="自己管理" data-en="Self-management">自己管理</th>
-            <td data-ja="Googleカレンダー＆ドキュメントで、勉強のスケジュールを自分で管理できるよう伴走します" data-en="We coach students to manage their own study schedule with Google Calendar and Docs">Googleカレンダー＆ドキュメントで、勉強のスケジュールを自分で管理できるよう伴走します</td>
+            <th data-i18n="taa752373" data-ja="自己管理" data-en="Self-management">自己管理</th>
+            <td data-i18n="tbf7b637a" data-ja="Googleカレンダー＆ドキュメントで、勉強のスケジュールを自分で管理できるよう伴走します" data-en="We coach students to manage their own study schedule with Google Calendar and Docs">Googleカレンダー＆ドキュメントで、勉強のスケジュールを自分で管理できるよう伴走します</td>
           </tr>
           <tr>
-            <th data-ja="対象" data-en="Target">対象</th>
-            <td data-ja="小学生・中学生・高校生（通えるならどこからでも可）" data-en="Elementary, Middle, and High School students">小学生・中学生・高校生<br><span style="font-size:12px;color:var(--text-muted);">通えるならどこからでも可</span></td>
+            <th data-i18n="tc89cacba" data-ja="対象" data-en="Target">対象</th>
+            <td data-i18n="t0fd39ce3" data-ja="小学生・中学生・高校生（通えるならどこからでも可）" data-en="Elementary, Middle, and High School students">小学生・中学生・高校生<br><span style="font-size:12px;color:var(--text-muted);">通えるならどこからでも可</span></td>
           </tr>
         </table>
       </div>
       <div class="reveal">
         <div style="background:var(--red-bg);border-radius:20px;padding:40px 32px;text-align:center;">
-          <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:12px;color:var(--red);letter-spacing:0.2em;margin-bottom:12px;" data-ja="月額 — ドネーション制" data-en="MONTHLY — BY DONATION">月額 — ドネーション制</div>
-          <div class="price-highlight">0〜50,000<span class="price-unit" data-ja="円/月" data-en="yen/mo">円/月</span></div>
-          <p class="price-note" style="font-size:14px;margin-top:16px;line-height:1.9;" data-ja="金額は、生徒自身が決めます。" data-en="Each student decides the amount.">金額は、生徒自身が決めます。</p>
+          <div style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:12px;color:var(--red);letter-spacing:0.2em;margin-bottom:12px;" data-i18n="tf361eb29" data-ja="月額 — ドネーション制" data-en="MONTHLY — BY DONATION">月額 — ドネーション制</div>
+          <div class="price-highlight">0〜50,000<span class="price-unit" data-i18n="t0607719e" data-ja="円/月" data-en="yen/mo">円/月</span></div>
+          <p class="price-note" style="font-size:14px;margin-top:16px;line-height:1.9;" data-i18n="t517a340f" data-ja="金額は、生徒自身が決めます。" data-en="Each student decides the amount.">金額は、生徒自身が決めます。</p>
         </div>
       </div>
     </div>
@@ -1011,30 +1015,30 @@ body.theme-juku footer { border-top: 3px double rgba(226,201,138,0.35); }
 <!-- 学びのしくみ -->
 <section class="flow" id="flow">
   <div class="container">
-    <div class="eyebrow eyebrow-red reveal" data-ja="How It Works" data-en="How It Works">How It Works</div>
-    <h2 class="section-title reveal" data-ja="学びのしくみ" data-en="How It Works">学びのしくみ</h2>
+    <div class="eyebrow eyebrow-red reveal" data-i18n="t8cecc82d" data-ja="How It Works" data-en="How It Works">How It Works</div>
+    <h2 class="section-title reveal" data-i18n="t24f72919" data-ja="学びのしくみ" data-en="How It Works">学びのしくみ</h2>
     <span class="section-title-en reveal">Every Week</span>
 
     <div class="flow-list">
       <div class="flow-row together reveal">
-        <div class="flow-time" data-ja="週2回・30分" data-en="2×/wk · 30 min">週2回・30分</div>
+        <div class="flow-time" data-i18n="te0a92314" data-ja="週2回・30分" data-en="2×/wk · 30 min">週2回・30分</div>
         <div class="flow-body">
-          <div class="flow-name" data-ja="オンライン面談" data-en="Online Coaching">オンライン面談</div>
-          <div class="flow-desc" data-ja="目標の立て方、計画の組み方、振り返り。<br>いきなり問題を解きはじめるのではなく、「どう学ぶか」を一緒に考えます。" data-en="Setting goals, making plans, reflecting.<br>Rather than jumping into worksheets, we think together about how to learn.">目標の立て方、計画の組み方、振り返り。<br>いきなり問題を解きはじめるのではなく、「どう学ぶか」を一緒に考えます。</div>
+          <div class="flow-name" data-i18n="t5580bf05" data-ja="オンライン面談" data-en="Online Coaching">オンライン面談</div>
+          <div class="flow-desc" data-i18n="tc0c868fc" data-ja="目標の立て方、計画の組み方、振り返り。<br>いきなり問題を解きはじめるのではなく、「どう学ぶか」を一緒に考えます。" data-en="Setting goals, making plans, reflecting.<br>Rather than jumping into worksheets, we think together about how to learn.">目標の立て方、計画の組み方、振り返り。<br>いきなり問題を解きはじめるのではなく、「どう学ぶか」を一緒に考えます。</div>
         </div>
       </div>
       <div class="flow-row reveal">
-        <div class="flow-time" data-ja="毎日" data-en="Every day">毎日</div>
+        <div class="flow-time" data-i18n="td63043a3" data-ja="毎日" data-en="Every day">毎日</div>
         <div class="flow-body">
-          <div class="flow-name" data-ja="Googleカレンダー＆ドキュメントで自己管理" data-en="Self-management with Google Calendar & Docs">Googleカレンダー＆ドキュメントで自己管理</div>
-          <div class="flow-desc" data-ja="勉強のスケジュールは、自分でカレンダーに入れ、ドキュメントに記録します。自分で決めて、自分で回せるようになるまで伴走します。" data-en="Students put their own study schedule into a calendar and keep notes in a doc. We stay alongside until they can run it on their own.">勉強のスケジュールは、自分でカレンダーに入れ、ドキュメントに記録します。自分で決めて、自分で回せるようになるまで伴走します。</div>
+          <div class="flow-name" data-i18n="tac3e80b1" data-ja="Googleカレンダー＆ドキュメントで自己管理" data-en="Self-management with Google Calendar & Docs">Googleカレンダー＆ドキュメントで自己管理</div>
+          <div class="flow-desc" data-i18n="tde1a2ad8" data-ja="勉強のスケジュールは、自分でカレンダーに入れ、ドキュメントに記録します。自分で決めて、自分で回せるようになるまで伴走します。" data-en="Students put their own study schedule into a calendar and keep notes in a doc. We stay alongside until they can run it on their own.">勉強のスケジュールは、自分でカレンダーに入れ、ドキュメントに記録します。自分で決めて、自分で回せるようになるまで伴走します。</div>
         </div>
       </div>
       <div class="flow-row reveal">
-        <div class="flow-time" data-ja="いつでも" data-en="Anytime">いつでも</div>
+        <div class="flow-time" data-i18n="t8d437e07" data-ja="いつでも" data-en="Anytime">いつでも</div>
         <div class="flow-body">
-          <div class="flow-name" data-ja="自習室＠大府<span class='flow-tag free'>使い放題</span>" data-en="Study Room in Obu<span class='flow-tag free'>unlimited</span>">自習室＠大府<span class="flow-tag free">使い放題</span></div>
-          <div class="flow-desc" data-ja="集中したいときは、大府の自習室へ。何回来ても大丈夫です。" data-en="When you want to focus, come to the study room in Obu — as often as you like.">集中したいときは、大府の自習室へ。何回来ても大丈夫です。</div>
+          <div class="flow-name" data-i18n="te44d3a5f" data-ja="自習室＠大府<span class='flow-tag free'>使い放題</span>" data-en="Study Room in Obu<span class='flow-tag free'>unlimited</span>">自習室＠大府<span class="flow-tag free">使い放題</span></div>
+          <div class="flow-desc" data-i18n="te02363da" data-ja="集中したいときは、大府の自習室へ。何回来ても大丈夫です。" data-en="When you want to focus, come to the study room in Obu — as often as you like.">集中したいときは、大府の自習室へ。何回来ても大丈夫です。</div>
         </div>
       </div>
     </div>
@@ -1044,25 +1048,25 @@ body.theme-juku footer { border-top: 3px double rgba(226,201,138,0.35); }
 <!-- VOLUNTEER -->
 <section class="volunteer">
   <div class="container">
-    <div class="eyebrow eyebrow-white reveal" data-ja="Community-Run" data-en="Community-Run">Community-Run</div>
-    <h2 class="section-title reveal" style="color:var(--white);" data-ja="完全ボランティア運営" data-en="100% Volunteer-Run">完全ボランティア運営</h2>
-    <span class="section-title-en reveal" style="color:rgba(255,255,255,0.3);" data-ja="Community-Powered Learning" data-en="Community-Powered Learning">Community-Powered Learning</span>
+    <div class="eyebrow eyebrow-white reveal" data-i18n="t3c168be9" data-ja="Community-Run" data-en="Community-Run">Community-Run</div>
+    <h2 class="section-title reveal" style="color:var(--white);" data-i18n="t4e124a86" data-ja="完全ボランティア運営" data-en="100% Volunteer-Run">完全ボランティア運営</h2>
+    <span class="section-title-en reveal" style="color:rgba(255,255,255,0.3);" data-i18n="t3bdf695b" data-ja="Community-Powered Learning" data-en="Community-Powered Learning">Community-Powered Learning</span>
 
     <div class="vol-grid">
       <div class="vol-card reveal">
         <div class="vol-icon">🤝</div>
-        <div class="vol-title" data-ja="人件費ゼロ" data-en="Zero Labor Costs">人件費ゼロ</div>
-        <div class="vol-desc" data-ja="講師・スタッフはすべてボランティアです。" data-en="All instructors and staff are volunteers.">講師・スタッフはすべてボランティアです。</div>
+        <div class="vol-title" data-i18n="te06304d1" data-ja="人件費ゼロ" data-en="Zero Labor Costs">人件費ゼロ</div>
+        <div class="vol-desc" data-i18n="t8f68273b" data-ja="講師・スタッフはすべてボランティアです。" data-en="All instructors and staff are volunteers.">講師・スタッフはすべてボランティアです。</div>
       </div>
       <div class="vol-card reveal">
         <div class="vol-icon">🏘️</div>
-        <div class="vol-title" data-ja="地域の大人が講師" data-en="Community Adults as Teachers">地域の大人が講師</div>
-        <div class="vol-desc" data-ja="地域に住むさまざまな経験を持つ大人たちが、子どもたちの学びを支えます。" data-en="Adults from the community with diverse experiences support children's learning.">地域に住むさまざまな経験を持つ大人たちが、子どもたちの学びを支えます。</div>
+        <div class="vol-title" data-i18n="t8f09835c" data-ja="地域の大人が講師" data-en="Community Adults as Teachers">地域の大人が講師</div>
+        <div class="vol-desc" data-i18n="te19394a2" data-ja="地域に住むさまざまな経験を持つ大人たちが、子どもたちの学びを支えます。" data-en="Adults from the community with diverse experiences support children's learning.">地域に住むさまざまな経験を持つ大人たちが、子どもたちの学びを支えます。</div>
       </div>
       <div class="vol-card reveal">
         <div class="vol-icon">🌱</div>
-        <div class="vol-title" data-ja="市民が育てる" data-en="Raised by the Community">市民が育てる</div>
-        <div class="vol-desc" data-ja="市民が市民の子どもを育てる。そんな当たり前の循環を、もう一度この地域につくります。" data-en="Community members nurturing community children — rebuilding that natural cycle in this region.">市民が市民の子どもを育てる。そんな当たり前の循環を、もう一度この地域につくります。</div>
+        <div class="vol-title" data-i18n="tb8564c41" data-ja="市民が育てる" data-en="Raised by the Community">市民が育てる</div>
+        <div class="vol-desc" data-i18n="t114e3d18" data-ja="市民が市民の子どもを育てる。そんな当たり前の循環を、もう一度この地域につくります。" data-en="Community members nurturing community children — rebuilding that natural cycle in this region.">市民が市民の子どもを育てる。そんな当たり前の循環を、もう一度この地域につくります。</div>
       </div>
     </div>
   </div>
@@ -1071,54 +1075,54 @@ body.theme-juku footer { border-top: 3px double rgba(226,201,138,0.35); }
 <!-- FAQ -->
 <section class="faq" id="faq">
   <div class="container">
-    <div class="eyebrow eyebrow-red reveal" data-ja="FAQ" data-en="FAQ">FAQ</div>
-    <h2 class="section-title reveal" data-ja="よくある質問" data-en="Frequently Asked Questions">よくある質問</h2>
+    <div class="eyebrow eyebrow-red reveal" data-i18n="t03688ba6" data-ja="FAQ" data-en="FAQ">FAQ</div>
+    <h2 class="section-title reveal" data-i18n="t05ed8846" data-ja="よくある質問" data-en="Frequently Asked Questions">よくある質問</h2>
     <span class="section-title-en reveal">Before You Come</span>
 
     <div class="faq-list">
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="オンライン塾・オンラインの習い事として利用できますか？" data-en="Can we use it as an online tutoring school or online lesson?">オンライン塾・オンラインの習い事として利用できますか？</div>
-        <div class="faq-a" data-ja="はい。面談はすべてマンツーマンのオンラインなので、自宅から参加できます。大府の自習室は、使いたいときに使ってください。" data-en="Yes. All coaching is one-on-one and online, so students can join from home. The study room in Obu is there whenever you want it.">はい。面談はすべてマンツーマンのオンラインなので、自宅から参加できます。大府の自習室は、使いたいときに使ってください。</div>
+        <div class="faq-q" data-i18n="tb00b6b56" data-ja="オンライン塾・オンラインの習い事として利用できますか？" data-en="Can we use it as an online tutoring school or online lesson?">オンライン塾・オンラインの習い事として利用できますか？</div>
+        <div class="faq-a" data-i18n="t2aa5b32d" data-ja="はい。面談はすべてマンツーマンのオンラインなので、自宅から参加できます。大府の自習室は、使いたいときに使ってください。" data-en="Yes. All coaching is one-on-one and online, so students can join from home. The study room in Obu is there whenever you want it.">はい。面談はすべてマンツーマンのオンラインなので、自宅から参加できます。大府の自習室は、使いたいときに使ってください。</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="いきなり入会するのは不安です。見学はできますか？" data-en="Can we observe a session before joining?">いきなり入会するのは不安です。見学はできますか？</div>
-        <div class="faq-a" data-ja="見学という形はご用意していません。月額はドネーション制で0円から始められるので、まずは参加してみてください。外から眺めるより、一度やってみたほうが分かることが多いはずです。ご質問は公式LINEでお受けしています。" data-en="We don't offer observation-only visits. Fees are by donation and can start at ¥0, so just give it a try — taking part tells you more than watching from outside. Questions are welcome via our official LINE.">見学という形はご用意していません。月額はドネーション制で0円から始められるので、まずは参加してみてください。外から眺めるより、一度やってみたほうが分かることが多いはずです。ご質問は公式LINEでお受けしています。</div>
+        <div class="faq-q" data-i18n="t6e85ca2b" data-ja="いきなり入会するのは不安です。見学はできますか？" data-en="Can we observe a session before joining?">いきなり入会するのは不安です。見学はできますか？</div>
+        <div class="faq-a" data-i18n="t851b6e7e" data-ja="見学という形はご用意していません。月額はドネーション制で0円から始められるので、まずは参加してみてください。外から眺めるより、一度やってみたほうが分かることが多いはずです。ご質問は公式LINEでお受けしています。" data-en="We don't offer observation-only visits. Fees are by donation and can start at ¥0, so just give it a try — taking part tells you more than watching from outside. Questions are welcome via our official LINE.">見学という形はご用意していません。月額はドネーション制で0円から始められるので、まずは参加してみてください。外から眺めるより、一度やってみたほうが分かることが多いはずです。ご質問は公式LINEでお受けしています。</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="教材は持っていく必要がありますか？" data-en="Do we need to bring our own materials?">教材は持っていく必要がありますか？</div>
-        <div class="faq-a" data-ja="持参してもしなくても、どちらでもかまいません。使いたいものがあれば持ってきてください。何もなくても大丈夫です。" data-en="Either is fine. Bring what you want to work on, or come with nothing at all.">持参してもしなくても、どちらでもかまいません。使いたいものがあれば持ってきてください。何もなくても大丈夫です。</div>
+        <div class="faq-q" data-i18n="t3c97527a" data-ja="教材は持っていく必要がありますか？" data-en="Do we need to bring our own materials?">教材は持っていく必要がありますか？</div>
+        <div class="faq-a" data-i18n="t829b92c4" data-ja="持参してもしなくても、どちらでもかまいません。使いたいものがあれば持ってきてください。何もなくても大丈夫です。" data-en="Either is fine. Bring what you want to work on, or come with nothing at all.">持参してもしなくても、どちらでもかまいません。使いたいものがあれば持ってきてください。何もなくても大丈夫です。</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="オンライン面談では何をするのですか？" data-en="What happens in the online coaching?">オンライン面談では何をするのですか？</div>
-        <div class="faq-a" data-ja="週2回、30分ずつ、オンラインで面談します。目標の立て方、計画の組み方、振り返りを一緒に行い、GoogleカレンダーとGoogleドキュメントを使って、勉強のスケジュールを自分で管理できるよう伴走します。" data-en="Twice a week, 30 minutes each, online. We set goals, make plans, and reflect together, and coach students to manage their own study schedule with Google Calendar and Google Docs.">週2回、30分ずつ、オンラインで面談します。目標の立て方、計画の組み方、振り返りを一緒に行い、GoogleカレンダーとGoogleドキュメントを使って、勉強のスケジュールを自分で管理できるよう伴走します。</div>
+        <div class="faq-q" data-i18n="t5e56770a" data-ja="オンライン面談では何をするのですか？" data-en="What happens in the online coaching?">オンライン面談では何をするのですか？</div>
+        <div class="faq-a" data-i18n="te55f0126" data-ja="週2回、30分ずつ、オンラインで面談します。目標の立て方、計画の組み方、振り返りを一緒に行い、GoogleカレンダーとGoogleドキュメントを使って、勉強のスケジュールを自分で管理できるよう伴走します。" data-en="Twice a week, 30 minutes each, online. We set goals, make plans, and reflect together, and coach students to manage their own study schedule with Google Calendar and Google Docs.">週2回、30分ずつ、オンラインで面談します。目標の立て方、計画の組み方、振り返りを一緒に行い、GoogleカレンダーとGoogleドキュメントを使って、勉強のスケジュールを自分で管理できるよう伴走します。</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="月謝はいくらですか？" data-en="How much is the monthly fee?">月謝はいくらですか？</div>
-        <div class="faq-a" data-ja="月額はドネーション制です。0円から50,000円までの間で、生徒自身が金額を決めます。お金を理由に学びをあきらめてほしくない、というのがこの塾の考え方です。" data-en="Fees are by donation: each student decides an amount between ¥0 and ¥50,000 a month. No child should have to give up learning over money.">月額はドネーション制です。0円から50,000円までの間で、<strong>生徒自身が金額を決めます</strong>。お金を理由に学びをあきらめてほしくない、というのがこの塾の考え方です。</div>
+        <div class="faq-q" data-i18n="td2080681" data-ja="月謝はいくらですか？" data-en="How much is the monthly fee?">月謝はいくらですか？</div>
+        <div class="faq-a" data-i18n="tb395c37f" data-ja="月額はドネーション制です。0円から50,000円までの間で、生徒自身が金額を決めます。お金を理由に学びをあきらめてほしくない、というのがこの塾の考え方です。" data-en="Fees are by donation: each student decides an amount between ¥0 and ¥50,000 a month. No child should have to give up learning over money.">月額はドネーション制です。0円から50,000円までの間で、<strong>生徒自身が金額を決めます</strong>。お金を理由に学びをあきらめてほしくない、というのがこの塾の考え方です。</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="申し込みはどうすればいいですか？" data-en="How do we apply?">申し込みはどうすればいいですか？</div>
-        <div class="faq-a" data-ja="公式LINEに「まぬる義塾希望」とお送りください。そのあとの流れは、LINEでご案内します。むずかしい手続きはありません。" data-en="Send “まぬる義塾希望” to our official LINE. We'll guide you from there — no complicated paperwork.">公式LINEに<strong>「まぬる義塾希望」</strong>とお送りください。そのあとの流れは、LINEでご案内します。むずかしい手続きはありません。</div>
+        <div class="faq-q" data-i18n="tf019c5b9" data-ja="申し込みはどうすればいいですか？" data-en="How do we apply?">申し込みはどうすればいいですか？</div>
+        <div class="faq-a" data-i18n="t494e5574" data-ja="公式LINEに「まぬる義塾希望」とお送りください。そのあとの流れは、LINEでご案内します。むずかしい手続きはありません。" data-en="Send “まぬる義塾希望” to our official LINE. We'll guide you from there — no complicated paperwork.">公式LINEに<strong>「まぬる義塾希望」</strong>とお送りください。そのあとの流れは、LINEでご案内します。むずかしい手続きはありません。</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="講師は何人くらいで、どんなふうに見てもらえますか？" data-en="Who will work with my child, and how?">講師は何人くらいで、どんなふうに見てもらえますか？</div>
-        <div class="faq-a" data-ja="マンツーマンです。生徒に合わせてメンターを選びますが、基本的には土屋真理奈が担当します。" data-en="One-on-one. We match a mentor to each student; in most cases, Marina Tsuchiya is the mentor.">マンツーマンです。生徒に合わせてメンターを選びますが、基本的には土屋真理奈が担当します。</div>
+        <div class="faq-q" data-i18n="t6bd83b17" data-ja="講師は何人くらいで、どんなふうに見てもらえますか？" data-en="Who will work with my child, and how?">講師は何人くらいで、どんなふうに見てもらえますか？</div>
+        <div class="faq-a" data-i18n="t3c24cdea" data-ja="マンツーマンです。生徒に合わせてメンターを選びますが、基本的には土屋真理奈が担当します。" data-en="One-on-one. We match a mentor to each student; in most cases, Marina Tsuchiya is the mentor.">マンツーマンです。生徒に合わせてメンターを選びますが、基本的には土屋真理奈が担当します。</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="面談の日時は変えられますか？" data-en="Can we change the coaching schedule?">面談の日時は変えられますか？</div>
-        <div class="faq-a" data-ja="はい、ご相談いただければ変更できます。マンツーマン・オンラインなので、生徒の都合に合わせます。" data-en="Yes — just let us know. Sessions are one-on-one and online, so we fit the student's schedule.">はい、ご相談いただければ変更できます。マンツーマン・オンラインなので、生徒の都合に合わせます。</div>
+        <div class="faq-q" data-i18n="t7d9787e1" data-ja="面談の日時は変えられますか？" data-en="Can we change the coaching schedule?">面談の日時は変えられますか？</div>
+        <div class="faq-a" data-i18n="t4d9004ad" data-ja="はい、ご相談いただければ変更できます。マンツーマン・オンラインなので、生徒の都合に合わせます。" data-en="Yes — just let us know. Sessions are one-on-one and online, so we fit the student's schedule.">はい、ご相談いただければ変更できます。マンツーマン・オンラインなので、生徒の都合に合わせます。</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="きょうだいで通わせたいのですが、割引はありますか？" data-en="Is there a sibling discount?">きょうだいで通わせたいのですが、割引はありますか？</div>
-        <div class="faq-a" data-ja="月額はドネーション制なので、それぞれの生徒が自分で金額を決めます。気になることがあればご相談ください。" data-en="Since fees are by donation, each student decides their own amount. Feel free to ask us anything.">月額はドネーション制なので、それぞれの生徒が自分で金額を決めます。気になることがあればご相談ください。</div>
+        <div class="faq-q" data-i18n="teaa862fa" data-ja="きょうだいで通わせたいのですが、割引はありますか？" data-en="Is there a sibling discount?">きょうだいで通わせたいのですが、割引はありますか？</div>
+        <div class="faq-a" data-i18n="t49944c81" data-ja="月額はドネーション制なので、それぞれの生徒が自分で金額を決めます。気になることがあればご相談ください。" data-en="Since fees are by donation, each student decides their own amount. Feel free to ask us anything.">月額はドネーション制なので、それぞれの生徒が自分で金額を決めます。気になることがあればご相談ください。</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="送迎は必要ですか？保護者の付き添いは？" data-en="Do we need to drop off and pick up? Should a parent stay?">送迎は必要ですか？保護者の付き添いは？</div>
-        <div class="faq-a" data-ja="面談はオンラインなので、送迎や保護者の付き添いは必要ありません。" data-en="Coaching is online, so no drop-off, pick-up, or parent attendance is needed.">面談はオンラインなので、送迎や保護者の付き添いは必要ありません。</div>
+        <div class="faq-q" data-i18n="tc914a9f8" data-ja="送迎は必要ですか？保護者の付き添いは？" data-en="Do we need to drop off and pick up? Should a parent stay?">送迎は必要ですか？保護者の付き添いは？</div>
+        <div class="faq-a" data-i18n="t6050d6c1" data-ja="面談はオンラインなので、送迎や保護者の付き添いは必要ありません。" data-en="Coaching is online, so no drop-off, pick-up, or parent attendance is needed.">面談はオンラインなので、送迎や保護者の付き添いは必要ありません。</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q" data-ja="学校に行っていないのですが、通えますか？" data-en="Can my child attend if they're not going to school?">学校に行っていないのですが、通えますか？</div>
-        <div class="faq-a" data-ja="はい。学校に行っていない子、発達特性がある子、学習が遅れている子、勉強が苦手な子——そういう子のための場所です。通えるなら、どこからでも来てください。" data-en="Yes. This place exists for children not attending school, with developmental differences, behind in their studies, or who struggle with learning. Come from wherever you can travel from.">はい。学校に行っていない子、発達特性がある子、学習が遅れている子、勉強が苦手な子——そういう子のための場所です。通えるなら、どこからでも来てください。</div>
+        <div class="faq-q" data-i18n="t9760ecca" data-ja="学校に行っていないのですが、通えますか？" data-en="Can my child attend if they're not going to school?">学校に行っていないのですが、通えますか？</div>
+        <div class="faq-a" data-i18n="tabf8fae3" data-ja="はい。学校に行っていない子、発達特性がある子、学習が遅れている子、勉強が苦手な子——そういう子のための場所です。通えるなら、どこからでも来てください。" data-en="Yes. This place exists for children not attending school, with developmental differences, behind in their studies, or who struggle with learning. Come from wherever you can travel from.">はい。学校に行っていない子、発達特性がある子、学習が遅れている子、勉強が苦手な子——そういう子のための場所です。通えるなら、どこからでも来てください。</div>
       </div>
     </div>
   </div>
@@ -1127,15 +1131,15 @@ body.theme-juku footer { border-top: 3px double rgba(226,201,138,0.35); }
 <!-- CONTACT -->
 <section class="juku-contact" id="contact">
   <div class="container">
-    <div class="eyebrow eyebrow-red reveal" data-ja="Contact" data-en="Contact">Contact</div>
-    <h2 class="section-title reveal" data-ja="お申し込み・お問い合わせ" data-en="Apply / Contact">お申し込み・お問い合わせ</h2>
+    <div class="eyebrow eyebrow-red reveal" data-i18n="tb37456c4" data-ja="Contact" data-en="Contact">Contact</div>
+    <h2 class="section-title reveal" data-i18n="tf5cab543" data-ja="お申し込み・お問い合わせ" data-en="Apply / Contact">お申し込み・お問い合わせ</h2>
     <span class="section-title-en reveal">Get in Touch</span>
 
     <div class="line-cta-box reveal" style="margin-top:48px;">
-      <h3 data-ja="まずは気軽にご連絡ください" data-en="Feel free to reach out">まずは気軽にご連絡ください</h3>
-      <p data-ja="2026年9月の開講に向けて、お申し込み・ご相談を受け付けています。<br>公式LINEに<strong>「まぬる義塾希望」</strong>とお送りください。<br>そのあとの流れは、LINEでご案内します。" data-en="We are accepting applications and enquiries ahead of our September 2026 opening. Send <strong>“まぬる義塾希望”</strong> to our official LINE and we'll take it from there.">2026年9月の開講に向けて、お申し込み・ご相談を受け付けています。<br>公式LINEに<strong>「まぬる義塾希望」</strong>とお送りください。<br>そのあとの流れは、LINEでご案内します。</p>
+      <h3 data-i18n="t238aafbc" data-ja="まずは気軽にご連絡ください" data-en="Feel free to reach out">まずは気軽にご連絡ください</h3>
+      <p data-i18n="t0ac4c4ce" data-ja="お申し込み・ご相談を受け付けています。<br>公式LINEに<strong>「まぬる義塾希望」</strong>とお送りください。<br>そのあとの流れは、LINEでご案内します。" data-en="We are accepting applications and enquiries. Send <strong>“まぬる義塾希望”</strong> to our official LINE and we'll take it from there.">お申し込み・ご相談を受け付けています。<br>公式LINEに<strong>「まぬる義塾希望」</strong>とお送りください。<br>そのあとの流れは、LINEでご案内します。</p>
       <a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" class="btn-line">📱 公式LINEで問い合わせる</a>
-      <p class="line-note" data-ja="NPO法人 kimyo-na-manul 公式LINE" data-en="NPO kimyo-na-manul Official LINE">NPO法人 kimyo-na-manul 公式LINE</p>
+      <p class="line-note" data-i18n="t975defa1" data-ja="NPO法人 kimyo-na-manul 公式LINE" data-en="NPO kimyo-na-manul Official LINE">NPO法人 kimyo-na-manul 公式LINE</p>
     </div>
   </div>
 </section>
@@ -1144,26 +1148,26 @@ body.theme-juku footer { border-top: 3px double rgba(226,201,138,0.35); }
   <div class="footer-inner">
     <div class="footer-logo">
       <img src="assets/logo-kmanul.png" alt="kimyo-na-manul">
-      <div class="footer-tagline" data-ja="愛知県・知多半島から、自分らしく生きる場所をつくる。<br>NPO法人 kimyo-na-manul（奇妙なマヌル）" data-en="Creating spaces to live authentically, from the Chita Peninsula.<br>NPO kimyo-na-manul">愛知県・知多半島から、自分らしく生きる場所をつくる。<br>NPO法人 kimyo-na-manul（奇妙なマヌル）</div>
+      <div class="footer-tagline" data-i18n="t2c9bd891" data-ja="愛知県・知多半島から、自分らしく生きる場所をつくる。<br>NPO法人 kimyo-na-manul（奇妙なマヌル）" data-en="Creating spaces to live authentically, from the Chita Peninsula.<br>NPO kimyo-na-manul">愛知県・知多半島から、自分らしく生きる場所をつくる。<br>NPO法人 kimyo-na-manul（奇妙なマヌル）</div>
     </div>
     <div>
-      <div class="footer-col-title" data-ja="サイトマップ" data-en="Site Map">サイトマップ</div>
+      <div class="footer-col-title" data-i18n="tdb5f29a8" data-ja="サイトマップ" data-en="Site Map">サイトマップ</div>
       <ul class="footer-links">
-        <li><a href="index.html" data-ja="ホーム" data-en="Home">ホーム</a></li>
-        <li><a href="about.html" data-ja="団体概要" data-en="About">団体概要</a></li>
-        <li><a href="manul-juku.html" data-ja="まぬる義塾" data-en="Manul Gijuku">まぬる義塾</a></li>
-        <li><a href="activities.html" data-ja="活動内容" data-en="Activities">活動内容</a></li>
-        <li><a href="events.html" data-ja="イベント" data-en="Events">イベント</a></li>
-        <li><a href="contact.html" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
-        <li><a href="https://congrant.com/project/kimyo-na-manul/20646" target="_blank" rel="noopener" data-ja="寄付" data-en="Donate">寄付</a></li>
+        <li><a href="index.html" data-i18n="ted28cf13" data-ja="ホーム" data-en="Home">ホーム</a></li>
+        <li><a href="about.html" data-i18n="t7157b08d" data-ja="団体概要" data-en="About">団体概要</a></li>
+        <li><a href="manul-juku.html" data-i18n="tc1215991" data-ja="まぬる義塾" data-en="Manul Gijuku">まぬる義塾</a></li>
+        <li><a href="activities.html" data-i18n="t959b5b69" data-ja="活動内容" data-en="Activities">活動内容</a></li>
+        <li><a href="events.html" data-i18n="te18b1ea1" data-ja="イベント" data-en="Events">イベント</a></li>
+        <li><a href="contact.html" data-i18n="t44ff6d3f" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
+        <li><a href="https://congrant.com/project/kimyo-na-manul/20646" target="_blank" rel="noopener" data-i18n="t9b02ee8b" data-ja="寄付" data-en="Donate">寄付</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Follow Us</div>
       <ul class="footer-links">
         <li><a href="https://www.instagram.com/kimyo_na_manul0423/" target="_blank" rel="noopener">Instagram @kimyo_na_manul0423</a></li>
-        <li><a href="https://open.spotify.com/show/4pCX4vRVYYnigfrbYCAyXj" target="_blank" rel="noopener" data-ja="まぬらじ（Podcast）" data-en="Manuraji (Podcast)">まぬらじ（Podcast）</a></li>
-        <li><a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" data-ja="公式LINE" data-en="Official LINE">公式LINE</a></li>
+        <li><a href="https://open.spotify.com/show/4pCX4vRVYYnigfrbYCAyXj" target="_blank" rel="noopener" data-i18n="t5d5ad3d7" data-ja="まぬらじ（Podcast）" data-en="Manuraji (Podcast)">まぬらじ（Podcast）</a></li>
+        <li><a href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" data-i18n="t3f6fe8d0" data-ja="公式LINE" data-en="Official LINE">公式LINE</a></li>
       </ul>
     </div>
   </div>
@@ -1178,15 +1182,7 @@ body.theme-juku footer { border-top: 3px double rgba(226,201,138,0.35); }
 </footer>
 
 <script src="assets/main.js?v=2"></script>
-<script>
-function setLang(lang) {
-  document.querySelectorAll('[data-ja]').forEach(el => {
-    el.innerHTML = el.getAttribute('data-' + lang);
-  });
-  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-}
-</script>
+<script src="assets/i18n.js?v=1"></script>
 <script src="assets/sky.js?v=5"></script>
 </body>
 </html>
