@@ -11,6 +11,8 @@
     ['ko',  '한국어',        'ko'],
     ['pt',  'Português',     'pt-BR'],
     ['es',  'Español',       'es'],
+    ['fr',  'Français',      'fr'],
+    ['it',  'Italiano',      'it'],
     ['vi',  'Tiếng Việt',    'vi'],
     ['fil', 'Filipino',      'fil']
   ];
