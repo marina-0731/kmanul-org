@@ -95,6 +95,19 @@
   font-size: 28px;
   margin-bottom: 16px;
 }
+/* マヌルのイラスト（まるいステッカー風） */
+.mini-card__illust {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--sky-mid);
+  background: var(--white);
+}
+.mini-card:hover .mini-card__illust { transform: rotate(-4deg) scale(1.05); }
+.mini-card__illust { transition: transform .3s ease; }
 .mini-card__title {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   font-size: 17px;
@@ -242,19 +255,19 @@
         <h3 style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:16px;">4つの柱</h3>
         <div class="mini-cards" style="grid-template-columns:1fr 1fr;gap:16px;">
           <div class="mini-card" style="padding:20px;">
-            <div class="mini-card__icon">🎯</div>
+            <img src="images/manul/paws-up.jpg" alt="手をあげるマヌル" class="mini-card__illust" loading="lazy">
             <h3 class="mini-card__title" style="font-size:14px;">夢から逆算する</h3>
           </div>
           <div class="mini-card" style="padding:20px;">
-            <div class="mini-card__icon">🐢</div>
+            <img src="images/manul/tail-wag.jpg" alt="しっぽをふるマヌル" class="mini-card__illust" loading="lazy">
             <h3 class="mini-card__title" style="font-size:14px;">自分のペースで</h3>
           </div>
           <div class="mini-card" style="padding:20px;">
-            <div class="mini-card__icon">🤝</div>
+            <img src="images/manul/hands-smile.jpg" alt="にっこりするマヌル" class="mini-card__illust" loading="lazy">
             <h3 class="mini-card__title" style="font-size:14px;">地域の大人が支える</h3>
           </div>
           <div class="mini-card" style="padding:20px;">
-            <div class="mini-card__icon">💪</div>
+            <img src="images/manul/sparkle.jpg" alt="目をかがやかせるマヌル" class="mini-card__illust" loading="lazy">
             <h3 class="mini-card__title" style="font-size:14px;">点数より「力」</h3>
           </div>
         </div>
@@ -288,7 +301,7 @@
     <span class="section-title-en reveal">Events, Community Spaces & Support</span>
     <div class="mini-cards">
       <div class="mini-card reveal">
-        <div class="mini-card__icon">🎉</div>
+        <img src="images/manul/party.jpg" alt="パーティー帽のマヌル" class="mini-card__illust" loading="lazy">
         <h3 class="mini-card__title">月例対面イベント</h3>
         <p class="mini-card__text">
           月2回以上、地域のみんなが集まるリアルイベントを開催。
@@ -297,7 +310,7 @@
         </p>
       </div>
       <div class="mini-card reveal">
-        <img src="images/kosodate_soudan.jpg" alt="子育て相談（マヌルと白ねこのイラスト）" style="width:100%;max-width:220px;height:auto;display:block;margin:0 auto 12px;" loading="lazy">
+        <img src="images/kosodate_soudan.jpg" alt="子育て相談（マヌルと白ねこのイラスト）" class="mini-card__illust" loading="lazy">
         <h3 class="mini-card__title">子育て相談</h3>
         <p class="mini-card__text">
           24時間365日受付（12時間以内に対応）。
@@ -305,7 +318,7 @@
         </p>
       </div>
       <div class="mini-card reveal">
-        <div class="mini-card__icon">☀️</div>
+        <img src="images/manul/sleepy-sun.jpg" alt="おひさまの下でおやすみするマヌル" class="mini-card__illust" loading="lazy">
         <h3 class="mini-card__title">夏休み子どもの居場所（8月予定）</h3>
         <p class="mini-card__text">
           8月に「アドラー心理学講座エルム」と合わせて実施予定。
@@ -314,7 +327,7 @@
         </p>
       </div>
       <div class="mini-card reveal">
-        <div class="mini-card__icon">🌐</div>
+        <img src="images/manul/earth.jpg" alt="地球からのぞくマヌル" class="mini-card__illust" loading="lazy">
         <h3 class="mini-card__title">オンライン交流会</h3>
         <p class="mini-card__text">
           Discordで月2回開催。日常的にも若者同士で交流しています。
@@ -333,7 +346,7 @@
     <span class="section-title-en reveal">Speaker Dispatch & Development</span>
     <div class="mini-cards" style="grid-template-columns:1fr;">
       <div class="mini-card reveal" style="max-width:720px;">
-        <div class="mini-card__icon">🎤</div>
+        <img src="images/manul/talk.jpg" alt="おしゃべりするマヌル" class="mini-card__illust" loading="lazy">
         <h3 class="mini-card__title">人材育成・派遣事業</h3>
         <p class="mini-card__text">
           多様な背景を持つ子ども・若者を市民・企業・行政の催しに派遣し、
@@ -353,7 +366,7 @@
     <span class="section-title-en reveal">Media & Publications</span>
     <div class="media-cards">
       <div class="mini-card reveal" id="radio">
-        <div class="mini-card__icon">🎙️</div>
+        <img src="images/manul/wink.jpg" alt="ウインクするマヌル" class="mini-card__illust" loading="lazy">
         <h3 class="mini-card__title">ラジオ「まぬらじ！」</h3>
         <p class="mini-card__text">
           毎週土曜18時半配信。不登校・発達障害の当事者経験や
@@ -365,7 +378,7 @@
         </div>
       </div>
       <div class="mini-card reveal">
-        <div class="mini-card__icon">▶️</div>
+        <img src="images/manul/peek.jpg" alt="かべからのぞくマヌル" class="mini-card__illust" loading="lazy">
         <h3 class="mini-card__title">マヌルちゃんねる（YouTube・準備中）</h3>
         <p class="mini-card__text">
           様々なマイノリティの当事者がチャレンジする姿や
@@ -373,7 +386,7 @@
         </p>
       </div>
       <div class="mini-card reveal">
-        <div class="mini-card__icon">📄</div>
+        <img src="images/manul/paws-look.jpg" alt="のぞきこむマヌル" class="mini-card__illust" loading="lazy">
         <h3 class="mini-card__title">紙媒体での情報発信</h3>
         <p class="mini-card__text">
           地域への広報・普及啓発のため、紙媒体での情報発信を行っています。<br>

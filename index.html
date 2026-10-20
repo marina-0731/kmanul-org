@@ -336,10 +336,23 @@
   margin-top: 8px;
 }
 .value-card {
+  position: relative;
   padding: 32px 24px;
   border-top: 3px solid var(--sky);
   background: var(--sky-light);
   border-radius: 0 0 12px 12px;
+}
+/* 右上からのぞくマヌル */
+.value-illust {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--sky-mid);
+  background: var(--white);
 }
 .value-num {
   font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Yu Gothic', sans-serif;
@@ -638,8 +651,8 @@
     </div>
     <div class="project-cards" style="grid-template-columns:repeat(4,1fr);">
       <a href="manul-schole.html" class="project-card reveal">
-        <div class="project-card-top green">
-          <img src="assets/logo-manul-schole.png" alt="まぬるすこれ" class="project-card-logo">
+        <div class="project-card-top green" style="padding:20px 0;">
+          <img src="assets/logo-manul-schole-card.png" alt="まぬるすこれ" style="width:100%;max-width:280px;height:auto;display:block;margin:0 auto;">
         </div>
         <div class="project-card-body">
           <div class="project-card-tag green" data-ja="オルタナティブスクール" data-en="Alternative School">オルタナティブスクール</div>
@@ -659,8 +672,8 @@
         </div>
       </div>
       <div class="project-card reveal">
-        <div class="project-card-top purple" style="padding-top:48px;padding-bottom:48px;text-align:center;">
-          <span style="font-family:'BIZ UDPGothic','Hiragino Sans','Yu Gothic',sans-serif;font-size:32px;font-weight:700;color:var(--white);">オンライン</span>
+        <div class="project-card-top" style="background:var(--white);padding:0;text-align:center;border-bottom:1px solid var(--stone);">
+          <img src="images/manul/earth.jpg" alt="地球からのぞくマヌル（オンライン）" style="width:100%;max-width:280px;height:auto;display:block;margin:0 auto;">
         </div>
         <div class="project-card-body">
           <div class="project-card-tag purple" data-ja="ラジオ・Discord" data-en="Radio & Discord">ラジオ・Discord</div>
@@ -691,21 +704,25 @@
     <span class="section-title-en reveal">Core Values</span>
     <div class="values-grid">
       <div class="value-card reveal">
+        <img src="images/manul/v-sit.jpg" alt="ちょこんと座るマヌル" class="value-illust" loading="lazy">
         <div class="value-num">01</div>
         <div class="value-title" data-ja="ありのまま" data-en="As You Are">ありのまま</div>
         <p class="value-text" data-ja="「違う」「変わっている」を欠如ではなく個性として肯定します。すべての子どもの存在が、そのままで価値を持っています。" data-en="We affirm 'different' and 'unusual' as individuality, not deficiency. Every child has inherent worth.">「違う」「変わっている」を欠如ではなく個性として肯定します。すべての子どもの存在が、そのままで価値を持っています。</p>
       </div>
       <div class="value-card reveal">
+        <img src="images/manul/v-look-up.jpg" alt="見上げるマヌル" class="value-illust" loading="lazy">
         <div class="value-num">02</div>
         <div class="value-title" data-ja="自己決定" data-en="Self-determination">自己決定</div>
         <p class="value-text" data-ja="学びの内容・方法・ペースを自ら決める機会を保障します。自分が決める実感が、人生を豊かにします。" data-en="We ensure opportunities to decide one's own learning content, method, and pace. The experience of deciding for yourself enriches life.">学びの内容・方法・ペースを自ら決める機会を保障します。自分が決める実感が、人生を豊かにします。</p>
       </div>
       <div class="value-card reveal">
+        <img src="images/manul/v-content.jpg" alt="にっこり目をとじるマヌル" class="value-illust" loading="lazy">
         <div class="value-num">03</div>
         <div class="value-title" data-ja="共育" data-en="Co-education">共育</div>
         <p class="value-text" data-ja="子ども・保護者・スタッフ・地域が一緒に育ち合う。誰かが誰かを一方的に「教える」だけでない関係性を大切にします。" data-en="Children, parents, staff, and community grow together. We value relationships that go beyond one-sided 'teaching'.">子ども・保護者・スタッフ・地域が一緒に育ち合う。誰かが誰かを一方的に「教える」だけでない関係性を大切にします。</p>
       </div>
       <div class="value-card reveal">
+        <img src="images/manul/v-talk.jpg" alt="おしゃべりするマヌル" class="value-illust" loading="lazy">
         <div class="value-num">04</div>
         <div class="value-title" data-ja="地域とともに" data-en="With the Community">地域とともに</div>
         <p class="value-text" data-ja="知多半島の人・自然・文化を活かし、地域と共に育つ教育エコシステムをつくります。" data-en="We build an educational ecosystem that grows with the people, nature, and culture of the Chita Peninsula.">知多半島の人・自然・文化を活かし、地域と共に育つ教育エコシステムをつくります。</p>
@@ -720,6 +737,7 @@
     <div class="eyebrow eyebrow-sky reveal" style="justify-content:center;">Instagram</div>
     <h2 class="section-title reveal" style="text-align:center;">わたしたちの日常</h2>
     <span class="section-title-en reveal" style="text-align:center;display:block;">Follow @kimyo_na_manul0423</span>
+    <img src="images/manul/paw-wave.jpg" alt="手をふるマヌル" class="reveal" style="width:96px;height:96px;display:block;margin:16px auto 0;border-radius:50%;object-fit:cover;border:3px solid var(--sky-mid);background:var(--white);" loading="lazy">
     <div class="insta-embed-wrap reveal">
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/kimyo_na_manul0423/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08); margin:0 auto; max-width:540px; min-width:326px; padding:0; width:100%;">
         <div style="padding:16px;">
@@ -738,6 +756,7 @@
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr;gap:32px;">
       <div class="reveal">
+        <img src="images/manul/please.jpg" alt="おねがいするマヌル" style="width:96px;height:96px;display:block;margin-bottom:12px;border-radius:50%;object-fit:cover;border:3px solid var(--sky-mid);background:var(--white);" loading="lazy">
         <div class="eyebrow eyebrow-sky">Support Us</div>
         <h2 class="section-title" data-ja="寄付で、子どもの<br>未来を支える" data-en="Support children's future<br>with a donation">寄付で、子どもの<br>未来を支える</h2>
         <span class="section-title-en">Make a Donation</span>
