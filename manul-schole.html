@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="NPO法人kimyo-na-manulが運営。小中高一貫・週5日・授業料無償。自己決定と探究の学び。">
 <meta name="twitter:image" content="https://kmanul.org/assets/logo-manul-schole.png">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=31">
+<link rel="stylesheet" href="assets/style.css?v=32">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -927,52 +927,6 @@
 .trial-send .trial-line { background: #06C755; color: #fff; box-shadow: 0 4px 16px rgba(6,199,85,0.3); }
 .trial-send .trial-mail { background: transparent; color: var(--green-dark); border: 1.5px solid var(--green); }
 .trial-note { font-size: 12px; color: var(--text-muted); line-height: 1.8; text-align: center; }
-/* 「LINEで送る」を押したあとの手順。
-   スクリプトでLINEへ移動するとアプリではなくLINEのWebページが開いてしまうので、
-   本人がタップするリンクで開く。友だち追加前だと内容入りのトークが開けないため、2段階で案内する */
-.trial-steps { display: none; gap: 14px; }
-.trial-steps.show { display: grid; }
-.trial-steps-title { font-size: 16px; font-weight: 700; color: var(--green-dark); text-align: center; }
-.trial-step {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 16px;
-  display: grid;
-  gap: 10px;
-}
-.trial-step-head { font-size: 14px; font-weight: 700; color: var(--text); }
-.trial-step-head b { color: var(--green); margin-right: 6px; }
-.trial-step p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
-.trial-step a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
-  border-radius: 999px;
-  padding: 14px 18px;
-  background: #06C755;
-  color: #fff;
-}
-.trial-step a.sub { background: transparent; color: #06A04A; border: 1.5px solid #06C755; }
-.trial-preview {
-  white-space: pre-wrap;
-  font-size: 12px;
-  line-height: 1.7;
-  color: var(--text-mid);
-  background: var(--stone);
-  border-radius: 10px;
-  padding: 12px;
-  max-height: 180px;
-  overflow: auto;
-}
-/* PCではLINEのリンクがアプリで開かないので、スマホで読み取るQRコードに切り替える */
-.trial-pc { display: none; justify-items: center; gap: 8px; text-align: center; }
-.trial-steps.is-pc .trial-pc { display: grid; }
-.trial-steps.is-pc .trial-sp { display: none; }
-.trial-qr { background: #fff; padding: 10px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08); line-height: 0; }
-.trial-qr img, .trial-qr canvas { width: 240px; height: 240px; image-rendering: pixelated; }
-.trial-back { font: inherit; font-size: 13px; color: var(--text-muted); background: none; border: none; text-decoration: underline; cursor: pointer; justify-self: center; }
 </style>
 </head>
 <body class="theme-schole">
@@ -1393,34 +1347,9 @@
 
       <p class="trial-error" id="trial-error" role="alert"></p>
 
-      <div class="trial-send" id="trial-send">
+      <div class="trial-send lf-send">
         <button type="submit" class="trial-line" data-via="line" data-ja="LINEで送る" data-en="Send via LINE">LINEで送る</button>
-        <button type="button" class="trial-mail" id="trial-mail" data-ja="LINEを使っていない方はメールで送る" data-en="No LINE? Send by email">LINEを使っていない方はメールで送る</button>
-      </div>
-      <div class="trial-steps" id="trial-steps" aria-live="polite">
-        <div class="trial-steps-title" data-ja="あと少しです。LINEで送ってください" data-en="Almost done — please send it on LINE">あと少しです。LINEで送ってください</div>
-        <div class="trial-step">
-          <div class="trial-step-head"><b>1</b><span data-ja="公式アカウントを友だち追加" data-en="Add our official account as a friend">公式アカウントを友だち追加</span></div>
-          <p data-ja="すでに友だちの方は 2 へ進んでください。追加したら、このページに戻ってきてください。" data-en="Already friends? Go to step 2. After adding, come back to this page.">すでに友だちの方は 2 へ進んでください。追加したら、このページに戻ってきてください。</p>
-          <a class="sub trial-sp" href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" data-ja="kimyo-na-manul奇妙なマヌル を友だち追加" data-en="Add kimyo-na-manul on LINE">kimyo-na-manul奇妙なマヌル を友だち追加</a>
-          <div class="trial-pc">
-            <div class="trial-qr"><img src="images/line-qr.png" alt="公式LINE kimyo-na-manul奇妙なマヌル の友だち追加QRコード" style="width:160px;height:160px;"></div>
-            <p data-ja="スマホのカメラかLINEで読み取って、友だち追加してください。" data-en="Scan with your phone's camera or LINE to add us as a friend.">スマホのカメラかLINEで読み取って、友だち追加してください。</p>
-          </div>
-        </div>
-        <div class="trial-step">
-          <div class="trial-step-head"><b>2</b><span data-ja="申し込み内容を送る" data-en="Send your application">申し込み内容を送る</span></div>
-          <p data-ja="公式アカウントのトークが、申し込み内容が入った状態で開きます。そのまま送信してください。" data-en="Our official account's chat opens with your details filled in. Just tap send.">公式アカウントのトークが、申し込み内容が入った状態で開きます。そのまま送信してください。</p>
-          <div class="trial-pc">
-            <div class="trial-qr" id="trial-qr"></div>
-            <p data-ja="スマホのカメラで読み取ると、公式アカウントのトークが申し込み内容入りで開きます。そのまま送信してください。" data-en="Scan with your phone's camera — our official account's chat opens with your details filled in. Just tap send.">スマホのカメラで読み取ると、公式アカウントのトークが申し込み内容入りで開きます。そのまま送信してください。</p>
-            <p id="trial-qr-cut" style="display:none;" data-ja="「気になること」が長いため、QRコードには入れていません。トークで続けて送ってください（コピー済みです）。" data-en="Your note was too long to fit in the QR code — please send it in the chat afterwards (it has been copied).">「気になること」が長いため、QRコードには入れていません。トークで続けて送ってください（コピー済みです）。</p>
-          </div>
-          <a class="trial-sp" id="trial-open-line" href="https://line.me/R/ti/p/%40597rhvgp" data-ja="LINEのトークを開いて送る" data-en="Open the LINE chat and send">LINEのトークを開いて送る</a>
-          <p data-ja="うまく開かないときは、公式アカウントのトークに貼り付けて送ってください（申し込み内容はコピー済みです）。" data-en="If it doesn't open properly, paste into our official account's chat and send (your details have been copied).">うまく開かないときは、公式アカウントのトークに貼り付けて送ってください（申し込み内容はコピー済みです）。</p>
-          <div class="trial-preview" id="trial-preview"></div>
-        </div>
-        <button type="button" class="trial-back" id="trial-back" data-ja="入力内容を直す" data-en="Edit my details">入力内容を直す</button>
+        <button type="button" class="trial-mail" data-lf-mail data-ja="LINEを使っていない方はメールで送る" data-en="No LINE? Send by email">LINEを使っていない方はメールで送る</button>
       </div>
       <p class="trial-note" data-ja="入力内容はこのページには保存されません。LINEまたはメールで、kimyo-na-manulに直接届きます。" data-en="Nothing is stored on this page — your details go straight to kimyo-na-manul via LINE or email.">入力内容はこのページには保存されません。LINEまたはメールで、kimyo-na-manulに直接届きます。</p>
     </form>
@@ -1527,12 +1456,12 @@ reveals.forEach(el => observer.observe(el));
 </script>
 <script async src="//www.instagram.com/embed.js"></script>
 <script src="assets/main.js?v=2"></script>
+<script src="assets/line-form.js?v=3"></script>
 <script>
-// 見学・体験の申し込み：入力内容を本文にして公式LINE（またはメール）を開く
+// 見学・体験の申し込み：入力チェックと本文づくり（LINEに送る部分は assets/line-form.js）
 (function () {
   var form = document.getElementById('trial-form');
   if (!form) return;
-  var LINE_ID = '%40597rhvgp';          // 公式LINE（@597rhvgp）
   var MAIL_TO = 'info@kmanul.org';
   var errBox = document.getElementById('trial-error');
   var WEEK = ['日', '月', '火', '水', '木', '金', '土'];
@@ -1584,66 +1513,12 @@ reveals.forEach(el => observer.observe(el));
     return lines.join('\n');
   }
 
-  var sendBox = document.getElementById('trial-send');
-
-  // スマホ・タブレット以外（マウス操作の端末）をPCとみなす
-  var IS_PC = !/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) && !window.matchMedia('(pointer: coarse)').matches;
-  var QR_MAX = 2200; // QRコードに入れられるURLの長さの目安（誤り訂正レベルL）
-
-  function loadQrLib(done) {
-    if (window.QRCode) return done();
-    var sc = document.createElement('script');
-    sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
-    sc.onload = done;
-    document.head.appendChild(sc);
-  }
-  function drawQr(text) {
-    // 「気になること」が長すぎてQRに入らないときは、それを抜いた文面にする
-    var cut = false;
-    var url = 'https://line.me/R/oaMessage/' + LINE_ID + '/?' + encodeURIComponent(text);
-    if (url.length > QR_MAX) {
-      cut = true;
-      url = 'https://line.me/R/oaMessage/' + LINE_ID + '/?' + encodeURIComponent(text.split('\n\n気になること：')[0] + '\n\n（ホームページのフォームから送信）');
-    }
-    document.getElementById('trial-qr-cut').style.display = cut ? '' : 'none';
-    loadQrLib(function () {
-      var box = document.getElementById('trial-qr');
-      box.innerHTML = '';
-      new QRCode(box, { text: url, width: 480, height: 480, correctLevel: QRCode.CorrectLevel.L });
-    });
-  }
-  var steps = document.getElementById('trial-steps');
-
-  function copy(text) {
-    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text).catch(function () {});
-    var ta = document.createElement('textarea');
-    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
-    document.body.appendChild(ta); ta.select();
-    try { document.execCommand('copy'); } catch (e) {}
-    ta.remove();
-  }
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (!check()) return;
-    var text = body();
-    copy(text);
-    document.getElementById('trial-preview').textContent = text;
-    var lineUrl = 'https://line.me/R/oaMessage/' + LINE_ID + '/?' + encodeURIComponent(text);
-    document.getElementById('trial-open-line').href = lineUrl;
-    steps.classList.toggle('is-pc', IS_PC);
-    if (IS_PC) drawQr(text);
-    sendBox.style.display = 'none';
-    steps.classList.add('show');
-    steps.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-  document.getElementById('trial-back').addEventListener('click', function () {
-    steps.classList.remove('show');
-    sendBox.style.display = '';
-  });
-  document.getElementById('trial-mail').addEventListener('click', function () {
-    if (!check()) return;
-    location.href = 'mailto:' + MAIL_TO + '?subject=' + encodeURIComponent('まぬるすこれ 見学・体験の申し込み') + '&body=' + encodeURIComponent(body());
+  KmanulLine.setup({
+    form: form,
+    check: check,
+    body: body,
+    mailTo: MAIL_TO,
+    mailSubject: 'まぬるすこれ 見学・体験の申し込み'
   });
 })();
 </script>

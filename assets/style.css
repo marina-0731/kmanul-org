@@ -726,3 +726,47 @@ section { padding: 48px 0; }
 
 .footer-inner { grid-template-columns: 1fr !important; gap: 32px; padding: 0 20px; }
 .footer-bottom { padding: 20px 20px 0; flex-direction: column; gap: 8px; text-align: center; }
+
+/* ── 公式LINEに送るフォームの手順パネル（assets/line-form.js が作る） ── */
+.lf-steps { display: none; gap: 14px; }
+.lf-steps.show { display: grid; }
+.lf-steps-title { font-size: 16px; font-weight: 700; color: #06A04A; text-align: center; }
+.lf-step {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+.lf-step-head { font-size: 14px; font-weight: 700; color: var(--text); }
+.lf-step-head b { color: #06A04A; margin-right: 6px; }
+.lf-step p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
+.lf-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 14px 18px;
+  background: #06C755;
+  color: #fff;
+}
+.lf-btn.sub { background: transparent; color: #06A04A; border: 1.5px solid #06C755; }
+.lf-pc { display: none; justify-items: center; gap: 8px; text-align: center; }
+.lf-steps.is-pc .lf-pc { display: grid; }
+.lf-steps.is-pc .lf-sp { display: none; }
+.lf-qr { background: #fff; padding: 10px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08); line-height: 0; }
+.lf-qr img, .lf-qr canvas { width: 260px; height: 260px; max-width: 100%; height: auto; image-rendering: pixelated; }
+.lf-preview {
+  white-space: pre-wrap;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  background: var(--stone);
+  border-radius: 10px;
+  padding: 12px;
+  max-height: 180px;
+  overflow: auto;
+}
+.lf-back { font: inherit; font-size: 13px; color: var(--text-muted); background: none; border: none; text-decoration: underline; cursor: pointer; justify-self: center; }

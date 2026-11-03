@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="愛知県知多半島のNPO法人。障がい・不登校の子ども・若者の居場所づくりと、オルタナティブスクール「まぬるすこれ」を運営。">
 <meta name="twitter:image" content="https://kmanul.org/assets/logo-kmanul.png">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/style.css?v=31">
+<link rel="stylesheet" href="assets/style.css?v=32">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -508,6 +508,38 @@
 @media (max-width: 900px) {
   .award { padding: 48px 0; }
 }
+
+/* ── LINEで相談する ──（送る部分は assets/line-form.js） */
+.consult { background: var(--sky-light); }
+.consult-illust {
+  width: 120px; height: 120px; display: block; margin: 0 auto 16px;
+  border-radius: 50%; object-fit: cover; border: 3px solid var(--white); background: var(--white);
+}
+.consult-lead { text-align: center; font-size: 15px; color: var(--text-mid); line-height: 2; margin: 0 auto; max-width: 560px; }
+.consult-lead strong { color: var(--text); }
+.consult-form {
+  max-width: 560px; margin: 28px auto 0;
+  background: var(--white); border-radius: 20px; padding: 24px 20px;
+  display: grid; gap: 16px;
+}
+.consult-field { display: grid; gap: 6px; }
+.consult-label { font-size: 14px; font-weight: 700; color: var(--text); }
+.consult-req { font-size: 11px; font-weight: 700; color: var(--white); background: var(--sky); border-radius: 4px; padding: 1px 6px; margin-left: 6px; vertical-align: 2px; }
+.consult-input, .consult-textarea {
+  width: 100%; font: inherit; font-size: 16px; color: var(--text);
+  background: var(--misora-bg); border: 1.5px solid rgba(0,0,0,0.1); border-radius: 10px; padding: 12px 14px;
+}
+.consult-textarea { min-height: 150px; resize: vertical; line-height: 1.8; }
+.consult-input:focus, .consult-textarea:focus { outline: none; border-color: var(--sky); box-shadow: 0 0 0 3px rgba(74,127,181,0.18); }
+.consult-textarea[aria-invalid="true"] { border-color: var(--red); }
+.consult-error { font-size: 13px; color: var(--red-dark); background: var(--red-light); border-radius: 8px; padding: 10px 12px; display: none; }
+.consult-error.show { display: block; }
+.consult-send { display: grid; gap: 10px; }
+.consult-send button { font: inherit; font-size: 16px; font-weight: 700; border: none; border-radius: 999px; padding: 16px 20px; cursor: pointer; }
+.consult-send .consult-line { background: #06C755; color: #fff; box-shadow: 0 4px 16px rgba(6,199,85,0.3); }
+.consult-send .consult-mail { background: transparent; color: var(--sky-dark); border: 1.5px solid var(--sky); }
+.consult-note { font-size: 12px; color: var(--text-muted); line-height: 1.8; text-align: center; }
+.consult .lf-step { background: var(--misora-bg); }
 </style>
 </head>
 <body class="theme-npo">
@@ -697,6 +729,33 @@
   </div>
 </section>
 
+<!-- LINEで相談する -->
+<section class="consult" id="consult">
+  <div class="container">
+    <img src="images/kosodate_soudan.jpg" alt="マヌルと白ねこのイラスト" class="consult-illust reveal" loading="lazy">
+    <div class="eyebrow eyebrow-sky reveal" style="justify-content:center;">Talk to Us on LINE</div>
+    <h2 class="section-title reveal" style="text-align:center;" data-ja="LINEで相談する" data-en="Talk to us on LINE">LINEで相談する</h2>
+    <p class="consult-lead reveal" data-ja="子育てのこと、学校のこと、自分のこと。<br><strong>愚痴も、ただの吐き出しもOK。</strong><br>だいたい12時間以内に、ゆるく、でも全力でお返事します。" data-en="Parenting, school, or just yourself.<br><strong>Venting or simply letting it all out is OK.</strong><br>We reply within about 12 hours — relaxed, but with everything we’ve got.">子育てのこと、学校のこと、自分のこと。<br><strong>愚痴も、ただの吐き出しもOK。</strong><br>だいたい12時間以内に、ゆるく、でも全力でお返事します。</p>
+
+    <form class="consult-form reveal" id="consult-form" novalidate>
+      <div class="consult-field">
+        <label class="consult-label" for="cs-name" data-ja="お名前（任意・ニックネームでもOK）" data-en="Name (optional — a nickname is fine)">お名前（任意・ニックネームでもOK）</label>
+        <input class="consult-input" id="cs-name" name="name" autocomplete="nickname">
+      </div>
+      <div class="consult-field">
+        <label class="consult-label" for="cs-msg"><span data-ja="話したいこと" data-en="What’s on your mind">話したいこと</span><span class="consult-req" data-ja="必須" data-en="Required">必須</span></label>
+        <textarea class="consult-textarea" id="cs-msg" name="msg" required placeholder="まとまっていなくても大丈夫です"></textarea>
+      </div>
+      <p class="consult-error" id="consult-error" role="alert"></p>
+      <div class="consult-send lf-send">
+        <button type="submit" class="consult-line" data-ja="LINEで送る" data-en="Send via LINE">LINEで送る</button>
+        <button type="button" class="consult-mail" data-lf-mail data-ja="LINEを使っていない方はメールで送る" data-en="No LINE? Send by email">LINEを使っていない方はメールで送る</button>
+      </div>
+      <p class="consult-note" data-ja="入力内容はこのページには保存されません。公式LINE（kimyo-na-manul奇妙なマヌル）またはメールで、直接届きます。" data-en="Nothing is stored on this page — your message goes straight to our official LINE (kimyo-na-manul) or email.">入力内容はこのページには保存されません。公式LINE（kimyo-na-manul奇妙なマヌル）またはメールで、直接届きます。</p>
+    </form>
+  </div>
+</section>
+
 <!-- VALUES -->
 <section class="values">
   <div class="container">
@@ -839,6 +898,31 @@ reveals.forEach(el => observer.observe(el));
 </script>
 <script async src="//www.instagram.com/embed.js"></script>
 <script src="assets/main.js?v=2"></script>
+<script src="assets/line-form.js?v=3"></script>
+<script>
+// LINEで相談する：入力チェックと本文づくり（LINEに送る部分は assets/line-form.js）
+(function () {
+  var form = document.getElementById('consult-form');
+  if (!form) return;
+  var errBox = document.getElementById('consult-error');
+  function val(n) { return (form.elements[n].value || '').trim(); }
+  function check() {
+    var msg = form.elements.msg;
+    var ok = !!val('msg');
+    if (ok) msg.removeAttribute('aria-invalid'); else { msg.setAttribute('aria-invalid', 'true'); msg.focus(); }
+    errBox.textContent = ok ? '' : '話したいことを入力してください。';
+    errBox.classList.toggle('show', !ok);
+    return ok;
+  }
+  function body() {
+    var lines = ['【LINE相談】'];
+    if (val('name')) lines.push('お名前：' + val('name'));
+    lines.push('', val('msg'), '', '（ホームページから送信）');
+    return lines.join('\n');
+  }
+  KmanulLine.setup({ form: form, check: check, body: body, mailTo: 'info@kmanul.org', mailSubject: 'LINE相談（ホームページから）' });
+})();
+</script>
 <script src="assets/i18n.js?v=2"></script>
 <script src="assets/sky.js?v=5"></script>
 </body>
