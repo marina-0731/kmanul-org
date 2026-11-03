@@ -901,7 +901,9 @@
   cursor: pointer;
 }
 .trial-choice:has(input:checked) { border-color: var(--green); background: var(--green-light); font-weight: 700; }
-.trial-choice input { accent-color: var(--green); width: 18px; height: 18px; }
+.trial-choice { flex-basis: 100%; }
+.trial-choice input { accent-color: var(--green); width: 18px; height: 18px; flex-shrink: 0; }
+.trial-choice small { display: block; font-size: 12px; font-weight: 400; color: var(--text-muted); margin-top: 2px; }
 .trial-dates { display: grid; grid-template-columns: 1fr; gap: 10px; }
 .trial-error {
   font-size: 13px;
@@ -1294,8 +1296,8 @@
       <div class="trial-field">
         <span class="trial-label" data-ja="申し込みの種類" data-en="Type">申し込みの種類</span>
         <div class="trial-choices" role="radiogroup">
-          <label class="trial-choice"><input type="radio" name="kind" value="見学" checked> <span data-ja="見学" data-en="Visit">見学</span></label>
-          <label class="trial-choice"><input type="radio" name="kind" value="体験"> <span data-ja="体験（1日参加）" data-en="Trial day">体験（1日参加）</span></label>
+          <label class="trial-choice"><input type="radio" name="kind" value="学校の様子を見たい（2時間程度の見学・視察）" checked> <span data-ja="学校の様子を見たい<small>2時間程度の見学・視察</small>" data-en="I'd like to see the school<small>A visit of about 2 hours</small>">学校の様子を見たい<small>2時間程度の見学・視察</small></span></label>
+          <label class="trial-choice"><input type="radio" name="kind" value="入学を検討したい（1日体験・個別説明会）"> <span data-ja="入学を検討したい<small>1日体験（10:00〜15:00）・個別説明会</small>" data-en="I'm considering enrolling<small>Trial day (10:00–15:00) and one-on-one info session</small>">入学を検討したい<small>1日体験（10:00〜15:00）・個別説明会</small></span></label>
         </div>
       </div>
 
@@ -1310,30 +1312,8 @@
       </div>
 
       <div class="trial-field">
-        <label class="trial-label" for="tr-grade"><span data-ja="学年" data-en="Grade">学年</span><span class="trial-req" data-ja="必須" data-en="Required">必須</span></label>
-        <select class="trial-select" id="tr-grade" name="grade" required>
-            <option value="" data-ja="選んでください" data-en="Please choose">選んでください</option>
-            <option value="年長（新1年生）" data-ja="年長（新1年生）" data-en="Kindergarten (entering 1st grade)">年長（新1年生）</option>
-            <option value="小学1年" data-ja="小学1年" data-en="Grade 1">小学1年</option>
-            <option value="小学2年" data-ja="小学2年" data-en="Grade 2">小学2年</option>
-            <option value="小学3年" data-ja="小学3年" data-en="Grade 3">小学3年</option>
-            <option value="小学4年" data-ja="小学4年" data-en="Grade 4">小学4年</option>
-            <option value="小学5年" data-ja="小学5年" data-en="Grade 5">小学5年</option>
-            <option value="小学6年" data-ja="小学6年" data-en="Grade 6">小学6年</option>
-            <option value="中学1年" data-ja="中学1年" data-en="Grade 7">中学1年</option>
-            <option value="中学2年" data-ja="中学2年" data-en="Grade 8">中学2年</option>
-            <option value="中学3年" data-ja="中学3年" data-en="Grade 9">中学3年</option>
-            <option value="高校1年" data-ja="高校1年" data-en="Grade 10">高校1年</option>
-            <option value="高校2年" data-ja="高校2年" data-en="Grade 11">高校2年</option>
-            <option value="高校3年" data-ja="高校3年" data-en="Grade 12">高校3年</option>
-            <option value="ユース（16〜29歳）" data-ja="ユース（16〜29歳）" data-en="Youth (16–29)">ユース（16〜29歳）</option>
-            <option value="その他" data-ja="その他" data-en="Other">その他</option>
-        </select>
-      </div>
-
-      <div class="trial-field">
         <span class="trial-label"><span data-ja="希望日" data-en="Preferred dates">希望日</span><span class="trial-req" data-ja="必須" data-en="Required">必須</span></span>
-        <span class="trial-hint" data-ja="平日 10:15〜15:00 に受け入れています。第2希望まであると調整しやすいです。" data-en="We welcome visitors on weekdays, 10:15–15:00. A second choice helps us find a date.">平日 10:15〜15:00 に受け入れています。第2希望まであると調整しやすいです。</span>
+        <span class="trial-hint" data-ja="平日に受け入れています。見学は2時間程度、1日体験は10:00〜15:00です。第2希望まであると調整しやすいです。" data-en="We welcome you on weekdays. A visit takes about 2 hours; a trial day runs 10:00–15:00. A second choice helps us find a date.">平日に受け入れています。見学は2時間程度、1日体験は10:00〜15:00です。第2希望まであると調整しやすいです。</span>
         <div class="trial-dates">
           <label class="trial-hint" for="tr-date1"><span data-ja="第1希望" data-en="1st choice">第1希望</span>
             <input class="trial-input" type="date" id="tr-date1" name="date1" required></label>
@@ -1502,7 +1482,7 @@ reveals.forEach(el => observer.observe(el));
   function check() {
     var bad = [], msg = [];
     form.querySelectorAll('[aria-invalid]').forEach(function (el) { el.removeAttribute('aria-invalid'); });
-    ['parent', 'child', 'grade', 'date1'].forEach(function (n) {
+    ['parent', 'child', 'date1'].forEach(function (n) {
       if (!val(n)) bad.push(form.elements[n]);
     });
     if (bad.length) msg.push('必須の項目を入力してください。');
@@ -1523,7 +1503,6 @@ reveals.forEach(el => observer.observe(el));
       '種類：' + form.elements.kind.value,
       '保護者のお名前：' + val('parent'),
       'お子さんのお名前：' + val('child'),
-      '学年：' + val('grade'),
       '第1希望日：' + fmtDate(val('date1')),
       '第2希望日：' + (fmtDate(val('date2')) || 'なし')
     ];
