@@ -840,6 +840,91 @@
 .contact-label { width: auto; padding-top: 0; }
 .form-input, .form-textarea, .form-select { font-size: 16px; padding: 14px 16px; }
 .form-submit { padding: 18px; font-size: 15px; }
+
+/* ── 見学・体験の申し込み ──
+   HPには受け取る仕組みがないので、入力内容を本文にした公式LINE（またはメール）を開いて送ってもらう */
+.trial { background: var(--white); }
+.trial-form {
+  max-width: 640px;
+  margin: 32px auto 0;
+  background: var(--green-bg);
+  border-radius: 20px;
+  padding: 28px 22px;
+  display: grid;
+  gap: 18px;
+}
+.trial-field { display: grid; gap: 6px; }
+.trial-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.trial-req {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--green);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-left: 6px;
+  vertical-align: 2px;
+}
+.trial-hint { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+.trial-input, .trial-select, .trial-textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 16px; /* iPhoneで入力時に拡大されないよう16px */
+  color: var(--text);
+  background: var(--white);
+  border: 1.5px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.trial-textarea { min-height: 110px; resize: vertical; line-height: 1.8; }
+.trial-input:focus, .trial-select:focus, .trial-textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(63,154,58,0.18);
+}
+.trial-input[aria-invalid="true"], .trial-select[aria-invalid="true"] { border-color: var(--red); }
+.trial-choices { display: flex; gap: 10px; flex-wrap: wrap; }
+.trial-choice {
+  flex: 1 1 120px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1.5px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.trial-choice:has(input:checked) { border-color: var(--green); background: var(--green-light); font-weight: 700; }
+.trial-choice input { accent-color: var(--green); width: 18px; height: 18px; }
+.trial-dates { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.trial-error {
+  font-size: 13px;
+  color: var(--red-dark);
+  background: var(--red-light);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: none;
+}
+.trial-error.show { display: block; }
+.trial-send { display: grid; gap: 10px; margin-top: 4px; }
+.trial-send button {
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+.trial-send .trial-line { background: #06C755; color: #fff; box-shadow: 0 4px 16px rgba(6,199,85,0.3); }
+.trial-send .trial-mail { background: transparent; color: var(--green-dark); border: 1.5px solid var(--green); }
+.trial-note { font-size: 12px; color: var(--text-muted); line-height: 1.8; text-align: center; }
 </style>
 </head>
 <body class="theme-schole">
@@ -889,7 +974,8 @@
         自分で考え、動き、つくる毎日の中で、<br>自立して生きていく力を育みます。
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-green" data-i18n="t7afe8620" data-ja="うちの子に合うか、聞いてみる" data-en="Ask if it might suit your child">うちの子に合うか、聞いてみる</a>
+        <a href="#trial" class="btn-green" data-ja="見学・体験を申し込む" data-en="Book a visit or trial day">見学・体験を申し込む</a>
+        <a href="#contact" class="btn-outline-white" data-i18n="t7afe8620" data-ja="うちの子に合うか、聞いてみる" data-en="Ask if it might suit your child">うちの子に合うか、聞いてみる</a>
         <a href="#concept" class="btn-outline-white" data-i18n="t88de5ff0" data-ja="学校の理念を読む" data-en="Our Philosophy">学校の理念を読む</a>
       </div>
       <p class="hero-reassure" data-i18n="t7a2d6839" data-ja="見学するか迷っている段階でも大丈夫です。まだ決めなくてかまいません。" data-en="It's fine to reach out even while you're still unsure about visiting. You don't have to decide anything yet.">見学するか迷っている段階でも大丈夫です。まだ決めなくてかまいません。</p>
@@ -1197,6 +1283,99 @@
   </div>
 </section>
 
+<!-- 見学・体験の申し込み -->
+<section class="trial" id="trial">
+  <div class="container">
+    <div class="eyebrow eyebrow-green reveal" style="justify-content:center;">Visit &amp; Trial</div>
+    <h2 class="section-title reveal" style="text-align:center;" data-ja="見学・体験の申し込み" data-en="Book a Visit or Trial Day">見学・体験の申し込み</h2>
+    <p class="section-lead reveal" style="text-align:center;margin:0 auto;font-size:14px;" data-ja="入力して「LINEで送る」を押すと、入力内容が入った公式LINEが開きます。そのまま送信すれば申し込み完了です。日程はLINEでご相談しながら決めます。" data-en="Fill this in and tap “Send via LINE”. Our official LINE opens with your details filled in — just send it. We’ll settle the date with you on LINE.">入力して「LINEで送る」を押すと、入力内容が入った公式LINEが開きます。そのまま送信すれば申し込み完了です。日程はLINEでご相談しながら決めます。</p>
+
+    <form class="trial-form reveal" id="trial-form" novalidate>
+      <div class="trial-field">
+        <span class="trial-label" data-ja="申し込みの種類" data-en="Type">申し込みの種類</span>
+        <div class="trial-choices" role="radiogroup">
+          <label class="trial-choice"><input type="radio" name="kind" value="見学" checked> <span data-ja="見学" data-en="Visit">見学</span></label>
+          <label class="trial-choice"><input type="radio" name="kind" value="体験"> <span data-ja="体験（1日参加）" data-en="Trial day">体験（1日参加）</span></label>
+        </div>
+      </div>
+
+      <div class="trial-field">
+        <label class="trial-label" for="tr-parent"><span data-ja="保護者のお名前" data-en="Parent / guardian name">保護者のお名前</span><span class="trial-req" data-ja="必須" data-en="Required">必須</span></label>
+        <input class="trial-input" id="tr-parent" name="parent" autocomplete="name" required>
+      </div>
+
+      <div class="trial-field">
+        <label class="trial-label" for="tr-child"><span data-ja="お子さんのお名前" data-en="Child’s name">お子さんのお名前</span><span class="trial-req" data-ja="必須" data-en="Required">必須</span></label>
+        <input class="trial-input" id="tr-child" name="child" required>
+      </div>
+
+      <div class="trial-field">
+        <label class="trial-label" for="tr-grade"><span data-ja="学年" data-en="Grade">学年</span><span class="trial-req" data-ja="必須" data-en="Required">必須</span></label>
+        <select class="trial-select" id="tr-grade" name="grade" required>
+            <option value="" data-ja="選んでください" data-en="Please choose">選んでください</option>
+            <option value="年長（新1年生）" data-ja="年長（新1年生）" data-en="Kindergarten (entering 1st grade)">年長（新1年生）</option>
+            <option value="小学1年" data-ja="小学1年" data-en="Grade 1">小学1年</option>
+            <option value="小学2年" data-ja="小学2年" data-en="Grade 2">小学2年</option>
+            <option value="小学3年" data-ja="小学3年" data-en="Grade 3">小学3年</option>
+            <option value="小学4年" data-ja="小学4年" data-en="Grade 4">小学4年</option>
+            <option value="小学5年" data-ja="小学5年" data-en="Grade 5">小学5年</option>
+            <option value="小学6年" data-ja="小学6年" data-en="Grade 6">小学6年</option>
+            <option value="中学1年" data-ja="中学1年" data-en="Grade 7">中学1年</option>
+            <option value="中学2年" data-ja="中学2年" data-en="Grade 8">中学2年</option>
+            <option value="中学3年" data-ja="中学3年" data-en="Grade 9">中学3年</option>
+            <option value="高校1年" data-ja="高校1年" data-en="Grade 10">高校1年</option>
+            <option value="高校2年" data-ja="高校2年" data-en="Grade 11">高校2年</option>
+            <option value="高校3年" data-ja="高校3年" data-en="Grade 12">高校3年</option>
+            <option value="ユース（16〜29歳）" data-ja="ユース（16〜29歳）" data-en="Youth (16–29)">ユース（16〜29歳）</option>
+            <option value="その他" data-ja="その他" data-en="Other">その他</option>
+        </select>
+      </div>
+
+      <div class="trial-field">
+        <span class="trial-label"><span data-ja="希望日" data-en="Preferred dates">希望日</span><span class="trial-req" data-ja="必須" data-en="Required">必須</span></span>
+        <span class="trial-hint" data-ja="平日 10:15〜15:00 に受け入れています。第2希望まであると調整しやすいです。" data-en="We welcome visitors on weekdays, 10:15–15:00. A second choice helps us find a date.">平日 10:15〜15:00 に受け入れています。第2希望まであると調整しやすいです。</span>
+        <div class="trial-dates">
+          <label class="trial-hint" for="tr-date1"><span data-ja="第1希望" data-en="1st choice">第1希望</span>
+            <input class="trial-input" type="date" id="tr-date1" name="date1" required></label>
+          <label class="trial-hint" for="tr-date2"><span data-ja="第2希望（任意）" data-en="2nd choice (optional)">第2希望（任意）</span>
+            <input class="trial-input" type="date" id="tr-date2" name="date2"></label>
+        </div>
+      </div>
+
+      <div class="trial-field">
+        <label class="trial-label" for="tr-tel" data-ja="電話番号（任意）" data-en="Phone (optional)">電話番号（任意）</label>
+        <input class="trial-input" type="tel" id="tr-tel" name="tel" autocomplete="tel" inputmode="tel">
+      </div>
+
+      <div class="trial-field">
+        <label class="trial-label" for="tr-how" data-ja="まぬるすこれを知ったきっかけ（任意）" data-en="How did you hear about us? (optional)">まぬるすこれを知ったきっかけ（任意）</label>
+        <select class="trial-select" id="tr-how" name="how">
+            <option value="" data-ja="選んでください" data-en="Please choose">選んでください</option>
+            <option value="Instagram" data-ja="Instagram" data-en="Instagram">Instagram</option>
+            <option value="インターネット検索" data-ja="インターネット検索" data-en="Web search">インターネット検索</option>
+            <option value="知人・友人からの紹介" data-ja="知人・友人からの紹介" data-en="A friend or acquaintance">知人・友人からの紹介</option>
+            <option value="チラシ・ポスター" data-ja="チラシ・ポスター" data-en="Flyer or poster">チラシ・ポスター</option>
+            <option value="新聞・地域情報" data-ja="新聞・地域情報" data-en="Newspaper or local news">新聞・地域情報</option>
+            <option value="その他" data-ja="その他" data-en="Other">その他</option>
+        </select>
+      </div>
+
+      <div class="trial-field">
+        <label class="trial-label" for="tr-note" data-ja="お子さんの様子や、気になること（任意）" data-en="Anything you’d like us to know (optional)">お子さんの様子や、気になること（任意）</label>
+        <textarea class="trial-textarea" id="tr-note" name="note"></textarea>
+      </div>
+
+      <p class="trial-error" id="trial-error" role="alert"></p>
+
+      <div class="trial-send">
+        <button type="submit" class="trial-line" data-via="line" data-ja="LINEで送る" data-en="Send via LINE">LINEで送る</button>
+        <button type="button" class="trial-mail" id="trial-mail" data-ja="LINEを使っていない方はメールで送る" data-en="No LINE? Send by email">LINEを使っていない方はメールで送る</button>
+      </div>
+      <p class="trial-note" data-ja="入力内容はこのページには保存されません。LINEまたはメールで、kimyo-na-manulに直接届きます。" data-en="Nothing is stored on this page — your details go straight to kimyo-na-manul via LINE or email.">入力内容はこのページには保存されません。LINEまたはメールで、kimyo-na-manulに直接届きます。</p>
+    </form>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
@@ -1297,6 +1476,75 @@ reveals.forEach(el => observer.observe(el));
 </script>
 <script async src="//www.instagram.com/embed.js"></script>
 <script src="assets/main.js?v=2"></script>
+<script>
+// 見学・体験の申し込み：入力内容を本文にして公式LINE（またはメール）を開く
+(function () {
+  var form = document.getElementById('trial-form');
+  if (!form) return;
+  var LINE_ID = '%40597rhvgp';          // 公式LINE（@597rhvgp）
+  var MAIL_TO = 'info@kmanul.org';
+  var errBox = document.getElementById('trial-error');
+  var WEEK = ['日', '月', '火', '水', '木', '金', '土'];
+
+  // 明日以降しか選べないようにする
+  var t = new Date(); t.setDate(t.getDate() + 1);
+  var min = t.getFullYear() + '-' + String(t.getMonth() + 1).padStart(2, '0') + '-' + String(t.getDate()).padStart(2, '0');
+  ['tr-date1', 'tr-date2'].forEach(function (id) { document.getElementById(id).min = min; });
+
+  function fmtDate(v) {
+    if (!v) return '';
+    var d = new Date(v + 'T00:00:00');
+    return (d.getMonth() + 1) + '月' + d.getDate() + '日（' + WEEK[d.getDay()] + '）';
+  }
+  function isWeekend(v) { var g = new Date(v + 'T00:00:00').getDay(); return g === 0 || g === 6; }
+  function val(name) { var el = form.elements[name]; return (el.value || '').trim(); }
+
+  function check() {
+    var bad = [], msg = [];
+    form.querySelectorAll('[aria-invalid]').forEach(function (el) { el.removeAttribute('aria-invalid'); });
+    ['parent', 'child', 'grade', 'date1'].forEach(function (n) {
+      if (!val(n)) bad.push(form.elements[n]);
+    });
+    if (bad.length) msg.push('必須の項目を入力してください。');
+    ['date1', 'date2'].forEach(function (n) {
+      var v = val(n);
+      if (v && isWeekend(v)) { bad.push(form.elements[n]); msg.push('希望日は平日を選んでください。'); }
+    });
+    bad.forEach(function (el) { el.setAttribute('aria-invalid', 'true'); });
+    errBox.textContent = msg.filter(function (m, i) { return msg.indexOf(m) === i; }).join(' ');
+    errBox.classList.toggle('show', msg.length > 0);
+    if (bad.length) bad[0].focus();
+    return bad.length === 0;
+  }
+
+  function body() {
+    var lines = [
+      '【まぬるすこれ 見学・体験の申し込み】',
+      '種類：' + form.elements.kind.value,
+      '保護者のお名前：' + val('parent'),
+      'お子さんのお名前：' + val('child'),
+      '学年：' + val('grade'),
+      '第1希望日：' + fmtDate(val('date1')),
+      '第2希望日：' + (fmtDate(val('date2')) || 'なし')
+    ];
+    if (val('tel')) lines.push('電話番号：' + val('tel'));
+    if (val('how')) lines.push('知ったきっかけ：' + val('how'));
+    if (val('note')) lines.push('', '気になること：', val('note'));
+    lines.push('', '（ホームページのフォームから送信）');
+    return lines.join('\n');
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!check()) return;
+    location.href = 'https://line.me/R/oaMessage/' + LINE_ID + '/?' + encodeURIComponent(body());
+  });
+  document.getElementById('trial-mail').addEventListener('click', function () {
+    if (!check()) return;
+    location.href = 'mailto:' + MAIL_TO + '?subject=' + encodeURIComponent('まぬるすこれ 見学・体験の申し込み') + '&body=' + encodeURIComponent(body());
+  });
+})();
+</script>
 <script src="assets/i18n.js?v=2"></script>
 <script src="assets/sky.js?v=5"></script>
 </body>
