@@ -927,6 +927,46 @@
 .trial-send .trial-line { background: #06C755; color: #fff; box-shadow: 0 4px 16px rgba(6,199,85,0.3); }
 .trial-send .trial-mail { background: transparent; color: var(--green-dark); border: 1.5px solid var(--green); }
 .trial-note { font-size: 12px; color: var(--text-muted); line-height: 1.8; text-align: center; }
+/* 「LINEで送る」を押したあとの手順。
+   スクリプトでLINEへ移動するとアプリではなくLINEのWebページが開いてしまうので、
+   本人がタップするリンクで開く。友だち追加前だと内容入りのトークが開けないため、2段階で案内する */
+.trial-steps { display: none; gap: 14px; }
+.trial-steps.show { display: grid; }
+.trial-steps-title { font-size: 16px; font-weight: 700; color: var(--green-dark); text-align: center; }
+.trial-step {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+.trial-step-head { font-size: 14px; font-weight: 700; color: var(--text); }
+.trial-step-head b { color: var(--green); margin-right: 6px; }
+.trial-step p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
+.trial-step a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 14px 18px;
+  background: #06C755;
+  color: #fff;
+}
+.trial-step a.sub { background: transparent; color: #06A04A; border: 1.5px solid #06C755; }
+.trial-preview {
+  white-space: pre-wrap;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  background: var(--stone);
+  border-radius: 10px;
+  padding: 12px;
+  max-height: 180px;
+  overflow: auto;
+}
+.trial-back { font: inherit; font-size: 13px; color: var(--text-muted); background: none; border: none; text-decoration: underline; cursor: pointer; justify-self: center; }
 </style>
 </head>
 <body class="theme-schole">
@@ -1290,7 +1330,7 @@
   <div class="container">
     <div class="eyebrow eyebrow-green reveal" style="justify-content:center;">Visit &amp; Trial</div>
     <h2 class="section-title reveal" style="text-align:center;" data-ja="見学・体験の申し込み" data-en="Book a Visit or Trial Day">見学・体験の申し込み</h2>
-    <p class="section-lead reveal" style="text-align:center;margin:0 auto;font-size:14px;" data-ja="入力して「LINEで送る」を押すと、入力内容が入った公式LINEが開きます。そのまま送信すれば申し込み完了です。日程はLINEでご相談しながら決めます。" data-en="Fill this in and tap “Send via LINE”. Our official LINE opens with your details filled in — just send it. We’ll settle the date with you on LINE.">入力して「LINEで送る」を押すと、入力内容が入った公式LINEが開きます。そのまま送信すれば申し込み完了です。日程はLINEでご相談しながら決めます。</p>
+    <p class="section-lead reveal" style="text-align:center;margin:0 auto;font-size:14px;" data-ja="入力して「LINEで送る」を押し、公式アカウント「kimyo-na-manul奇妙なマヌル」に送ってください。日程はLINEでご相談しながら決めます。" data-en="Fill this in, tap “Send via LINE”, and send it to our official account “kimyo-na-manul”. We’ll settle the date with you on LINE.">入力して「LINEで送る」を押し、公式アカウント「kimyo-na-manul奇妙なマヌル」に送ってください。日程はLINEでご相談しながら決めます。</p>
 
     <form class="trial-form reveal" id="trial-form" novalidate>
       <div class="trial-field">
@@ -1347,9 +1387,25 @@
 
       <p class="trial-error" id="trial-error" role="alert"></p>
 
-      <div class="trial-send">
+      <div class="trial-send" id="trial-send">
         <button type="submit" class="trial-line" data-via="line" data-ja="LINEで送る" data-en="Send via LINE">LINEで送る</button>
         <button type="button" class="trial-mail" id="trial-mail" data-ja="LINEを使っていない方はメールで送る" data-en="No LINE? Send by email">LINEを使っていない方はメールで送る</button>
+      </div>
+      <div class="trial-steps" id="trial-steps" aria-live="polite">
+        <div class="trial-steps-title" data-ja="あと少しです。LINEで送ってください" data-en="Almost done — please send it on LINE">あと少しです。LINEで送ってください</div>
+        <div class="trial-step">
+          <div class="trial-step-head"><b>1</b><span data-ja="公式アカウントを友だち追加" data-en="Add our official account as a friend">公式アカウントを友だち追加</span></div>
+          <p data-ja="すでに友だちの方は 2 へ進んでください。追加したら、このページに戻ってきてください。" data-en="Already friends? Go to step 2. After adding, come back to this page.">すでに友だちの方は 2 へ進んでください。追加したら、このページに戻ってきてください。</p>
+          <a class="sub" href="https://line.me/R/ti/p/%40597rhvgp" target="_blank" rel="noopener" data-ja="kimyo-na-manul奇妙なマヌル を友だち追加" data-en="Add kimyo-na-manul on LINE">kimyo-na-manul奇妙なマヌル を友だち追加</a>
+        </div>
+        <div class="trial-step">
+          <div class="trial-step-head"><b>2</b><span data-ja="申し込み内容を送る" data-en="Send your application">申し込み内容を送る</span></div>
+          <p data-ja="公式アカウントのトークが、申し込み内容が入った状態で開きます。そのまま送信してください。" data-en="Our official account's chat opens with your details filled in. Just tap send.">公式アカウントのトークが、申し込み内容が入った状態で開きます。そのまま送信してください。</p>
+          <a id="trial-open-line" href="https://line.me/R/ti/p/%40597rhvgp" data-ja="LINEのトークを開いて送る" data-en="Open the LINE chat and send">LINEのトークを開いて送る</a>
+          <p data-ja="うまく開かないときは、公式アカウントのトークに貼り付けて送ってください（申し込み内容はコピー済みです）。" data-en="If it doesn't open properly, paste into our official account's chat and send (your details have been copied).">うまく開かないときは、公式アカウントのトークに貼り付けて送ってください（申し込み内容はコピー済みです）。</p>
+          <div class="trial-preview" id="trial-preview"></div>
+        </div>
+        <button type="button" class="trial-back" id="trial-back" data-ja="入力内容を直す" data-en="Edit my details">入力内容を直す</button>
       </div>
       <p class="trial-note" data-ja="入力内容はこのページには保存されません。LINEまたはメールで、kimyo-na-manulに直接届きます。" data-en="Nothing is stored on this page — your details go straight to kimyo-na-manul via LINE or email.">入力内容はこのページには保存されません。LINEまたはメールで、kimyo-na-manulに直接届きます。</p>
     </form>
@@ -1513,10 +1569,32 @@ reveals.forEach(el => observer.observe(el));
     return lines.join('\n');
   }
 
+  var sendBox = document.getElementById('trial-send');
+  var steps = document.getElementById('trial-steps');
+
+  function copy(text) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text).catch(function () {});
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    ta.remove();
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!check()) return;
-    location.href = 'https://line.me/R/oaMessage/' + LINE_ID + '/?' + encodeURIComponent(body());
+    var text = body();
+    copy(text);
+    document.getElementById('trial-preview').textContent = text;
+    document.getElementById('trial-open-line').href = 'https://line.me/R/oaMessage/' + LINE_ID + '/?' + encodeURIComponent(text);
+    sendBox.style.display = 'none';
+    steps.classList.add('show');
+    steps.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  document.getElementById('trial-back').addEventListener('click', function () {
+    steps.classList.remove('show');
+    sendBox.style.display = '';
   });
   document.getElementById('trial-mail').addEventListener('click', function () {
     if (!check()) return;
